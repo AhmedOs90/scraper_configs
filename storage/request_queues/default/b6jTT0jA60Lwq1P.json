@@ -1,0 +1,9 @@
+{
+	"id": "b6jTT0jA60Lwq1P",
+	"json": "{\"id\":\"b6jTT0jA60Lwq1P\",\"url\":\"https://drydrinker.com/collections/all?page=34\",\"loadedUrl\":\"https://drydrinker.com/collections/all?page=34\",\"uniqueKey\":\"https://drydrinker.com/collections/all?page=34\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2024-10-29T13:51:24.354Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://drydrinker.com/collections/all?page=34",
+	"url": "https://drydrinker.com/collections/all?page=34"
+}
