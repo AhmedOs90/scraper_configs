@@ -1,0 +1,31 @@
+{
+    "baseUrl": "https://alkoholfributik.dk",
+    "rootUrl": "https://alkoholfributik.dk",
+    "collectionLinks": "collections/",
+    "productsLinks": "alllinks",
+    "seller": "seller",
+    "site_name": "alkoholfributik",
+    "moreConfig": true,
+    "selectors": {
+      "header": {
+        "name": "meta[property='og:title']",
+        "price": "meta[property='product:price:amount']",
+        "currency": "meta[property='product:price:currency']",
+        "description": "meta[name='description']",
+        "images": "meta[property='og:image']"
+      },
+      "main": {
+        "abv": "td:contains('Alkoholindhold') + td",
+        "energy": "th:contains('Energi') + td",
+        "sugar": "th:contains('Sukker') + td",
+        "gluten": "th:contains('Glutenfri') + td",
+        "vegan": "th:contains('Vegan') + td",
+        "producer": ".product-manufacturer"
+      }
+    },
+    "pagination": {
+      "type": "link",
+      "selector": "a[rel='next']"
+    }
+  }
+  

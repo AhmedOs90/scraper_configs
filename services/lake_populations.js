@@ -3,6 +3,10 @@ import { google } from 'googleapis';
 import path from 'path';
 import process from 'process';
 import { authenticate } from '@google-cloud/local-auth';
+import axios from 'axios';
+
+export const publicProductList = [];
+
 
 // Google Sheets API configuration
 const SCOPES = ['https://www.googleapis.com/auth/spreadsheets'];
@@ -67,29 +71,97 @@ export async function authorize() {
  * @param {google.auth.OAuth2} auth The authenticated Google OAuth client.
  * @param {Array} products Array of product objects to append.
  */
-export async function appendToSheet(auth, products) {
-    const sheets = google.sheets({ version: 'v4', auth });
-    const spreadsheetId = '186TESMwGZnGE49mZXA_DIvYWqsy1vbyw1hps-44Txrw'; // Replace with your Google Spreadsheet ID
-    const range = 'Sheet1'; // Specifying only the sheet name allows the data to be appended to the next available row
-  
-    // Prepare values to append
-    const values = products.map((product, index) => [
-      product.id,  // ID starts at 1
-      product.name,
-      product.abv,
-      product.price,
-    ]);
-  
-    const resource = {
-      values,
-    };
-  
+export async function appendToSheet(auth, products, range = 'Sheet1!A:D') {
+  const sheets = google.sheets({ version: 'v4', auth });
+  const spreadsheetId = '186TESMwGZnGE49mZXA_DIvYWqsy1vbyw1hps-44Txrw'; // Replace with your Google Spreadsheet ID
+
+  // Prepare values to append
+  const values = products.map((product) => [
+    product.id,
+    product.name,
+    product.abv,
+    product.producer,
+    product.product_category,
+    product.energy,
+    product.sugar,
+    product.price,
+    product.currency,
+    product.country,
+    product.url,
+    product.images,
+    product.description,
+    product.gluten_free,
+    product.vegan,
+    product.duplicateWith,
+    product.percentDuplication,
+    product.site_name,
+    product.site_url,
+    product.seller
+  ]);
+
+  const resource = {
+    values,
+  };
+
+  try {
     await sheets.spreadsheets.values.append({
       spreadsheetId,
-      range,
+      range, // Dynamic range based on the file parameter
       valueInputOption: 'RAW',
       insertDataOption: 'INSERT_ROWS', // This ensures new rows are appended
       resource,
     });
+    console.log(`Data appended to range: ${range}`);
+  } catch (error) {
+    console.error(`Failed to append data to ${range}:`, error.message);
   }
+}
+
+
+// const API_BASE_URL = 'http://localhost:3002'; // Replace with your API's base URL
+const API_BASE_URL = 'http://34.141.37.120:3002'; // Replace with your API's base URL
+
+export async function populateLake(product) {
+  try {
+    console.log(`Pushing for product ${product.name}...`);
+
+    const response = await axios.post(`${API_BASE_URL}/lake`, product);
+    console.log(`Response for product ${product.name}:`, response.data);
+
+    // Check API response for status
+    if (response.data && response.data.status) {
+      if (response.data.status.toLowerCase() === 'updated') {
+        return 'updated';
+      } else if (response.data.status.toLowerCase() === 'new') {
+        return 'new';
+      }
+    }
+
+    // Default to "new" if no status provided
+    return 'new';
+  } catch (error) {
+    console.error(`Error populating product ${product.name}:`, error.message);
+    return 'error';
+  }
+}
+const API_BASE_URL_CLASSIFY = "http://34.141.37.120:8000";
+
+const API_URL = `${API_BASE_URL_CLASSIFY}/process_products`;
+
+export const classifyAll = () => {
+  axios
+    .post(
+      API_URL,
+      { number: 'all' }, 
+      { headers: { 'Content-Type': 'application/json' } }
+    )
+    .then((response) => {
+      if (response.data.status === 'no_products') {
+        console.warn('No products to classify.');
+      }
+    })
+    .catch((error) => {
+      console.error('Error triggering classifyAll API:', error);
+    });
+};
   

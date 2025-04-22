@@ -1,0 +1,31 @@
+{
+  "baseUrl": "https://ishspirits.com/collections/frontpage",
+  "rootUrl": "https://ishspirits.com",
+  "collectionLinks": "collections/",
+  "productsLinks": "products/",
+  "seller": "seller",
+  "site_name": "ishspirits",
+  "moreConfig": true,
+  "selectors": {
+    "header": {
+      "name": "meta[property='og:title']",
+      "price": "meta[property='product:price:amount']",
+      "currency": "meta[property='product:price:currency']",
+      "description": "meta[name='description']",
+      "images": "meta[property='og:image']"
+    },
+    "main": {
+      "price": ".block-price__regular.product__price span[aria-hidden='true']",
+      "abv": "th:contains('Alcohol Content') + td",
+      "energy": "span.metafield-multi_line_text_field",
+      "sugar": "span.metafield-multi_line_text_field",
+      "gluten": "span.metafield-multi_line_text_field",
+      "vegan": "span.metafield-multi_line_text_field",
+      "producer": ".product-meta__vendor a"
+    }
+  },
+  "pagination": {
+    "type": "link",
+    "selector": "a.pagination__nav-item[rel='next']"
+  }
+}

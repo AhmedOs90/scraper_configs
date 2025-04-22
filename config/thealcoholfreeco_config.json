@@ -1,12 +1,11 @@
 {
-    "baseUrl": "https://drydrinker.com/collections/all",
-    "rootUrl": "https://drydrinker.com",
-    "collectionLinks": "collections/",
-    "productsLinks": "products/",
-    "moreConfig":true,
-    "seller":"seller",
-    "site_name":"drydrinker",
-    "skipCollectionLinksInProducts": true,
+    "baseUrl": "https://thealcoholfreeco.co.uk/product-category/beer/",
+    "rootUrl": "https://thealcoholfreeco.co.uk",
+    "collectionLinks": "product-category/",
+    "productsLinks": "product/",
+    "seller": "seller",
+    "site_name": "thealcoholfreeco",
+    "moreConfig": true,
     "selectors": {
       "header": {
         "name": "meta[property='og:title']",
@@ -16,15 +15,17 @@
         "images": "meta[property='og:image']"
       },
       "main": {
-        "abv": ".product-info__abv-unit-size span:first-of-type",
+        "abv": "th:contains('ABV') + td",
+        "energy": "th:contains('Energy') + td",
+        "sugar": "th:contains('Sugar') + td",
         "gluten": "div[data-tooltip='Gluten Free'] .sr-only",
         "vegan": "div[data-tooltip='Vegan'] .sr-only",
-        "producer": ".product-info__vendor a, .product-info__vendor span"
+        "producer": ".product-meta__vendor a"
       }
     },
     "pagination": {
       "type": "link",
-      "selector": "a.pagination__item.group[rel='next']"
+      "selector": "a.next.page-numbers"
     }
   }
   

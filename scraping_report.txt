@@ -1,0 +1,19 @@
+Total Sites Scraped: 2
+Total Products Scraped: 2
+Details per Site:
+Site Name: ishspirits
+Root URL: https://ishspirits.com
+Products Scraped: 1
+---
+Site Name: ishspirits
+Root URL: https://ishspirits.com
+Products Scraped: 1
+---
+Scraped Root URLs:
+https://drydrinker.com
+https://sansdrinks.com.au
+https://dryvariety.com
+https://alkoholfributik.dk
+https://thealcoholfreeco.co.uk
+https://www.alcoholvrijshop.nl
+https://ishspirits.com
