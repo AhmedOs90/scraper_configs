@@ -256,6 +256,9 @@ async function runCrawlerForSite( config, rootUrl) {
   const cleanup = async () => {
     console.log('Cleaning up before exit...');
     if (crawler.browserPool) {
+      await crawler.browserPool.closeAllBrowsers();
+
+
       await crawler.browserPool.destroy();
       console.log('Browser pool destroyed.');
     }
