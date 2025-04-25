@@ -45,7 +45,7 @@ function loadConfigForSite(rootUrl) {
   }
 }
 
-async function runCrawlerForSite( config, rootUrl) {
+async function runCrawlerForSite( config, rootUrl,  last = false)  {
 
 
 
@@ -299,32 +299,36 @@ async function runCrawlerForSite( config, rootUrl) {
     console.log(e);
   } 
   finally {
-    cleanup();
+    if (last) {
+      await cleanup(); // ✅ only run if this is the last site
+    }
+
   }
 }
 
 export async function runAllSites() {
-  
-  for (const rootUrl of rootUrls) {
-    try {
-      console.log(rootUrl);
-      const config = loadConfigForSite(rootUrl);
-      console.log(`Starting scraper for ${rootUrl}`);
-      await runCrawlerForSite( config, rootUrl);
+  const total = rootUrls.length;
 
+  for (let i = 0; i < total; i++) {
+    const rootUrl = rootUrls[i];
+    const isLast = i === total - 1; // ✅ true only on the last iteration
+
+    try {
+      console.log(`Starting scraper for ${rootUrl}`);
+      const config = loadConfigForSite(rootUrl);
+      await runCrawlerForSite(config, rootUrl, isLast); // ✅ pass `isLast` flag
     } catch (error) {
-      console.error(error.message);
+      console.error(`Error scraping ${rootUrl}:`, error.message);
     }
-  
   }
-  // classifyAll();
 
   generateReportFile();
+
   return {
     report: scrapedDataReport,
   };
-  
 }
+
 
 export async function runSite(domain) {
 
@@ -335,7 +339,7 @@ export async function runSite(domain) {
       if(domain == rootUrl){
         const config = loadConfigForSite(rootUrl);
         console.log(`Starting scraper for ${rootUrl}`);
-        await runCrawlerForSite( config, rootUrl);
+        await runCrawlerForSite( config, rootUrl, true);
 
         }
     } catch (error) {
