@@ -1,0 +1,36 @@
+{
+    "baseUrl": "https://www.nemlig.com/dagligvarer/drikkevarer/oel/alkoholfri",
+    "baseUrl2": "https://www.nemlig.com/vin/alkoholfri-vin",
+    "rootUrl": "https://www.nemlig.com",
+    "collectionLinks": "",
+    "productsLinks": "pageLinks",
+    "moreConfig": true,
+    "seller": "nemlig.com",
+    "site_name": "nemlig",
+    "skipCollectionLinksInProducts": true,
+    "productLinkSelector": "a.product-tile__link",
+    "productLinkAttribute": "href",
+    "selectors": {
+      "header": {
+        "name": "meta[property='og:title']",
+        "price": "meta[name='twitter:data1']",
+        "currency": "meta[property='product:price:currency']",
+        "description": "meta[property='og:description']",
+        "images": "meta[property='og:image']"
+      },
+      "main": {
+        "abv": {
+          "selector": null,
+          "regex": "(\\d+(\\.\\d+)?\\s*%)"
+        },
+        "gluten": null,
+        "vegan": null,
+        "producer": null
+      }
+    },
+    "pagination": {
+      "type": "link",
+      "selector": "a.pagination__next"
+    }
+  }
+  

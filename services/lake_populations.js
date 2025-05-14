@@ -165,3 +165,64 @@ export const classifyAll = () => {
     });
 };
   
+
+export async function saveProductsToCSV(products, filename = 'scraped_products.csv') {
+  const csvHeaders = [
+    'id',
+    'name',
+    'abv',
+    'producer',
+    'product_category',
+    'energy',
+    'sugar',
+    'price',
+    'currency',
+    'country',
+    'url',
+    'images',
+    'description',
+    'gluten_free',
+    'vegan',
+    'duplicateWith',
+    'percentDuplication',
+    'site_name',
+    'site_url',
+    'seller'
+  ];
+
+  const outputPath = path.join(process.cwd(), filename);
+
+  let writeHeader = false;
+
+  // Check if file exists
+  try {
+    await fs.promises.access(outputPath, fs.constants.F_OK);
+    writeHeader = false; // file exists, don't write header again
+  } catch (error) {
+    writeHeader = true; // file does not exist, write header
+  }
+
+  // Prepare CSV rows
+  const csvRows = products.map(product => {
+    return csvHeaders.map(header => {
+      const value = product[header] !== undefined ? product[header] : '';
+      if (typeof value === 'string' && (value.includes(',') || value.includes('"'))) {
+        return `"${value.replace(/"/g, '""')}"`;
+      }
+      return value;
+    }).join(',');
+  });
+
+  let csvContent = '';
+
+  if (writeHeader) {
+    csvContent += csvHeaders.join(',') + '\n'; // Write headers first if file is new
+  }
+
+  csvContent += csvRows.join('\n') + '\n'; // Then the data
+
+  // Append to file
+  await fs.promises.appendFile(outputPath, csvContent);
+
+  console.log(`✅ Products appended to ${outputPath}`);
+}

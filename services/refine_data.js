@@ -179,6 +179,105 @@ product.sugar = await page.evaluate(() => {
 }).catch(() => null);
 
 }
+
+if(rootUrl === "https://www.vildmedvin.dk"){
+// Extract ABV by scanning all product-attribute rows
+product.abv = await page.$$eval('.product-attribute', (rows) => {
+  for (const row of rows) {
+    const label = row.querySelector('.name span')?.textContent?.trim();
+    const value = row.querySelector('.value div')?.textContent?.trim();
+    if (label && value && label.toLowerCase().includes('alkohol')) {
+      return value;
+    }
+  }
+  return null;
+});
+if(!product.price)
+  product.price = await page.$eval('#CartContent .price.serif .weight-700', el => el.textContent.trim()).catch(() => null);
+}
+
+if(rootUrl === "https://beershoppen.dk"){
+  // Extract ABV by scanning all product-attribute rows
+  product.abv  = extractABVFromText(product.name, product.description);
+
+  }
+
+if(rootUrl === "https://shoppencph.dk"){
+  // Extract ABV by scanning all product-attribute rows
+  product.abv  = extractABVFromText(product.name, product.description);
+
+  }
+  if (rootUrl === "https://www.nemlig.com" && product.price) {
+    try {
+      await page.waitForSelector('strong.product-detail__attribute-key', { timeout: 5000 });
+      product.producer = await page.evaluate(() => {
+        const keys = document.querySelectorAll('strong.product-detail__attribute-key');
+        for (const key of keys) {
+          if (key.textContent?.trim().toLowerCase().includes('brand')) {
+            return key.parentElement?.querySelector('span.product-detail__attribute-value')?.textContent?.trim() || null;
+          }
+        }
+        return null;
+      });
+    } catch (e) {
+      console.warn('⚠️ Producer not found or wait failed.');
+    }
+  
+    try {
+      await page.waitForSelector('.product-detail__attribute-key', { timeout: 5000 });
+      product.abv = await page.evaluate(() => {
+        const keys = document.querySelectorAll('.product-detail__attribute-key');
+        for (const key of keys) {
+          const label = key.textContent?.trim().toLowerCase();
+          if (label && label.includes('alkohol-%')) {
+            const valueEl = key.parentElement?.querySelector('.product-detail__attribute-value');
+            return valueEl?.textContent?.trim().replace(',', '.');
+          }
+        }
+        return null;
+      });
+    } catch (e) {
+      console.warn('⚠️ ABV not found or wait failed.');
+    }
+  
+    try {
+      await page.waitForSelector('table', { timeout: 5000 });
+      product.energy = await page.evaluate(() => {
+        const rows = document.querySelectorAll('table tr');
+        for (const row of rows) {
+          const label = row.querySelector('td')?.textContent?.trim();
+          if (label && label.toLowerCase().includes('energi')) {
+            return row.querySelectorAll('td')[1]?.textContent?.trim();
+          }
+        }
+        return null;
+      });
+  
+      product.sugar = await page.evaluate(() => {
+        const rows = document.querySelectorAll('table tr');
+        for (const row of rows) {
+          const label = row.querySelector('td')?.textContent?.trim();
+          if (label && label.toLowerCase().includes('heraf sukkerarter')) {
+            return row.querySelectorAll('td')[1]?.textContent?.trim();
+          }
+        }
+        return null;
+      });
+    } catch (e) {
+      console.warn('⚠️ Energy or Sugar data not found or wait failed.');
+    }
+  
+    // Fallback ABV
+    if (!product.abv) {
+      product.abv = extractABVFromText(product.name, product.description);
+    }
+  
+    product.currency = "DKK";
+  }
+  
+  
+  
+  
   // Attempt to extract ABV from product.description if it's still missing
   const anotherABV = product.description.match(/(\d+\.\d+% ABV|\d+% ABV)/i);
   product.abv = product.abv || (anotherABV ? anotherABV[0] : null);
@@ -205,7 +304,19 @@ function detectCategory(productName, productDescription, categories) {
   return "Other";
 }
 
-const categories = ["Beer", "Wine", "Spirit", "Kombucha", "Cider", "Soda", "tea","soda water","can opener","gift card","Other"];
+const categories = [
+  "Beer",
+  "Wine",
+  "Spirit",
+  "RTD Cocktail",
+  "Aperitif",
+  "Sparkling Tea",
+  "Kombucha",
+  "Cider",
+  "Mixer",
+  "Other"
+]
+;
 
 // Helper function to detect vegan and gluten-free in description
 function detectVeganAndgluten_free(description) {
@@ -220,4 +331,13 @@ function detectZeroAlcohol(name, description) {
   const isZeroAlcohol = /zero[-\s]*alcohol/i.test(name) || /zero[-\s]*alcohol/i.test(description) ||
    /non[-\s]*alcohol/i.test(name) || /non[-\s]*alcohol/i.test(description) || /alcohol[-\s]*free/i.test(name) || /alcohol[-\s]*free/i.test(description) ? "0.0 ABV" : null;
   return isZeroAlcohol;
+}
+
+function extractABVFromText(name, description) {
+  const text = `${name} ${description}`.toLowerCase();
+  const match = text.match(/(\d{1,2}[.,]\d{1,2})\s*%/); // e.g. 4.5%, 0,3 %
+  if (match) {
+    return match[1].replace(',', '.') + '%';
+  }
+  return null;
 }

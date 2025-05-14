@@ -1,0 +1,31 @@
+{
+    "baseUrl": "https://shoppencph.dk/collections/alcohol-free",
+    "rootUrl": "https://shoppencph.dk",
+    "collectionLinks": "collections/",
+    "productsLinks": "products/",
+    "moreConfig": true,
+    "seller": "seller",
+    "site_name": "shoppencph",
+    "skipCollectionLinksInProducts": true,
+    "productLinkAttribute": "href",
+    "selectors": {
+      "header": {
+        "name": "meta[property='og:title']",
+        "price": "meta[property='og:price:amount']",
+        "currency": "meta[property='og:price:currency']",
+        "description": "meta[property='og:description']",
+        "images": "meta[property='og:image']"
+      },
+      "main": {
+        "abv": ".product-info__abv-unit-size span:first-of-type",
+        "gluten": "div[data-tooltip='Gluten Free'] .sr-only",
+        "vegan": "div[data-tooltip='Vegan'] .sr-only",
+        "producer": ".product-info__vendor a, .product-info__vendor span"
+      }
+    },
+    "pagination": {
+      "type": "link",
+      "selector": "a[aria-label='Next page']"
+    }
+  }
+  

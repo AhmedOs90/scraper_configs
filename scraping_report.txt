@@ -1,13 +1,9 @@
-Total Sites Scraped: 2
-Total Products Scraped: 2
+Total Sites Scraped: 1
+Total Products Scraped: 156
 Details per Site:
-Site Name: ishspirits
-Root URL: https://ishspirits.com
-Products Scraped: 1
----
-Site Name: ishspirits
-Root URL: https://ishspirits.com
-Products Scraped: 1
+Site Name: vildmedvin
+Root URL: https://www.vildmedvin.dk
+Products Scraped: 156
 ---
 Scraped Root URLs:
 https://drydrinker.com
@@ -17,3 +13,7 @@ https://alkoholfributik.dk
 https://thealcoholfreeco.co.uk
 https://www.alcoholvrijshop.nl
 https://ishspirits.com
+https://www.vildmedvin.dk
+https://beershoppen.dk
+https://shoppencph.dk
+https://www.nemlig.com

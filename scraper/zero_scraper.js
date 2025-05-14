@@ -1,5 +1,5 @@
 import { PuppeteerCrawler, purgeDefaultStorages } from 'crawlee';
-import { appendToSheet, populateLake, classifyAll } from '../services/lake_populations.js';
+import { appendToSheet, populateLake, classifyAll, } from '../services/lake_populations.js';
 import { refineData } from '../services/refine_data.js';
 import { sendScrapingReport, updateScraperStatus } from '../services/report.js';
 import { extractProductData, delay } from './helper.js';
@@ -73,104 +73,66 @@ async function runCrawlerForSite( config, rootUrl,  last = false)  {
   // const auth = await authorize(); // Ensure Google Sheets auth is initialized
 
   const crawler = new PuppeteerCrawler({
-    launchContext: {
-      launchOptions: {
-        executablePath: '/usr/bin/chromium', // Corrected path
-        headless: true,
-        args: [
-          '--no-sandbox', // Disable sandboxing for lower resource usage
-          '--disable-setuid-sandbox',
-          '--disable-gpu', // Disable GPU for headless servers
-          '--disable-software-rasterizer',
-          '--disable-dev-shm-usage', // Prevent /dev/shm from running out of space
-          '--no-zygote', // Reduce memory usage
-          '--disable-extensions', // Disable extensions
-          '--disable-background-networking', // Reduce background requests
-          '--disable-default-apps', // Disable default apps
-        ],
-        // args: [
-        //   '--no-sandbox',
-        //   '--disable-setuid-sandbox',
-        //   '--headless',
-        //   '--disable-gpu',
-        //   '--disable-software-rasterizer',
-        //   '--disable-dev-shm-usage',
-        // ],
-      },
-    },
+
+    // launchContext: {
+    //   launchOptions: {
+    //     executablePath: '/usr/bin/chromium', // Corrected path
+    //     headless: true,
+    //     args: [
+    //       '--no-sandbox', // Disable sandboxing for lower resource usage
+    //       '--disable-setuid-sandbox',
+    //       '--disable-gpu', // Disable GPU for headless servers
+    //       '--disable-software-rasterizer',
+    //       '--disable-dev-shm-usage', // Prevent /dev/shm from running out of space
+    //       '--no-zygote', // Reduce memory usage
+    //       '--disable-extensions', // Disable extensions
+    //       '--disable-background-networking', // Reduce background requests
+    //       '--disable-default-apps', // Disable default apps
+    //     ],
+    //     // args: [
+    //     //   '--no-sandbox',
+    //     //   '--disable-setuid-sandbox',
+    //     //   '--headless',
+    //     //   '--disable-gpu',
+    //     //   '--disable-software-rasterizer',
+    //     //   '--disable-dev-shm-usage',
+    //     // ],
+    //   },
+    // },
+    requestHandlerTimeoutSecs: 120, // ⬅️ Increase to 120 seconds (or more if needed)
+
     maxConcurrency: 1, // Enforces sequential processing
   
     async requestHandler({ page, request, log }) {
       log.info(`Starting requestHandler for ${request.url}`);
       const url = request.url;
-      let Prod = {}; // Initialize product object
-     
-      if (config.productsLinks === "alllinks") {
-        log.info(`"alllinks" mode enabled. Extracting all internal links on ${url}...`);
-
-        // Extract all internal links
-        const allLinks = await page.$$eval('a[href]', links => links.map(link => link.href));
-        const internalLinks = allLinks.filter(link => link.includes(rootUrl));
-
-        log.info(`Found ${internalLinks.length} internal links on ${url}`);
-
-        // Add all internal links to the Crawlee queue
-        await crawler.addRequests(internalLinks.map(link => ({ url: link })));
-        log.info('attempting to extract product data...');
-        try {
-          Prod = await extractProductData(page, config, Prod, log);
-          log.info(url)
-
-          if (Prod) {
-            Prod.id = ++productCounter;
-            Prod.url = url;
-
-            Prod = findDuplication(Prod, publicProductList);
-            Prod.site_name = site_name;
-            Prod.seller_or_not_seller = seller;
-            Prod.site_url = baseUrl;
-            publicProductList.push(Prod);
-            log.info(`Product extracted: ${JSON.stringify(Prod)}`);
-
-            // if(Prod.name != "Name not found"){
-            // appendToSheet(auth,[Prod])
-            // }
-            if(Prod.name != "Name not found"){
-            let resp = await populateLake(Prod);
-            if(resp =="updated"){
-              updatedProductsCount++; // Increment updated product count
-            }
-            else{
-              newProductsCount++; // Increment new product count
-            }
-            siteData.productsScraped += 1;
-          }
-          } else {
-            log.error('Product extraction failed, product data is null');
-          }
-        } catch (error) {
-          log.error(`Error during product extraction: ${error.message}`);
-        }
-
-    } 
-    else if (url.includes(config.productsLinks)) {
-      log.info('Product page detected. Extracting product data...');
+      let Prod = {}; 
+      let isProductPage = false;
+      // Initialize product object
       try {
         Prod = await extractProductData(page, config, Prod, log);
-        
+        log.info(`Product extracted: ${JSON.stringify(Prod)}`);
 
-        if (Prod) {
+        log.info(url)
+        if (Prod && Prod.name && Prod.name !== "Name not found" && Prod.price) {
+          isProductPage = true;
+
           Prod.id = ++productCounter;
           Prod.url = url;
 
           Prod = findDuplication(Prod, publicProductList);
           Prod.site_name = site_name;
           Prod.seller_or_not_seller = seller;
+          Prod.seller = seller;
           Prod.site_url = baseUrl;
           publicProductList.push(Prod);
-          log.info(`Product extracted: ${JSON.stringify(Prod)}`);
+          // log.info(`Product extracted: ${JSON.stringify(Prod)}`);
 
+          // if(Prod.name != "Name not found"){
           // appendToSheet(auth,[Prod])
+          // }
+          if(Prod.name != "Name not found"){
+            // saveProductsToCSV([Prod],"my_scraped_data.csv")
           let resp = await populateLake(Prod);
           if(resp =="updated"){
             updatedProductsCount++; // Increment updated product count
@@ -179,77 +141,240 @@ async function runCrawlerForSite( config, rootUrl,  last = false)  {
             newProductsCount++; // Increment new product count
           }
           siteData.productsScraped += 1;
+        }
         } else {
           log.error('Product extraction failed, product data is null');
         }
       } catch (error) {
         log.error(`Error during product extraction: ${error.message}`);
       }
-    
-  }
-    else if (url.includes(config.collectionLinks)) {
-        log.info('Collection page detected. Extracting product links...');
-        
-        if (config.pagination.type === "button") {
-          let hasMoreProducts = true;
-          let previousLinkCount = 0;
 
-          while (hasMoreProducts) {
-            const currentProductLinks = await page.$$eval('a[href*="products/"]', links => links.map(link => link.href));
-            if (currentProductLinks.length === previousLinkCount) {
-              hasMoreProducts = false;
-              log.info('No more products loaded. Pagination complete.');
-            } else {
-              previousLinkCount = currentProductLinks.length;
-              const seeMoreButton = await page.$(config.pagination.selector);
-              if (seeMoreButton) {
-                log.info('Clicking "See More" button...');
-                await seeMoreButton.click();
-                await delay(2000);
-              } else {
-                hasMoreProducts = false;
-              }
+      if (!isProductPage) {
+
+        if (config.productsLinks === "alllinks") {
+          log.info(`"alllinks" mode enabled. Extracting all internal links on ${url}...`);
+  
+          // Extract all internal links
+          const allLinks = await page.$$eval('a[href]', links => links.map(link => link.href));
+          const internalLinks = allLinks.filter(link => link.includes(rootUrl));
+  
+          log.info(`Found ${internalLinks.length} internal links on ${url}`);
+  
+          // Add all internal links to the Crawlee queue
+          await crawler.addRequests(internalLinks.map(link => ({ url: link })));
+          // log.info('attempting to extract product data...');
+          // try {
+          //   Prod = await extractProductData(page, config, Prod, log);
+          //   log.info(url)
+  
+          //   if (Prod) {
+          //     Prod.id = ++productCounter;
+          //     Prod.url = url;
+  
+          //     Prod = findDuplication(Prod, publicProductList);
+          //     Prod.site_name = site_name;
+          //     Prod.seller_or_not_seller = seller;
+          //     Prod.site_url = baseUrl;
+          //     publicProductList.push(Prod);
+          //     log.info(`Product extracted: ${JSON.stringify(Prod)}`);
+  
+          //     // if(Prod.name != "Name not found"){
+          //     // appendToSheet(auth,[Prod])
+          //     // }
+          //     if(Prod.name != "Name not found"){
+          //     let resp = await populateLake(Prod);
+          //     if(resp =="updated"){
+          //       updatedProductsCount++; // Increment updated product count
+          //     }
+          //     else{
+          //       newProductsCount++; // Increment new product count
+          //     }
+          //     siteData.productsScraped += 1;
+          //   }
+          //   } else {
+          //     log.error('Product extraction failed, product data is null');
+          //   }
+          // } catch (error) {
+          //   log.error(`Error during product extraction: ${error.message}`);
+          // }
+  
+      } 
+      if (config.productsLinks === "pageLinks" && url === config.baseUrl) {
+        log.info(`"pageLinks" mode: extracting all product links from base page ${url}`);
+      
+       
+        try {
+          await page.waitForFunction(() => {
+            delay(10000);
+          });
+        } catch (err) {
+          log.warning('⚠️ Product count didn’t load in time, fallback to 5s delay.');
+          // await page.waitForTimeout(5000);
+        }
+        
+        
+        const allLinks = await page.$$eval('a[href]', links =>
+          links
+            .map(a => a.getAttribute('href'))
+            .filter(href => href)
+            .map(href => new URL(href, window.location.origin).href)
+        );
+        
+        
+        // const allLinks = await page.$$eval('a[href]', links =>
+        //   links.map(a => a.href).filter(Boolean)
+        // );
+      
+      
+        const internalLinks = allLinks.filter(link => link.startsWith(rootUrl));
+        // internalLinks.forEach((link, i) => log.info(`🔗 Link ${i + 1}: ${link}`));
+      
+        log.info(`Found ${internalLinks.length} internal links on ${url}`);
+      
+        await crawler.addRequests(internalLinks);
+      }
+          else if (
+      await page.$(config.productLinkSelector || `a[href*="${config.productsLinks}"]`) ||
+      (config.collectionLinks && await page.$(`a[href*="${config.collectionLinks}"]`))
+    ) {
+      log.info('Page contains product links. Extracting product links dynamically...');
+    
+      // SAFETY FALLBACKS
+      const productLinkSelector = config.productLinkSelector || `a[href*="${config.productsLinks}"]`;
+      const productLinkAttribute = config.productLinkAttribute || 'href';
+    
+      if (config.pagination?.type === "button") {
+        let hasMoreProducts = true;
+        let previousLinkCount = 0;
+      
+        // ✅ Accept cookies if banner is visible
+        const cookieAcceptBtn = await page.$('button.coi-banner__accept');
+        if (cookieAcceptBtn) {
+          log.info("Cookie accept button found, clicking...");
+          await cookieAcceptBtn.click();
+          await delay(2000);
+        }
+      
+        while (hasMoreProducts) {
+          const currentProductLinks = await page.$$eval(
+            productLinkSelector,
+            (elements, baseUrl, attribute, skipCollections, collectionLinks) => {
+              return elements.map(el => {
+                let href = el.getAttribute(attribute);
+                if (!href) return null;
+                if (!href.startsWith('http')) href = baseUrl + href;
+                if (skipCollections && href.includes(collectionLinks)) return null;
+                return href;
+              }).filter(Boolean);
+            },
+            baseUrl,
+            productLinkAttribute,
+            config.skipCollectionLinksInProducts,
+            config.collectionLinks || "collections/"
+          );
+      
+          log.info(`length: ${currentProductLinks.length}`);
+      
+          if (currentProductLinks.length === previousLinkCount) {
+            log.info('No more products loaded. Pagination complete.');
+            break;
+          }
+      
+          previousLinkCount = currentProductLinks.length;
+      
+          const seeMoreButton = await page.$(config.pagination.selector);
+          if (seeMoreButton) {
+            await page.evaluate(selector => {
+              const btn = document.querySelector(selector);
+              if (btn) btn.scrollIntoView({ behavior: "instant", block: "center" });
+            }, config.pagination.selector);
+      
+            log.info('Clicking "See More" button...');
+            await seeMoreButton.click();
+      
+            try {
+              // ✅ Wait for more product cards to load (timeout fallback)
+              await page.waitForFunction(
+                (sel, count) => {
+                  return document.querySelectorAll(sel).length > count;
+                },
+                {
+                  timeout: 10000,
+                },
+                productLinkSelector,
+                previousLinkCount
+              );
+            } catch (e) {
+              log.warning("Timeout: No new products appeared after clicking.");
             }
+      
+            // await delay(2000); // still wait a bit for rendering
+          } else {
+            hasMoreProducts = false;
+            log.info('No "See More" button found. Stopping pagination.');
           }
         }
-
-        const selector = config.skipCollectionLinksInProducts
-          ? `a[href*="${config.productsLinks}"]`
-          : `a[href*="${config.productsLinks}"], a[href*="${config.collectionLinks}"]`;
-
-        const productLinks = await page.$$eval(selector, (links, baseUrl) => {
-          return links.map(link => {
-            let href = link.getAttribute('href');
-            if (!href.startsWith('http')) href = baseUrl + href;
-            return href;
-          });
-        }, baseUrl);
-
-        
-
-        log.info(`Extracted ${productLinks.length} product links`);
-        await crawler.addRequests(productLinks);
-
-        if (config.pagination.type === "link") {
-                    log.info('Handling pagination for collection page...');
-                    const nextPageLink = await page.$(config.pagination.selector);
-                    if (nextPageLink) {
-                      log.info('Next page link found, evaluating URL...');
-                      const nextPageUrl = await nextPageLink.evaluate(el => el.href);
-                      if (nextPageUrl) {
-                        log.info(`Next page URL: ${nextPageUrl}. Adding to the queue.`);
-                        await crawler.addRequests([nextPageUrl]);
-                      }
-                    } else {
-                      log.info('No next page link found. Pagination complete.');
-                    }
-                  }
-      } 
+      }
       
-    else {
-      log.info('Nothing Found. closing everything...');
+    
+      // const productLinks = await page.$$eval(productLinkSelector, (elements, baseUrl, attribute) => {
+      //   return elements.map(el => {
+      //     let href = el.getAttribute(attribute);
+      //     if (!href) return null;
+      //     if (!href.startsWith('http')) href = baseUrl + href;
+      //     return href;
+      //   }).filter(Boolean);
+      // }, baseUrl, productLinkAttribute);
+      const productLinks = await page.$$eval(
+        productLinkSelector,
+        (elements, baseUrl, attribute, skipCollections, collectionLinks, ) => {
+          return elements.map(el => {
+            let href = el.getAttribute(attribute);
+            if (!href) return null;
+            if (!href.startsWith('http')) href = baseUrl + href;
+      
+            const isCollection = href.includes(collectionLinks);
+            const isProduct  = true;
+                        // ✅ If skipping collections, return only product links
+            if (skipCollections && !isProduct) return null;
+      
+            // ✅ If not skipping, return product or collection links
+            return (isProduct || isCollection) ? href : null;
+          }).filter(Boolean);
+        },
+        baseUrl,
+        productLinkAttribute,
+        config.skipCollectionLinksInProducts,
+        config.collectionLinks || "collections/",
+      );
+      
+      
+      
+      log.info(`Extracted ${productLinks.length} product links`);
 
+      await crawler.addRequests(productLinks);
+    
+      if (config.pagination?.type === "link") {
+        log.info('Handling pagination for link-based collection page...');
+        const nextPageLink = await page.$(config.pagination.selector);
+        if (nextPageLink) {
+          const nextPageUrl = await nextPageLink.evaluate(el => el.href);
+          if (nextPageUrl) {
+            log.info(`Next page URL found: ${nextPageUrl}`);
+            await crawler.addRequests([nextPageUrl]);
+          }
+        } else {
+          log.info('No next page link found. Pagination complete.');
+        }
+      }
     }
+    
+        
+      else {
+        log.info('Nothing Found. closing everything...');
+  }
+}
+  await page.close();
     },
   });
   
