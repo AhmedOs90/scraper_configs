@@ -1,4 +1,12 @@
 export async function refineData(rootUrl, product, page) {
+  page.on('console', msg => {
+    for (let i = 0; i < msg.args().length; ++i) {
+      msg.args()[i].jsonValue().then(val => {
+        console.log(`PAGE LOG: ${val}`);
+      });
+    }
+  });
+
   if (rootUrl === "https://drydrinker.com") {
     product.energy = await page.evaluate(() => {
       const energyEl = document.evaluate("//div[contains(@class, 'feature-chart__table-row') and div[contains(text(), 'Energy')]]/div[2]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
@@ -15,7 +23,7 @@ export async function refineData(rootUrl, product, page) {
 
   if (rootUrl === "https://dryvariety.com") {
     let text = product.abv || product.description || ""; // Use description if abv text is not available
-    
+
     // Regular expressions to capture relevant information
     const abvMatch = text.match(/Alcohol[:\s]*(.*)/i);
     const energyMatch = text.match(/Energy[:\s]*(.*)/i);
@@ -31,45 +39,45 @@ export async function refineData(rootUrl, product, page) {
 
   if (rootUrl === "https://sansdrinks.com.au") {
     product.energy = await page.evaluate(() => {
-    const th = Array.from(document.querySelectorAll('th')).find(el => el.textContent.includes('Calories'));
-    return th ? th.nextElementSibling.textContent.trim() : null;
-  }).catch(() => null);
-  
-  product.sugar = await page.evaluate(() => {
-    const th = Array.from(document.querySelectorAll('th')).find(el => el.textContent.includes('Sugar'));
-    return th ? th.nextElementSibling.textContent.trim() : null;
-  }).catch(() => null);
-  
-  product.abv = await page.evaluate(() => {
-    const th = Array.from(document.querySelectorAll('th')).find(el => el.textContent.includes('ABV'));
-    return th ? th.nextElementSibling.textContent.trim() : null;
-  }).catch(() => null);
+      const th = Array.from(document.querySelectorAll('th')).find(el => el.textContent.includes('Calories'));
+      return th ? th.nextElementSibling.textContent.trim() : null;
+    }).catch(() => null);
 
-  const productDataArray = await page.evaluate(() => {
-    const scriptTags = Array.from(document.querySelectorAll('script.tpt-seo-schema'));
-    const data = [];
-    console.log("foundtag : scriptTags");
+    product.sugar = await page.evaluate(() => {
+      const th = Array.from(document.querySelectorAll('th')).find(el => el.textContent.includes('Sugar'));
+      return th ? th.nextElementSibling.textContent.trim() : null;
+    }).catch(() => null);
 
-    scriptTags.forEach(scriptTag => {
-      console.log("foundtag");
+    product.abv = await page.evaluate(() => {
+      const th = Array.from(document.querySelectorAll('th')).find(el => el.textContent.includes('ABV'));
+      return th ? th.nextElementSibling.textContent.trim() : null;
+    }).catch(() => null);
 
-      const scriptContent = scriptTag.textContent;
-      const match = scriptContent.match(/var preAsssignedValue = ({[\s\S]*?});/);
-      
-      if (match && match[1]) {
-        try {
-          const parsedData = eval('(' + match[1] + ')');
-          data.push(parsedData);
-        } catch (error) {
-          console.error('Error parsing script content:', error);
+    const productDataArray = await page.evaluate(() => {
+      const scriptTags = Array.from(document.querySelectorAll('script.tpt-seo-schema'));
+      const data = [];
+      console.log("foundtag : scriptTags");
+
+      scriptTags.forEach(scriptTag => {
+        console.log("foundtag");
+
+        const scriptContent = scriptTag.textContent;
+        const match = scriptContent.match(/var preAsssignedValue = ({[\s\S]*?});/);
+
+        if (match && match[1]) {
+          try {
+            const parsedData = eval('(' + match[1] + ')');
+            data.push(parsedData);
+          } catch (error) {
+            console.error('Error parsing script content:', error);
+          }
         }
-      }
-    });
-    
-    return data;
-  });
+      });
 
- if (productDataArray && productDataArray.length > 0) {
+      return data;
+    });
+
+    if (productDataArray && productDataArray.length > 0) {
       productDataArray.forEach(data => {
         product.producer = data["product.vendor"] || product.producer;
       });
@@ -90,7 +98,7 @@ export async function refineData(rootUrl, product, page) {
     }
     // product.country = "AU";
 
-}
+  }
 
   if (rootUrl === "https://alkoholfributik.dk") {
     product.abv = await page.evaluate(() => {
@@ -123,88 +131,88 @@ export async function refineData(rootUrl, product, page) {
       }
       return null;
     }).catch(() => null);
-    
-   
-  
-}
 
-if (rootUrl === "https://www.alcoholvrijshop.nl") {
-  product.energy = await page.evaluate(() => {
-    const th = Array.from(document.querySelectorAll('th')).find(el => el.textContent.includes('Energie'));
-    return th ? th.nextElementSibling.textContent.trim() : null;
-  }).catch(() => null);
-  
-  product.sugar = await page.evaluate(() => {
-    const th = Array.from(document.querySelectorAll('th')).find(el => el.textContent.includes('waarvan suikers'));
-    return th ? th.nextElementSibling.textContent.trim() : null;
-  }).catch(() => null);
-  
-  product.abv = await page.evaluate(() => {
-    const th = Array.from(document.querySelectorAll('th')).find(el => el.textContent.includes('Alcoholgehalte'));
-    return th ? th.nextElementSibling.textContent.trim() : null;
-  }).catch(() => null);
 
-  product.producer = await page.evaluate(() => {
-    const th = Array.from(document.querySelectorAll('th')).find(el => el.textContent.includes('Merk'));
-    return th ? th.nextElementSibling.textContent.trim() : null;
-  }).catch(() => null);
-}
 
-if(rootUrl === "https://ishspirits.com"){
-  product.producer = "Ish"
- 
-product.country = "DK"
-product.currency = "KR"
+  }
 
-product.energy = await page.evaluate(() => {
-    const elements = document.querySelectorAll("span.metafield-multi_line_text_field");
-    for (let el of elements) {
+  if (rootUrl === "https://www.alcoholvrijshop.nl") {
+    product.energy = await page.evaluate(() => {
+      const th = Array.from(document.querySelectorAll('th')).find(el => el.textContent.includes('Energie'));
+      return th ? th.nextElementSibling.textContent.trim() : null;
+    }).catch(() => null);
+
+    product.sugar = await page.evaluate(() => {
+      const th = Array.from(document.querySelectorAll('th')).find(el => el.textContent.includes('waarvan suikers'));
+      return th ? th.nextElementSibling.textContent.trim() : null;
+    }).catch(() => null);
+
+    product.abv = await page.evaluate(() => {
+      const th = Array.from(document.querySelectorAll('th')).find(el => el.textContent.includes('Alcoholgehalte'));
+      return th ? th.nextElementSibling.textContent.trim() : null;
+    }).catch(() => null);
+
+    product.producer = await page.evaluate(() => {
+      const th = Array.from(document.querySelectorAll('th')).find(el => el.textContent.includes('Merk'));
+      return th ? th.nextElementSibling.textContent.trim() : null;
+    }).catch(() => null);
+  }
+
+  if (rootUrl === "https://ishspirits.com") {
+    product.producer = "Ish"
+
+    product.country = "DK"
+    product.currency = "KR"
+
+    product.energy = await page.evaluate(() => {
+      const elements = document.querySelectorAll("span.metafield-multi_line_text_field");
+      for (let el of elements) {
         console.log("Checking:", el.innerText); // Debugging Step
         if (el.textContent.includes("Energy:")) {
-            return el.textContent.split("Energy:")[1].split("\n")[0].trim();  // Extracts until first line break
+          return el.textContent.split("Energy:")[1].split("\n")[0].trim();  // Extracts until first line break
         }
-    }
-    return null;
-}).catch(() => null);
+      }
+      return null;
+    }).catch(() => null);
 
-product.sugar = await page.evaluate(() => {
-    const elements = document.querySelectorAll("span.metafield-multi_line_text_field");
-    for (let el of elements) {
+    product.sugar = await page.evaluate(() => {
+      const elements = document.querySelectorAll("span.metafield-multi_line_text_field");
+      for (let el of elements) {
         console.log("Checking:", el.innerText); // Debugging Step
         if (el.textContent.includes("of which sugars:")) {
-            return el.textContent.split("of which sugars:")[1].split("\n")[0].trim();  // Extracts until first line break
+          return el.textContent.split("of which sugars:")[1].split("\n")[0].trim();  // Extracts until first line break
         }
-    }
-    return null;
-}).catch(() => null);
-
-}
-
-if(rootUrl === "https://www.vildmedvin.dk"){
-// Extract ABV by scanning all product-attribute rows
-product.abv = await page.$$eval('.product-attribute', (rows) => {
-  for (const row of rows) {
-    const label = row.querySelector('.name span')?.textContent?.trim();
-    const value = row.querySelector('.value div')?.textContent?.trim();
-    if (label && value && label.toLowerCase().includes('alkohol')) {
-      return value;
-    }
-  }
-  return null;
-});
-if(!product.price)
-  product.price = await page.$eval('#CartContent .price.serif .weight-700', el => el.textContent.trim()).catch(() => null);
-}
-
-if(rootUrl === "https://beershoppen.dk"){
-  // Extract ABV by scanning all product-attribute rows
-  product.abv  = extractABVFromText(product.name, product.description);
+      }
+      return null;
+    }).catch(() => null);
 
   }
 
-if(rootUrl === "https://shoppencph.dk"){
-  // Extract ABV by scanning all product-attribute rows
-  product.abv  = extractABVFromText(product.name, product.description);
+  if (rootUrl === "https://www.vildmedvin.dk") {
+    // Extract ABV by scanning all product-attribute rows
+    product.abv = await page.$$eval('.product-attribute', (rows) => {
+      for (const row of rows) {
+        const label = row.querySelector('.name span')?.textContent?.trim();
+        const value = row.querySelector('.value div')?.textContent?.trim();
+        if (label && value && label.toLowerCase().includes('alkohol')) {
+          return value;
+        }
+      }
+      return null;
+    });
+    if (!product.price)
+      product.price = await page.$eval('#CartContent .price.serif .weight-700', el => el.textContent.trim()).catch(() => null);
+  }
+
+  if (rootUrl === "https://beershoppen.dk") {
+    // Extract ABV by scanning all product-attribute rows
+    product.abv = extractABVFromText(product.name, product.description);
+
+  }
+
+  if (rootUrl === "https://shoppencph.dk") {
+    // Extract ABV by scanning all product-attribute rows
+    product.abv = extractABVFromText(product.name, product.description);
 
   }
   if (rootUrl === "https://www.nemlig.com" && product.price) {
@@ -222,7 +230,7 @@ if(rootUrl === "https://shoppencph.dk"){
     } catch (e) {
       console.warn('⚠️ Producer not found or wait failed.');
     }
-  
+
     try {
       await page.waitForSelector('.product-detail__attribute-key', { timeout: 5000 });
       product.abv = await page.evaluate(() => {
@@ -239,7 +247,7 @@ if(rootUrl === "https://shoppencph.dk"){
     } catch (e) {
       console.warn('⚠️ ABV not found or wait failed.');
     }
-  
+
     try {
       await page.waitForSelector('table', { timeout: 5000 });
       product.energy = await page.evaluate(() => {
@@ -252,7 +260,7 @@ if(rootUrl === "https://shoppencph.dk"){
         }
         return null;
       });
-  
+
       product.sugar = await page.evaluate(() => {
         const rows = document.querySelectorAll('table tr');
         for (const row of rows) {
@@ -266,22 +274,133 @@ if(rootUrl === "https://shoppencph.dk"){
     } catch (e) {
       console.warn('⚠️ Energy or Sugar data not found or wait failed.');
     }
-  
+
     // Fallback ABV
     if (!product.abv) {
       product.abv = extractABVFromText(product.name, product.description);
     }
-  
+
     product.currency = "DKK";
   }
-  
-  
-  
-  
+  if (rootUrl === "https://thezeroproof.com") {
+
+    product.producer = await page.evaluate(() => {
+      const scriptTag = document.querySelector('#viewed_product');
+      if (!scriptTag) return null;
+
+      const content = scriptTag.textContent;
+      const match = content.match(/Brand:\s*"([^"]+)"/);
+      return match ? match[1] : null;
+    });
+  }
+
+  if (rootUrl === "https://proofnomore.com") {
+
+    product.producer = await page.evaluate(() => {
+      const scriptTag = document.querySelector('#viewed_product');
+      if (!scriptTag) return null;
+
+      const content = scriptTag.textContent;
+      const match = content.match(/Brand:\s*"([^"]+)"/);
+      return match ? match[1] : null;
+    });
+
+  }
+  if (rootUrl === "https://drinknolow.com") {
+
+    product.producer = await page.evaluate(() => {
+      const scriptTag = document.querySelector('#viewed_product');
+      if (!scriptTag) return null;
+
+      const content = scriptTag.textContent;
+      const match = content.match(/Brand:\s*"([^"]+)"/);
+      return match ? match[1] : null;
+    });
+
+    const { vegan, glutenfree } = await page.evaluate(() => {
+      const spans = document.querySelectorAll('span.metafield-multi_line_text_field');
+      if (!spans.length) return { vegan: false, glutenfree: false };
+
+      const text = Array.from(spans)
+        .map(span => span.innerText)
+        .join(' ')
+        .toLowerCase();
+
+      return {
+        vegan: text.includes('vegan'),
+        glutenfree: text.includes('gluten'),
+      };
+    });
+
+
+    product.vegan = vegan;
+    product.gluten_free = glutenfree;
+  }
+
+  if (rootUrl === "https://worldofnix.com") {
+
+    product.producer = await page.evaluate(() => {
+      const scriptTag = document.querySelector('#viewed_product');
+      if (!scriptTag) return null;
+
+      const content = scriptTag.textContent;
+      const match = content.match(/Brand:\s*"([^"]+)"/);
+      return match ? match[1] : null;
+    });
+
+    product.energy = await page.evaluate(() => {
+      const items = document.querySelectorAll("li.details-list__item");
+      // Debugging Step
+      console.log("Items found:", items.length); // Debugging Step
+      for (let item of items) {
+        const title = item.querySelector(".details-list__title")?.textContent.trim().toLowerCase();
+        // console.log("Checking:", title); // Debugging Step
+        const value = item.querySelector(".details-list__content")?.textContent.trim();
+        // console.log("Value:", value); // Debugging Step
+        if (title && title.includes("energy")) {
+          return value;
+        }
+      }
+      return null;
+    }).catch(() => null);
+
+    product.sugar = await page.evaluate(() => {
+      const items = document.querySelectorAll("li.details-list__item");
+      for (let item of items) {
+        const title = item.querySelector(".details-list__title")?.textContent.trim().toLowerCase();
+        const value = item.querySelector(".details-list__content")?.textContent.trim();
+        if (title && title.includes("sugar")) {
+          return value;
+        }
+      }
+      return null;
+    }).catch(() => null);
+
+
+  }
+
+  if (rootUrl === "https://www.beyondbeer.de") {
+    product.abv = await page.evaluate(() => {
+      const rows = document.querySelectorAll("table.product-detail-properties-table tr.properties-row");
+      for (let row of rows) {
+        const label = row.querySelector("th.properties-label")?.textContent.trim().toLowerCase();
+        const value = row.querySelector("td.properties-value")?.textContent.trim();
+
+        if (label && label.includes("alkoholgehalt")) {
+          return value;
+        }
+      }
+      return null;
+    }).catch(() => null);
+
+  }
+
+
+
   // Attempt to extract ABV from product.description if it's still missing
   const anotherABV = product.description.match(/(\d+\.\d+% ABV|\d+% ABV)/i);
   product.abv = product.abv || (anotherABV ? anotherABV[0] : null);
-  
+
   product.abv = product.abv || detectZeroAlcohol(product.name, product.description);
   // Check for vegan and gluten-free if not set
   const { isVegan, isgluten_free } = detectVeganAndgluten_free(product.description || "");
@@ -316,7 +435,7 @@ const categories = [
   "Mixer",
   "Other"
 ]
-;
+  ;
 
 // Helper function to detect vegan and gluten-free in description
 function detectVeganAndgluten_free(description) {
@@ -329,7 +448,7 @@ function detectVeganAndgluten_free(description) {
 // Helper function to check for "zero alcohol" in name or description
 function detectZeroAlcohol(name, description) {
   const isZeroAlcohol = /zero[-\s]*alcohol/i.test(name) || /zero[-\s]*alcohol/i.test(description) ||
-   /non[-\s]*alcohol/i.test(name) || /non[-\s]*alcohol/i.test(description) || /alcohol[-\s]*free/i.test(name) || /alcohol[-\s]*free/i.test(description) ? "0.0 ABV" : null;
+    /non[-\s]*alcohol/i.test(name) || /non[-\s]*alcohol/i.test(description) || /alcohol[-\s]*free/i.test(name) || /alcohol[-\s]*free/i.test(description) ? "0.0 ABV" : null;
   return isZeroAlcohol;
 }
 

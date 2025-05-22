@@ -1,0 +1,32 @@
+{
+    "baseUrl": "https://thezeroproof.com/collections/all",
+    "rootUrl": "https://thezeroproof.com",
+    "collectionLinks": "collections/",
+    "productsLinks": "products/",
+    "moreConfig":true,
+    "seller":"seller",
+    "bannerSkip": "button.klaviyo-close-form",
+    "site_name":"thezeroproof",
+    "skipCollectionLinksInProducts": true,
+    "selectors": {
+      "header": {
+        "name": "meta[property='og:title']",
+        "price": "meta[property='og:price:amount']",
+        "currency": "meta[property='og:price:currency']",
+        "description": "meta[name='description']",
+        "images": "meta[property='og:image']"
+      },
+      "main": {
+        "abv": ".product-info__abv-unit-size span:first-of-type",
+        "gluten": "div[data-tooltip='Gluten Free'] .sr-only",
+        "vegan": "div[data-tooltip='Vegan'] .sr-only",
+        "producer": ".product-info__vendor a, .product-info__vendor span"
+      }
+    },
+    "pagination": {
+  "type": "button",
+"selector": "button.js-load-more-btn-all"
+
+}
+
+  }

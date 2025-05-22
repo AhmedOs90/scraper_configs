@@ -1,9 +1,9 @@
 Total Sites Scraped: 1
-Total Products Scraped: 156
+Total Products Scraped: 39
 Details per Site:
-Site Name: vildmedvin
-Root URL: https://www.vildmedvin.dk
-Products Scraped: 156
+Site Name: nemlig
+Root URL: https://www.nemlig.com
+Products Scraped: 39
 ---
 Scraped Root URLs:
 https://drydrinker.com
@@ -17,3 +17,8 @@ https://www.vildmedvin.dk
 https://beershoppen.dk
 https://shoppencph.dk
 https://www.nemlig.com
+https://thezeroproof.com
+https://proofnomore.com
+https://drinknolow.com
+https://worldofnix.com
+https://www.beyondbeer.de

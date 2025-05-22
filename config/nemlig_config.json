@@ -1,6 +1,6 @@
 {
     "baseUrl": "https://www.nemlig.com/dagligvarer/drikkevarer/oel/alkoholfri",
-    "baseUrl2": "https://www.nemlig.com/vin/alkoholfri-vin",
+    "baseUrlS": "https://www.nemlig.com/vin/alkoholfri-vin",
     "rootUrl": "https://www.nemlig.com",
     "collectionLinks": "",
     "productsLinks": "pageLinks",
