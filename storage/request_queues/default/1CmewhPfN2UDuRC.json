@@ -1,0 +1,9 @@
+{
+	"id": "1CmewhPfN2UDuRC",
+	"json": "{\"id\":\"1CmewhPfN2UDuRC\",\"url\":\"https://thezeroproof.com/collections/all/products/buy-lyres-dark-n-spicy\",\"uniqueKey\":\"https://thezeroproof.com/collections/all/products/buy-lyres-dark-n-spicy\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":3411,\"name\":\"Lyre's Dark & Spicy Ready to Drink (4-pack)\",\"abv\":null,\"producer\":\"Lyre's\",\"product_category\":\"Other\",\"energy\":null,\"sugar\":null,\"price\":\"17.99\",\"currency\":\"USD\",\"country\":null,\"url\":\"https://thezeroproof.com/collections/all/products/buy-lyres-dark-n-spicy\",\"images\":\"https://thezeroproof.com/cdn/shop/files/lyres-dark-spicy-ready-to-drink-4-pack-507704-664637_1000x1000.png?v=1739233037\",\"description\":\"The Lyre's take on a Dark 'n Stormy. Aromatic, spiced, and rich. Toffee, spiced dark fruit on the nose. Ginger, toasted nuts, and lime zest make for a complex yet approachable palate. Enjoy from the can or dress it up with glassware and a garnish.\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"thezeroproof\",\"site_url\":\"https://thezeroproof.com\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear and category is not explicitly valid\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
+	"method": "GET",
+	"orderNo": 1748995313496,
+	"retryCount": 0,
+	"uniqueKey": "https://thezeroproof.com/collections/all/products/buy-lyres-dark-n-spicy",
+	"url": "https://thezeroproof.com/collections/all/products/buy-lyres-dark-n-spicy"
+}

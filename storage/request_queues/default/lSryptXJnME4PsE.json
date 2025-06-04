@@ -1,0 +1,9 @@
+{
+	"id": "lSryptXJnME4PsE",
+	"json": "{\"id\":\"lSryptXJnME4PsE\",\"url\":\"https://sansdrinks.com.au/products/nocktail-mai-tai-premixed-mocktail\",\"uniqueKey\":\"https://sansdrinks.com.au/products/nocktail-mai-tai-premixed-mocktail\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":602,\"name\":\"Nocktail Mai Tai Premixed Mocktail |  Sans Drinks  Australia  \",\"abv\":null,\"producer\":\"Nocktail\",\"product_category\":\"Other\",\"energy\":null,\"sugar\":null,\"price\":\"12.60\",\"currency\":\"AUD\",\"country\":null,\"url\":\"https://sansdrinks.com.au/products/nocktail-mai-tai-premixed-mocktail\",\"images\":\"http://sansdrinks.com.au/cdn/shop/products/NocktailMaiTaiPremixedMocktail_58f0d80a-30b7-4f05-aba4-e70eb5213061.jpg?v=1708602551\",\"description\":\"This Nocktail Mai Tai honours the legendary 1940s creation by 'Trader Vic' Bergeron, capturing the essence of tiki culture in an alcoho \\n\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"sansdrinks\",\"site_url\":\"https://sansdrinks.com.au\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear and category is 'Other', which requires further clarification\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
+	"method": "GET",
+	"orderNo": 1748995312948,
+	"retryCount": 0,
+	"uniqueKey": "https://sansdrinks.com.au/products/nocktail-mai-tai-premixed-mocktail",
+	"url": "https://sansdrinks.com.au/products/nocktail-mai-tai-premixed-mocktail"
+}

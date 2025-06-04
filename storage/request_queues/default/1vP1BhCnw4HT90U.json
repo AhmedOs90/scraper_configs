@@ -1,0 +1,9 @@
+{
+	"id": "1vP1BhCnw4HT90U",
+	"json": "{\"id\":\"1vP1BhCnw4HT90U\",\"url\":\"https://thezeroproof.com/collections/all/products/ghia-le-fizz-strawberry-orange-blossom-750ml\",\"uniqueKey\":\"https://thezeroproof.com/collections/all/products/ghia-le-fizz-strawberry-orange-blossom-750ml\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":3535,\"name\":\"Ghia - Le Fizz Strawberry Orange Blossom (750ml)\",\"abv\":null,\"producer\":\"Ghia\",\"product_category\":\"Other\",\"energy\":null,\"sugar\":null,\"price\":\"19.99\",\"currency\":\"USD\",\"country\":null,\"url\":\"https://thezeroproof.com/collections/all/products/ghia-le-fizz-strawberry-orange-blossom-750ml\",\"images\":\"https://thezeroproof.com/cdn/shop/files/ghia-le-fizz-strawberry-orange-blossom-750ml-536401-394075_2000x2000.png?v=1739208425\",\"description\":\"It's kind of a sweet story: orange blossom meets strawberry. Juicy main character energy. Tangity-tang and a dry finish. Mixed with bubbles, oui-oui. Gently effervescent with a smooth mouthfeel. A touch sweet, refreshingly tart, and dry at the finish. Zesty, juicy and bright, led by strawberry and orange blossom notes.\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"thezeroproof\",\"site_url\":\"https://thezeroproof.com\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear and category is 'Other', which requires further clarification\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
+	"method": "GET",
+	"orderNo": 1748995313501,
+	"retryCount": 0,
+	"uniqueKey": "https://thezeroproof.com/collections/all/products/ghia-le-fizz-strawberry-orange-blossom-750ml",
+	"url": "https://thezeroproof.com/collections/all/products/ghia-le-fizz-strawberry-orange-blossom-750ml"
+}

@@ -1,0 +1,9 @@
+{
+	"id": "sczY8ZAB2iQ4yFJ",
+	"json": "{\"id\":\"sczY8ZAB2iQ4yFJ\",\"url\":\"https://sansdrinks.com.au/products/giesen-0-new-zealand-rose\",\"uniqueKey\":\"https://sansdrinks.com.au/products/giesen-0-new-zealand-rose\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":611,\"name\":\"Giesen 0% New Zealand Rose |  Sans Drinks  Australia  \",\"abv\":null,\"producer\":\"Giesen\",\"product_category\":\"Wine\",\"energy\":null,\"sugar\":null,\"price\":\"19.95\",\"currency\":\"AUD\",\"country\":null,\"url\":\"https://sansdrinks.com.au/products/giesen-0-new-zealand-rose\",\"images\":\"http://sansdrinks.com.au/cdn/shop/products/GiesenRose_a4f4c340-c98d-42c3-9a16-b8c8c0bdb3cd.jpg?v=1708602418\",\"description\":\"From the distinguished Giesen winery, renowned for their premium New Zealand wines. The Giesen 0% New Zealand Rosé is meticulously craf \\n\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"sansdrinks\",\"site_url\":\"https://sansdrinks.com.au\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
+	"method": "GET",
+	"orderNo": 1748995312954,
+	"retryCount": 0,
+	"uniqueKey": "https://sansdrinks.com.au/products/giesen-0-new-zealand-rose",
+	"url": "https://sansdrinks.com.au/products/giesen-0-new-zealand-rose"
+}

@@ -226,3 +226,25 @@ export async function saveProductsToCSV(products, filename = 'scraped_products.c
 
   console.log(`✅ Products appended to ${outputPath}`);
 }
+
+
+export async function getClassifiedNeedsInvestigation() {
+  const API_URL = 'http://34.141.37.120:3002/lake/classified';
+  const payload = {
+    classifiedValue: 2,      // needs investigation
+    page: 0,
+    rowsPerPage: 10000,
+    reviewed: null,
+    cleaned: 0
+  };
+
+  try {
+    const response = await axios.post(API_URL, payload);
+    const products = response.data?.products || [];
+    return products;
+  } catch (error) {
+    console.error('❌ Error fetching needs investigation products:', error.message);
+    return [];
+  }
+}
+

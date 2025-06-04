@@ -1,0 +1,9 @@
+{
+	"id": "SjIAAKLjMEwh4ce",
+	"json": "{\"id\":\"SjIAAKLjMEwh4ce\",\"url\":\"https://sansdrinks.com.au/products/free-deluxe-sparkling-red-wine-set\",\"uniqueKey\":\"https://sansdrinks.com.au/products/free-deluxe-sparkling-red-wine-set\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":409,\"name\":\"FREE Deluxe Sparkling & Red Wine Set |  Sans Drinks  Australia  \",\"abv\":null,\"producer\":\"Sans Drinks\",\"product_category\":\"Wine\",\"energy\":null,\"sugar\":null,\"price\":\"29.00\",\"currency\":\"AUD\",\"country\":null,\"url\":\"https://sansdrinks.com.au/products/free-deluxe-sparkling-red-wine-set\",\"images\":\"http://sansdrinks.com.au/cdn/shop/files/freesample3bottles.webp?v=1742180473\",\"description\":\"\\n\\nThis time, it’s all about treating yourself right.\\nEnjoy a FREE Deluxe Sparkling &amp; Red Wine Set when you spend over $70 at Sans D \\n\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"sansdrinks\",\"site_url\":\"https://sansdrinks.com.au\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear and the product appears to be a multipack\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
+	"method": "GET",
+	"orderNo": 1748995673609,
+	"retryCount": 0,
+	"uniqueKey": "https://sansdrinks.com.au/products/free-deluxe-sparkling-red-wine-set",
+	"url": "https://sansdrinks.com.au/products/free-deluxe-sparkling-red-wine-set"
+}

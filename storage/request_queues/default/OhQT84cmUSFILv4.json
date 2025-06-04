@@ -1,0 +1,9 @@
+{
+	"id": "OhQT84cmUSFILv4",
+	"json": "{\"id\":\"OhQT84cmUSFILv4\",\"url\":\"https://worldofnix.com/en/products/all-the-bitter-aromatic\",\"uniqueKey\":\"https://worldofnix.com/en/products/all-the-bitter-aromatic\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":3686,\"name\":\"All The Bitter Aromatic - Alcoholvrije bitter | World of NIX\",\"abv\":null,\"producer\":\"All the bitter\",\"product_category\":\"Other\",\"energy\":\"\",\"sugar\":\"0 g\",\"price\":\"24,19\",\"currency\":\"EUR\",\"country\":null,\"url\":\"https://worldofnix.com/en/products/all-the-bitter-aromatic\",\"images\":\"http://worldofnix.com/cdn/shop/files/all-the-bitter-aromatic-world-of-nix-1.png?v=1721046432\",\"description\":\"Powerful All The Bitters Aromatic. Add character to your cocktails or mix with soda for an invigorating twist. Dare to explore the boundaries of taste?\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"worldofnix\",\"site_url\":\"https://worldofnix.com\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"Unclear category and missing ABV information\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
+	"method": "GET",
+	"orderNo": 1748995313558,
+	"retryCount": 0,
+	"uniqueKey": "https://worldofnix.com/en/products/all-the-bitter-aromatic",
+	"url": "https://worldofnix.com/en/products/all-the-bitter-aromatic"
+}

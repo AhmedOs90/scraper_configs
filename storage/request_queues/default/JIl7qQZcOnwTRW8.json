@@ -1,0 +1,9 @@
+{
+	"id": "JIl7qQZcOnwTRW8",
+	"json": "{\"id\":\"JIl7qQZcOnwTRW8\",\"url\":\"https://sansdrinks.com.au/products/monday-non-alcoholic-paloma\",\"uniqueKey\":\"https://sansdrinks.com.au/products/monday-non-alcoholic-paloma\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":633,\"name\":\"Monday Distillery Paloma |  Sans Drinks  Australia  \",\"abv\":null,\"producer\":\"Monday Distillery\",\"product_category\":\"Other\",\"energy\":null,\"sugar\":null,\"price\":\"16.00\",\"currency\":\"AUD\",\"country\":null,\"url\":\"https://sansdrinks.com.au/products/monday-non-alcoholic-paloma\",\"images\":\"http://sansdrinks.com.au/cdn/shop/files/Monday_Distillery_Paloma.jpg?v=1723616994\",\"description\":\"\\nThe Monday Distillery Paloma is a pre-mixed and ready to drink tequila inspired mocktail crafted with a blend of bold grapefruit and p \\n\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"sansdrinks\",\"site_url\":\"https://sansdrinks.com.au\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear and category is 'Other', which requires further clarification\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
+	"method": "GET",
+	"orderNo": 1748995312957,
+	"retryCount": 0,
+	"uniqueKey": "https://sansdrinks.com.au/products/monday-non-alcoholic-paloma",
+	"url": "https://sansdrinks.com.au/products/monday-non-alcoholic-paloma"
+}

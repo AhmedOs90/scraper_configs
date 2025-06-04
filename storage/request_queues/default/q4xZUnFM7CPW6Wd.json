@@ -1,0 +1,9 @@
+{
+	"id": "q4xZUnFM7CPW6Wd",
+	"json": "{\"id\":\"q4xZUnFM7CPW6Wd\",\"url\":\"https://thezeroproof.com/collections/all/products/proxies-gold-crush\",\"uniqueKey\":\"https://thezeroproof.com/collections/all/products/proxies-gold-crush\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":3589,\"name\":\"Proxies Gold Crush\",\"abv\":null,\"producer\":\"Proxies\",\"product_category\":\"Wine\",\"energy\":null,\"sugar\":null,\"price\":\"28.00\",\"currency\":\"USD\",\"country\":null,\"url\":\"https://thezeroproof.com/collections/all/products/proxies-gold-crush\",\"images\":\"https://thezeroproof.com/cdn/shop/files/BottlesBundlePNG_4_1000x1000.png?v=1739370311\",\"description\":\"It’s the Gold Crush! If you’re digging for treasure, look no further: Bright bubbles balance ripe peach, fragrant yuzu, and a hint of fennel on the finish. Proxies offers “a new form of wine alternative” — through layered blends of fruit, teas, spices, and botanicals. Try one, try 'em all.\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"thezeroproof\",\"site_url\":\"https://thezeroproof.com\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
+	"method": "GET",
+	"orderNo": 1748995313504,
+	"retryCount": 0,
+	"uniqueKey": "https://thezeroproof.com/collections/all/products/proxies-gold-crush",
+	"url": "https://thezeroproof.com/collections/all/products/proxies-gold-crush"
+}

@@ -1,0 +1,9 @@
+{
+	"id": "apGpslYCzcA7Plb",
+	"json": "{\"id\":\"apGpslYCzcA7Plb\",\"url\":\"https://www.alcoholvrijshop.nl/gin-mule-mocktail-pakket\",\"uniqueKey\":\"https://www.alcoholvrijshop.nl/gin-mule-mocktail-pakket\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":2275,\"name\":\"Gin Mule - Mocktail Pakket\",\"abv\":null,\"producer\":\"Lyre's\",\"product_category\":\"Other\",\"energy\":\"10 kCal / 43 Kj\",\"sugar\":\"1 g\",\"price\":\"29.23\",\"currency\":\"EUR\",\"country\":null,\"url\":\"https://www.alcoholvrijshop.nl/gin-mule-mocktail-pakket\",\"images\":\"https://www.alcoholvrijshop.nl/media/catalog/product/cache/f9572dad0fbf57ad9228b073e7175037/g/i/gin-mule-v3.png\",\"description\":\"Koop Gin Mule - Mocktail Pakket alcoholvrije cocktail voor slechts 26.82 ✅ Bestel eenvoudig online ✅ Veilig bezorgd ✅ Kopersbescherming\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"alcoholvrijshop\",\"site_url\":\"https://www.alcoholvrijshop.nl\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear and category is 'Other'\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
+	"method": "GET",
+	"orderNo": 1748995313057,
+	"retryCount": 0,
+	"uniqueKey": "https://www.alcoholvrijshop.nl/gin-mule-mocktail-pakket",
+	"url": "https://www.alcoholvrijshop.nl/gin-mule-mocktail-pakket"
+}

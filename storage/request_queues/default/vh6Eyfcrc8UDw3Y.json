@@ -1,0 +1,9 @@
+{
+	"id": "vh6Eyfcrc8UDw3Y",
+	"json": "{\"id\":\"vh6Eyfcrc8UDw3Y\",\"url\":\"https://sansdrinks.com.au/products/i-love-yuzu-margarita-cocktail\",\"uniqueKey\":\"https://sansdrinks.com.au/products/i-love-yuzu-margarita-cocktail\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":412,\"name\":\"I LOVE Yuzu Margarita Cocktail |  Sans Drinks  Australia  \",\"abv\":null,\"producer\":\"The Ethical Drinks\",\"product_category\":\"Other\",\"energy\":null,\"sugar\":null,\"price\":\"3.00\",\"currency\":\"AUD\",\"country\":null,\"url\":\"https://sansdrinks.com.au/products/i-love-yuzu-margarita-cocktail\",\"images\":\"http://sansdrinks.com.au/cdn/shop/files/ILOVEYuzuMargaritaCocktail_d9b6d151-77a3-4a72-b6c4-0d6967737855.jpg?v=1741758576\",\"description\":\"The I LOVE Yuzu Margarita brings the bold flavour of yuzu citrus into a classic Margarita mocktail. Offering a fresh, tangy profile, th \\n\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"sansdrinks\",\"site_url\":\"https://sansdrinks.com.au\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear and category is 'Other', which requires further clarification\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
+	"method": "GET",
+	"orderNo": 1748995493609,
+	"retryCount": 0,
+	"uniqueKey": "https://sansdrinks.com.au/products/i-love-yuzu-margarita-cocktail",
+	"url": "https://sansdrinks.com.au/products/i-love-yuzu-margarita-cocktail"
+}

@@ -1,0 +1,9 @@
+{
+	"id": "rbhIYdrsM85hitG",
+	"json": "{\"id\":\"rbhIYdrsM85hitG\",\"url\":\"https://thezeroproof.com/collections/all/products/proxies-bubbly-white-cans-4-pack\",\"uniqueKey\":\"https://thezeroproof.com/collections/all/products/proxies-bubbly-white-cans-4-pack\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":3591,\"name\":\"Proxies Bubbly White Cans (4-Pack)\",\"abv\":null,\"producer\":\"Proxies\",\"product_category\":\"Wine\",\"energy\":null,\"sugar\":null,\"price\":\"19.99\",\"currency\":\"USD\",\"country\":null,\"url\":\"https://thezeroproof.com/collections/all/products/proxies-bubbly-white-cans-4-pack\",\"images\":\"https://thezeroproof.com/cdn/shop/files/proxies-bubbly-white-cans-4-pack-537704-271673_2048x2048.png?v=1740238190\",\"description\":\"Proxies blends fruit, teas, spices, and botanicals to create beautifully complex wine alternatives. This convenient can is ready to enjoy straight from the source or poured into a glass, offering vibrant notes of peach, grapefruit zest, pomelo, mint, lilac, and black tea with a hibiscus  body. Pair it with a summery Ca\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"thezeroproof\",\"site_url\":\"https://thezeroproof.com\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear and the product description mentions tea, which may indicate it's not a traditional wine\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
+	"method": "GET",
+	"orderNo": 1748995313505,
+	"retryCount": 0,
+	"uniqueKey": "https://thezeroproof.com/collections/all/products/proxies-bubbly-white-cans-4-pack",
+	"url": "https://thezeroproof.com/collections/all/products/proxies-bubbly-white-cans-4-pack"
+}

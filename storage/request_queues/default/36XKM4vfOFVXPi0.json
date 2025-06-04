@@ -1,0 +1,9 @@
+{
+	"id": "36XKM4vfOFVXPi0",
+	"json": "{\"id\":\"36XKM4vfOFVXPi0\",\"url\":\"https://www.nemlig.com/bon-voyage-sparkling-rose-5058189\",\"uniqueKey\":\"https://www.nemlig.com/bon-voyage-sparkling-rose-5058189\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":3276,\"name\":\"Bon Voyage Sparkling Rosé – Leveret med nemlig.com\",\"abv\":null,\"producer\":null,\"product_category\":\"Other\",\"energy\":null,\"sugar\":null,\"price\":\"49,95 DKK\",\"currency\":\"DKK\",\"country\":null,\"url\":\"https://www.nemlig.com/bon-voyage-sparkling-rose-5058189\",\"images\":\"https://www.nemlig.com/scommerce/images/bon-voyage-sparkling-rose.jpg?i=NmDbLfB2/5058189\",\"description\":\"Køb Bon Voyage Sparkling Rosé og flere tusind andre dagligvarer hos nemlig.com. Levering direkte til døren, nemt og ligetil.\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"nemlig\",\"site_url\":\"https://www.nemlig.com\",\"seller_or_not_seller\":\"nemlig.com\",\"classified\":2,\"reason\":\"ABV is unclear and category is not explicitly defined\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
+	"method": "GET",
+	"orderNo": 1748995313493,
+	"retryCount": 0,
+	"uniqueKey": "https://www.nemlig.com/bon-voyage-sparkling-rose-5058189",
+	"url": "https://www.nemlig.com/bon-voyage-sparkling-rose-5058189"
+}

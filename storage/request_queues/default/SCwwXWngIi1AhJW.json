@@ -1,0 +1,9 @@
+{
+	"id": "SCwwXWngIi1AhJW",
+	"json": "{\"id\":\"SCwwXWngIi1AhJW\",\"url\":\"https://thezeroproof.com/collections/all/products/kally-verjus-sparkler-750-ml\",\"uniqueKey\":\"https://thezeroproof.com/collections/all/products/kally-verjus-sparkler-750-ml\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":3543,\"name\":\"Kally Verjus Sparkler (750 ml)\",\"abv\":null,\"producer\":\"Kally\",\"product_category\":\"Wine\",\"energy\":null,\"sugar\":null,\"price\":\"27.99\",\"currency\":\"USD\",\"country\":null,\"url\":\"https://thezeroproof.com/collections/all/products/kally-verjus-sparkler-750-ml\",\"images\":\"https://thezeroproof.com/cdn/shop/files/kally-verjus-sparkler-750-ml-526401-601509_1000x1000.png?v=1739208494\",\"description\":\"Crisp microbubbles combine with California Chardonnay verjus, offering a lively sparkling wine alternative. From Kally's 2023 harvest. The season was longer and cooler than years prior, making harvest unusually late. Handpicked grapes with the perfect balance of acids and sugars. Highlights the high acidity, bold miner\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"thezeroproof\",\"site_url\":\"https://thezeroproof.com\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
+	"method": "GET",
+	"orderNo": 1748995313501,
+	"retryCount": 0,
+	"uniqueKey": "https://thezeroproof.com/collections/all/products/kally-verjus-sparkler-750-ml",
+	"url": "https://thezeroproof.com/collections/all/products/kally-verjus-sparkler-750-ml"
+}

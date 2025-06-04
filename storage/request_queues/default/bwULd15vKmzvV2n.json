@@ -1,0 +1,9 @@
+{
+	"id": "bwULd15vKmzvV2n",
+	"json": "{\"id\":\"bwULd15vKmzvV2n\",\"url\":\"https://thezeroproof.com/collections/all/products/oddbird-gsm-single-bottle-6-pack\",\"uniqueKey\":\"https://thezeroproof.com/collections/all/products/oddbird-gsm-single-bottle-6-pack\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":3593,\"name\":\"Oddbird GSM Single Bottle-6-Pack\",\"abv\":null,\"producer\":\"Oddbird\",\"product_category\":\"Wine\",\"energy\":null,\"sugar\":null,\"price\":\"149.94\",\"currency\":\"USD\",\"country\":null,\"url\":\"https://thezeroproof.com/collections/all/products/oddbird-gsm-single-bottle-6-pack\",\"images\":\"https://thezeroproof.com/cdn/shop/files/oddbird-gsm-single-bottle-6-pack-519506-318873_1080x1080.jpeg?v=1739575426\",\"description\":\"A silky, mature and dry red wine from Saint-Chinian in South of France, harvest in 2020. GSM is characterized by its acidity and earthy notes with fruity touches. GSM is made from Grenache, Syrah, Mourvèdre, and Carignan, creating layers with different complexities starting with red and black fruits and a sharp tannic \",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"thezeroproof\",\"site_url\":\"https://thezeroproof.com\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
+	"method": "GET",
+	"orderNo": 1748995313514,
+	"retryCount": 0,
+	"uniqueKey": "https://thezeroproof.com/collections/all/products/oddbird-gsm-single-bottle-6-pack",
+	"url": "https://thezeroproof.com/collections/all/products/oddbird-gsm-single-bottle-6-pack"
+}

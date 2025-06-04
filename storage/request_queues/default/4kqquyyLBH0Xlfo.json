@@ -1,0 +1,9 @@
+{
+	"id": "4kqquyyLBH0Xlfo",
+	"json": "{\"id\":\"4kqquyyLBH0Xlfo\",\"url\":\"https://thealcoholfreeco.co.uk/product/darling-cellars-de-alcoholised-sparkling-blanc/\",\"uniqueKey\":\"https://thealcoholfreeco.co.uk/product/darling-cellars-de-alcoholised-sparkling-blanc\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":1500,\"name\":\"Darling Cellars – DE-ALCOHOLISED SPARKLING BLANC\",\"abv\":null,\"producer\":null,\"product_category\":\"Other\",\"energy\":null,\"sugar\":null,\"price\":\"9.49\",\"currency\":\"GBP\",\"country\":null,\"url\":\"https://thealcoholfreeco.co.uk/product/darling-cellars-de-alcoholised-sparkling-blanc/\",\"images\":\"https://thealcoholfreeco.co.uk/wp-content/uploads/2025/03/Untitled-design-2025-03-22T203301.149.png\",\"description\":\"An elegant white sparkling with aromas of green apple and sweet pear following through to a balanced palate with a lively sparkle and lingering finish that leaves you wanting more.\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"thealcoholfreeco\",\"site_url\":\"https://thealcoholfreeco.co.uk\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear and category is not explicitly valid\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
+	"method": "GET",
+	"orderNo": 1748995313006,
+	"retryCount": 0,
+	"uniqueKey": "https://thealcoholfreeco.co.uk/product/darling-cellars-de-alcoholised-sparkling-blanc",
+	"url": "https://thealcoholfreeco.co.uk/product/darling-cellars-de-alcoholised-sparkling-blanc/"
+}

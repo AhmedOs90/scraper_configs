@@ -1,0 +1,9 @@
+{
+	"id": "0RkF1T3sigsjzq4",
+	"json": "{\"id\":\"0RkF1T3sigsjzq4\",\"url\":\"https://worldofnix.com/en/products/seasn-light\",\"uniqueKey\":\"https://worldofnix.com/en/products/seasn-light\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":3805,\"name\":\"Seasn Light | 0.0 bitter for refreshing mocktails\",\"abv\":null,\"producer\":\"Seasn\",\"product_category\":\"Other\",\"energy\":\"1013 kJ/243 kcal\",\"sugar\":\"0.1g\",\"price\":\"27,49\",\"currency\":\"EUR\",\"country\":null,\"url\":\"https://worldofnix.com/en/products/seasn-light\",\"images\":\"http://worldofnix.com/cdn/shop/files/Packshot_Seasn_Bitter_Light_green_a27a777b-1069-43e7-84b6-59d1753e7237.png?v=1744633086\",\"description\":\"Take your mocktails to the next level with Seasn Light. Enriched with lime, grapefruit and rosemary for a unique taste experience. Vegan and sugar-free.\",\"gluten_free\":null,\"vegan\":\"Vegan\",\"duplicated_with\":null,\"probability\":null,\"site_name\":\"worldofnix\",\"site_url\":\"https://worldofnix.com\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"Unclear category and missing ABV information\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
+	"method": "GET",
+	"orderNo": 1748995313564,
+	"retryCount": 0,
+	"uniqueKey": "https://worldofnix.com/en/products/seasn-light",
+	"url": "https://worldofnix.com/en/products/seasn-light"
+}

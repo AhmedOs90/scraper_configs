@@ -1,0 +1,9 @@
+{
+	"id": "u38b2nVaXN0i3nH",
+	"json": "{\"id\":\"u38b2nVaXN0i3nH\",\"url\":\"https://beershoppen.dk/collections/alkoholfri-ol/products/alkoholfri-ol-smagekasse\",\"uniqueKey\":\"https://beershoppen.dk/collections/alkoholfri-ol/products/alkoholfri-ol-smagekasse\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":3044,\"name\":\"Alkoholfri øl-smagekasse - Et mix af de bedste 12 øl uden alkohol\",\"abv\":null,\"producer\":null,\"product_category\":\"Other\",\"energy\":null,\"sugar\":null,\"price\":\"395,00\",\"currency\":\"DKK\",\"country\":null,\"url\":\"https://beershoppen.dk/collections/alkoholfri-ol/products/alkoholfri-ol-smagekasse\",\"images\":\"http://beershoppen.dk/cdn/shop/products/alkoholfri-ol_1200x1200.jpg?v=1668521474\",\"description\":\"I denne smagekasse får du et mix af de bedste 12 alkoholfri øl på markedet - nøje udvalgt af vores ølmester Henrik Feldthaus. Du får et bredt udvalg af forskellige øltyper, og kassen byder dermed på øloplevelser for enhver smag. Billedet er vejledende - antal og øltyper udvælges løbende.  Bemærk: I Danmark er det tilla\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"beershoppen\",\"site_url\":\"https://beershoppen.dk\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear and category is not explicitly valid\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
+	"method": "GET",
+	"orderNo": 1748995313470,
+	"retryCount": 0,
+	"uniqueKey": "https://beershoppen.dk/collections/alkoholfri-ol/products/alkoholfri-ol-smagekasse",
+	"url": "https://beershoppen.dk/collections/alkoholfri-ol/products/alkoholfri-ol-smagekasse"
+}

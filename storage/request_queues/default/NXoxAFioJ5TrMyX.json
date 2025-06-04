@@ -1,0 +1,9 @@
+{
+	"id": "NXoxAFioJ5TrMyX",
+	"json": "{\"id\":\"NXoxAFioJ5TrMyX\",\"url\":\"https://dryvariety.com/products/noughty-wine-bundle\",\"uniqueKey\":\"https://dryvariety.com/products/noughty-wine-bundle\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":913,\"name\":\"Noughty Wine Bundle\",\"abv\":null,\"producer\":\"Dry Variety\",\"product_category\":\"Wine\",\"energy\":null,\"sugar\":null,\"price\":\"120.00\",\"currency\":\"CAD\",\"country\":null,\"url\":\"https://dryvariety.com/products/noughty-wine-bundle\",\"images\":\"http://dryvariety.com/cdn/shop/files/Dry_Variety_noughty_non-alcoholic_wine_bundles2000x1800_5.png?v=1730749434\",\"description\":\"A bundle of each award winning Noughty dealcoholized wines by Thompson and Scott. The lineup included to 5 incredible options – from their OG sparkling chardonnay and rosé to a rich red, crisp white, and refreshing still rosé.⁠These fan-favorites hold a special place on our shelves and in our hearts, and they’re yours \",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"dryvariety\",\"site_url\":\"https://dryvariety.com\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
+	"method": "GET",
+	"orderNo": 1748995312976,
+	"retryCount": 0,
+	"uniqueKey": "https://dryvariety.com/products/noughty-wine-bundle",
+	"url": "https://dryvariety.com/products/noughty-wine-bundle"
+}

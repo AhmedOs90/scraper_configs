@@ -1,0 +1,9 @@
+{
+	"id": "oyLejVHAxVODbxr",
+	"json": "{\"id\":\"oyLejVHAxVODbxr\",\"url\":\"https://ishspirits.com/collections/non-alcoholic-wine/products/all-things-sparkling\",\"loadedUrl\":\"https://ishspirits.com/da/products/all-things-sparkling\",\"uniqueKey\":\"https://ishspirits.com/collections/non-alcoholic-wine/products/all-things-sparkling\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":334,\"name\":\"All Things Sparkling\",\"abv\":null,\"producer\":\"Ish\",\"product_category\":\"Other\",\"energy\":null,\"sugar\":null,\"price\":\"€3295\",\"currency\":\"KR\",\"country\":\"DK\",\"url\":\"https://ishspirits.com/collections/non-alcoholic-wine/products/all-things-sparkling\",\"images\":\"http://ishspirits.com/cdn/shop/files/Skaermbillede2024-05-14kl.11.58.51_1.png?v=1730812142\",\"description\":\"Bubbles for every occasion Are you looking for the perfect bubbles to celebrate big moments or just to make an ordinary evening extra festive? Our All Things Sparkling gives you everything you need to toast in style – completely without alcohol. Whether it's for New Year's Eve, birthdays or a simple good night out with\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"ishspirits\",\"site_url\":\"https://ishspirits.com\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"Unclear category and ABV is not specified\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0},\"__crawlee\":{\"state\":4}},\"handledAt\":\"2025-06-04T00:02:10.441Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://ishspirits.com/collections/non-alcoholic-wine/products/all-things-sparkling",
+	"url": "https://ishspirits.com/collections/non-alcoholic-wine/products/all-things-sparkling"
+}

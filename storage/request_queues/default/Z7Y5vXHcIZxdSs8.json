@@ -1,0 +1,9 @@
+{
+	"id": "Z7Y5vXHcIZxdSs8",
+	"json": "{\"id\":\"Z7Y5vXHcIZxdSs8\",\"url\":\"https://worldofnix.com/en/products/tempera-the-collection\",\"uniqueKey\":\"https://worldofnix.com/en/products/tempera-the-collection\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":3815,\"name\":\"Tempera The Collection – Premium wine alternatives | 0.0%\",\"abv\":null,\"producer\":\"Tempera\",\"product_category\":\"Wine\",\"energy\":\"100 kJ/38 kcal\",\"sugar\":\"1.8g\",\"price\":\"98,99\",\"currency\":\"EUR\",\"country\":null,\"url\":\"https://worldofnix.com/en/products/tempera-the-collection\",\"images\":\"http://worldofnix.com/cdn/shop/files/Alcoholvrij_pakket_Tempera_collectie.png?v=1741420498\",\"description\":\"Discover Tempera The Collection, an exclusive wine alternative with rich flavors. Perfect for every occasion. Order now and enjoy without compromise!\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"worldofnix\",\"site_url\":\"https://worldofnix.com\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is listed as 'None', but the description mentions 0.0% ABV, and the category is Wine, which may not align with being a wine alternative\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
+	"method": "GET",
+	"orderNo": 1748995313566,
+	"retryCount": 0,
+	"uniqueKey": "https://worldofnix.com/en/products/tempera-the-collection",
+	"url": "https://worldofnix.com/en/products/tempera-the-collection"
+}

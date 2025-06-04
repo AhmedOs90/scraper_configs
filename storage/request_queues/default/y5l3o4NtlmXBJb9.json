@@ -1,0 +1,9 @@
+{
+	"id": "y5l3o4NtlmXBJb9",
+	"json": "{\"id\":\"y5l3o4NtlmXBJb9\",\"url\":\"https://worldofnix.com/en/products/tempera-tierra\",\"uniqueKey\":\"https://worldofnix.com/en/products/tempera-tierra\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":3816,\"name\":\"Tempera Tierra – Characterful alternative to red wine\",\"abv\":null,\"producer\":\"Tempera\",\"product_category\":\"Wine\",\"energy\":\"48 kJ/11 kcal\",\"sugar\":\"2.5g\",\"price\":\"18,69\",\"currency\":\"EUR\",\"country\":null,\"url\":\"https://worldofnix.com/en/products/tempera-tierra\",\"images\":\"http://worldofnix.com/cdn/shop/files/Packshot_Tempera_Tierra_d873b33c-aaf3-4eb8-ba44-f68caa5526a5.png?v=1740665612\",\"description\":\"Tempera Tierra is an alternative to red wine with deep flavors and rich aromas. Made by a Michelin chef in France. Order and experience the quality!\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"worldofnix\",\"site_url\":\"https://worldofnix.com\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
+	"method": "GET",
+	"orderNo": 1748995313566,
+	"retryCount": 0,
+	"uniqueKey": "https://worldofnix.com/en/products/tempera-tierra",
+	"url": "https://worldofnix.com/en/products/tempera-tierra"
+}

@@ -1,0 +1,9 @@
+{
+	"id": "WkqcJLtnQ4ime81",
+	"json": "{\"id\":\"WkqcJLtnQ4ime81\",\"url\":\"https://sansdrinks.com.au/products/brewtropic-approved-leave\",\"uniqueKey\":\"https://sansdrinks.com.au/products/brewtropic-approved-leave\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":646,\"name\":\"Brewtropic Approved Leave |  Sans Drinks  Australia  \",\"abv\":null,\"producer\":\"BREWTROPIC\",\"product_category\":\"Beer\",\"energy\":null,\"sugar\":null,\"price\":\"6.25\",\"currency\":\"AUD\",\"country\":null,\"url\":\"https://sansdrinks.com.au/products/brewtropic-approved-leave\",\"images\":\"http://sansdrinks.com.au/cdn/shop/products/BrewtropicApprovedLeave_b8995da0-8de1-4080-a8a7-9566289e47d2.jpg?v=1708602345\",\"description\":\"BREWTROPIC Approved Leave is a tropical sour beer crafted with a 1990s Miami Beach holiday in mind. This low-calorie, pacific sour-styl \\n\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"sansdrinks\",\"site_url\":\"https://sansdrinks.com.au\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
+	"method": "GET",
+	"orderNo": 1748995312958,
+	"retryCount": 0,
+	"uniqueKey": "https://sansdrinks.com.au/products/brewtropic-approved-leave",
+	"url": "https://sansdrinks.com.au/products/brewtropic-approved-leave"
+}

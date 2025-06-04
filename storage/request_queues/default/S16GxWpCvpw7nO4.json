@@ -1,0 +1,9 @@
+{
+	"id": "S16GxWpCvpw7nO4",
+	"json": "{\"id\":\"S16GxWpCvpw7nO4\",\"url\":\"https://thezeroproof.com/collections/all/products/proxies-brut-rose\",\"uniqueKey\":\"https://thezeroproof.com/collections/all/products/proxies-brut-rose\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":3590,\"name\":\"Proxies Brut Rosé & Balanced Sparkling Wine\",\"abv\":null,\"producer\":\"Proxies\",\"product_category\":\"Wine\",\"energy\":null,\"sugar\":null,\"price\":\"28.00\",\"currency\":\"USD\",\"country\":null,\"url\":\"https://thezeroproof.com/collections/all/products/proxies-brut-rose\",\"images\":\"https://thezeroproof.com/cdn/shop/files/BottlesBundlePNG_5_1000x1000.png?v=1739371991\",\"description\":\"Looking for something to toast with? You're in the right place. Proxies Brut Rosé provides a balanced blend of tart raspberry, zesty lemon, summer peach, elderflower, and jasmine. Proxies are designed to be paired: Try shrimp rolls, prosciutto with peaches, or sushi. Cheers!\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"thezeroproof\",\"site_url\":\"https://thezeroproof.com\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
+	"method": "GET",
+	"orderNo": 1748995313504,
+	"retryCount": 0,
+	"uniqueKey": "https://thezeroproof.com/collections/all/products/proxies-brut-rose",
+	"url": "https://thezeroproof.com/collections/all/products/proxies-brut-rose"
+}

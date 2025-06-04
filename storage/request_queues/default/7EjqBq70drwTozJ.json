@@ -1,0 +1,9 @@
+{
+	"id": "7EjqBq70drwTozJ",
+	"json": "{\"id\":\"7EjqBq70drwTozJ\",\"url\":\"https://thealcoholfreeco.co.uk/product/nogne-svart-hvit-milk-stout-0-0-2/\",\"uniqueKey\":\"https://thealcoholfreeco.co.uk/product/nogne-svart-hvit-milk-stout-0-0-2\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":1653,\"name\":\"Nogne - Svart/Hvit Milk Stout 0.0%\",\"abv\":null,\"producer\":null,\"product_category\":\"Other\",\"energy\":null,\"sugar\":null,\"price\":\"2.89\",\"currency\":\"GBP\",\"country\":null,\"url\":\"https://thealcoholfreeco.co.uk/product/nogne-svart-hvit-milk-stout-0-0-2/\",\"images\":\"https://thealcoholfreeco.co.uk/wp-content/uploads/2021/11/PhotoRoom-20211108-210803.png\",\"description\":\"Dark, flavourful and exhilarating. Rich with coffee, chocolate and vanilla flavours.\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"thealcoholfreeco\",\"site_url\":\"https://thealcoholfreeco.co.uk\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear, although the description mentions 0.0%, it is not explicitly stated in the ABV field\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
+	"method": "GET",
+	"orderNo": 1748995313015,
+	"retryCount": 0,
+	"uniqueKey": "https://thealcoholfreeco.co.uk/product/nogne-svart-hvit-milk-stout-0-0-2",
+	"url": "https://thealcoholfreeco.co.uk/product/nogne-svart-hvit-milk-stout-0-0-2/"
+}

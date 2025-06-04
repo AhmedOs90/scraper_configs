@@ -1,0 +1,9 @@
+{
+	"id": "61C35fUjAxbDrvE",
+	"json": "{\"id\":\"61C35fUjAxbDrvE\",\"url\":\"https://thezeroproof.com/collections/all/products/curious-elixir-no-9\",\"uniqueKey\":\"https://thezeroproof.com/collections/all/products/curious-elixir-no-9\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":3501,\"name\":\"Curious Elixir No. 9 - Sparkling Rosé with Key Lime\",\"abv\":null,\"producer\":\"Curious Elixirs\",\"product_category\":\"Other\",\"energy\":null,\"sugar\":null,\"price\":\"49.00\",\"currency\":\"USD\",\"country\":null,\"url\":\"https://thezeroproof.com/collections/all/products/curious-elixir-no-9\",\"images\":\"https://thezeroproof.com/cdn/shop/files/curious-elixir-no-9-sparkling-rose-with-key-lime-530004-524984_1500x1500.png?v=1739208432\",\"description\":\"A sparkling, creative take on rosé. Chardonnay grapes infused with extracts of rose, key lime, pine, echinacea, California poppy, and a touch of French oak. South African kanna to mellow the mind. Curious No. 9 is ready-to-pour. Serve chilled in a coupe with a lime wheel or an edible rosebud.\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"thezeroproof\",\"site_url\":\"https://thezeroproof.com\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear and category is not explicitly valid\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
+	"method": "GET",
+	"orderNo": 1748995313500,
+	"retryCount": 0,
+	"uniqueKey": "https://thezeroproof.com/collections/all/products/curious-elixir-no-9",
+	"url": "https://thezeroproof.com/collections/all/products/curious-elixir-no-9"
+}

@@ -1,0 +1,9 @@
+{
+	"id": "EMRPW5wrCBVtqpO",
+	"json": "{\"id\":\"EMRPW5wrCBVtqpO\",\"url\":\"https://thealcoholfreeco.co.uk/product/case-of-10-pimento-250ml/\",\"uniqueKey\":\"https://thealcoholfreeco.co.uk/product/case-of-10-pimento-250ml\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":1363,\"name\":\"Case of 10 Pimento 250ml\",\"abv\":null,\"producer\":null,\"product_category\":\"Other\",\"energy\":null,\"sugar\":null,\"price\":\"17.49\",\"currency\":\"GBP\",\"country\":null,\"url\":\"https://thealcoholfreeco.co.uk/product/case-of-10-pimento-250ml/\",\"images\":\"https://thealcoholfreeco.co.uk/wp-content/uploads/2020/04/IMG_2083.jpg\",\"description\":\"pimento chilli and ginger drink,firey ginger mixed with chilli, uk stockist of pimento ginger and chill to trade and public get your pimento gingembre today\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"thealcoholfreeco\",\"site_url\":\"https://thealcoholfreeco.co.uk\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"Unclear ABV and category\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
+	"method": "GET",
+	"orderNo": 1748995312990,
+	"retryCount": 0,
+	"uniqueKey": "https://thealcoholfreeco.co.uk/product/case-of-10-pimento-250ml",
+	"url": "https://thealcoholfreeco.co.uk/product/case-of-10-pimento-250ml/"
+}

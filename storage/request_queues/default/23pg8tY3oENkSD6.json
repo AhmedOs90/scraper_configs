@@ -1,0 +1,9 @@
+{
+	"id": "23pg8tY3oENkSD6",
+	"json": "{\"id\":\"23pg8tY3oENkSD6\",\"url\":\"https://worldofnix.com/en/products/winzer-krems-gruner-veltliner\",\"uniqueKey\":\"https://worldofnix.com/en/products/winzer-krems-gruner-veltliner\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":3831,\"name\":\"Winzer Krems Grüner Veltliner | Fresh Austrian white wine\",\"abv\":null,\"producer\":\"Winzer Krems\",\"product_category\":\"Wine\",\"energy\":\"70 kJ/17 kcal\",\"sugar\":\"2.5g\",\"price\":\"12,09\",\"currency\":\"EUR\",\"country\":null,\"url\":\"https://worldofnix.com/en/products/winzer-krems-gruner-veltliner\",\"images\":\"http://worldofnix.com/cdn/shop/files/Packshot_Gruner_Veltliner_Winzer_Krems.png?v=1742891276\",\"description\":\"Discover the Winzer Krems Grüner Veltliner: a refreshing Austrian white wine with hints of citrus and pepper. Perfect as an aperitif or with light dishes.\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"worldofnix\",\"site_url\":\"https://worldofnix.com\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
+	"method": "GET",
+	"orderNo": 1748995313567,
+	"retryCount": 0,
+	"uniqueKey": "https://worldofnix.com/en/products/winzer-krems-gruner-veltliner",
+	"url": "https://worldofnix.com/en/products/winzer-krems-gruner-veltliner"
+}

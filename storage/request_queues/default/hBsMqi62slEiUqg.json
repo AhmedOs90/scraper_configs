@@ -1,0 +1,9 @@
+{
+	"id": "hBsMqi62slEiUqg",
+	"json": "{\"id\":\"hBsMqi62slEiUqg\",\"url\":\"https://sansdrinks.com.au/products/non-8-torched-apple-oolong\",\"uniqueKey\":\"https://sansdrinks.com.au/products/non-8-torched-apple-oolong\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":589,\"name\":\"Non 8 Torched Apple & OOlong |  Sans Drinks  Australia  \",\"abv\":null,\"producer\":\"NON\",\"product_category\":\"Wine\",\"energy\":null,\"sugar\":null,\"price\":\"24.00\",\"currency\":\"AUD\",\"country\":null,\"url\":\"https://sansdrinks.com.au/products/non-8-torched-apple-oolong\",\"images\":\"http://sansdrinks.com.au/cdn/shop/products/Non8TorchedApple_OOlong_b911b4e3-5422-4953-9fae-53fee8b70887.jpg?v=1708602567\",\"description\":\"NON8 is an apple-based beverage employing winery techniques involving apple skin contact. Something of high minerality and high acidity \\n\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"sansdrinks\",\"site_url\":\"https://sansdrinks.com.au\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear and category is borderline, as it's described as an apple-based beverage but categorized as Wine\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
+	"method": "GET",
+	"orderNo": 1748995312946,
+	"retryCount": 0,
+	"uniqueKey": "https://sansdrinks.com.au/products/non-8-torched-apple-oolong",
+	"url": "https://sansdrinks.com.au/products/non-8-torched-apple-oolong"
+}

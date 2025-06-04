@@ -1,0 +1,9 @@
+{
+	"id": "oBdznJOLzUboLIB",
+	"json": "{\"id\":\"oBdznJOLzUboLIB\",\"url\":\"https://thealcoholfreeco.co.uk/product/gimber-n2-brut/\",\"uniqueKey\":\"https://thealcoholfreeco.co.uk/product/gimber-n2-brut\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":1527,\"name\":\"GIMBER N°2 Brut\",\"abv\":null,\"producer\":null,\"product_category\":\"Other\",\"energy\":null,\"sugar\":null,\"price\":\"26.95\",\"currency\":\"GBP\",\"country\":null,\"url\":\"https://thealcoholfreeco.co.uk/product/gimber-n2-brut/\",\"images\":null,\"description\":\"GIMBER N°2 Brut: that's 50% less sugar, some premium Yuzu and lemon thyme.\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"thealcoholfreeco\",\"site_url\":\"https://thealcoholfreeco.co.uk\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
+	"method": "GET",
+	"orderNo": 1748995313009,
+	"retryCount": 0,
+	"uniqueKey": "https://thealcoholfreeco.co.uk/product/gimber-n2-brut",
+	"url": "https://thealcoholfreeco.co.uk/product/gimber-n2-brut/"
+}

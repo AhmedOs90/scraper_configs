@@ -1,0 +1,9 @@
+{
+	"id": "lwsnKGwkjVEXmgB",
+	"json": "{\"id\":\"lwsnKGwkjVEXmgB\",\"url\":\"https://ishspirits.com/collections/non-alcoholic-cocktails/products/try-it-box-2\",\"loadedUrl\":\"https://ishspirits.com/da/products/try-it-box-2\",\"uniqueKey\":\"https://ishspirits.com/collections/non-alcoholic-cocktails/products/try-it-box-2\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":308,\"name\":\"Try-it Box\",\"abv\":null,\"producer\":\"Ish\",\"product_category\":\"Other\",\"energy\":null,\"sugar\":null,\"price\":\"€1695\",\"currency\":\"KR\",\"country\":\"DK\",\"url\":\"https://ishspirits.com/collections/non-alcoholic-cocktails/products/try-it-box-2\",\"images\":\"http://ishspirits.com/cdn/shop/files/Cocktails_d2ea1a1a-57c5-4dc7-9d1f-d7d96d21c671.jpg?v=1730211748\",\"description\":\"Try them all Our Try-it Box is the best way for you to try all of our award-winning premixed cocktails. Although we can vouch for all of them, you might enjoy one over the other so here's to the mindful explorer and to finding your personal favorite. They come in nifty little cans which are perfect for a single serving\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"ishspirits\",\"site_url\":\"https://ishspirits.com\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"Unclear ABV and category\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0},\"__crawlee\":{\"state\":4}},\"handledAt\":\"2025-06-04T00:02:06.731Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://ishspirits.com/collections/non-alcoholic-cocktails/products/try-it-box-2",
+	"url": "https://ishspirits.com/collections/non-alcoholic-cocktails/products/try-it-box-2"
+}

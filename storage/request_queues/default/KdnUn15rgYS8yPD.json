@@ -1,0 +1,9 @@
+{
+	"id": "KdnUn15rgYS8yPD",
+	"json": "{\"id\":\"KdnUn15rgYS8yPD\",\"url\":\"https://www.alcoholvrijshop.nl/manhattan-mocktail-pakket\",\"uniqueKey\":\"https://www.alcoholvrijshop.nl/manhattan-mocktail-pakket\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":2980,\"name\":\"Manhattan - Mocktail Pakket\",\"abv\":null,\"producer\":\"Lyre's\",\"product_category\":\"Other\",\"energy\":\"61 kCal / 261 Kj\",\"sugar\":\"15 g\",\"price\":\"63.41\",\"currency\":\"EUR\",\"country\":null,\"url\":\"https://www.alcoholvrijshop.nl/manhattan-mocktail-pakket\",\"images\":\"https://www.alcoholvrijshop.nl/media/catalog/product/cache/f9572dad0fbf57ad9228b073e7175037/m/a/manhattan-v2.png\",\"description\":\"Koop Manhattan - Mocktail Pakket alcoholvrije cocktail voor slechts 58.17 ✅ Bestel eenvoudig online ✅ Veilig bezorgd ✅ Kopersbescherming\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"alcoholvrijshop\",\"site_url\":\"https://www.alcoholvrijshop.nl\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear and category is 'Other'\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
+	"method": "GET",
+	"orderNo": 1748995313456,
+	"retryCount": 0,
+	"uniqueKey": "https://www.alcoholvrijshop.nl/manhattan-mocktail-pakket",
+	"url": "https://www.alcoholvrijshop.nl/manhattan-mocktail-pakket"
+}

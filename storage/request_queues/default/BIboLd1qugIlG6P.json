@@ -1,0 +1,9 @@
+{
+	"id": "BIboLd1qugIlG6P",
+	"json": "{\"id\":\"BIboLd1qugIlG6P\",\"url\":\"https://www.vildmedvin.dk/gustavshof-zero-zero-alkoholfri\",\"uniqueKey\":\"https://www.vildmedvin.dk/gustavshof-zero-zero-alkoholfri\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":3214,\"name\":\"Gustavshof, Zero Zero Alkoholfri\",\"abv\":null,\"producer\":null,\"product_category\":\"Other\",\"energy\":null,\"sugar\":null,\"price\":\"99,00 kr.\",\"currency\":\"DKK\",\"country\":null,\"url\":\"https://www.vildmedvin.dk/gustavshof-zero-zero-alkoholfri\",\"images\":\"https://www.vildmedvin.dk/img/600/600/resize/g/u/gustavshof-zero-zero-alkoholfrei-rheinhessen-tyskland.jpg\",\"description\":\"Køb Gustavshof, Zero Zero Alkoholfri hos Vildmedvin. Her får du prisgaranti og fri fragt, og kan optjene bonus online og i butik.\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"vildmedvin\",\"site_url\":\"https://www.vildmedvin.dk\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
+	"method": "GET",
+	"orderNo": 1748995313477,
+	"retryCount": 0,
+	"uniqueKey": "https://www.vildmedvin.dk/gustavshof-zero-zero-alkoholfri",
+	"url": "https://www.vildmedvin.dk/gustavshof-zero-zero-alkoholfri"
+}

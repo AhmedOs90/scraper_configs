@@ -1,0 +1,9 @@
+{
+	"id": "XnmE7eEHMHMgsf0",
+	"json": "{\"id\":\"XnmE7eEHMHMgsf0\",\"url\":\"https://www.nemlig.com/bon-voyage-sauvignon-blanc-5058185\",\"uniqueKey\":\"https://www.nemlig.com/bon-voyage-sauvignon-blanc-5058185\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":3269,\"name\":\"Bon Voyage Sauvignon Blanc – Leveret med nemlig.com\",\"abv\":null,\"producer\":null,\"product_category\":\"Other\",\"energy\":null,\"sugar\":null,\"price\":\"40,0 DKK\",\"currency\":\"DKK\",\"country\":null,\"url\":\"https://www.nemlig.com/bon-voyage-sauvignon-blanc-5058185\",\"images\":\"https://www.nemlig.com/scommerce/images/bon-voyage-sauvignon-blanc.jpg?i=LaczkYW3/5058185\",\"description\":\"Køb Bon Voyage Sauvignon Blanc og flere tusind andre dagligvarer hos nemlig.com. Levering direkte til døren, nemt og ligetil.\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"nemlig\",\"site_url\":\"https://www.nemlig.com\",\"seller_or_not_seller\":\"nemlig.com\",\"classified\":2,\"reason\":\"ABV is unclear and category is not explicitly defined\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
+	"method": "GET",
+	"orderNo": 1748995313486,
+	"retryCount": 0,
+	"uniqueKey": "https://www.nemlig.com/bon-voyage-sauvignon-blanc-5058185",
+	"url": "https://www.nemlig.com/bon-voyage-sauvignon-blanc-5058185"
+}

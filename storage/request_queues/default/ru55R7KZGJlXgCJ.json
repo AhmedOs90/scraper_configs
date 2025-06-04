@@ -1,0 +1,9 @@
+{
+	"id": "ru55R7KZGJlXgCJ",
+	"json": "{\"id\":\"ru55R7KZGJlXgCJ\",\"url\":\"https://beershoppen.dk/collections/alkoholfri-ol/products/vandestreek-bier-fra-holland-alkoholfri-saet-4-ol\",\"uniqueKey\":\"https://beershoppen.dk/collections/alkoholfri-ol/products/vandestreek-bier-fra-holland-alkoholfri-saet-4-ol\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":3134,\"name\":\"VandeStreek Bier Fra Holland Alkoholfri sæt 4 øl\",\"abv\":null,\"producer\":null,\"product_category\":\"Other\",\"energy\":null,\"sugar\":null,\"price\":\"120,00\",\"currency\":\"DKK\",\"country\":null,\"url\":\"https://beershoppen.dk/collections/alkoholfri-ol/products/vandestreek-bier-fra-holland-alkoholfri-saet-4-ol\",\"images\":\"http://beershoppen.dk/cdn/shop/files/vandestreek_1200x1200.jpg?v=1726686702\",\"description\":\"Et super smagfuld sæt m 4 forsk. alkoholfri øl fra VandeSteek i Holland Playground  33 cl Ipa let bitter Fun House 33 cl IPA med citrus noter Bock Jij of Bock  33 cl Grapefruit 33 cl. Dejlig citrus præget\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"beershoppen\",\"site_url\":\"https://beershoppen.dk\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear and category is not explicitly valid\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
+	"method": "GET",
+	"orderNo": 1748995313471,
+	"retryCount": 0,
+	"uniqueKey": "https://beershoppen.dk/collections/alkoholfri-ol/products/vandestreek-bier-fra-holland-alkoholfri-saet-4-ol",
+	"url": "https://beershoppen.dk/collections/alkoholfri-ol/products/vandestreek-bier-fra-holland-alkoholfri-saet-4-ol"
+}

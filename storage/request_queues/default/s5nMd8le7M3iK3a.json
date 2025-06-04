@@ -1,0 +1,9 @@
+{
+	"id": "s5nMd8le7M3iK3a",
+	"json": "{\"id\":\"s5nMd8le7M3iK3a\",\"url\":\"https://thezeroproof.com/collections/all/products/valentines-bundle\",\"uniqueKey\":\"https://thezeroproof.com/collections/all/products/valentines-bundle\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":3576,\"name\":\"Valentine's Bundle\",\"abv\":null,\"producer\":\"The Zero Proof\",\"product_category\":\"Wine\",\"energy\":null,\"sugar\":null,\"price\":\"142.16\",\"currency\":\"USD\",\"country\":null,\"url\":\"https://thezeroproof.com/collections/all/products/valentines-bundle\",\"images\":\"https://thezeroproof.com/cdn/shop/files/valentines-bundle-909106-879820_1000x1000.png?v=1739208422\",\"description\":\"It's the season of love, and we think that's something to celebrate. Find a variety of options here - pink and red options, of course - to serve at a dinner for two, a dinner for 1, for a gaggle of galentines, and beyond. Whether wine is your thing, you're craving a pre-meal Aperitivo, or even a lovely pink spirit from\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"thezeroproof\",\"site_url\":\"https://thezeroproof.com\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"Unclear ABV and potential multipack\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
+	"method": "GET",
+	"orderNo": 1748995313502,
+	"retryCount": 0,
+	"uniqueKey": "https://thezeroproof.com/collections/all/products/valentines-bundle",
+	"url": "https://thezeroproof.com/collections/all/products/valentines-bundle"
+}

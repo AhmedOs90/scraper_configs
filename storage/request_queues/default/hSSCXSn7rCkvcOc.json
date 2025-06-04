@@ -1,0 +1,9 @@
+{
+	"id": "hSSCXSn7rCkvcOc",
+	"json": "{\"id\":\"hSSCXSn7rCkvcOc\",\"url\":\"https://dryvariety.com/products/pure-vision-trio-alcohol-removed-wines\",\"uniqueKey\":\"https://dryvariety.com/products/pure-vision-trio-alcohol-removed-wines\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":927,\"name\":\"Pure Vision Zero Trio | Alcohol Removed Wines\",\"abv\":null,\"producer\":\"Pure Vision\",\"product_category\":\"Wine\",\"energy\":null,\"sugar\":null,\"price\":\"63.30\",\"currency\":\"CAD\",\"country\":null,\"url\":\"https://dryvariety.com/products/pure-vision-trio-alcohol-removed-wines\",\"images\":\"http://dryvariety.com/cdn/shop/files/Pure-Vision-Zero-Wine-Trio-Dealcoholized-non-alcoholic.png?v=1706888582\",\"description\":\"New to Canada, Pure Vision is a range of organic alcohol removed wines imported from South Australia.  Vegan friendly, Gluten Free, low sugar, and highly decorated with prestigious accolades, all three wines are equally top notch.  Enjoy them as a special Dry Variety bundle; an enticing way to try them all!  Red:  Shir\",\"gluten_free\":\"Gluten free\",\"vegan\":\"Vegan\",\"duplicated_with\":null,\"probability\":null,\"site_name\":\"dryvariety\",\"site_url\":\"https://dryvariety.com\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
+	"method": "GET",
+	"orderNo": 1748995312977,
+	"retryCount": 0,
+	"uniqueKey": "https://dryvariety.com/products/pure-vision-trio-alcohol-removed-wines",
+	"url": "https://dryvariety.com/products/pure-vision-trio-alcohol-removed-wines"
+}

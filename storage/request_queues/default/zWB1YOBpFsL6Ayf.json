@@ -1,0 +1,9 @@
+{
+	"id": "zWB1YOBpFsL6Ayf",
+	"json": "{\"id\":\"zWB1YOBpFsL6Ayf\",\"url\":\"https://thezeroproof.com/collections/all/products/ghia-berry-aperitif-535-ml\",\"uniqueKey\":\"https://thezeroproof.com/collections/all/products/ghia-berry-aperitif-535-ml\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":3527,\"name\":\"Ghia - Berry Aperitif (535 mL)\",\"abv\":null,\"producer\":\"Ghia\",\"product_category\":\"Aperitif\",\"energy\":null,\"sugar\":null,\"price\":\"38.00\",\"currency\":\"USD\",\"country\":null,\"url\":\"https://thezeroproof.com/collections/all/products/ghia-berry-aperitif-535-ml\",\"images\":\"https://thezeroproof.com/cdn/shop/files/ghia-berry-aperitif-535-ml-526301-997914_1000x1000.png?v=1739208498\",\"description\":\"  A bold departure from bitter norms. Ghia's Berry Aperitif is fruit forward. Juicy berry notes. An unexpected tannic complexity.\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"thezeroproof\",\"site_url\":\"https://thezeroproof.com\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
+	"method": "GET",
+	"orderNo": 1748995313500,
+	"retryCount": 0,
+	"uniqueKey": "https://thezeroproof.com/collections/all/products/ghia-berry-aperitif-535-ml",
+	"url": "https://thezeroproof.com/collections/all/products/ghia-berry-aperitif-535-ml"
+}

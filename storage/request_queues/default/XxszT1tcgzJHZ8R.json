@@ -1,0 +1,9 @@
+{
+	"id": "XxszT1tcgzJHZ8R",
+	"json": "{\"id\":\"XxszT1tcgzJHZ8R\",\"url\":\"https://dryvariety.com/products/pure-vision-zero-duo-alcohol-removed-wines\",\"uniqueKey\":\"https://dryvariety.com/products/pure-vision-zero-duo-alcohol-removed-wines\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":924,\"name\":\"Pure Vision Zero Duo | Alcohol Removed Wines\",\"abv\":null,\"producer\":\"Pure Vision\",\"product_category\":\"Wine\",\"energy\":null,\"sugar\":null,\"price\":\"39.50\",\"currency\":\"CAD\",\"country\":null,\"url\":\"https://dryvariety.com/products/pure-vision-zero-duo-alcohol-removed-wines\",\"images\":\"http://dryvariety.com/cdn/shop/files/pure_vision_zero_non-alcoholic_wines_from_australia_duo.png?v=1745249022\",\"description\":\"Pure Vision is a range of organic alcohol removed wines imported from South Australia.  Vegan friendly, Gluten Free, low sugar, and highly decorated with prestigious accolades, all three wines are equally top notch.  Enjoy them as a special Dry Variety bundle; an enticing way to try them both!  Red:  Shiraz this gorgeo\",\"gluten_free\":\"Gluten free\",\"vegan\":\"Vegan\",\"duplicated_with\":null,\"probability\":null,\"site_name\":\"dryvariety\",\"site_url\":\"https://dryvariety.com\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear, although the product is described as 'alcohol removed', the exact ABV needs to be confirmed\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
+	"method": "GET",
+	"orderNo": 1748995312977,
+	"retryCount": 0,
+	"uniqueKey": "https://dryvariety.com/products/pure-vision-zero-duo-alcohol-removed-wines",
+	"url": "https://dryvariety.com/products/pure-vision-zero-duo-alcohol-removed-wines"
+}

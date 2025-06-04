@@ -1,0 +1,9 @@
+{
+	"id": "yN2i0zCYuIv1P2W",
+	"json": "{\"id\":\"yN2i0zCYuIv1P2W\",\"url\":\"https://alkoholfributik.dk/spiritus/382-rumish-smagskasse.html\",\"uniqueKey\":\"https://alkoholfributik.dk/spiritus/382-rumish-smagskasse.html\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":1168,\"name\":\"RumISH Alkoholfri Romkasse\",\"abv\":null,\"producer\":null,\"product_category\":\"Beer\",\"energy\":null,\"sugar\":null,\"price\":\"349\",\"currency\":\"DKK\",\"country\":null,\"url\":\"https://alkoholfributik.dk/spiritus/382-rumish-smagskasse.html\",\"images\":\"https://alkoholfributik.dk/2035-large_default/rumish-smagskasse.jpg\",\"description\":\"Den alkoholfri rom RumISH i et mixsæt med ginger beer, ginger ale og soda water, giver dig perfekte drinks. Prøv dark and stormy, ginger rummy eller longdrink\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"alkoholfributik\",\"site_url\":\"https://alkoholfributik.dk\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear and category is potentially borderline\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
+	"method": "GET",
+	"orderNo": 1748995312984,
+	"retryCount": 0,
+	"uniqueKey": "https://alkoholfributik.dk/spiritus/382-rumish-smagskasse.html",
+	"url": "https://alkoholfributik.dk/spiritus/382-rumish-smagskasse.html"
+}
