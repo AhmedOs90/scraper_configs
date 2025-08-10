@@ -1,9 +1,0 @@
-{
-	"id": "ceY3D9dwmgyAoiT",
-	"json": "{\"id\":\"ceY3D9dwmgyAoiT\",\"url\":\"https://www.beyondbeer.de/Liefmans-0-0-Fruitesse/\",\"uniqueKey\":\"https://www.beyondbeer.de/Liefmans-0-0-Fruitesse\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":3861,\"name\":\"Liefmans Fruitesse 0,0% Alkoholfreies Bier\",\"abv\":null,\"producer\":\"Duvel\",\"product_category\":\"Beer\",\"energy\":null,\"sugar\":null,\"price\":\"2.49\",\"currency\":\"EUR\",\"country\":null,\"url\":\"https://www.beyondbeer.de/Liefmans-0-0-Fruitesse/\",\"images\":\"https://www.beyondbeer.de/media/21/bd/b8/1730732786/2390056.jpg?ts=1731573167\",\"description\":\"Jetzt das Liefmans Fruitesse 0,0% im Beyond Beer Onlineshop bestellen. Beerig & erfrischend. Alkoholfreies Craft Beer bei Beyond Beer entdecken und kaufen.\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"beyondbeer\",\"site_url\":\"https://www.beyondbeer.de\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear, although the description mentions 0,0% Alkoholfreies Bier\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
-	"method": "GET",
-	"orderNo": 1748995313571,
-	"retryCount": 0,
-	"uniqueKey": "https://www.beyondbeer.de/Liefmans-0-0-Fruitesse",
-	"url": "https://www.beyondbeer.de/Liefmans-0-0-Fruitesse/"
-}

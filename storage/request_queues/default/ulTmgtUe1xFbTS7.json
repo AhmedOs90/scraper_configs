@@ -1,9 +1,0 @@
-{
-	"id": "ulTmgtUe1xFbTS7",
-	"json": "{\"id\":\"ulTmgtUe1xFbTS7\",\"url\":\"https://sansdrinks.com.au/products/mcwilliams-balance-alcohol-removed-shiraz\",\"loadedUrl\":\"https://sansdrinks.com.au/products/mcwilliams-balance-alcohol-removed-shiraz\",\"uniqueKey\":\"https://sansdrinks.com.au/products/mcwilliams-balance-alcohol-removed-shiraz\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":370,\"name\":\"McWilliam's Balance Alcohol Removed Shiraz |  Sans Drinks  Australia  \",\"abv\":\"0.5%\",\"producer\":\"McWilliam's\",\"product_category\":\"Other\",\"energy\":null,\"sugar\":null,\"price\":\"12.75\",\"currency\":\"AUD\",\"country\":null,\"url\":\"https://sansdrinks.com.au/products/mcwilliams-balance-alcohol-removed-shiraz\",\"images\":\"http://sansdrinks.com.au/cdn/shop/files/McWilliam_sBalanceRemovedShiraz.jpg?v=1741684198\",\"description\":\"This Balance Alcohol Removed Shiraz brings rich, dark berry fruit flavours and savoury tannins to your table, perfect for those seeking \\n\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"sansdrinks\",\"site_url\":\"https://sansdrinks.com.au\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear and category is 'Other', which requires further clarification\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0},\"__crawlee\":{\"state\":4}},\"handledAt\":\"2025-06-04T00:02:22.533Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://sansdrinks.com.au/products/mcwilliams-balance-alcohol-removed-shiraz",
-	"url": "https://sansdrinks.com.au/products/mcwilliams-balance-alcohol-removed-shiraz"
-}

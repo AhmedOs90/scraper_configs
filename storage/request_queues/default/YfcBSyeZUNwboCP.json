@@ -1,9 +1,0 @@
-{
-	"id": "YfcBSyeZUNwboCP",
-	"json": "{\"id\":\"YfcBSyeZUNwboCP\",\"url\":\"https://sansdrinks.com.au/products/non-alcoholic-aperitz-spritz\",\"uniqueKey\":\"https://sansdrinks.com.au/products/non-alcoholic-aperitz-spritz\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":753,\"name\":\"Monday Distillery Aperitz Spritz |  Sans Drinks  Australia  \",\"abv\":null,\"producer\":\"Monday Distillery\",\"product_category\":\"Other\",\"energy\":null,\"sugar\":null,\"price\":\"16.00\",\"currency\":\"AUD\",\"country\":null,\"url\":\"https://sansdrinks.com.au/products/non-alcoholic-aperitz-spritz\",\"images\":\"http://sansdrinks.com.au/cdn/shop/files/Monday_Distillery_Aperitz_Spritz.jpg?v=1741684347\",\"description\":\"Inspired by the Italian style Aperitif Spritz and classic Negroni, this ready to drink mocktail features aromas of orange peel, espress \\n\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"sansdrinks\",\"site_url\":\"https://sansdrinks.com.au\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear and category is not explicitly valid\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
-	"method": "GET",
-	"orderNo": 1748995312968,
-	"retryCount": 0,
-	"uniqueKey": "https://sansdrinks.com.au/products/non-alcoholic-aperitz-spritz",
-	"url": "https://sansdrinks.com.au/products/non-alcoholic-aperitz-spritz"
-}

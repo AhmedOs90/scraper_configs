@@ -1,9 +1,0 @@
-{
-	"id": "JEIYGniIJnN5sCo",
-	"json": "{\"id\":\"JEIYGniIJnN5sCo\",\"url\":\"https://www.vildmedvin.dk/skanderborg-bryghus-kaereklar-kane-alkoholfri\",\"uniqueKey\":\"https://www.vildmedvin.dk/skanderborg-bryghus-kaereklar-kane-alkoholfri\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":3224,\"name\":\"Skanderborg Bryghus, Kæreklar Kane Alkoholfri\",\"abv\":null,\"producer\":null,\"product_category\":\"Other\",\"energy\":null,\"sugar\":null,\"price\":\"17,00 kr.\",\"currency\":\"DKK\",\"country\":null,\"url\":\"https://www.vildmedvin.dk/skanderborg-bryghus-kaereklar-kane-alkoholfri\",\"images\":\"https://www.vildmedvin.dk/img/600/600/resize/k/_/k_reklar_kane.jpg\",\"description\":\"Køb Skanderborg Bryghus, Kæreklar Kane Alkoholfri hos Vildmedvin. Her får du prisgaranti og fri fragt, og kan optjene bonus online og i butik.\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"vildmedvin\",\"site_url\":\"https://www.vildmedvin.dk\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
-	"method": "GET",
-	"orderNo": 1748995313478,
-	"retryCount": 0,
-	"uniqueKey": "https://www.vildmedvin.dk/skanderborg-bryghus-kaereklar-kane-alkoholfri",
-	"url": "https://www.vildmedvin.dk/skanderborg-bryghus-kaereklar-kane-alkoholfri"
-}

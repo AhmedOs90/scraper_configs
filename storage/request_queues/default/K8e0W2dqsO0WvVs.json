@@ -1,9 +1,0 @@
-{
-	"id": "K8e0W2dqsO0WvVs",
-	"json": "{\"id\":\"K8e0W2dqsO0WvVs\",\"url\":\"https://www.alcoholvrijshop.nl/catalogsearch/result/index/?volume=415&amnoroute=&q=collections+all&recipe_specialty=1262\",\"uniqueKey\":\"https://www.alcoholvrijshop.nl/catalogsearch/result/index?amnoroute=&q=collections+all&recipe_specialty=1262&volume=415\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":2432,\"name\":\"Seaward & Tonic\",\"abv\":null,\"producer\":null,\"product_category\":\"Other\",\"energy\":null,\"sugar\":null,\"price\":\"1.79\",\"currency\":\"EUR\",\"country\":null,\"url\":\"https://www.alcoholvrijshop.nl/catalogsearch/result/index/?volume=415&amnoroute=&q=collections+all&recipe_specialty=1262\",\"images\":\"https://www.alcoholvrijshop.nl/media/catalog/product/cache/f9572dad0fbf57ad9228b073e7175037/s/e/seaward-tonic-800x600.png\",\"description\":\"Wil jij zelf een alcoholvrije cocktail maken? Seaward & Tonic is een heerlijk recept voor een cocktail zonder alcohol. Bekijk de bereidingswijze voor deze mocktail!\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"alcoholvrijshop\",\"site_url\":\"https://www.alcoholvrijshop.nl\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear and category is not explicitly valid\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
-	"method": "GET",
-	"orderNo": 1748995313094,
-	"retryCount": 0,
-	"uniqueKey": "https://www.alcoholvrijshop.nl/catalogsearch/result/index?amnoroute=&q=collections+all&recipe_specialty=1262&volume=415",
-	"url": "https://www.alcoholvrijshop.nl/catalogsearch/result/index/?volume=415&amnoroute=&q=collections+all&recipe_specialty=1262"
-}

@@ -1,9 +1,0 @@
-{
-	"id": "yr5NHptnd97nc7A",
-	"json": "{\"id\":\"yr5NHptnd97nc7A\",\"url\":\"https://sansdrinks.com.au/products/leitz-zero-point-five-vegan-cabernet-sauvignon\",\"uniqueKey\":\"https://sansdrinks.com.au/products/leitz-zero-point-five-vegan-cabernet-sauvignon\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":800,\"name\":\"Leitz Zero-Point-Five Vegan Cabernet Sauvignon |  Sans Drinks  Australia  \",\"abv\":null,\"producer\":\"Leitz\",\"product_category\":\"Wine\",\"energy\":null,\"sugar\":null,\"price\":\"25.20\",\"currency\":\"AUD\",\"country\":null,\"url\":\"https://sansdrinks.com.au/products/leitz-zero-point-five-vegan-cabernet-sauvignon\",\"images\":\"http://sansdrinks.com.au/cdn/shop/files/LeitzZero-Point-FiveVeganCabernetSauvignon.jpg?v=1703053104\",\"description\":\"This impressive wine showcases all the distinctive characteristics of a classic pinot noir, despite having only 0.5% alcohol. A rich pa \\n\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"sansdrinks\",\"site_url\":\"https://sansdrinks.com.au\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is not explicitly stated, but a percentage is mentioned in the description\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
-	"method": "GET",
-	"orderNo": 1748995312972,
-	"retryCount": 0,
-	"uniqueKey": "https://sansdrinks.com.au/products/leitz-zero-point-five-vegan-cabernet-sauvignon",
-	"url": "https://sansdrinks.com.au/products/leitz-zero-point-five-vegan-cabernet-sauvignon"
-}

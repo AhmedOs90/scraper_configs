@@ -1,9 +1,0 @@
-{
-	"id": "uDueW4o14Xb5MFP",
-	"json": "{\"id\":\"uDueW4o14Xb5MFP\",\"url\":\"https://ishspirits.com/collections/tasting-boxes/products/margarita-box\",\"loadedUrl\":\"https://ishspirits.com/da/collections/tasting-boxes/products/margarita-box\",\"uniqueKey\":\"https://ishspirits.com/collections/tasting-boxes/products/margarita-box\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":294,\"name\":\"Margarita Box\",\"abv\":\"0.0%\",\"producer\":\"Ish\",\"product_category\":\"Spirit\",\"energy\":null,\"sugar\":null,\"price\":\"€2295\",\"currency\":\"KR\",\"country\":\"DK\",\"url\":\"https://ishspirits.com/collections/tasting-boxes/products/margarita-box\",\"images\":\"http://ishspirits.com/cdn/shop/files/Margarita-Bundle_02.jpg?v=1706014454\",\"description\":\"The perfect Mindful Margarita   Craving a refreshing Margarita experience without the alcohol? With the Margarita Box, you can mix the classic cocktail - crisp, sour and mouth-watering. Perfect for everything from summer parties to cozy evenings at home.  Margarita Box contains:  1 x ISH Mexican Agave Spirit 500mlOur n\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"ishspirits\",\"site_url\":\"https://ishspirits.com\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear and the product contains a spirit, which may have an ABV > 1.2\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0},\"__crawlee\":{\"state\":4}},\"handledAt\":\"2025-06-04T00:02:07.915Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://ishspirits.com/collections/tasting-boxes/products/margarita-box",
-	"url": "https://ishspirits.com/collections/tasting-boxes/products/margarita-box"
-}

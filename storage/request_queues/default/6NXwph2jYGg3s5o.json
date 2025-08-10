@@ -1,9 +1,0 @@
-{
-	"id": "6NXwph2jYGg3s5o",
-	"json": "{\"id\":\"6NXwph2jYGg3s5o\",\"url\":\"https://www.nemlig.com/nozeco-spritz-5058190\",\"uniqueKey\":\"https://www.nemlig.com/nozeco-spritz-5058190\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":3277,\"name\":\"Nozeco Spritz – Leveret med nemlig.com\",\"abv\":null,\"producer\":null,\"product_category\":\"Other\",\"energy\":null,\"sugar\":null,\"price\":\"49,95 DKK\",\"currency\":\"DKK\",\"country\":null,\"url\":\"https://www.nemlig.com/nozeco-spritz-5058190\",\"images\":\"https://www.nemlig.com/scommerce/images/nozeco-spritz.jpg?i=NdnuG06i/5058190\",\"description\":\"Køb Nozeco Spritz og flere tusind andre dagligvarer hos nemlig.com. Levering direkte til døren, nemt og ligetil.\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"nemlig\",\"site_url\":\"https://www.nemlig.com\",\"seller_or_not_seller\":\"nemlig.com\",\"classified\":2,\"reason\":\"ABV and category are unclear\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
-	"method": "GET",
-	"orderNo": 1748995313494,
-	"retryCount": 0,
-	"uniqueKey": "https://www.nemlig.com/nozeco-spritz-5058190",
-	"url": "https://www.nemlig.com/nozeco-spritz-5058190"
-}

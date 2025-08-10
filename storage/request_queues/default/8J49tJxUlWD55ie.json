@@ -1,9 +1,0 @@
-{
-	"id": "8J49tJxUlWD55ie",
-	"json": "{\"id\":\"8J49tJxUlWD55ie\",\"url\":\"https://drinknolow.com/collections/all/products/ghia-le-fizz-strawberry-orange-blossom\",\"uniqueKey\":\"https://drinknolow.com/collections/all/products/ghia-le-fizz-strawberry-orange-blossom\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":3935,\"name\":\"Ghia - Le Fizz Strawberry Orange Blossom\",\"abv\":null,\"producer\":\"Ghia\",\"product_category\":\"Aperitif\",\"energy\":null,\"sugar\":null,\"price\":\"24.00\",\"currency\":\"USD\",\"country\":null,\"url\":\"https://drinknolow.com/collections/all/products/ghia-le-fizz-strawberry-orange-blossom\",\"images\":\"http://drinknolow.com/cdn/shop/files/GhiaLeFizz.webp?v=1734692387\",\"description\":\"A tannic ready-to-drink aperitif. Fruity, gingery, &amp; carbonated like a soda. Infused botanicals that bring the sophistication of Ghia.\",\"gluten_free\":\"1\",\"vegan\":\"1\",\"duplicated_with\":null,\"probability\":null,\"site_name\":\"drinknolow\",\"site_url\":\"https://drinknolow.com\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
-	"method": "GET",
-	"orderNo": 1748995313572,
-	"retryCount": 0,
-	"uniqueKey": "https://drinknolow.com/collections/all/products/ghia-le-fizz-strawberry-orange-blossom",
-	"url": "https://drinknolow.com/collections/all/products/ghia-le-fizz-strawberry-orange-blossom"
-}

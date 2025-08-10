@@ -1,9 +1,0 @@
-{
-	"id": "XddsLW9TvICN4zu",
-	"json": "{\"id\":\"XddsLW9TvICN4zu\",\"url\":\"https://sansdrinks.com.au/products/sans-bar-summer-carnivale-white-rum-substitute\",\"loadedUrl\":\"https://sansdrinks.com.au/products/sans-bar-summer-carnivale-white-rum-substitute\",\"uniqueKey\":\"https://sansdrinks.com.au/products/sans-bar-summer-carnivale-white-rum-substitute\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":380,\"name\":\"Sans Bar Summer Carnivàle (White Rum Substitute) | Sans Drinks\",\"abv\":null,\"producer\":\"Sans Bar\",\"product_category\":\"Other\",\"energy\":null,\"sugar\":null,\"price\":\"31.96\",\"currency\":\"AUD\",\"country\":null,\"url\":\"https://sansdrinks.com.au/products/sans-bar-summer-carnivale-white-rum-substitute\",\"images\":\"http://sansdrinks.com.au/cdn/shop/files/Sans-Bar-white-rum_da047a78-0dfd-41b4-b97e-65ef4c0b3221.jpg?v=1741684532\",\"description\":\"The Sans Bar Summer Carnivàle is a premium substitute for a traditional White Rum. Features a smooth flavour profile of coconut & vanilla with hints of citrus.\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"sansdrinks\",\"site_url\":\"https://sansdrinks.com.au\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0},\"__crawlee\":{\"state\":4}},\"handledAt\":\"2025-06-04T00:02:20.641Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://sansdrinks.com.au/products/sans-bar-summer-carnivale-white-rum-substitute",
-	"url": "https://sansdrinks.com.au/products/sans-bar-summer-carnivale-white-rum-substitute"
-}

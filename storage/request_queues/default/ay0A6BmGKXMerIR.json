@@ -1,9 +1,0 @@
-{
-	"id": "ay0A6BmGKXMerIR",
-	"json": "{\"id\":\"ay0A6BmGKXMerIR\",\"url\":\"https://sansdrinks.com.au/products/thomson-scott-noughty-red\",\"uniqueKey\":\"https://sansdrinks.com.au/products/thomson-scott-noughty-red\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":573,\"name\":\"Thomson & Scott Noughty Rouge Syrah |  Sans Drinks  Australia  \",\"abv\":null,\"producer\":\"Thomson & Scott\",\"product_category\":\"Other\",\"energy\":null,\"sugar\":null,\"price\":\"20.00\",\"currency\":\"AUD\",\"country\":null,\"url\":\"https://sansdrinks.com.au/products/thomson-scott-noughty-red\",\"images\":\"http://sansdrinks.com.au/cdn/shop/products/Thomson_ScottNoughtyRougeSyrah_ca03b776-dad9-4ef9-921a-0fa3032072e8.jpg?v=1708602656\",\"description\":\"The Noughty Rouge Shiraz is produced with Syrah grapes from the dryland vineyards in Darling, South Africa and aged for 12 months in Fr \\n\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"sansdrinks\",\"site_url\":\"https://sansdrinks.com.au\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear and category is 'Other', which requires further clarification\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
-	"method": "GET",
-	"orderNo": 1748995312944,
-	"retryCount": 0,
-	"uniqueKey": "https://sansdrinks.com.au/products/thomson-scott-noughty-red",
-	"url": "https://sansdrinks.com.au/products/thomson-scott-noughty-red"
-}

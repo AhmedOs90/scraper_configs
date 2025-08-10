@@ -1,9 +1,0 @@
-{
-	"id": "Ir7EY9PIUnfNKBt",
-	"json": "{\"id\":\"Ir7EY9PIUnfNKBt\",\"url\":\"https://beershoppen.dk/collections/alkoholfri-ol/products/miloslaw-bezalkoholowe-pszeniczne-50cl-0-alkoholfri-hvedeol-browar-fortuna\",\"uniqueKey\":\"https://beershoppen.dk/collections/alkoholfri-ol/products/miloslaw-bezalkoholowe-pszeniczne-50cl-0-alkoholfri-hvedeol-browar-fortuna\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":3132,\"name\":\"Miloslaw Bezalkoholowe Pszeniczne - 50cl, 0%, Alkoholfri Hvedeøl - Bro\",\"abv\":null,\"producer\":null,\"product_category\":\"Other\",\"energy\":null,\"sugar\":null,\"price\":\"30,00\",\"currency\":\"DKK\",\"country\":null,\"url\":\"https://beershoppen.dk/collections/alkoholfri-ol/products/miloslaw-bezalkoholowe-pszeniczne-50cl-0-alkoholfri-hvedeol-browar-fortuna\",\"images\":\"http://beershoppen.dk/cdn/shop/files/IMG_1779_1200x1200.jpg?v=1738841577\",\"description\":\"En alkoholfri hvedøl med noter af appelsin. Den er let drikkelig og dejlig forfriskende.   \",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"beershoppen\",\"site_url\":\"https://beershoppen.dk\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear, although the description implies it is alcohol-free\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
-	"method": "GET",
-	"orderNo": 1748995313471,
-	"retryCount": 0,
-	"uniqueKey": "https://beershoppen.dk/collections/alkoholfri-ol/products/miloslaw-bezalkoholowe-pszeniczne-50cl-0-alkoholfri-hvedeol-browar-fortuna",
-	"url": "https://beershoppen.dk/collections/alkoholfri-ol/products/miloslaw-bezalkoholowe-pszeniczne-50cl-0-alkoholfri-hvedeol-browar-fortuna"
-}

@@ -1,9 +1,0 @@
-{
-	"id": "R98pRTc4AcxtJpj",
-	"json": "{\"id\":\"R98pRTc4AcxtJpj\",\"url\":\"https://thezeroproof.com/collections/all/products/jack-rudy-margarita-mix-32-oz\",\"uniqueKey\":\"https://thezeroproof.com/collections/all/products/jack-rudy-margarita-mix-32-oz\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":3600,\"name\":\"Jack Rudy Margarita Mix (32 oz)\",\"abv\":null,\"producer\":\"Jack Rudy\",\"product_category\":\"Other\",\"energy\":null,\"sugar\":null,\"price\":\"8.99\",\"currency\":\"USD\",\"country\":null,\"url\":\"https://thezeroproof.com/collections/all/products/jack-rudy-margarita-mix-32-oz\",\"images\":\"https://thezeroproof.com/cdn/shop/files/jack-rudy-margarita-mix-32-oz-539401-932577_1000x1000.png?v=1743056590\",\"description\":\"Modeled after the famed “Tommy’s Margarita” recipe of the early nineties, this mix made with only three ingredients (tequila, fresh lime, agave syrup) notably contains less sugar and fewer calories than most mixes on the market. It's made with high-quality lime and agave, finished with a touch of cane sugar. It's a bal\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"thezeroproof\",\"site_url\":\"https://thezeroproof.com\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"Unclear ABV and category, potentially a mixer but needs further clarification\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
-	"method": "GET",
-	"orderNo": 1748995313547,
-	"retryCount": 0,
-	"uniqueKey": "https://thezeroproof.com/collections/all/products/jack-rudy-margarita-mix-32-oz",
-	"url": "https://thezeroproof.com/collections/all/products/jack-rudy-margarita-mix-32-oz"
-}

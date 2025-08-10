@@ -1,9 +1,0 @@
-{
-	"id": "uJs0nbSTTzIkiJw",
-	"json": "{\"id\":\"uJs0nbSTTzIkiJw\",\"url\":\"https://sansdrinks.com.au/products/yes-you-can-yuzu-sake\",\"uniqueKey\":\"https://sansdrinks.com.au/products/yes-you-can-yuzu-sake\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":704,\"name\":\"Yes You Can Yuzu Sake |  Sans Drinks  Australia  \",\"abv\":null,\"producer\":\"Yes You Can\",\"product_category\":\"Other\",\"energy\":null,\"sugar\":null,\"price\":\"1.90\",\"currency\":\"AUD\",\"country\":null,\"url\":\"https://sansdrinks.com.au/products/yes-you-can-yuzu-sake\",\"images\":\"http://sansdrinks.com.au/cdn/shop/files/YesYouCanYuzuSake_e34f2ec6-9d7a-48b9-9e08-61fdfe709fba.jpg?v=1738822750\",\"description\":\"Yes You Can Yuzu Sake is a bright and citrusy delight that brings a light-bodied experience to your palate. Striking the perfect balanc \\n\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"sansdrinks\",\"site_url\":\"https://sansdrinks.com.au\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear and category is 'Other', which may not be a valid category\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
-	"method": "GET",
-	"orderNo": 1748995312962,
-	"retryCount": 0,
-	"uniqueKey": "https://sansdrinks.com.au/products/yes-you-can-yuzu-sake",
-	"url": "https://sansdrinks.com.au/products/yes-you-can-yuzu-sake"
-}

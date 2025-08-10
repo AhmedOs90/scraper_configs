@@ -1,9 +1,0 @@
-{
-	"id": "FhpyPwqy9yXuJoc",
-	"json": "{\"id\":\"FhpyPwqy9yXuJoc\",\"url\":\"https://thezeroproof.com/collections/all/products/kin-luna-morada-4-pack\",\"uniqueKey\":\"https://thezeroproof.com/collections/all/products/kin-luna-morada-4-pack\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":3608,\"name\":\"Kin Luna Morada (4-pack)\",\"abv\":null,\"producer\":\"Kin Euphorics\",\"product_category\":\"Other\",\"energy\":null,\"sugar\":null,\"price\":\"15.99\",\"currency\":\"USD\",\"country\":null,\"url\":\"https://thezeroproof.com/collections/all/products/kin-luna-morada-4-pack\",\"images\":\"https://thezeroproof.com/cdn/shop/files/kin-luna-morada-4-pack-538504-112893_1000x1000.png?v=1744995954\",\"description\":\"Taste a sweet-smoky twist on a Latin American Chicha featuring pineapple, tamarind, Persian lime, and chili. This NA canned cocktail also includes antioxidant-rich purple maize, metabolism-boosting wormwood, liver-supporting milk thistle, and glucose-balancing cinnamon and clove.\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"thezeroproof\",\"site_url\":\"https://thezeroproof.com\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"Category is unclear and ABV is not specified\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
-	"method": "GET",
-	"orderNo": 1748995313551,
-	"retryCount": 0,
-	"uniqueKey": "https://thezeroproof.com/collections/all/products/kin-luna-morada-4-pack",
-	"url": "https://thezeroproof.com/collections/all/products/kin-luna-morada-4-pack"
-}

@@ -1,9 +1,0 @@
-{
-	"id": "R5tTSRS0FcMO8B4",
-	"json": "{\"id\":\"R5tTSRS0FcMO8B4\",\"url\":\"https://beershoppen.dk/collections/alkoholfri-ol/products/hyldeblomst-cider-val-de-france-alkoholfri-75-cl\",\"uniqueKey\":\"https://beershoppen.dk/collections/alkoholfri-ol/products/hyldeblomst-cider-val-de-france-alkoholfri-75-cl\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":3143,\"name\":\"Hyldeblomst Cider - Val de France - Alkoholfri - 75 cl\",\"abv\":null,\"producer\":null,\"product_category\":\"Cider\",\"energy\":null,\"sugar\":null,\"price\":\"75,00\",\"currency\":\"DKK\",\"country\":null,\"url\":\"https://beershoppen.dk/collections/alkoholfri-ol/products/hyldeblomst-cider-val-de-france-alkoholfri-75-cl\",\"images\":\"http://beershoppen.dk/cdn/shop/files/Valdefranchehyldeblomst_1200x1200.jpg?v=1742466871\",\"description\":\"En fransk æble cider ALKOHOLFRI - Tilsart lidt hyldeblomst, som giver en friskhed\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"beershoppen\",\"site_url\":\"https://beershoppen.dk\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear, although the product is described as 'ALKOHOLFRI' which implies 0% ABV, confirmation is needed\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
-	"method": "GET",
-	"orderNo": 1748995313472,
-	"retryCount": 0,
-	"uniqueKey": "https://beershoppen.dk/collections/alkoholfri-ol/products/hyldeblomst-cider-val-de-france-alkoholfri-75-cl",
-	"url": "https://beershoppen.dk/collections/alkoholfri-ol/products/hyldeblomst-cider-val-de-france-alkoholfri-75-cl"
-}

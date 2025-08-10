@@ -1,9 +1,0 @@
-{
-	"id": "1hLowEeuz38l3Lv",
-	"json": "{\"id\":\"1hLowEeuz38l3Lv\",\"url\":\"https://thezeroproof.com/collections/all/products/proxies-big-red\",\"uniqueKey\":\"https://thezeroproof.com/collections/all/products/proxies-big-red\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":3581,\"name\":\"Proxies Big Red & Flavorful Wine Alternative\",\"abv\":null,\"producer\":\"Proxies\",\"product_category\":\"Wine\",\"energy\":null,\"sugar\":null,\"price\":\"27.99\",\"currency\":\"USD\",\"country\":null,\"url\":\"https://thezeroproof.com/collections/all/products/proxies-big-red\",\"images\":\"https://thezeroproof.com/cdn/shop/files/proxies-big-red-537601-980778_1000x1000.png?v=1740238134\",\"description\":\"Big Red and big flavor from Proxies. Expect a deep, dark, dry sip, giving notes of rich blackberry and cherry accented by black pepper and a hint of Grandpa’s cigar box. Proxies are designed to pair with food, so try the red wine classics: Ribeye steak, braised lamb shank, wild mushrooms, or creamy gorgonzola… Cheers!\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"thezeroproof\",\"site_url\":\"https://thezeroproof.com\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
-	"method": "GET",
-	"orderNo": 1748995313503,
-	"retryCount": 0,
-	"uniqueKey": "https://thezeroproof.com/collections/all/products/proxies-big-red",
-	"url": "https://thezeroproof.com/collections/all/products/proxies-big-red"
-}

@@ -1,9 +1,0 @@
-{
-	"id": "oXYknmASem2HNwn",
-	"json": "{\"id\":\"oXYknmASem2HNwn\",\"url\":\"https://www.alcoholvrijshop.nl/herbal-basil-smash\",\"uniqueKey\":\"https://www.alcoholvrijshop.nl/herbal-basil-smash\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":2976,\"name\":\"Herbal Basil Smash\",\"abv\":null,\"producer\":null,\"product_category\":\"Other\",\"energy\":null,\"sugar\":null,\"price\":\"7.99\",\"currency\":\"EUR\",\"country\":null,\"url\":\"https://www.alcoholvrijshop.nl/herbal-basil-smash\",\"images\":\"https://www.alcoholvrijshop.nl/media/catalog/product/cache/f9572dad0fbf57ad9228b073e7175037/h/e/herbal-basil-smash-800x600.png\",\"description\":\"Wil jij zelf een alcoholvrije cocktail maken? Herbal Basil Smash is een heerlijk recept voor een cocktail zonder alcohol. Bekijk de bereidingswijze voor deze mocktail!\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"alcoholvrijshop\",\"site_url\":\"https://www.alcoholvrijshop.nl\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear and category is not explicitly valid\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
-	"method": "GET",
-	"orderNo": 1748995313452,
-	"retryCount": 0,
-	"uniqueKey": "https://www.alcoholvrijshop.nl/herbal-basil-smash",
-	"url": "https://www.alcoholvrijshop.nl/herbal-basil-smash"
-}

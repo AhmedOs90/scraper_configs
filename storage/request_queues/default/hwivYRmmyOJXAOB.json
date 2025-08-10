@@ -1,9 +1,0 @@
-{
-	"id": "hwivYRmmyOJXAOB",
-	"json": "{\"id\":\"hwivYRmmyOJXAOB\",\"url\":\"https://worldofnix.com/en/products/kobenhavn-kombucha-rosa-rugosa\",\"uniqueKey\":\"https://worldofnix.com/en/products/kobenhavn-kombucha-rosa-rugosa\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":3747,\"name\":\"København Kombucha Rosa Rugosa | Kombucha met Rozen\",\"abv\":null,\"producer\":\"København\",\"product_category\":\"Sparkling Tea\",\"energy\":\"79 kJ/19 kcal\",\"sugar\":\"4,2 g\",\"price\":\"18,69\",\"currency\":\"EUR\",\"country\":null,\"url\":\"https://worldofnix.com/en/products/kobenhavn-kombucha-rosa-rugosa\",\"images\":\"http://worldofnix.com/cdn/shop/files/Packshot_Kopenhavn_Kombucha_CherryBlossom.png?v=1747052651\",\"description\":\"Rosa Rugosa: een alcoholvrije sparkling tea met tonen van rozenbottel, zomerbessen en een romige textuur. Perfect als alternatief voor rosé of bij desserts.\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"worldofnix\",\"site_url\":\"https://worldofnix.com\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
-	"method": "GET",
-	"orderNo": 1748995313563,
-	"retryCount": 0,
-	"uniqueKey": "https://worldofnix.com/en/products/kobenhavn-kombucha-rosa-rugosa",
-	"url": "https://worldofnix.com/en/products/kobenhavn-kombucha-rosa-rugosa"
-}

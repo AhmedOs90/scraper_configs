@@ -1,9 +1,0 @@
-{
-	"id": "4C8YIRQHGFFSTjy",
-	"json": "{\"id\":\"4C8YIRQHGFFSTjy\",\"url\":\"https://sansdrinks.com.au/products/sidewinder-xpa-deluxe\",\"uniqueKey\":\"https://sansdrinks.com.au/products/sidewinder-xpa-deluxe\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":752,\"name\":\"Sidewinder XPA Deluxe |  Sans Drinks  Australia  \",\"abv\":null,\"producer\":\"Brick Lane Brewing Co\",\"product_category\":\"Beer\",\"energy\":null,\"sugar\":null,\"price\":\"3.07\",\"currency\":\"AUD\",\"country\":null,\"url\":\"https://sansdrinks.com.au/products/sidewinder-xpa-deluxe\",\"images\":\"http://sansdrinks.com.au/cdn/shop/products/SidewinderXPADeluxe_7da89eae-141a-4e5b-91d0-854fb69c994a.jpg?v=1708602615\",\"description\":\"From independent Australian beer makers, Brick Lane Brewery, Sidewinder XPA Deluxe is tropical, bitter and refreshing. Featuring aromas \\n\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"sansdrinks\",\"site_url\":\"https://sansdrinks.com.au\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
-	"method": "GET",
-	"orderNo": 1748995312968,
-	"retryCount": 0,
-	"uniqueKey": "https://sansdrinks.com.au/products/sidewinder-xpa-deluxe",
-	"url": "https://sansdrinks.com.au/products/sidewinder-xpa-deluxe"
-}

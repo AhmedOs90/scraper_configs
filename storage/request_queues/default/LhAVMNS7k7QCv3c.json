@@ -1,9 +1,0 @@
-{
-	"id": "LhAVMNS7k7QCv3c",
-	"json": "{\"id\":\"LhAVMNS7k7QCv3c\",\"url\":\"https://proofnomore.com/collections/shop-all-na-beverages/products/untitled-art-juicy-ipa-12oz\",\"uniqueKey\":\"https://proofnomore.com/collections/shop-all-na-beverages/products/untitled-art-juicy-ipa-12oz\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":3619,\"name\":\"Untitled Art Juicy IPA - 12oz\",\"abv\":null,\"producer\":\"UNTITLED ART\",\"product_category\":\"Other\",\"energy\":null,\"sugar\":null,\"price\":\"Starting at $3.99\",\"currency\":\"USD\",\"country\":null,\"url\":\"https://proofnomore.com/collections/shop-all-na-beverages/products/untitled-art-juicy-ipa-12oz\",\"images\":\"https://proofnomore.com/cdn/shop/files/untitled-art-juicy-ipa-12oz-non-alcoholic-beer-juic-brew-666_1200x1200.webp?v=1741894591\",\"description\":\"Brewed with Citra & Mosaic hops, we are very excited about how this Untitled Art Juicy IPA turned out and are eager to expand on what we learned so that those who wish to still have the camaraderie of drinking and the flavor of a craft brew but without the negative effects can have something to enjoy!\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"proofnomore\",\"site_url\":\"https://proofnomore.com\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear and category is not explicitly valid\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
-	"method": "GET",
-	"orderNo": 1748995313558,
-	"retryCount": 0,
-	"uniqueKey": "https://proofnomore.com/collections/shop-all-na-beverages/products/untitled-art-juicy-ipa-12oz",
-	"url": "https://proofnomore.com/collections/shop-all-na-beverages/products/untitled-art-juicy-ipa-12oz"
-}

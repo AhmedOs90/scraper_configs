@@ -1,9 +1,0 @@
-{
-	"id": "HRKxFi6FdhBNoT4",
-	"json": "{\"id\":\"HRKxFi6FdhBNoT4\",\"url\":\"https://www.alcoholvrijshop.nl/catalogsearch/result/index/?brand=576&amnoroute=&q=collections+all&variety_mixer=1219\",\"uniqueKey\":\"https://www.alcoholvrijshop.nl/catalogsearch/result/index?amnoroute=&brand=576&q=collections+all&variety_mixer=1219\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":2758,\"name\":\"Beer Sangria\",\"abv\":null,\"producer\":null,\"product_category\":\"Beer\",\"energy\":null,\"sugar\":null,\"price\":\"1.39\",\"currency\":\"EUR\",\"country\":null,\"url\":\"https://www.alcoholvrijshop.nl/catalogsearch/result/index/?brand=576&amnoroute=&q=collections+all&variety_mixer=1219\",\"images\":\"https://www.alcoholvrijshop.nl/media/catalog/product/cache/f9572dad0fbf57ad9228b073e7175037/b/e/beer-sangria-800x600.png\",\"description\":\"Wil jij zelf een alcoholvrije cocktail maken? Beer Sangria is een heerlijk recept voor een cocktail zonder alcohol. Bekijk de bereidingswijze voor deze mocktail!\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"alcoholvrijshop\",\"site_url\":\"https://www.alcoholvrijshop.nl\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
-	"method": "GET",
-	"orderNo": 1748995313334,
-	"retryCount": 0,
-	"uniqueKey": "https://www.alcoholvrijshop.nl/catalogsearch/result/index?amnoroute=&brand=576&q=collections+all&variety_mixer=1219",
-	"url": "https://www.alcoholvrijshop.nl/catalogsearch/result/index/?brand=576&amnoroute=&q=collections+all&variety_mixer=1219"
-}

@@ -395,13 +395,217 @@ export async function refineData(rootUrl, product, page) {
 
   }
 
+  if (rootUrl === "https://www.craftzero.com.au") {
+    product.abv = await page.evaluate(() => {
+      const elements = document.querySelectorAll('.product-info-accordion .disclosure__title .with-icon__beside');
+      for (const el of elements) {
+        if (el.textContent?.trim() === 'ABV') {
+          const content = el.closest('details')?.querySelector('.disclosure__content p');
+          return content?.textContent?.trim() || null;
+        }
+      }
+      return null;
+    });
 
+    product.country = await page.evaluate(() => {
+      const elements = document.querySelectorAll('.product-info-accordion .disclosure__title .with-icon__beside');
+      for (const el of elements) {
+        if (el.textContent?.trim() === 'Country of Origin') {
+          const content = el.closest('details')?.querySelector('.disclosure__content p');
+          return content?.textContent?.trim() || null;
+        }
+      }
+      return null;
+    });
+    product.energy = await page.evaluate(() => {
+      const elements = document.querySelectorAll('.product-info-accordion .disclosure__title .with-icon__beside');
+      for (const el of elements) {
+        if (el.textContent?.trim() === 'Nutritional Info Per 100ml') {
+          const content = el.closest('details')?.querySelector('.disclosure__content p');
+          return content?.textContent?.trim() || null;
+        }
+      }
+      return null;
+    });
+    product.sugar = await page.evaluate(() => {
+      const elements = document.querySelectorAll('.product-info-accordion .disclosure__title .with-icon__beside');
+      for (const el of elements) {
+        if (el.textContent?.trim() === 'Nutritional Info Per 100ml') {
+          const content = el.closest('details')?.querySelector('.disclosure__content p');
+          return content?.textContent?.trim() || null;
+        }
+      }
+      return null;
+    });
+
+
+
+  }
+
+  if (rootUrl === "https://boisson.co") {
+    console.log("refining");
+product.abv = await page.evaluate(() => {
+  const body = document.querySelector('#description-1');
+  if (!body) return null;
+
+  const paragraphs = Array.from(body.querySelectorAll('p'));
+  for (let i = 0; i < paragraphs.length; i++) {
+    const label = paragraphs[i].textContent.trim().toLowerCase();
+    if (label.includes('alcohol by volume')) {
+      // Look for the next sibling <ul> and extract the <li> inside it
+      const ul = paragraphs[i].nextElementSibling;
+      if (ul && ul.tagName.toLowerCase() === 'ul') {
+        const li = ul.querySelector('li');
+        return li?.textContent.trim() || null;
+      }
+    }
+  }
+
+  return null;
+});
+
+
+  }
+if (rootUrl === "https://upsidedrinks.com"){
+product.price = (parseFloat(product.price.replace(/[^0-9]/g, '')) / 100).toString();
+  product.abv = await page.evaluate(() => {
+  const paragraphs = document.querySelectorAll('p');
+
+  for (const p of paragraphs) {
+    const strong = p.querySelector('strong');
+    if (strong && strong.textContent.trim().toLowerCase().startsWith('alcohol')) {
+      // Case 1: value in <span>
+      const span = p.querySelector('span');
+      if (span) return span.textContent.trim();
+
+      // Case 2: value in p text directly
+      const textAfterStrong = p.textContent.replace(strong.textContent, '').trim();
+      return textAfterStrong || null;
+    }
+  }
+
+  return null;
+});
+
+product.producer = await page.evaluate(() => {
+  const script = Array.from(document.querySelectorAll('script[type="application/ld+json"]'))
+    .find(s => s.textContent.includes('"@type": "Product"'));
+  if (!script) return null;
+
+  try {
+    const data = JSON.parse(script.textContent);
+    return data.brand || null;
+  } catch (e) {
+    return null;
+  }
+});
+product.currency = "USD";
+
+}
+if (rootUrl === "https://thebluedolphinstore.com"){
+product.price = await page.evaluate(() => {
+  try {
+    const scripts = Array.from(document.querySelectorAll('script'))
+      .map(s => s.textContent)
+      .filter(Boolean);
+
+    for (const script of scripts) {
+      if (script.includes('dataLayer.push') && script.includes('"ecommerce"')) {
+        const jsonMatch = script.match(/dataLayer\.push\((\{.*?\})\)/s);
+        if (jsonMatch && jsonMatch[1]) {
+          const data = JSON.parse(jsonMatch[1]);
+          const items = data?.ecommerce?.items;
+          if (Array.isArray(items) && items.length > 0) {
+            return items[0].price;
+          }
+        }
+      }
+    }
+  } catch (err) {
+    console.error('Error extracting price from dataLayer:', err);
+  }
+  return null;
+});
+
+product.abv = await page.evaluate(() => {
+  const listItems = Array.from(document.querySelectorAll('li'));
+  for (const li of listItems) {
+    if (li.innerText.toLowerCase().includes('graduación')) {
+      return li.innerText.toLowerCase().replace('graduación:', '').trim();
+    }
+  }
+  return null;
+});
+product.currency = "EUR";
+
+product.producer = await page.evaluate(() => {
+  const listItems = Array.from(document.querySelectorAll('li'));
+  for (const li of listItems) {
+    if (li.innerText.toLowerCase().includes('productor')) {
+      return li.innerText.toLowerCase().replace('productor:', '').trim();
+    }
+  }
+  return null;
+});
+
+product.energy = await page.evaluate(() => {
+  const listItems = Array.from(document.querySelectorAll('li'));
+  for (const li of listItems) {
+    if (li.innerText.toLowerCase().includes('calorías')) {
+      return li.innerText.toLowerCase().replace('calorías:', '').trim();
+    }
+  }
+  return null;
+});
+
+product.sugar = await page.evaluate(() => {
+  const listItems = Array.from(document.querySelectorAll('li'));
+  for (const li of listItems) {
+    if (li.innerText.toLowerCase().includes('azúcares totales')) {
+      return li.innerText.toLowerCase().replace('azúcares totales:', '').trim();
+    }
+  }
+  return null;
+});
+
+}
+
+if (rootUrl === "https://www.teedawn.com") {
+ product.abv = await page.evaluate(() => {
+  const container = document.querySelector('.ProductItem-details-excerpt');
+  if (!container) return null;
+
+  const text = container.innerText.toLowerCase();
+  const lines = text.split('\n'); // Split into separate lines for context
+
+  for (const line of lines) {
+    if (line.includes('alkoholprocent')) {
+      const match = line.match(/(\d+(?:[.,]\d+)?)\s*%/);
+      if (match) {
+        return match[1].replace(',', '.') + '%'; // Normalize decimal
+      }
+    }
+  }
+
+  return null;
+});
+
+
+  product.abv = product.abv||  extractABVFromText(product.name, product.description);
+
+  // Fallback: detect "0%" or "0 %" in name or description
+  if (!product.abv && /0\s*%/.test(`${product.name}`)) {
+    product.abv = "0%";
+  }
+
+  product.producer = "teedawn";
+}
 
   // Attempt to extract ABV from product.description if it's still missing
   const anotherABV = product.description.match(/(\d+\.\d+% ABV|\d+% ABV)/i);
+  
   product.abv = product.abv || (anotherABV ? anotherABV[0] : null);
 
-  product.abv = product.abv || detectZeroAlcohol(product.name, product.description);
   // Check for vegan and gluten-free if not set
   const { isVegan, isgluten_free } = detectVeganAndgluten_free(product.description || "");
   product.vegan = product.vegan || isVegan;

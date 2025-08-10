@@ -1,9 +1,0 @@
-{
-	"id": "9G2Oo3AVlBKiqkn",
-	"json": "{\"id\":\"9G2Oo3AVlBKiqkn\",\"url\":\"https://sansdrinks.com.au/products/mcguigan-zero-sparkling-rose\",\"uniqueKey\":\"https://sansdrinks.com.au/products/mcguigan-zero-sparkling-rose\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":648,\"name\":\"McGuigan Zero Sparkling Rose |  Sans Drinks  Australia  \",\"abv\":null,\"producer\":\"mcguigan-zero\",\"product_category\":\"Wine\",\"energy\":null,\"sugar\":null,\"price\":\"12.40\",\"currency\":\"AUD\",\"country\":null,\"url\":\"https://sansdrinks.com.au/products/mcguigan-zero-sparkling-rose\",\"images\":\"http://sansdrinks.com.au/cdn/shop/products/McGuiganZeroSparklingRose_dd9a6894-c831-401c-a707-1e3fa367ab0e.jpg?v=1708602488\",\"description\":\"Based in the Iconic Hunter Valley, the McGuigan Zero Sparkling Rose is an entry level Sparkling Wine ideal for those who enjoy sweeter  \\n\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"sansdrinks\",\"site_url\":\"https://sansdrinks.com.au\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
-	"method": "GET",
-	"orderNo": 1748995312959,
-	"retryCount": 0,
-	"uniqueKey": "https://sansdrinks.com.au/products/mcguigan-zero-sparkling-rose",
-	"url": "https://sansdrinks.com.au/products/mcguigan-zero-sparkling-rose"
-}

@@ -1,9 +1,0 @@
-{
-	"id": "NjBg5HJSMTbSerg",
-	"json": "{\"id\":\"NjBg5HJSMTbSerg\",\"url\":\"https://worldofnix.com/en/products/giesen-new-zealand-pinot-gris\",\"uniqueKey\":\"https://worldofnix.com/en/products/giesen-new-zealand-pinot-gris\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":3722,\"name\":\"Alcoholvrije witte wijn - Giesen New Zealand Pinot Gris\",\"abv\":null,\"producer\":\"Giesen\",\"product_category\":\"Other\",\"energy\":\"77 kJ/18 kcal\",\"sugar\":\"3 g\",\"price\":\"13,19\",\"currency\":\"EUR\",\"country\":null,\"url\":\"https://worldofnix.com/en/products/giesen-new-zealand-pinot-gris\",\"images\":\"http://worldofnix.com/cdn/shop/files/Giesen-0-PG-BottleShot-2048x.png?v=1731573054\",\"description\":\"Proef de bekroonde alcoholvrije witte wijn, Giesen Pinot Gris uit Nieuw-Zeeland. Een evenwichtige mix van zoet en zuur, bloemige tonen met vleugje muskaatdruif\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"worldofnix\",\"site_url\":\"https://worldofnix.com\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
-	"method": "GET",
-	"orderNo": 1748995313561,
-	"retryCount": 0,
-	"uniqueKey": "https://worldofnix.com/en/products/giesen-new-zealand-pinot-gris",
-	"url": "https://worldofnix.com/en/products/giesen-new-zealand-pinot-gris"
-}

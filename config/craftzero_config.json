@@ -1,0 +1,46 @@
+{
+  "rootUrl": "https://www.craftzero.com.au",
+  "baseUrl": "https://www.craftzero.com.au/collections/all",
+  "site_name": "craftzero",
+  "seller": "seller",
+  "productsLinks": "/products/",
+  "collectionLinks": "/collections/",
+  "productLinkSelector": "a[href*=\"/products/\"]",
+  "productLinkAttribute": "href",
+  "skipCollectionLinksInProducts": true,
+  "pagination": {
+    "type": "link",
+    "selector": ".pagination a[href*=\"page=\"]"
+  },
+  "moreConfig": true,
+  "selectors": {
+    "header": {
+      "name": "meta[property='og:title']",
+      "price": "meta[property='og:price:amount']",
+      "currency": "meta[property='og:price:currency']",
+      "description": "meta[name='description']",
+      "images": "meta[property='og:image']",
+      "abv": null,
+      "gluten_free": null,
+      "vegan": null,
+      "producer": ".vendor a.underline",
+      "energy": null,
+      "sugars": null,
+      "category": null
+    },
+    "main": {
+      "name": "h1.product__title",
+      "price": ".product__price .price-item--regular",
+      "currency": ".product__price .price-item--regular",
+      "description": "#ProductAccordion-product-template .rte",
+      "images": ".product__media img",
+      "abv": ".product-single__description:contains(\"ABV\")",
+      "gluten": null,
+      "vegan": null,
+      "producer": ".vendor a.underline",
+      "energy": null,
+      "sugars": null,
+      "category": ".breadcrumb li:last-child"
+    }
+  }
+}

@@ -1,9 +1,0 @@
-{
-	"id": "70e1mXbbwQaefsE",
-	"json": "{\"id\":\"70e1mXbbwQaefsE\",\"url\":\"https://thezeroproof.com/collections/all/products/proxies-crisp-white\",\"uniqueKey\":\"https://thezeroproof.com/collections/all/products/proxies-crisp-white\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":3586,\"name\":\"Proxies Crisp White\",\"abv\":null,\"producer\":\"Proxies\",\"product_category\":\"Wine\",\"energy\":null,\"sugar\":null,\"price\":\"28.00\",\"currency\":\"USD\",\"country\":null,\"url\":\"https://thezeroproof.com/collections/all/products/proxies-crisp-white\",\"images\":\"https://thezeroproof.com/cdn/shop/files/proxies-crisp-white-537501-632729_1000x1000.png?v=1740569582\",\"description\":\"Proxies offers “a new form of wine alternative” — through layered blends of fruit, teas, spices, and botanicals. In their Crisp White, lychee, white flowers, and spicy ginger burst across the palate, mingling with ripe peach, vibrant citrus, and lively Niagara verjus. It is certifiably zesty.\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"thezeroproof\",\"site_url\":\"https://thezeroproof.com\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
-	"method": "GET",
-	"orderNo": 1748995313503,
-	"retryCount": 0,
-	"uniqueKey": "https://thezeroproof.com/collections/all/products/proxies-crisp-white",
-	"url": "https://thezeroproof.com/collections/all/products/proxies-crisp-white"
-}

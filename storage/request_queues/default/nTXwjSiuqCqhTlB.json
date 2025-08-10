@@ -1,9 +1,0 @@
-{
-	"id": "nTXwjSiuqCqhTlB",
-	"json": "{\"id\":\"nTXwjSiuqCqhTlB\",\"url\":\"https://worldofnix.com/en/products/french-bloom-bouteille-blanc-de-blancs\",\"uniqueKey\":\"https://worldofnix.com/en/products/french-bloom-bouteille-blanc-de-blancs\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":3717,\"name\":\"French Bloom Le Blanc - Premium alcoholvrije bubbel\",\"abv\":null,\"producer\":\"French Bloom\",\"product_category\":\"Other\",\"energy\":\"119 kJ/28 kcal\",\"sugar\":\"5.9 g\",\"price\":\"120,99\",\"currency\":\"EUR\",\"country\":null,\"url\":\"https://worldofnix.com/en/products/french-bloom-bouteille-blanc-de-blancs\",\"images\":\"http://worldofnix.com/cdn/shop/files/Packshot_French_Bloom_LaCuvee.png?v=1745916982\",\"description\":\"De alcoholvrije (0.0%) bubbel French Bloom Le Blanc, biologisch, vegan en halal. Subtiele smaken van granny smith appel, witte bloem en citrus. Pure Luxe!\",\"gluten_free\":null,\"vegan\":\"Vegan\",\"duplicated_with\":null,\"probability\":null,\"site_name\":\"worldofnix\",\"site_url\":\"https://worldofnix.com\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear, although described as 0.0% in the description\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
-	"method": "GET",
-	"orderNo": 1748995313559,
-	"retryCount": 0,
-	"uniqueKey": "https://worldofnix.com/en/products/french-bloom-bouteille-blanc-de-blancs",
-	"url": "https://worldofnix.com/en/products/french-bloom-bouteille-blanc-de-blancs"
-}

@@ -1,9 +1,0 @@
-{
-	"id": "a575hGjEnQjELmp",
-	"json": "{\"id\":\"a575hGjEnQjELmp\",\"url\":\"https://worldofnix.com/en/products/tempera-calda\",\"uniqueKey\":\"https://worldofnix.com/en/products/tempera-calda\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":3811,\"name\":\"Tempera Calda – soft alternative for a dessert wine\",\"abv\":null,\"producer\":\"Tempera\",\"product_category\":\"Wine\",\"energy\":\"119 kJ/28 kcal\",\"sugar\":\"7 g\",\"price\":\"18,69\",\"currency\":\"EUR\",\"country\":null,\"url\":\"https://worldofnix.com/en/products/tempera-calda\",\"images\":\"http://worldofnix.com/cdn/shop/files/Packshot_Tempera_Calda.png?v=1740665666\",\"description\":\"Tempera Calda is an alternative to a dessert wine with soft, warm tones and a full taste. Perfect for a relaxing moment. Order now and enjoy!\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"worldofnix\",\"site_url\":\"https://worldofnix.com\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
-	"method": "GET",
-	"orderNo": 1748995313565,
-	"retryCount": 0,
-	"uniqueKey": "https://worldofnix.com/en/products/tempera-calda",
-	"url": "https://worldofnix.com/en/products/tempera-calda"
-}

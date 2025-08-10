@@ -1,9 +1,0 @@
-{
-	"id": "gHsDUDJsBw7lTii",
-	"json": "{\"id\":\"gHsDUDJsBw7lTii\",\"url\":\"https://sansdrinks.com.au/products/tread-softly-everything-except-pinot-grigio\",\"uniqueKey\":\"https://sansdrinks.com.au/products/tread-softly-everything-except-pinot-grigio\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":570,\"name\":\"Tread Softly Everything Except Pinot Grigio |  Sans Drinks  Australia  \",\"abv\":null,\"producer\":\"Tread Softly\",\"product_category\":\"Other\",\"energy\":null,\"sugar\":null,\"price\":\"18.00\",\"currency\":\"AUD\",\"country\":null,\"url\":\"https://sansdrinks.com.au/products/tread-softly-everything-except-pinot-grigio\",\"images\":\"http://sansdrinks.com.au/cdn/shop/products/TreadSoftlyEverythingExceptZeroAlcPinotGrigio2023_9e88f669-cdda-4581-b1c4-0e5e89b7ca35.jpg?v=1708602662\",\"description\":\"The Tread Softly Everything Except Pinot Grigio is made in Australia from grapes sourced from the dry-grown vineyards of Victoria and S \\n\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"sansdrinks\",\"site_url\":\"https://sansdrinks.com.au\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear and category is 'Other', which requires further clarification\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
-	"method": "GET",
-	"orderNo": 1748995312943,
-	"retryCount": 0,
-	"uniqueKey": "https://sansdrinks.com.au/products/tread-softly-everything-except-pinot-grigio",
-	"url": "https://sansdrinks.com.au/products/tread-softly-everything-except-pinot-grigio"
-}

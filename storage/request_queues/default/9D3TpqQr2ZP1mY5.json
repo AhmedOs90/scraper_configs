@@ -1,9 +1,0 @@
-{
-	"id": "9D3TpqQr2ZP1mY5",
-	"json": "{\"id\":\"9D3TpqQr2ZP1mY5\",\"url\":\"https://www.alcoholvrijshop.nl/vinada-sipper\",\"uniqueKey\":\"https://www.alcoholvrijshop.nl/vinada-sipper\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":2303,\"name\":\"Vinada Sipper - voor 200ml fles\",\"abv\":null,\"producer\":\"Vinada\",\"product_category\":\"Other\",\"energy\":null,\"sugar\":null,\"price\":\"2.49\",\"currency\":\"EUR\",\"country\":null,\"url\":\"https://www.alcoholvrijshop.nl/vinada-sipper\",\"images\":\"https://www.alcoholvrijshop.nl/media/catalog/product/cache/f9572dad0fbf57ad9228b073e7175037/v/i/vinada-sipper-black-bottle.png\",\"description\":\"Koop Vinada Sipper - voor 200ml fles alcoholvrije mousserende wijn voor slechts 2.09 ✅ Bestel eenvoudig online ✅ Veilig bezorgd ✅ Kopersbescherming\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"alcoholvrijshop\",\"site_url\":\"https://www.alcoholvrijshop.nl\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear and category is 'Other'\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
-	"method": "GET",
-	"orderNo": 1748995313066,
-	"retryCount": 0,
-	"uniqueKey": "https://www.alcoholvrijshop.nl/vinada-sipper",
-	"url": "https://www.alcoholvrijshop.nl/vinada-sipper"
-}

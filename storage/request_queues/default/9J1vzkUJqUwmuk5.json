@@ -1,9 +1,0 @@
-{
-	"id": "9J1vzkUJqUwmuk5",
-	"json": "{\"id\":\"9J1vzkUJqUwmuk5\",\"url\":\"https://dryvariety.com/products/noughty-and-nice\",\"uniqueKey\":\"https://dryvariety.com/products/noughty-and-nice\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":949,\"name\":\"“Noughty and Nice”\",\"abv\":null,\"producer\":\"Dry Variety\",\"product_category\":\"Wine\",\"energy\":null,\"sugar\":null,\"price\":\"52.00\",\"currency\":\"CAD\",\"country\":null,\"url\":\"https://dryvariety.com/products/noughty-and-nice\",\"images\":\"http://dryvariety.com/cdn/shop/files/noughtystillblancandrosedealcoholizedwine.png?v=1686783663\",\"description\":\"Introducing the “Noughty and Nice” Variety Bundle......just in time for those hot summer days and warm summer nights.   This special duo includes the two most recently released still wines from Thomson and Scott: Noughty Blanc and Noughty Rosé.  These newbies are incredible and have been selected as two of Dry Variety'\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"dryvariety\",\"site_url\":\"https://dryvariety.com\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
-	"method": "GET",
-	"orderNo": 1748995312979,
-	"retryCount": 0,
-	"uniqueKey": "https://dryvariety.com/products/noughty-and-nice",
-	"url": "https://dryvariety.com/products/noughty-and-nice"
-}

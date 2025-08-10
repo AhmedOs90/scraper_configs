@@ -1,9 +1,0 @@
-{
-	"id": "2Wa2xlqzx0urKLK",
-	"json": "{\"id\":\"2Wa2xlqzx0urKLK\",\"url\":\"https://beershoppen.dk/collections/alkoholfri-ol/products/granat-aeble-cider-val-de-france-alkoholfri-75-cl\",\"uniqueKey\":\"https://beershoppen.dk/collections/alkoholfri-ol/products/granat-aeble-cider-val-de-france-alkoholfri-75-cl\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":3144,\"name\":\"Granat Æble Cider - Val de France- Alkoholfri- 75 cl.\",\"abv\":null,\"producer\":null,\"product_category\":\"Cider\",\"energy\":null,\"sugar\":null,\"price\":\"75,00\",\"currency\":\"DKK\",\"country\":null,\"url\":\"https://beershoppen.dk/collections/alkoholfri-ol/products/granat-aeble-cider-val-de-france-alkoholfri-75-cl\",\"images\":\"http://beershoppen.dk/cdn/shop/files/ValdefrancheGranataeble_1200x1200.jpg?v=1742466531\",\"description\":\"Fransk æble cider brygget af økologiske æbler, som er Granat æble\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"beershoppen\",\"site_url\":\"https://beershoppen.dk\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
-	"method": "GET",
-	"orderNo": 1748995313472,
-	"retryCount": 0,
-	"uniqueKey": "https://beershoppen.dk/collections/alkoholfri-ol/products/granat-aeble-cider-val-de-france-alkoholfri-75-cl",
-	"url": "https://beershoppen.dk/collections/alkoholfri-ol/products/granat-aeble-cider-val-de-france-alkoholfri-75-cl"
-}

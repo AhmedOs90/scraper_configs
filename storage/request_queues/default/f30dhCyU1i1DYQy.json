@@ -1,9 +1,0 @@
-{
-	"id": "f30dhCyU1i1DYQy",
-	"json": "{\"id\":\"f30dhCyU1i1DYQy\",\"url\":\"https://sansdrinks.com.au/products/beneficial-beer-co-classic-pale-ale\",\"uniqueKey\":\"https://sansdrinks.com.au/products/beneficial-beer-co-classic-pale-ale\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":662,\"name\":\"Beneficial Beer Co Wagon Drivers Pale Ale |  Sans Drinks  Australia  \",\"abv\":null,\"producer\":\"Beneficial Beer Co\",\"product_category\":\"Beer\",\"energy\":null,\"sugar\":null,\"price\":\"5.90\",\"currency\":\"AUD\",\"country\":null,\"url\":\"https://sansdrinks.com.au/products/beneficial-beer-co-classic-pale-ale\",\"images\":\"http://sansdrinks.com.au/cdn/shop/files/Beneficial_Beer_Co_Wagon_Drivers_Pale_Ale.jpg?v=1732507713\",\"description\":\"Beneficial Beer Co has reimagined the classics to produce the Beneficial Beer Co Wagon Drivers Pale Ale. This perfectly balanced non-al \\n\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"sansdrinks\",\"site_url\":\"https://sansdrinks.com.au\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
-	"method": "GET",
-	"orderNo": 1748995312959,
-	"retryCount": 0,
-	"uniqueKey": "https://sansdrinks.com.au/products/beneficial-beer-co-classic-pale-ale",
-	"url": "https://sansdrinks.com.au/products/beneficial-beer-co-classic-pale-ale"
-}

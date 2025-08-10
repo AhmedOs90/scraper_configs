@@ -1,9 +1,0 @@
-{
-	"id": "WbtTePKULKQXPY7",
-	"json": "{\"id\":\"WbtTePKULKQXPY7\",\"url\":\"https://thealcoholfreeco.co.uk/product/mixed-white-6-bottle-bundle-2/\",\"uniqueKey\":\"https://thealcoholfreeco.co.uk/product/mixed-white-6-bottle-bundle-2\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":1588,\"name\":\"Mixed White 6 Bottle Bundle\",\"abv\":null,\"producer\":null,\"product_category\":\"Wine\",\"energy\":null,\"sugar\":null,\"price\":\"61.05\",\"currency\":\"GBP\",\"country\":null,\"url\":\"https://thealcoholfreeco.co.uk/product/mixed-white-6-bottle-bundle-2/\",\"images\":\"https://thealcoholfreeco.co.uk/wp-content/uploads/2023/01/Untitled-design-21.png\",\"description\":\"Mix of wines pictured. *In the event we are out of a particular wine we may substitute for a like for like wine of the same value\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"thealcoholfreeco\",\"site_url\":\"https://thealcoholfreeco.co.uk\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear and product is a multipack\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
-	"method": "GET",
-	"orderNo": 1748995313014,
-	"retryCount": 0,
-	"uniqueKey": "https://thealcoholfreeco.co.uk/product/mixed-white-6-bottle-bundle-2",
-	"url": "https://thealcoholfreeco.co.uk/product/mixed-white-6-bottle-bundle-2/"
-}

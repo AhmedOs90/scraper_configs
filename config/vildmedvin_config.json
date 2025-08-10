@@ -4,7 +4,7 @@
     "collectionLinks": "",
     "productLinkSelector": "a[data-testid='productLink']",
     "productLinkAttribute": "href",
-    "bannerSkip": "'button.coi-banner__accept'",
+    "bannerSkip": "button.coi-banner__accept",
     "seller": "seller",
     "site_name": "vildmedvin",
     "moreConfig": true,

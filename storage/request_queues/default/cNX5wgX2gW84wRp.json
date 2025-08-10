@@ -1,9 +1,0 @@
-{
-	"id": "cNX5wgX2gW84wRp",
-	"json": "{\"id\":\"cNX5wgX2gW84wRp\",\"url\":\"https://worldofnix.com/en/products/three-spirit-blurred-vines-sharp\",\"uniqueKey\":\"https://worldofnix.com/en/products/three-spirit-blurred-vines-sharp\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":3822,\"name\":\"Alcoholvrije Not Wine - Three Spirit Blurred Vines Sharp\",\"abv\":null,\"producer\":\"Three Spirit\",\"product_category\":\"Wine\",\"energy\":\"83 kJ/20 kcal\",\"sugar\":\"2,4 g\",\"price\":\"21,99\",\"currency\":\"EUR\",\"country\":null,\"url\":\"https://worldofnix.com/en/products/three-spirit-blurred-vines-sharp\",\"images\":\"http://worldofnix.com/cdn/shop/files/ThreeSpirit_Sharp_Packshot.png?v=1744633015\",\"description\":\"De not wine Three Spirit Sharp - Aroma's van manukablad en geperste kruisbessen, gedurfde zuurgraad, en vol met actieve ingrediënten voor een scherpere geest.\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"worldofnix\",\"site_url\":\"https://worldofnix.com\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear and category is borderline (labeled as Wine but described as 'Not Wine')\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
-	"method": "GET",
-	"orderNo": 1748995313566,
-	"retryCount": 0,
-	"uniqueKey": "https://worldofnix.com/en/products/three-spirit-blurred-vines-sharp",
-	"url": "https://worldofnix.com/en/products/three-spirit-blurred-vines-sharp"
-}

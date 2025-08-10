@@ -1,9 +1,0 @@
-{
-	"id": "Jo1AUWhtXXq1fXd",
-	"json": "{\"id\":\"Jo1AUWhtXXq1fXd\",\"url\":\"https://thezeroproof.com/collections/all/products/leitz-zero-point-five-sauvignon-blanc\",\"uniqueKey\":\"https://thezeroproof.com/collections/all/products/leitz-zero-point-five-sauvignon-blanc\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":3603,\"name\":\"Leitz - Zero Point Five Sauvignon Blanc\",\"abv\":null,\"producer\":\"Leitz\",\"product_category\":\"Wine\",\"energy\":null,\"sugar\":null,\"price\":\"21.99\",\"currency\":\"USD\",\"country\":null,\"url\":\"https://thezeroproof.com/collections/all/products/leitz-zero-point-five-sauvignon-blanc\",\"images\":\"https://thezeroproof.com/cdn/shop/files/leitz-zero-point-five-sauvignon-blanc-539001-103705_1080x1080.png?v=1743139338\",\"description\":\"A new de-alcoholized sauvignon blanc in the proverbial TZP cellar. Experience notes of gooseberry, green bell pepper, and fresh grass -- a light freshness of green citrus fruits, combined with delicate minerality. White wine lovers, you're going to want to taste it!\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"thezeroproof\",\"site_url\":\"https://thezeroproof.com\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
-	"method": "GET",
-	"orderNo": 1748995313548,
-	"retryCount": 0,
-	"uniqueKey": "https://thezeroproof.com/collections/all/products/leitz-zero-point-five-sauvignon-blanc",
-	"url": "https://thezeroproof.com/collections/all/products/leitz-zero-point-five-sauvignon-blanc"
-}

@@ -1,9 +1,0 @@
-{
-	"id": "SJGi4YFYumjouPj",
-	"json": "{\"id\":\"SJGi4YFYumjouPj\",\"url\":\"https://sansdrinks.com.au/products/wolf-blass-rose\",\"uniqueKey\":\"https://sansdrinks.com.au/products/wolf-blass-rose\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":556,\"name\":\"Wolf Blass Rose |  Sans Drinks  Australia  \",\"abv\":null,\"producer\":\"Wolf Blass\",\"product_category\":\"Wine\",\"energy\":null,\"sugar\":null,\"price\":\"13.30\",\"currency\":\"AUD\",\"country\":null,\"url\":\"https://sansdrinks.com.au/products/wolf-blass-rose\",\"images\":\"http://sansdrinks.com.au/cdn/shop/products/WolfBlassZeroAlcoholRose_b99cd6e6-aece-490f-b5ff-1199a9ee4d54.jpg?v=1708602695\",\"description\":\"\\nEstablished in 1966, Wolf Blass is one of Australia's original wine brands. The Wolf Bass Zero range is made from exceptional South Au \\n\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"sansdrinks\",\"site_url\":\"https://sansdrinks.com.au\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
-	"method": "GET",
-	"orderNo": 1748995312941,
-	"retryCount": 0,
-	"uniqueKey": "https://sansdrinks.com.au/products/wolf-blass-rose",
-	"url": "https://sansdrinks.com.au/products/wolf-blass-rose"
-}

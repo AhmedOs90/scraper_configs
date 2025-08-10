@@ -35,7 +35,7 @@ export async function extractProductData(page, config, Prod, log) {
             Prod.sugars = Prod.sugars || await page.$eval(config.selectors.main.sugars, el => el.textContent.trim()).catch(() => null);
             Prod.category = Prod.category || await page.$eval(config.selectors.main.category, el => el.textContent.trim()).catch(() => null);
   
-            log.info(`${JSON.stringify(Prod)}`);
+
             if(config.moreConfig && Prod.name != "Name not found"){
               Prod = await refineData(config.rootUrl, Prod, page);
             }
@@ -44,7 +44,7 @@ export async function extractProductData(page, config, Prod, log) {
   
             return Prod;
           } catch (error) {
-            log.error(`Error during product extraction: ${error.message}`);
+            log.error(`Error during product extraction helper: ${error.message}`);
           }
           finally{
             // page.close();

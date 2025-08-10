@@ -1,0 +1,47 @@
+{
+  "rootUrl": "https://upsidedrinks.com",
+  "baseUrl": "https://upsidedrinks.com/collections/shop-all",
+  "site_name": "upsidedrinks",
+  "seller": "seller",
+  "productsLinks": "/products/",
+  "collectionLinks": "/collections/",
+  "productLinkSelector": "a[href*=\"/products/\"]",
+  "productLinkAttribute": "href",
+  "skipCollectionLinksInProducts": true,
+ "pagination": {
+  "type": "button",
+  "selector": ".gf-loadmore-btn"
+},
+"bannerSkip": "button[class*='kl-private-reset-css']",
+  "moreConfig": true,
+  "selectors": {
+    "header": {
+      "name": "meta[property='og:title']",
+      "price": "meta[property='og:price:amount']",
+      "currency": "meta[property='og:price:currency']",
+      "description": "meta[name='description']",
+      "images": "meta[property='og:image']",
+      "abv": null,
+      "gluten_free": null,
+      "vegan": null,
+      "producer": null,
+      "energy": null,
+      "sugars": null,
+      "category": null
+    },
+    "main": {
+      "name": "h1.product__title",
+      "price": ".product__price span",
+      "currency": ".price-item--regular",
+      "description": ".product__description, .product-single__description",
+      "images": ".product__media img, .product-gallery img",
+      "abv": "#product-details, #ProductAccordion-product-template",
+      "gluten": ".product__tags .tag--gluten-free",
+      "vegan": ".product__tags .tag--vegan",
+      "producer": ".product__vendor, .vendor",
+      "energy": null,
+      "sugars": null,
+      "category": ".breadcrumb li:last-child"
+    }
+  }
+}

@@ -1,9 +1,0 @@
-{
-	"id": "dqMrSEfHVqm6U6U",
-	"json": "{\"id\":\"dqMrSEfHVqm6U6U\",\"url\":\"https://sansdrinks.com.au/products/monday-classic-non-alcoholic-g-t\",\"uniqueKey\":\"https://sansdrinks.com.au/products/monday-classic-non-alcoholic-g-t\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":776,\"name\":\"Monday Distillery Classic G&T |  Sans Drinks  Australia  \",\"abv\":null,\"producer\":\"Monday Distillery\",\"product_category\":\"Other\",\"energy\":null,\"sugar\":null,\"price\":\"16.00\",\"currency\":\"AUD\",\"country\":null,\"url\":\"https://sansdrinks.com.au/products/monday-classic-non-alcoholic-g-t\",\"images\":\"http://sansdrinks.com.au/cdn/shop/files/Monday_Distillery_Classic_G_T.jpg?v=1723616452\",\"description\":\"The Monday Distillery Classic G&amp;T is a pre-mixed Gin mocktail that's ready to drink. It boasts all of the aroma, mouthfeel and tast \\n\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"sansdrinks\",\"site_url\":\"https://sansdrinks.com.au\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear and category is 'Other', which requires further clarification\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
-	"method": "GET",
-	"orderNo": 1748995312970,
-	"retryCount": 0,
-	"uniqueKey": "https://sansdrinks.com.au/products/monday-classic-non-alcoholic-g-t",
-	"url": "https://sansdrinks.com.au/products/monday-classic-non-alcoholic-g-t"
-}

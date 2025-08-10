@@ -1,9 +1,0 @@
-{
-	"id": "jQv0zaf7ASew2zB",
-	"json": "{\"id\":\"jQv0zaf7ASew2zB\",\"url\":\"https://www.beyondbeer.de/Giesinger-Freiheit/\",\"uniqueKey\":\"https://www.beyondbeer.de/Giesinger-Freiheit\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":3878,\"name\":\"Giesinger Freiheit Alkoholfrei\",\"abv\":null,\"producer\":\"Giesinger\",\"product_category\":\"Beer\",\"energy\":null,\"sugar\":null,\"price\":\"2.39\",\"currency\":\"EUR\",\"country\":null,\"url\":\"https://www.beyondbeer.de/Giesinger-Freiheit/\",\"images\":\"https://www.beyondbeer.de/media/e1/38/c5/1730733000/1750017.jpg?ts=1731573342\",\"description\":\"Eines der besten alkoholfreien Lagerbiere aus Deutschland! Erfrischend süffig und trotzdem intensiv im Geschmack. Direkt bei BEYOND BEER bestellen!\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"beyondbeer\",\"site_url\":\"https://www.beyondbeer.de\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
-	"method": "GET",
-	"orderNo": 1748995313571,
-	"retryCount": 0,
-	"uniqueKey": "https://www.beyondbeer.de/Giesinger-Freiheit",
-	"url": "https://www.beyondbeer.de/Giesinger-Freiheit/"
-}

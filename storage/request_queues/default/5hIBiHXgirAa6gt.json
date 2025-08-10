@@ -1,9 +1,0 @@
-{
-	"id": "5hIBiHXgirAa6gt",
-	"json": "{\"id\":\"5hIBiHXgirAa6gt\",\"url\":\"https://beershoppen.dk/collections/alkoholfri-ol/products/botanic-ipa-33cl-0-alkoholfri-ipa-baladin\",\"uniqueKey\":\"https://beershoppen.dk/collections/alkoholfri-ol/products/botanic-ipa-33cl-0-alkoholfri-ipa-baladin\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":3140,\"name\":\"Botanic IPA - 33cl, 0%, Alkoholfri IPA - Baladin\",\"abv\":null,\"producer\":null,\"product_category\":\"Other\",\"energy\":null,\"sugar\":null,\"price\":\"40,00\",\"currency\":\"DKK\",\"country\":null,\"url\":\"https://beershoppen.dk/collections/alkoholfri-ol/products/botanic-ipa-33cl-0-alkoholfri-ipa-baladin\",\"images\":\"http://beershoppen.dk/cdn/shop/files/IMG_2185_1200x1200.heic?v=1743593222\",\"description\":\"Alkoholfri ipa fra Italienske Baladin.\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"beershoppen\",\"site_url\":\"https://beershoppen.dk\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
-	"method": "GET",
-	"orderNo": 1748995313471,
-	"retryCount": 0,
-	"uniqueKey": "https://beershoppen.dk/collections/alkoholfri-ol/products/botanic-ipa-33cl-0-alkoholfri-ipa-baladin",
-	"url": "https://beershoppen.dk/collections/alkoholfri-ol/products/botanic-ipa-33cl-0-alkoholfri-ipa-baladin"
-}

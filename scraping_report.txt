@@ -1,9 +1,9 @@
 Total Sites Scraped: 1
-Total Products Scraped: 39
+Total Products Scraped: 253
 Details per Site:
-Site Name: nemlig
-Root URL: https://www.nemlig.com
-Products Scraped: 39
+Site Name: drydrinker
+Root URL: https://drydrinker.com
+Products Scraped: 253
 ---
 Scraped Root URLs:
 https://drydrinker.com
@@ -22,3 +22,9 @@ https://proofnomore.com
 https://drinknolow.com
 https://worldofnix.com
 https://www.beyondbeer.de
+https://www.craftzero.com.au
+https://boisson.co
+https://upsidedrinks.com
+https://thebluedolphinstore.com
+https://www.drybutwet.com.au
+https://www.teedawn.com

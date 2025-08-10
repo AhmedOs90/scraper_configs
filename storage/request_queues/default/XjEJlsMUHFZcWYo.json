@@ -1,9 +1,0 @@
-{
-	"id": "XjEJlsMUHFZcWYo",
-	"json": "{\"id\":\"XjEJlsMUHFZcWYo\",\"url\":\"https://sansdrinks.com.au/products/tread-softly-everything-except-rose\",\"uniqueKey\":\"https://sansdrinks.com.au/products/tread-softly-everything-except-rose\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":567,\"name\":\"Tread Softly Everything Except Rosé |  Sans Drinks  Australia  \",\"abv\":null,\"producer\":\"Tread Softly\",\"product_category\":\"Wine\",\"energy\":null,\"sugar\":null,\"price\":\"18.00\",\"currency\":\"AUD\",\"country\":null,\"url\":\"https://sansdrinks.com.au/products/tread-softly-everything-except-rose\",\"images\":\"http://sansdrinks.com.au/cdn/shop/products/Tread-Softly-Everything-Except-Rose_5395f041-0f42-4292-9af6-11ad20a42224.jpg?v=1708602667\",\"description\":\"\\n\\nCreated in South Australia by traditional wine makers Tread Softly. The Tread Softly Everything Except Rose is a vibrant and medium-b \\n\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"sansdrinks\",\"site_url\":\"https://sansdrinks.com.au\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
-	"method": "GET",
-	"orderNo": 1748995312943,
-	"retryCount": 0,
-	"uniqueKey": "https://sansdrinks.com.au/products/tread-softly-everything-except-rose",
-	"url": "https://sansdrinks.com.au/products/tread-softly-everything-except-rose"
-}

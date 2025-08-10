@@ -1,9 +1,0 @@
-{
-	"id": "H7oBcPOkoSdxj2z",
-	"json": "{\"id\":\"H7oBcPOkoSdxj2z\",\"url\":\"https://thezeroproof.com/collections/all/products/31-days-of-wine-bundle\",\"uniqueKey\":\"https://thezeroproof.com/collections/all/products/31-days-of-wine-bundle\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":3573,\"name\":\"31 Days of Wine Bundle\",\"abv\":null,\"producer\":\"The Zero Proof\",\"product_category\":\"Wine\",\"energy\":null,\"sugar\":null,\"price\":\"647.51\",\"currency\":\"USD\",\"country\":null,\"url\":\"https://thezeroproof.com/collections/all/products/31-days-of-wine-bundle\",\"images\":\"https://thezeroproof.com/cdn/shop/files/31-days-of-wine-bundle-908631-568177_1500x1500.png?v=1741398172\",\"description\":\"31 bottles of wine for 31 days of Dry January. Whether you're on a mission to find your new favorite bottle, excited to entertain this year, or simply want to imbibe in the novelty that is our ✨largest bundle yet✨, you're in the right place. Cheers!\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"thezeroproof\",\"site_url\":\"https://thezeroproof.com\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
-	"method": "GET",
-	"orderNo": 1748995313502,
-	"retryCount": 0,
-	"uniqueKey": "https://thezeroproof.com/collections/all/products/31-days-of-wine-bundle",
-	"url": "https://thezeroproof.com/collections/all/products/31-days-of-wine-bundle"
-}

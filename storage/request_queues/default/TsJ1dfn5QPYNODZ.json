@@ -1,9 +1,0 @@
-{
-	"id": "TsJ1dfn5QPYNODZ",
-	"json": "{\"id\":\"TsJ1dfn5QPYNODZ\",\"url\":\"https://sansdrinks.com.au/products/tread-softly-everything-except-prosecco\",\"uniqueKey\":\"https://sansdrinks.com.au/products/tread-softly-everything-except-prosecco\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"product\":{\"id\":568,\"name\":\"Tread Softly Everything Except Prosecco |  Sans Drinks  Australia  \",\"abv\":null,\"producer\":\"Tread Softly\",\"product_category\":\"Other\",\"energy\":null,\"sugar\":null,\"price\":\"14.40\",\"currency\":\"AUD\",\"country\":null,\"url\":\"https://sansdrinks.com.au/products/tread-softly-everything-except-prosecco\",\"images\":\"http://sansdrinks.com.au/cdn/shop/products/TreadSoftlyEverythingExceptZeroAlcProsecco_aa29c3ed-77f0-497c-b1d7-b3cde7a25bcd.jpg?v=1708602664\",\"description\":\"\\nThe Tread Softly Everything Except Prosecco is made in South Australia with Prosecco grapes. It boasts a vibrant and full-flavoured dr \\n\",\"gluten_free\":null,\"vegan\":null,\"duplicated_with\":null,\"probability\":null,\"site_name\":\"sansdrinks\",\"site_url\":\"https://sansdrinks.com.au\",\"seller_or_not_seller\":\"seller\",\"classified\":2,\"reason\":\"ABV is unclear and category is 'Other', which requires further clarification\",\"reviewed\":0,\"subcategory\":null,\"cleaned\":0}}}",
-	"method": "GET",
-	"orderNo": 1748995312943,
-	"retryCount": 0,
-	"uniqueKey": "https://sansdrinks.com.au/products/tread-softly-everything-except-prosecco",
-	"url": "https://sansdrinks.com.au/products/tread-softly-everything-except-prosecco"
-}

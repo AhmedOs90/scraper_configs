@@ -1,0 +1,40 @@
+{
+  "rootUrl": "https://www.teedawn.com",
+  "baseUrl": "https://www.teedawn.com/webshop",
+  "site_name": "teedawn",
+  "seller": "seller",
+  "productsLinks": "/p/",    
+  "collectionLinks": "/collections/",
+  "productLinkSelector": "a[href*=\"/p/\"]",
+  "productLinkAttribute": "href",
+  "skipCollectionLinksInProducts": true,
+  "pagination": {
+    "type": "link",
+    "selector": "a[rel=\"next\"]"
+  },
+  "bannerSkip": null,
+  "moreConfig": true,
+  "selectors": {
+    "header": {
+      "name": "meta[property='og:title']",
+      "price": "meta[property='product:price:amount']",
+      "currency": "meta[property='product:price:currency']",
+      "description":"meta[property='og:description']",
+      "images": "meta[property='og:image']"
+    },
+    "main": {
+      "name": "h1.product__title, h1.title",
+      "price": ".product__price, .price-item--regular, .price",
+      "currency": ".price-item--currency",
+      "description": ".product__description, .product-description, #tabs-description",
+      "images": ".product__media img, .gallery img, .slides img",
+      "abv": "p:contains(\"%\"), li:contains(\"%\")", 
+      "gluten": "p:contains(\"gluten\")",
+      "vegan": "p:contains(\"vegan\")",
+      "producer": ".vendor, .product__vendor a, .byline",
+      "energy": null,
+      "sugars": null,
+      "category": ".breadcrumb li:last-child, .breadcrumbs a:last-child"
+    }
+  }
+}
