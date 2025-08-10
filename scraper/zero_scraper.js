@@ -11,6 +11,7 @@ import extractAllLinks from './extractors/extractAllLinks.js';
 
 import extractPageLinks from './extractors/extractPageLinks.js';
 import extractDynamicLinks from './extractors/extractDynamicLinks.js';
+import { buildApiRefine } from '../services/refine_data_api.js';
 
 // Load root URLs
 const rootUrls = JSON.parse(fs.readFileSync('./config/roots.json', 'utf-8'));
@@ -49,9 +50,11 @@ function loadConfigForSite(rootUrl) {
   }
 }
 
-async function runCrawlerForSite(config, rootUrl, last = false) {
+async function runCrawlerForSite(config, rootUrl, last = false, opts = {}) {
 
-
+  const commit = opts?.commit === true; // default false
+  const refineFunctionString = opts?.refineFunctionString; // may be undefined (that’s fine)
+  const refineFromApi = buildApiRefine(refineFunctionString);
 
   const startTime = new Date().toISOString();
   let newProductsCount = 0;
@@ -80,7 +83,7 @@ async function runCrawlerForSite(config, rootUrl, last = false) {
 
     launchContext: {
       launchOptions: {
-        executablePath: '/usr/bin/chromium', // Corrected path
+        // executablePath: '/usr/bin/chromium', // Corrected path
         // headless: false, // Run in headless mode
         args: [
           '--no-sandbox', // Disable sandboxing for lower resource usage
@@ -114,7 +117,7 @@ async function runCrawlerForSite(config, rootUrl, last = false) {
       let isProductPage = false;
       // Initialize product object
       try {
-        Prod = await extractProductData(page, config, Prod, log);
+Prod = await extractProductData(page, config, Prod, log, { refineFromApi });
         log.info(`Product extracted: ${JSON.stringify(Prod)}`);
 
         if (!Prod.currency && config?.currency) {
@@ -144,14 +147,14 @@ if (
           // appendToSheet(auth,[Prod])
           // }
           if (Prod.name != "Name not found") {
-            // saveProductsToCSV([Prod], "my_scraped_data.csv")
-            let resp = await populateLake(Prod);
-            if (resp == "updated") {
-              updatedProductsCount++; // Increment updated product count
-            }
-            else {
-              newProductsCount++; // Increment new product count
-            }
+            saveProductsToCSV([Prod], "my_scraped_data.csv")
+            // let resp = await populateLake(Prod);
+            // if (resp == "updated") {
+            //   updatedProductsCount++; // Increment updated product count
+            // }
+            // else {
+            //   newProductsCount++; // Increment new product count
+            // }
             siteData.productsScraped += 1;
           }
         } else {
@@ -296,6 +299,26 @@ export async function runSite(domain) {
   };
 
 }
+
+export async function runSiteWithConfig(config, opts = {}) {
+  const { rootUrl, baseUrl } = config || {};
+  if (!rootUrl || !baseUrl) {
+    throw new Error('runSiteWithConfig: "rootUrl" and "baseUrl" are required in config.');
+  }
+
+  try {
+    console.log(`Starting scraper (config mode) for ${rootUrl}`);
+    await runCrawlerForSite(config, rootUrl, true, opts); // ⬅️ pass opts (contains refineFunctionString later)
+  } catch (error) {
+    console.error(`Error scraping (config mode) ${rootUrl}:`, error.message);
+  }
+
+  generateReportFile();
+  return { report: scrapedDataReport };
+}
+
+
+
 
 function generateReportFile() {
   const reportFilePath = path.join(process.cwd(), 'scraping_report.txt');

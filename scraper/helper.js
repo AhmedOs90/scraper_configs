@@ -1,7 +1,10 @@
 import { refineData } from '../services/refine_data.js';
 
 
-export async function extractProductData(page, config, Prod, log) {
+export async function extractProductData(page, config, Prod, log, opts = {}) {
+
+const refineFromApi = opts?.refineFromApi;                  // use the function passed from the crawler
+
     log.info('Product page detected. Extracting product data...');
           // outPage(page, productCounter);
           try {
@@ -17,7 +20,7 @@ export async function extractProductData(page, config, Prod, log) {
             Prod.vegan = await page.$eval(config.selectors.header.vegan, el => el.content).catch(() => null);
             Prod.producer = await page.$eval(config.selectors.header.producer, el => el.content).catch(() => null);
             Prod.energy = await page.$eval(config.selectors.header.energy, el => el.content).catch(() => null);
-            Prod.sugars = await page.$eval(config.selectors.header.sugars, el => el.content).catch(() => null);
+            Prod.sugar = await page.$eval(config.selectors.header.sugars, el => el.content).catch(() => null);
             Prod.category = await page.$eval(config.selectors.header.category, el => el.content).catch(() => null);
   
             // 2. Extract main section information if meta info is missing
@@ -32,15 +35,20 @@ export async function extractProductData(page, config, Prod, log) {
             Prod.vegan = Prod.vegan || await page.$eval(config.selectors.main.vegan, el => el.textContent.trim()).catch(() => null);
             Prod.producer = Prod.producer || await page.$eval(config.selectors.main.producer, el => el.textContent.trim()).catch(() => null);
             Prod.energy = Prod.energy || await page.$eval(config.selectors.main.energy, el => el.textContent.trim()).catch(() => null);
-            Prod.sugars = Prod.sugars || await page.$eval(config.selectors.main.sugars, el => el.textContent.trim()).catch(() => null);
+            Prod.sugar = Prod.sugar || await page.$eval(config.selectors.main.sugars, el => el.textContent.trim()).catch(() => null);
             Prod.category = Prod.category || await page.$eval(config.selectors.main.category, el => el.textContent.trim()).catch(() => null);
   
 
-            if(config.moreConfig && Prod.name != "Name not found"){
-              Prod = await refineData(config.rootUrl, Prod, page);
-            }
-            
-          
+         // 3) Your hardcoded per-site refine (kept)
+    if (config.moreConfig && Prod.name !== "Name not found") {
+      try {
+        Prod = await refineData(config.rootUrl, Prod, page);
+      } catch (e) {
+        log.error(`hardcoded refineData error: ${e.message}`);
+      }
+    }
+  
+  
   
             return Prod;
           } catch (error) {
