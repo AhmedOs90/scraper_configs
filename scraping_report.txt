@@ -1,9 +1,9 @@
 Total Sites Scraped: 1
-Total Products Scraped: 253
+Total Products Scraped: 11
 Details per Site:
-Site Name: drydrinker
-Root URL: https://drydrinker.com
-Products Scraped: 253
+Site Name: teedawn
+Root URL: https://www.teedawn.com
+Products Scraped: 11
 ---
 Scraped Root URLs:
 https://drydrinker.com
