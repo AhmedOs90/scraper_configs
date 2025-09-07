@@ -1,0 +1,33 @@
+{
+    "rootUrl": "https://www.thesobrmarket.com",
+    "baseUrl": "https://www.thesobrmarket.com/collections/all",
+    "site_name": "thesobrmarket",
+    "seller": "seller",
+    "productsLinks": "products/",
+    "collectionLinks": "/collections/",
+    "productLinkSelector": "a.product-item__title",
+    "productLinkAttribute": "href",
+    "skipCollectionLinksInProducts": true,
+    "level": 1,
+    "bannerSkip": null,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "price": "meta[property='og:price:amount']",
+            "currency": "meta[property='og:price:currency']",
+            "description": "meta[name='description']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "name": ".product-item__title",
+            "price": ".product-price--original",
+            "description": "div.product-single__description",
+            "images": ".product-single__photos img"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": "li.next a"
+    }
+}

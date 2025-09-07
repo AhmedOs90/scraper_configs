@@ -10,7 +10,7 @@
   "skipCollectionLinksInProducts": true,
   "pagination": {
     "type": "link",
-    "selector": ".woocommerce-pagination .next, .woocommerce-pagination a.next"
+  "selector": "a.next.page-numbers"
   },
   "bannerSkip": null,
   "moreConfig": true,
@@ -24,7 +24,7 @@
     },
     "main": {
       "name": "h1.product_title",
-      "price": ".price ins .amount, .price .amount",
+"price": "table tr:last-child td:last-child",
       "currency": ".price .amount",
       "description": ".woocommerce-product-details__short-description, .entry-summary p",
       "images": ".woocommerce-product-gallery__image img",

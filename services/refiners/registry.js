@@ -23,6 +23,8 @@ import boisson from "./sites/boisson.co.js";
 import upsidedrinks from "./sites/upsidedrinks.com.js";
 import thebluedolphinstore from "./sites/thebluedolphinstore.com.js";
 import teedawn from "./sites/teedawn.com.js";
+import thesobrmarket from "./sites/thesobrmarket.com.js";
+import thenewbar from "./sites/thenewbar.com.js";
 
 // Registry map
 const registry = new Map([
@@ -46,6 +48,9 @@ const registry = new Map([
   ["upsidedrinks.com", upsidedrinks],
   ["thebluedolphinstore.com", thebluedolphinstore],
   ["teedawn.com", teedawn],
+  ["thesobrmarket.com", thesobrmarket],
+  ["thenewbar.com", thenewbar]
+
 ]);
 
 export function getRefinerForUrl(rootUrl) {

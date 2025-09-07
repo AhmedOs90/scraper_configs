@@ -123,12 +123,13 @@ Prod = await extractProductData(page, config, Prod, log, { refineFromApi });
         if (!Prod.currency && config?.currency) {
           Prod.currency = config.currency;
         }
+        Prod.level = config.level || "0";
 
         log.info(url)
 if (
   Prod &&
   Prod.name &&
-  Prod.name !== "Name not found" &&
+  Prod.name !== "Name not found" && Prod.name !== "Products" &&
   Prod.price &&
   !String(Prod.price).toLowerCase().includes("start")
 ) {
@@ -148,13 +149,13 @@ if (
           // }
           if (Prod.name != "Name not found") {
             saveProductsToCSV([Prod], "my_scraped_data.csv")
-            // let resp = await populateLake(Prod);
-            // if (resp == "updated") {
-            //   updatedProductsCount++; // Increment updated product count
-            // }
-            // else {
-            //   newProductsCount++; // Increment new product count
-            // }
+            let resp = await populateLake(Prod);
+            if (resp == "updated") {
+              updatedProductsCount++; // Increment updated product count
+            }
+            else {
+              newProductsCount++; // Increment new product count
+            }
             siteData.productsScraped += 1;
           }
         } else {
@@ -172,7 +173,7 @@ if (
           }
           else if (config.productsLinks === "pageLinks" && (url === config.baseUrl || url === config.baseUrlS)) {
             log.info(`"pageLinks" mode enabled on ${url}`);
-            await extractPageLinks({ page, crawler, url, rootUrl, log });
+            await extractPageLinks({ page, crawler, config,url, rootUrl, log });
           }
           else if (
           await page.$(config.productLinkSelector || `a[href*="${config.productsLinks}"]`) ||

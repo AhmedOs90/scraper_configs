@@ -1,9 +1,9 @@
 Total Sites Scraped: 1
-Total Products Scraped: 11
+Total Products Scraped: 280
 Details per Site:
-Site Name: teedawn
-Root URL: https://www.teedawn.com
-Products Scraped: 11
+Site Name: thenewbar
+Root URL: https://thenewbar.com
+Products Scraped: 280
 ---
 Scraped Root URLs:
 https://drydrinker.com
@@ -28,3 +28,6 @@ https://upsidedrinks.com
 https://thebluedolphinstore.com
 https://www.drybutwet.com.au
 https://www.teedawn.com
+https://www.thesobrmarket.com
+https://www.alcoholfreedrinks.co.uk
+https://thenewbar.com

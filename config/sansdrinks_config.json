@@ -4,6 +4,8 @@
     "collectionLinks": "collections/",
     "productsLinks": "products/",
     "skipCollectionLinksInProducts": true,
+    "bannerSkip": "button.klaviyo-close-form",
+
     "seller":"seller",
     "site_name":"sansdrinks",
     "moreConfig":true,

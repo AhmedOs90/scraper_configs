@@ -12,18 +12,18 @@ export function detectCategory(productName, productDescription, categories) {
 }
 
 export const categories = [
-  "Beer",
-  "Wine",
-  "Spirit",
-  "RTD Cocktail",
-  "Aperitif",
-  "Sparkling Tea",
-  "Kombucha",
-  "Cider",
-  "Mixer",
-  "Other"
-]
-  ;
+    "Beer",
+    "Wine",
+    "Spirit",
+    "RTD Cocktail",
+    "Aperitif",
+    "Sparkling Tea",
+    "Kombucha",
+    "Cider",
+    "Mixer",
+    "Liqueur",
+    "Alternative"
+];
 
 // Helper function to detect vegan and gluten-free in description
 export function detectVeganAndgluten_free(description) {

@@ -19,7 +19,7 @@ async function extractPageLinks({ page, crawler, config, url, rootUrl, log }) {
   log.info(`Extracted ${allLinks.length} links from ${url}`);
 
   const internalLinks = allLinks.filter(link => link.startsWith(rootUrl));
-  internalLinks.forEach((link, i) => log.info(`🔗 Link ${i + 1}: ${link}`));
+  // internalLinks.forEach((link, i) => log.info(`🔗 Link ${i + 1}: ${link}`));
 
   log.info(`Found ${internalLinks.length} internal links on ${url}`);
 
