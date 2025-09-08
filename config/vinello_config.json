@@ -1,0 +1,33 @@
+{
+    "rootUrl": "https://www.vinello.eu",
+    "baseUrl": "https://www.vinello.eu/non-alcoholic-wine",
+    "site_name": "vinello",
+    "seller": "seller",
+
+    "collectionLinks": "",
+    "productsLinks": "",
+    "productLinkSelector": ".card-side .horizontal--title > a.product--title, .product--info .only--vertical > a.product--title",
+    "productLinkAttribute": "href",
+    "skipCollectionLinksInProducts": true,
+    "bannerSkip": ".cookie-permission--accept-button",
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "producer": "meta[property='product:brand']",
+            "price": "meta[property='product:price']",
+            "description": "meta[property='og:description']",
+            "images": "meta[name='twitter:image']"
+        },
+        "main": {
+            "abv": ".product--properties-row #attribute-1",
+            "currency": ".product--actions .price--content.content--default",
+            "country": ".product--properties-row #attribute-2"
+        }
+    },
+
+    "pagination": {
+        "type": "button",
+        "selector": "#listingLoadMore"
+    }
+}

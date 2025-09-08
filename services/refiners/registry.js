@@ -25,7 +25,15 @@ import thebluedolphinstore from "./sites/thebluedolphinstore.com.js";
 import teedawn from "./sites/teedawn.com.js";
 import thesobrmarket from "./sites/thesobrmarket.com.js";
 import thenewbar from "./sites/thenewbar.com.js";
-
+import collectivecraftbeer from "./sites/collectivecraftbeer.com.js";
+import freespiritdrinkco from "./sites/freespiritdrinkco.com.au.js";
+import vinello from "./sites/vinello.eu.js";
+import danmurphys from "./sites/danmurphys.com.au.js";
+import market from "./sites/market.nabeerclub.com.js";
+import winesformothers from "./sites/winesformothers.com.js";
+import zepeim from "./sites/zepeim.com.js";
+import minusmoonshine from "./sites/minusmoonshine.com.js";
+import themindfuldrinking from "./sites/themindfuldrinking.com.js";
 // Registry map
 const registry = new Map([
   ["drydrinker.com", drydrinker],
@@ -49,7 +57,16 @@ const registry = new Map([
   ["thebluedolphinstore.com", thebluedolphinstore],
   ["teedawn.com", teedawn],
   ["thesobrmarket.com", thesobrmarket],
-  ["thenewbar.com", thenewbar]
+  ["thenewbar.com", thenewbar],
+   ["collectivecraftbeer.com", collectivecraftbeer],
+  ["freespiritdrinkco.com.au", freespiritdrinkco],
+  ["vinello.eu", vinello],
+  ["danmurphys.com.au", danmurphys],
+  ["market.nabeerclub.com", market],
+  ["winesformothers.com", winesformothers],
+  ["zepeim.com", zepeim],
+  ["minusmoonshine.com", minusmoonshine],
+  ["themindfuldrinking.com", themindfuldrinking]
 
 ]);
 

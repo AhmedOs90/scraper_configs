@@ -1,0 +1,30 @@
+{
+    "rootUrl": "https://minusmoonshine.com",
+    "baseUrl": "https://minusmoonshine.com/collections/all",
+    "site_name": "minusmoonshine",
+    "seller": "seller",
+    "collectionLinks": "/collections/",
+    "skipCollectionLinksInProducts": false,
+
+    "productsLinks": "/products/",
+    "productLinkSelector": "",
+    "productLinkAttribute": "",
+
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "price": "meta[property='og:price:amount']",
+            "currency": "meta[property='og:price:currency']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "category": ".product__type span:nth-of-type(2)",
+            "description": ".description-block__content p"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": ".pagination .page-item:last-child a.page-link"
+    }
+}

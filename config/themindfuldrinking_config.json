@@ -1,0 +1,33 @@
+{
+
+    "rootUrl": "https://themindfuldrinking.com",
+    "baseUrl": "https://themindfuldrinking.com/collections/all",
+    "site_name": "themindfuldrinking",
+    "seller": "seller",
+    "collectionLinks": "/collections/",
+    "skipCollectionLinksInProducts": false,
+
+    "productsLinks": "/products/",
+    "productLinkSelector": "",
+    "productLinkAttribute": "",
+
+    "bannerSkip": ".om-popup-close-x",
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "price": "meta[property='og:price:amount']",
+            "currency": "meta[property='og:price:currency']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "description": ".product__description.rte.quick-add-hidden"
+        }
+    },
+
+    "pagination": {
+      "type": "link",
+      "selector": ".pagination__item[aria-label='Next page']"
+    }
+
+}

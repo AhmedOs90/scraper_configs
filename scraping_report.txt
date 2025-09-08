@@ -1,9 +1,9 @@
 Total Sites Scraped: 1
-Total Products Scraped: 280
+Total Products Scraped: 0
 Details per Site:
-Site Name: thenewbar
-Root URL: https://thenewbar.com
-Products Scraped: 280
+Site Name: vinello
+Root URL: https://www.vinello.eu
+Products Scraped: 0
 ---
 Scraped Root URLs:
 https://drydrinker.com
@@ -31,3 +31,12 @@ https://www.teedawn.com
 https://www.thesobrmarket.com
 https://www.alcoholfreedrinks.co.uk
 https://thenewbar.com
+https://collectivecraftbeer.com
+https://freespiritdrinkco.com.au
+https://www.vinello.eu
+https://www.danmurphys.com.au
+https://market.nabeerclub.com
+https://winesformothers.com
+https://zepeim.com
+https://minusmoonshine.com
+https://themindfuldrinking.com

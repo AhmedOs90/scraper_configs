@@ -1,0 +1,47 @@
+{
+  "rootUrl": "https://thenonalcoholicclub.com",
+  "baseUrl": "https://thenonalcoholicclub.com/collections/all",
+  "site_name": "thenonalcoholicclub",
+  "seller": "seller",
+  "productsLinks": "/products/",
+  "collectionLinks": "/collections/",
+  "productLinkSelector": "",
+  "productLinkAttribute": "",
+  "skipCollectionLinksInProducts": true,
+  "pagination": {
+    "type": "link",
+    "selector": "a[rel='next'], a[aria-label='Next'], .pagination__item--next a, .pagination a[title='Next'], .pagination .next a"
+  },
+  "bannerSkip": null,
+  "moreConfig": true,
+  "selectors": {
+    "header": {
+      "name": "meta[property='og:title']",
+      "price": "meta[property='product:price:amount'], meta[property='og:price:amount']",
+      "currency": "meta[property='product:price:currency'], meta[property='og:price:currency']",
+      "description": "meta[name='description']",
+      "images": "meta[property='og:image']",
+      "producer": "meta[property='product:brand']",
+      "abv": null,
+      "energy": null,
+      "sugar": null,
+      "gluten_free": null,
+      "vegan": null,
+      "category": null
+    },
+    "main": {
+      "name": "h1.product__title, h1.product-title, h1.ProductMeta__Title, h1[itemprop='name'], .product-single__title, .product__title h1, .m-product-title",
+      "price": ".price .price-item--sale, .price .price-item--regular, .product__price, .ProductMeta__Price, .price__regular .price-item, .price__sale .price-item",
+      "currency": ".price .price-item--sale, .price .price-item--regular, .product__price, .ProductMeta__Price",
+      "description": ".product__description, .product__accordion .rte, .product-single__description, .product__description.rte, #tab-description, .product-tabs__tab-item-content, .product__accordion-content",
+      "images": ".product__media img, .product__gallery img, .product-single__media img, .slider__slide img, .flickity img, .product-media img",
+      "producer": ".product__vendor, .product-meta__vendor a, .ProductMeta__Vendor a, .product__text a",
+      "abv": null,
+      "energy": null,
+      "sugar": null,
+      "gluten": null,
+      "vegan": null,
+      "category": ".breadcrumb li:last-child, nav.breadcrumbs li:last-child, ol.breadcrumbs li:last-child, .breadcrumbs__list li:last-child"
+    }
+  }
+}

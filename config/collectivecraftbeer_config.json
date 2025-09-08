@@ -1,0 +1,31 @@
+{
+    "rootUrl": "https://collectivecraftbeer.com",
+    "baseUrl": "https://collectivecraftbeer.com/collections/non-alcoholic-beer",
+    "collectionLinks": "/collections/non-alcoholic-",
+    "site_name": "collectivecraftbeer",
+    "seller": "seller",
+    "productsLinks": "/products/",
+    "productLinkSelector": "a[href^=\"/collections/\"][href*=\"/products/\"]",
+    "productLinkAttribute": "href",
+    "skipCollectionLinksInProducts": false,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "price": "meta[property='og:price:amount'], meta[property='product:price:amount']",
+            "currency": "meta[property='og:price:currency'], meta[property='product:price:currency']",
+            "images": "meta[property='og:image']",
+            "description": "meta[name='twitter:description']"
+        },
+        "main": {
+
+        }
+    },
+
+    "pagination": {
+        "type": "link",
+        "selector": ".pagination .next a"
+    },
+
+    "bannerSkip": ".age-checker__btn.js-age-close"
+}

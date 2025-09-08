@@ -114,7 +114,6 @@ async function extractDynamicLinks({ page, crawler, config, url, baseUrl, rootUr
   const toQueue = [...new Set(rawLinks)]
     .filter(u => /^https?:\/\//i.test(u))
     .filter(u => u !== url);
-
   log.info(`Extracted ${rawLinks.length} links; queueing ${toQueue.length}`);
 
   if (toQueue.length) {
