@@ -22,7 +22,7 @@ export default async function refine(rootUrl, product, page) {
     return null;
   }).catch(() => null);
 
-  product.sugars = await page.evaluate(() => {
+  product.sugar = await page.evaluate(() => {
     const rows = Array.from(document.querySelectorAll(".table-data-sheet tr"));
     for (const row of rows) {
       const cells = row.querySelectorAll("td");

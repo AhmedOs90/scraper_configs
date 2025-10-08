@@ -11,8 +11,13 @@ function normalizeConfig(cfg = {}) {
 }
 
 async function extractDynamicLinks({ page, crawler, config, url, baseUrl, rootUrl, log }) {
+
+
   const cfg = normalizeConfig(config);
 
+
+
+  
   const productLinkSelector   = cfg.productLinkSelector || null;      // e.g., "a.product-item__title"
   const productsLinksSubstr   = cfg.productsLinks || null;            // e.g., "/product/"
   const collectionLinksSubstr = cfg.collectionLinks || null;          // e.g., "/product-category/"
@@ -25,6 +30,21 @@ async function extractDynamicLinks({ page, crawler, config, url, baseUrl, rootUr
     log.info('[extractDynamicLinks] No product selector or productsLinks substring provided. Skipping.');
     return;
   }
+
+  // Pagination
+  if (cfg.pagination?.type === 'button') {
+    await handleButtonPagination({
+      page,
+      log,
+      config: cfg,
+      baseUrl,
+      productLinkSelector,
+      productLinkAttribute,
+    });
+  } else if (cfg.pagination?.type === 'scroll') {
+    await handleScrollPagination(page, cfg, baseUrl, productLinkSelector, productLinkAttribute, log);
+  }
+
 
   // Prefer the most specific wait we can.
   try {
@@ -129,20 +149,6 @@ async function extractDynamicLinks({ page, crawler, config, url, baseUrl, rootUr
         }
       }
     }
-  }
-
-  // Pagination
-  if (cfg.pagination?.type === 'button') {
-    await handleButtonPagination({
-      page,
-      log,
-      config: cfg,
-      baseUrl,
-      productLinkSelector,
-      productLinkAttribute,
-    });
-  } else if (cfg.pagination?.type === 'scroll') {
-    await handleScrollPagination(page, cfg, baseUrl, productLinkSelector, productLinkAttribute, log);
   }
 
   if (cfg.pagination?.type === 'link') {

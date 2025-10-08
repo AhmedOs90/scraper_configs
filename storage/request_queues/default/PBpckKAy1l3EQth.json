@@ -1,0 +1,9 @@
+{
+	"id": "PBpckKAy1l3EQth",
+	"json": "{\"id\":\"PBpckKAy1l3EQth\",\"url\":\"https://freebarco.com/products/free-bar-non-alcoholic-wine-box\",\"loadedUrl\":\"https://freebarco.com/products/free-bar-non-alcoholic-wine-box\",\"uniqueKey\":\"https://freebarco.com/products/free-bar-non-alcoholic-wine-box\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2025-10-01T03:19:15.618Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://freebarco.com/products/free-bar-non-alcoholic-wine-box",
+	"url": "https://freebarco.com/products/free-bar-non-alcoholic-wine-box"
+}

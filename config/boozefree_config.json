@@ -1,0 +1,52 @@
+{
+  "rootUrl": "https://boozefree.co.uk",
+  "baseUrl": "https://boozefree.co.uk/collections/all-non-alcoholic-beers-and-ciders",
+  "site_name": "boozefree",
+  "seller": "seller",
+
+  "productsLinks": "/products/",
+  "collectionLinks": "/collections/",
+  "productLinkSelector": "a[href*=\"/products/\"]",
+  "productLinkAttribute": "href",
+  "skipCollectionLinksInProducts": true,
+
+  "pagination": {
+    "type": "link",
+    "selector": "a[rel='next'], .pagination__item--next a, nav[aria-label='Pagination'] a[aria-label*='Next']"
+  },
+
+  "bannerSkip": null,
+  "moreConfig": true,
+
+  "selectors": {
+    "header": {
+
+      "price": "meta[property='product:price:amount'], meta[property='og:price:amount']",
+      "currency": "meta[property='product:price:currency'], meta[property='og:price:currency']",
+      "description": "meta[name='description'], meta[property='og:description']",
+      "images": "meta[property='og:image']",
+      "producer": "meta[property='product:brand']",
+      "abv": null,
+      "gluten_free": null,
+      "vegan": null,
+      "energy": null,
+      "sugars": null,
+      "category": null
+    },
+    "level": 2,
+    "main": {
+      "name": ".product__title h1",
+      "price": ".price-item--regular, .price-item--sale, .price__current .money, [data-product-price], .price .money",
+      "currency": ".price-item--regular, .price-item--sale, .price__current .money, .price .money",
+      "description": ".product__description, .product-single__description, .product-description, .rte, .product__accordion .rte",
+      "images": ".product__media img, .product-gallery img, img[src*='/products/']",
+      "producer": ".product__vendor, .product-meta__vendor a, .product-vendor",
+      "abv": "li:contains('ABV'), li:contains('Alcohol'), p:contains('% ABV')",
+      "gluten": ".product__tags a:contains('Gluten'), .product__tags a:contains('gluten')",
+      "vegan": ".product__tags a:contains('Vegan'), .product__tags a:contains('vegan')",
+      "energy": "li:contains('Calories'), p:contains('Calories'), li:contains('kcal')",
+      "sugars": "li:contains('Sugar'), li:contains('Sugars'), p:contains('Sugar')",
+      "category": ".breadcrumb li:last-child, nav.breadcrumbs li:last-child, .breadcrumbs a:last-child, nav[aria-label='breadcrumbs'] a:last-child"
+    }
+  }
+}

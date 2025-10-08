@@ -1,0 +1,35 @@
+{
+  "rootUrl": "https://joinclubsoda.com",
+  "baseUrl": "https://joinclubsoda.com/product-category/drinks/",
+  "site_name": "joinclubsoda",
+  "seller": "seller",
+  "collectionLinks": "/product-category/",
+  "productsLinks": "/product/",
+  "productLinkSelector": "a[href*=\"/product/\"]",
+  "productLinkAttribute": "href",
+  "skipCollectionLinksInProducts": true,
+  "pagination": {
+    "type": "link",
+    "selector": ".page-numbers a.next, nav.woocommerce-pagination a.next"
+  },
+  "bannerSkip": null,
+  "moreConfig": true,
+  "selectors": {
+    "header": {
+      "images": "meta[property='og:image']"
+    },
+    "main": {
+      "name": "h1.product_title",
+"price": " .price .woocommerce-Price-amount",
+"currency": ".elementor-widget-woocommerce-product-price .woocommerce-Price-currencySymbol, .summary .price .woocommerce-Price-currencySymbol, .price .woocommerce-Price-currencySymbol, .woocommerce-Price-currencySymbol",
+"description": ".elementor-widget-woocommerce-product-content .elementor-widget-container, .woocommerce-product-details__short-description, .entry-content .woocommerce-Tabs-panel--description, .product .entry-content",      "images": ".woocommerce-product-gallery__image img, img.wp-post-image",
+      "abv": ".entry-content p:has(strong:contains('ABV')), .product .entry-content p:contains('ABV'), .product .summary p:contains('ABV')",
+      "gluten": ".product_meta .tagged_as a[href*='gluten'], .entry-content a[href*='gluten']",
+      "vegan": ".product_meta .tagged_as a[href*='vegan'], .entry-content a[href*='vegan']",
+      "producer": ".product_meta .posted_in a",
+      "energy": ".entry-content p:contains('kcal'), .entry-content li:contains('kcal'), .entry-content p:contains('Calories')",
+      "sugars": ".entry-content p:contains('Sugar'), .entry-content li:contains('Sugar')",
+      "category": ".product_meta .posted_in a, .breadcrumbs a:last-child"
+    }
+  }
+}

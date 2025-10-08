@@ -19,7 +19,7 @@ export default async function refine(rootUrl, product, page) {
   // Site shows “Nutritional Info Per 100ml” as a blob; store as-is
   const nutr = await pickDisclosure('Nutritional Info Per 100ml');
   product.energy = product.energy || nutr || null;
-  product.sugars = product.sugars || nutr || null;
+  product.sugar = product.sugar || nutr || null;
 
   return product;
 }

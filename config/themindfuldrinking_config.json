@@ -5,7 +5,7 @@
     "site_name": "themindfuldrinking",
     "seller": "seller",
     "collectionLinks": "/collections/",
-    "skipCollectionLinksInProducts": false,
+    "skipCollectionLinksInProducts": true,
 
     "productsLinks": "/products/",
     "productLinkSelector": "",

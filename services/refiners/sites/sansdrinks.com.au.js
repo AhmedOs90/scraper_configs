@@ -5,7 +5,7 @@ export default async function refine(rootUrl, product, page) {
     return th ? th.nextElementSibling?.textContent?.trim() ?? null : null;
   }).catch(() => null);
 
-  product.sugars = await page.evaluate(() => {
+  product.sugar = await page.evaluate(() => {
     const th = Array.from(document.querySelectorAll("th")).find(el => el.textContent.includes("Sugar"));
     return th ? th.nextElementSibling?.textContent?.trim() ?? null : null;
   }).catch(() => null);

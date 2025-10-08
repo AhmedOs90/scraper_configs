@@ -49,7 +49,7 @@ export default async function refine(rootUrl, product, page) {
     return null;
   }).catch(() => null);
 
-  product.sugars = product.sugars || await page.evaluate(() => {
+  product.sugar = product.sugar || await page.evaluate(() => {
     for (const li of Array.from(document.querySelectorAll('li'))) {
       const txt = (li.innerText || '').toLowerCase();
       if (txt.includes('azúcares totales')) return txt.replace('azúcares totales:', '').trim();

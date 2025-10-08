@@ -1,8 +1,8 @@
 Total Sites Scraped: 1
 Total Products Scraped: 0
 Details per Site:
-Site Name: vinello
-Root URL: https://www.vinello.eu
+Site Name: joinclubsoda
+Root URL: https://joinclubsoda.com
 Products Scraped: 0
 ---
 Scraped Root URLs:
@@ -40,3 +40,12 @@ https://winesformothers.com
 https://zepeim.com
 https://minusmoonshine.com
 https://themindfuldrinking.com
+https://drinkdrystore.com
+https://www.sechey.com
+https://www.drinkpointzero.com
+https://sobersips.ca
+https://wisebartender.co.uk
+https://thechiller.co.nz
+https://boozefree.co.uk
+https://www.amavine.nl
+https://joinclubsoda.com

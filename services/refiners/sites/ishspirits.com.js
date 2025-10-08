@@ -14,7 +14,7 @@ export default async function refine(rootUrl, product, page) {
     return null;
   }).catch(() => null);
 
-  product.sugars = await page.evaluate(() => {
+  product.sugar = await page.evaluate(() => {
     const elements = document.querySelectorAll("span.metafield-multi_line_text_field");
     for (let el of elements) {
       if (el.textContent.includes("of which sugars:")) {

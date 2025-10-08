@@ -1,0 +1,41 @@
+{
+    "rootUrl": "https://www.sechey.com",
+    "baseUrl": "https://www.sechey.com/collections/all",
+    "site_name": "sechey",
+    "seller": "seller",
+    "productsLinks": "/products/",
+    "collectionLinks": "/collections/",
+    "productLinkSelector": "a[href*='/products/']",
+    "productLinkAttribute": "href",
+    "skipCollectionLinksInProducts": true,
+"pagination": {
+  "type": "link",
+  "selector": ".pagination-arrow.pagination-next a"
+},
+
+    "bannerSkip": null,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "price": "meta[property='og:price:amount']",
+            "currency": "meta[property='og:price:currency']",
+            "description": "meta[name='description']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "name": "h1.product__title",
+            "price": ".price__regular .price-item--regular",
+            "currency": ".price__regular .price-item--regular",
+            "description": ".product__description",
+            "images": ".product__media img",
+            "abv": null,
+            "gluten": ".product__tags .tag--gluten-free",
+            "vegan": ".product__tags .tag--vegan",
+            "producer": ".product__vendor",
+            "energy": null,
+            "sugars": null,
+            "category": ".breadcrumb__item--current"
+        }
+    }
+}

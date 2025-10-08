@@ -11,7 +11,7 @@ export default async function refine(rootUrl, product, page) {
     return energyEl ? energyEl.textContent.trim() : null;
   });
 
-  product.sugars = await page.evaluate(() => {
+  product.sugar = await page.evaluate(() => {
     const sugarEl = document.evaluate(
       "//div[contains(@class, 'feature-chart__table-row') and div[contains(text(), 'Sugars')]]/div[2]",
       document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null

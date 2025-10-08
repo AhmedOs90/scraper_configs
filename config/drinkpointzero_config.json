@@ -1,0 +1,47 @@
+{
+  "rootUrl": "https://www.drinkpointzero.com/",
+  "baseUrl": "https://www.drinkpointzero.com/collections/all-products",
+  "site_name": "drinkpointzero",
+  "seller": "seller",
+  "productsLinks": "/products/",
+  "collectionLinks": "/collections/",
+  "productLinkSelector": "a[href*=\"/products/\"]",
+  "productLinkAttribute": "href",
+  "skipCollectionLinksInProducts": true,
+  "pagination": {
+    "type": "link",
+    "selector": "a[rel='next'], a[aria-label='Next'], .pagination-arrow.pagination-next a, .pagination a[title='Next']"
+  },
+  "bannerSkip": null,
+  "moreConfig": true,
+  "selectors": {
+    "header": {
+      "name": "meta[property='og:title']",
+      "price": "meta[property='product:price:amount'], meta[property='og:price:amount']",
+      "currency": "meta[property='product:price:currency'], meta[property='og:price:currency']",
+      "description": "meta[name='description'], meta[property='og:description']",
+      "images": "meta[property='og:image']",
+      "abv": null,
+      "gluten_free": null,
+      "vegan": null,
+      "producer": "meta[property='product:brand']",
+      "energy": null,
+      "sugars": null,
+      "category": null
+    },
+    "main": {
+      "name": "h1.product__title, h1.product-title, h1",
+      "price": ".price-item--regular, .price__current .money, .product__price .money, .price .price__sale .price-item--sale, [data-product-price]",
+      "currency": ".price-item--regular, .price__current .money, .product__price .money",
+      "description": ".product__description, .product-single__description, .product-description, .rte",
+      "images": ".product__media img, .product-gallery img, img[src*='/products/']",
+      "abv": "li:contains('ABV'), li:contains('Alcohol Content'), li:contains('Alc.')",
+      "gluten": null,
+      "vegan": null,
+      "producer": ".product__vendor, .product-meta__vendor a, .product-vendor",
+      "energy": "li:contains('Calories')",
+      "sugars": "li:contains('Carbohydrates'), li:contains('Sugar')",
+      "category": ".breadcrumb li:last-child, nav.breadcrumbs li:last-child, .breadcrumbs a:last-child"
+    }
+  }
+}

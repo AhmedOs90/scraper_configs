@@ -8,7 +8,7 @@ export default async function refine(rootUrl, product, page) {
 
   if (!product.abv && abvMatch)    product.abv = abvMatch[1].trim();
   if (!product.energy && energyMatch) product.energy = energyMatch[1].trim();
-  if (!product.sugars && sugarsMatch) product.sugars = sugarsMatch[1].trim();
+  if (!product.sugar && sugarsMatch) product.sugar = sugarsMatch[1].trim();
 
   return product;
 }

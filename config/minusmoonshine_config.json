@@ -4,7 +4,7 @@
     "site_name": "minusmoonshine",
     "seller": "seller",
     "collectionLinks": "/collections/",
-    "skipCollectionLinksInProducts": false,
+    "skipCollectionLinksInProducts": true,
 
     "productsLinks": "/products/",
     "productLinkSelector": "",

@@ -141,7 +141,7 @@ Prod = await extractProductData(page, config, Prod, log, { refineFromApi });
 if (
   Prod &&
   Prod.name &&
-  Prod.name !== "Name not found" && Prod.name.includes("Products") &&
+  Prod.name !== "Name not found" && !Prod.name.includes("Products") &&
   Prod.price &&
   !String(Prod.price).toLowerCase().includes("start")
 ) {

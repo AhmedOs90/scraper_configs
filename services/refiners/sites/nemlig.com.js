@@ -52,7 +52,7 @@ export default async function refine(rootUrl, product, page) {
       return null;
     });
 
-    product.sugars = await page.evaluate(() => {
+    product.sugar = await page.evaluate(() => {
       const rows = document.querySelectorAll("table tr");
       for (const row of rows) {
         const label = row.querySelector("td")?.textContent?.trim();

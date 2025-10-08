@@ -34,6 +34,16 @@ import winesformothers from "./sites/winesformothers.com.js";
 import zepeim from "./sites/zepeim.com.js";
 import minusmoonshine from "./sites/minusmoonshine.com.js";
 import themindfuldrinking from "./sites/themindfuldrinking.com.js";
+import wisebartender from "./sites/wisebartender.com.js";
+import sechey from "./sites/sechey.com.js";
+import drinkpointzero from "./sites/drinkpointzero.com.js";
+import sobersips from "./sites/sobersips.ca.js";
+import thechiller from "./sites/thechiller.co.nz.js";
+import boozefree from "./sites/boozefree.co.uk.js";
+import amavine from "./sites/amavine.nl.js";
+import joinclubsoda from "./sites/joinclubsoda.com.js";
+
+
 // Registry map
 const registry = new Map([
   ["drydrinker.com", drydrinker],
@@ -66,8 +76,15 @@ const registry = new Map([
   ["winesformothers.com", winesformothers],
   ["zepeim.com", zepeim],
   ["minusmoonshine.com", minusmoonshine],
-  ["themindfuldrinking.com", themindfuldrinking]
-
+  ["themindfuldrinking.com", themindfuldrinking],
+  ["wisebartender.co.uk", wisebartender],
+  ["sechey.com", sechey],
+  ["drinkpointzero.com",drinkpointzero],
+  ["sobersips.ca", sobersips],
+  ["thechiller.co.nz", thechiller],
+  ["boozefree.co.uk", boozefree],
+  ["amavine.nl", amavine],
+  ["joinclubsoda.com", joinclubsoda],
 ]);
 
 export function getRefinerForUrl(rootUrl) {

@@ -22,7 +22,7 @@ export default async function refine(rootUrl, product, page) {
   }).catch(() => null);
 
   // Sugars
-  product.sugars = await page.evaluate(() => {
+  product.sugar = await page.evaluate(() => {
     const items = document.querySelectorAll("li.details-list__item");
     for (let item of items) {
       const title = item.querySelector(".details-list__title")?.textContent?.trim().toLowerCase();
