@@ -16,7 +16,7 @@ import { buildApiRefine } from '../services/refine_data_api.js';
 // Load root URLs
 const rootUrls = JSON.parse(fs.readFileSync('./config/roots.json', 'utf-8'));
 
-
+//new Change
 // Global product counter
 let productCounter = 0;
 const publicProductList = [];
