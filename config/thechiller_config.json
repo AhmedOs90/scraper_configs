@@ -3,12 +3,17 @@
   "baseUrl": "https://thechiller.co.nz/collections/all",
   "site_name": "thechiller",
   "seller": "seller",
-
+"config":true,
   "productsLinks": "/products/",
   "collectionLinks": "/collections/",
   "productLinkSelector": "a[href*=\"/products/\"]",
   "productLinkAttribute": "href",
   "skipCollectionLinksInProducts": true,
+  "renderWaitMs": 7000,        
+  "selectorWaitMs": 20000,    
+  "minProductLinks": 12,        
+  "linkPollAttempts": 8,        
+  "linkPollIntervalMs": 700      ,
 "pagination": {
   "type": "link",
   "selector": ".pagination a[aria-label='Next page'], nav[aria-label='Pagination'] a[aria-label*='Next']"

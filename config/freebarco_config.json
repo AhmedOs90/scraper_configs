@@ -9,9 +9,9 @@
   "productLinkAttribute": "href",
   "skipCollectionLinksInProducts": true,
   "pagination": {
-    "type": "link",
-    "selector": "a[rel='next'], a[aria-label*='Next'], .pagination__item--next a, .pagination a[title='Next']"
-  },
+  "type": "link",
+  "selector": "nav.pagination-custom a.pagination-custom__next, .pagination-custom__next, nav.pagination-custom a[title='Next'], a[href*='collections/all?page='][title='Next']"
+},
   "bannerSkip": null,
   "moreConfig": true,
   "selectors": {

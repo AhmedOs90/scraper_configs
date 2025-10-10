@@ -1,5 +1,5 @@
 import { PuppeteerCrawler, purgeDefaultStorages } from 'crawlee';
-import { appendToSheet, populateLake, classifyAll, saveProductsToCSV } from '../services/lake_populations.js';
+import {  populateLake, saveProductsToCSV } from '../services/lake_populations.js';
 import { refineData } from '../services/refine_data.js';
 import { sendScrapingReport, updateScraperStatus } from '../services/report.js';
 import { extractProductData, delay } from './helper.js';
@@ -142,6 +142,8 @@ if (
   Prod &&
   Prod.name &&
   Prod.name !== "Name not found" && !Prod.name.includes("Products") &&
+  Prod.images &&
+
   Prod.price &&
   !String(Prod.price).toLowerCase().includes("start")
 ) {
@@ -160,15 +162,15 @@ if (
           // appendToSheet(auth,[Prod])
           // }
           if (Prod.name != "Name not found") {
-            saveProductsToCSV([Prod], "my_scraped_data.csv")
-            // let resp = await populateLake(Prod);
-            // if (resp == "updated") {
-            //   updatedProductsCount++; // Increment updated product count
-            // }
-            // else {
-            //   newProductsCount++; // Increment new product count
-            // }
-            // siteData.productsScraped += 1;
+            // saveProductsToCSV([Prod], "my_scraped_data.csv")
+            let resp = await populateLake(Prod);
+            if (resp == "updated") {
+              updatedProductsCount++; // Increment updated product count
+            }
+            else {
+              newProductsCount++; // Increment new product count
+            }
+            siteData.productsScraped += 1;
           }
         } else {
           log.error('Product extraction failed, product data is null');

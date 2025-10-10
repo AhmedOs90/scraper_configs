@@ -1,9 +1,0 @@
-{
-	"id": "JFjcWTHE637aYGE",
-	"json": "{\"id\":\"JFjcWTHE637aYGE\",\"url\":\"https://freebarco.com/collections/all/products/athletic-brewing-non-alcoholic-cerveza-atletica\",\"loadedUrl\":\"https://freebarco.com/products/athletic-brewing-non-alcoholic-cerveza-atletica\",\"uniqueKey\":\"https://freebarco.com/collections/all/products/athletic-brewing-non-alcoholic-cerveza-atletica\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2025-10-01T03:19:35.312Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://freebarco.com/collections/all/products/athletic-brewing-non-alcoholic-cerveza-atletica",
-	"url": "https://freebarco.com/collections/all/products/athletic-brewing-non-alcoholic-cerveza-atletica"
-}

@@ -1,9 +1,0 @@
-{
-	"id": "JdseIq6urO7nuZx",
-	"json": "{\"id\":\"JdseIq6urO7nuZx\",\"url\":\"https://freebarco.com/collections/all/products/athletic-brewing-non-alcoholic-all-out-stout\",\"loadedUrl\":\"https://freebarco.com/products/athletic-brewing-non-alcoholic-all-out-stout\",\"uniqueKey\":\"https://freebarco.com/collections/all/products/athletic-brewing-non-alcoholic-all-out-stout\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2025-10-01T03:19:32.373Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://freebarco.com/collections/all/products/athletic-brewing-non-alcoholic-all-out-stout",
-	"url": "https://freebarco.com/collections/all/products/athletic-brewing-non-alcoholic-all-out-stout"
-}

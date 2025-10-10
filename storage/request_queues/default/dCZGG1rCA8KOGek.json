@@ -1,9 +1,0 @@
-{
-	"id": "dCZGG1rCA8KOGek",
-	"json": "{\"id\":\"dCZGG1rCA8KOGek\",\"url\":\"https://freebarco.com/collections/all/products/athletic-brewery-hazy-ipa\",\"loadedUrl\":\"https://freebarco.com/products/athletic-brewery-hazy-ipa\",\"uniqueKey\":\"https://freebarco.com/collections/all/products/athletic-brewery-hazy-ipa\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2025-10-01T03:19:28.764Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://freebarco.com/collections/all/products/athletic-brewery-hazy-ipa",
-	"url": "https://freebarco.com/collections/all/products/athletic-brewery-hazy-ipa"
-}

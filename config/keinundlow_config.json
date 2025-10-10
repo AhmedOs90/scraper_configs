@@ -1,0 +1,26 @@
+{
+    "rootUrl": "https://keinundlow.at",
+    "baseUrl": "https://keinundlow.at/collections/all?page=1",
+    "site_name": "keinundlow",
+    "seller": "seller",
+    "productsLinks": "/products/",
+    "collectionLinks": "/collections/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "images": "meta[property='og:image']",
+            "price": "meta[property='og:price:amount']",
+            "currency": "meta[property='og:price:currency']"
+        },
+        "main": {
+            "name": ".product__title h1",
+            "description": ".product__description.rte.quick-add-hidden"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": "a.pagination__item--prev"
+    },
+    "level":2
+}
