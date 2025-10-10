@@ -42,6 +42,7 @@ import thechiller from "./sites/thechiller.co.nz.js";
 import boozefree from "./sites/boozefree.co.uk.js";
 import amavine from "./sites/amavine.nl.js";
 import joinclubsoda from "./sites/joinclubsoda.com.js";
+import keinundlow from "./sites/keinundlow.at.js";
 
 
 // Registry map
@@ -85,6 +86,8 @@ const registry = new Map([
   ["boozefree.co.uk", boozefree],
   ["amavine.nl", amavine],
   ["joinclubsoda.com", joinclubsoda],
+    ["keinundlow.at", keinundlow]
+
 ]);
 
 export function getRefinerForUrl(rootUrl) {

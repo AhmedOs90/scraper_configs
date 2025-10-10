@@ -1,10 +1,6 @@
-Total Sites Scraped: 1
+Total Sites Scraped: 0
 Total Products Scraped: 0
 Details per Site:
-Site Name: joinclubsoda
-Root URL: https://joinclubsoda.com
-Products Scraped: 0
----
 Scraped Root URLs:
 https://drydrinker.com
 https://sansdrinks.com.au
@@ -49,3 +45,4 @@ https://thechiller.co.nz
 https://boozefree.co.uk
 https://www.amavine.nl
 https://joinclubsoda.com
+https://freebarco.com

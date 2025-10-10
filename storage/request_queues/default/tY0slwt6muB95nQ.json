@@ -1,9 +1,0 @@
-{
-	"id": "tY0slwt6muB95nQ",
-	"json": "{\"id\":\"tY0slwt6muB95nQ\",\"url\":\"https://freebarco.com/products/free-bar-x-rainhard-brewery-breakfast-beer\",\"loadedUrl\":\"https://freebarco.com/products/free-bar-x-rainhard-brewery-breakfast-beer\",\"uniqueKey\":\"https://freebarco.com/products/free-bar-x-rainhard-brewery-breakfast-beer\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2025-10-01T03:19:07.225Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://freebarco.com/products/free-bar-x-rainhard-brewery-breakfast-beer",
-	"url": "https://freebarco.com/products/free-bar-x-rainhard-brewery-breakfast-beer"
-}
