@@ -1,0 +1,21 @@
+{
+    "rootUrl": "https://noughtyaf.com",
+    "baseUrl": "https://noughtyaf.com/collections/frontpage",
+    "site_name": "noughtyaf",
+    "seller": "seller",
+    "productsLinks": "/collections/frontpage/products/",
+    "collectionLinks": "/collections/frontpage/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "images": "meta[property='og:image']",
+            "description": "meta[property='og:description']"
+        },
+        "main": {
+            "price": ".product-block [data-product-price]"
+        }
+    },
+    "level": 3
+}
