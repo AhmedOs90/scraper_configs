@@ -43,70 +43,70 @@ import boozefree from "./sites/boozefree.co.uk.js";
 import amavine from "./sites/amavine.nl.js";
 import joinclubsoda from "./sites/joinclubsoda.com.js";
 import keinundlow from "./sites/keinundlow.at.js";
-
+import noughtyaf from "./sites/noughtyaf.com.js";
 
 // Registry map
 const registry = new Map([
-  ["drydrinker.com", drydrinker],
-  ["dryvariety.com", dryvariety],
-  ["sansdrinks.com.au", sansdrinks],
-  ["alkoholfributik.dk", alkoholfributik],
-  ["alcoholvrijshop.nl", alcoholvrijshop],
-  ["ishspirits.com", ishspirits],
-  ["vildmedvin.dk", vildmedvin],
-  ["beershoppen.dk", beershoppen],
-  ["shoppencph.dk", shoppencph],
-  ["nemlig.com", nemlig],                 
-  ["thezeroproof.com", thezeroproof],
-  ["proofnomore.com", proofnomore],
-  ["drinknolow.com", drinknolow],
-  ["worldofnix.com", worldofnix],
-  ["beyondbeer.de", beyondbeer],
-  ["craftzero.com.au", craftzero],
-  ["boisson.co", boisson],
-  ["upsidedrinks.com", upsidedrinks],
-  ["thebluedolphinstore.com", thebluedolphinstore],
-  ["teedawn.com", teedawn],
-  ["thesobrmarket.com", thesobrmarket],
-  ["thenewbar.com", thenewbar],
-   ["collectivecraftbeer.com", collectivecraftbeer],
-  ["freespiritdrinkco.com.au", freespiritdrinkco],
-  ["vinello.eu", vinello],
-  ["danmurphys.com.au", danmurphys],
-  ["market.nabeerclub.com", market],
-  ["winesformothers.com", winesformothers],
-  ["zepeim.com", zepeim],
-  ["minusmoonshine.com", minusmoonshine],
-  ["themindfuldrinking.com", themindfuldrinking],
-  ["wisebartender.co.uk", wisebartender],
-  ["sechey.com", sechey],
-  ["drinkpointzero.com",drinkpointzero],
-  ["sobersips.ca", sobersips],
-  ["thechiller.co.nz", thechiller],
-  ["boozefree.co.uk", boozefree],
-  ["amavine.nl", amavine],
-  ["joinclubsoda.com", joinclubsoda],
-    ["keinundlow.at", keinundlow]
-
+    ["drydrinker.com", drydrinker],
+    ["dryvariety.com", dryvariety],
+    ["sansdrinks.com.au", sansdrinks],
+    ["alkoholfributik.dk", alkoholfributik],
+    ["alcoholvrijshop.nl", alcoholvrijshop],
+    ["ishspirits.com", ishspirits],
+    ["vildmedvin.dk", vildmedvin],
+    ["beershoppen.dk", beershoppen],
+    ["shoppencph.dk", shoppencph],
+    ["nemlig.com", nemlig],                 
+    ["thezeroproof.com", thezeroproof],
+    ["proofnomore.com", proofnomore],
+    ["drinknolow.com", drinknolow],
+    ["worldofnix.com", worldofnix],
+    ["beyondbeer.de", beyondbeer],
+    ["craftzero.com.au", craftzero],
+    ["boisson.co", boisson],
+    ["upsidedrinks.com", upsidedrinks],
+    ["thebluedolphinstore.com", thebluedolphinstore],
+    ["teedawn.com", teedawn],
+    ["thesobrmarket.com", thesobrmarket],
+    ["thenewbar.com", thenewbar],
+    ["collectivecraftbeer.com", collectivecraftbeer],
+    ["freespiritdrinkco.com.au", freespiritdrinkco],
+    ["vinello.eu", vinello],
+    ["danmurphys.com.au", danmurphys],
+    ["market.nabeerclub.com", market],
+    ["winesformothers.com", winesformothers],
+    ["zepeim.com", zepeim],
+    ["minusmoonshine.com", minusmoonshine],
+    ["themindfuldrinking.com", themindfuldrinking],
+    ["wisebartender.co.uk", wisebartender],
+    ["sechey.com", sechey],
+    ["drinkpointzero.com",drinkpointzero],
+    ["sobersips.ca", sobersips],
+    ["thechiller.co.nz", thechiller],
+    ["boozefree.co.uk", boozefree],
+    ["amavine.nl", amavine],
+    ["joinclubsoda.com", joinclubsoda],
+    ["keinundlow.at", keinundlow],
+    ["noughtyaf.com", noughtyaf]
 ]);
 
 export function getRefinerForUrl(rootUrl) {
-  const host = canonicalHostFromUrl(rootUrl);
-  const siteRefiner = registry.get(host);
+    const host = canonicalHostFromUrl(rootUrl);
+    const siteRefiner = registry.get(host);
 
-  // Return a composed refiner that runs siteRefiner (if any) then defaultRefiner
-  return async function refine(rootUrlArg, product, page) {
-    let out = product;
-    try {
-      if (siteRefiner) out = await siteRefiner(rootUrlArg, out, page);
-    } catch (e) {
-      console.error(`Site refiner error for ${host}: ${e.message}`);
-    }
-    try {
-      out = await defaultRefiner(rootUrlArg, out, page);
-    } catch (e) {
-      console.error(`Default refiner error: ${e.message}`);
-    }
-    return out;
-  };
+    // Return a composed refiner that runs siteRefiner (if any) then defaultRefiner
+    return async function refine(rootUrlArg, product, page) {
+        let out = product;
+        try {
+            if (siteRefiner) out = await siteRefiner(rootUrlArg, out, page);
+        } catch (e) {
+            console.error(`Site refiner error for ${host}: ${e.message}`);
+        }
+        try {
+            out = await defaultRefiner(rootUrlArg, out, page);
+        } catch (e) {
+            console.error(`Default refiner error: ${e.message}`);
+        }
+        return out;
+    };
 }

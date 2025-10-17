@@ -1,3 +1,8 @@
-node_modules
+config/sort.py
+config/levels.py
+config/levels.csv
+config/samples.csv
+node_modules/
+storage/
+scraping_reports.txt
 .env
-storage

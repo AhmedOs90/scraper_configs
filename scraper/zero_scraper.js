@@ -162,15 +162,15 @@ if (
           // appendToSheet(auth,[Prod])
           // }
           if (Prod.name != "Name not found") {
-            // saveProductsToCSV([Prod], "my_scraped_data.csv")
-            let resp = await populateLake(Prod);
-            if (resp == "updated") {
-              updatedProductsCount++; // Increment updated product count
-            }
-            else {
-              newProductsCount++; // Increment new product count
-            }
-            siteData.productsScraped += 1;
+            saveProductsToCSV([Prod], "my_scraped_data.csv")
+            // let resp = await populateLake(Prod);
+            // if (resp == "updated") {
+            //   updatedProductsCount++; // Increment updated product count
+            // }
+            // else {
+            //   newProductsCount++; // Increment new product count
+            // }
+            // siteData.productsScraped += 1;
           }
         } else {
           log.error('Product extraction failed, product data is null');
