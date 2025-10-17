@@ -1,6 +1,10 @@
-Total Sites Scraped: 0
-Total Products Scraped: 0
+Total Sites Scraped: 1
+Total Products Scraped: 216
 Details per Site:
+Site Name: thechiller
+Root URL: https://thechiller.co.nz
+Products Scraped: 216
+---
 Scraped Root URLs:
 https://drydrinker.com
 https://sansdrinks.com.au
@@ -46,3 +50,4 @@ https://boozefree.co.uk
 https://www.amavine.nl
 https://joinclubsoda.com
 https://freebarco.com
+https://keinundlow.at
