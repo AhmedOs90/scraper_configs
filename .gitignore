@@ -4,4 +4,5 @@ config/levels.csv
 config/samples.csv
 node_modules/
 storage/
+scraping_reports.txt
 .env
