@@ -75,7 +75,7 @@ async function runCrawlerForSite(config, rootUrl, last = false, opts = {}) {
     scraped_dates: startTime,
   };
   await sendScrapingReport(initialReportData);
-  updateScraperStatus(rootUrl, 'running'); // Update scraper status
+  // updateScraperStatus(rootUrl, 'running'); // Update scraper status
 
   // const auth = await authorize(); // Ensure Google Sheets auth is initialized
 
@@ -252,7 +252,7 @@ if (
 
     console.log(`Sending scraping report for ${site_name}...`);
     await sendScrapingReport(reportData);
-    await updateScraperStatus(rootUrl, 'completed'); // Update scraper status
+    // await updateScraperStatus(rootUrl, 'completed'); // Update scraper status
 
   }
   catch (e) {
