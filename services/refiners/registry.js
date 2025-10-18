@@ -45,6 +45,7 @@ import joinclubsoda from "./sites/joinclubsoda.com.js";
 import keinundlow from "./sites/keinundlow.at.js";
 import noughtyaf from "./sites/noughtyaf.com.js";
 import pierre_chavin from "./sites/shop.pierre-chavin.com.js";
+import nonalcoholicwinesonline from "./sites/nonalcoholicwinesonline.com.js";
 
 // Registry map
 const registry = new Map([
@@ -90,6 +91,7 @@ const registry = new Map([
     ["keinundlow.at", keinundlow],
     ["noughtyaf.com", noughtyaf],
     ["shop.pierre-chavin.com", pierre_chavin],
+    ["nonalcoholicwinesonline.com", nonalcoholicwinesonline]
 ]);
 
 export function getRefinerForUrl(rootUrl) {
