@@ -1,0 +1,27 @@
+{
+    "rootUrl": "https://shop.pierre-chavin.com/en",
+    "baseUrl": "https://shop.pierre-chavin.com/en/13-alcohol-free-wine-collection",
+    "site_name": "pierre-chavin",
+    "seller": "seller",
+    "bannerSkip": "button.tarteaucitronCTAButton.tarteaucitronAllow",
+    "productLinkAttribute": "href",
+    "productLinkSelector": "article.product-miniature a.subimage-true",
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "description": "meta[property='og:description']",
+            "images": "meta[property='og:image']",
+            "price": "meta[property='product:price:amount']",
+            "currency": "meta[property='product:price:currency']"
+        },
+        "main": {
+            "producer": "a.product-brand"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": "a.smooth200.next.js-search-link"
+    },
+    "level": 2
+}
