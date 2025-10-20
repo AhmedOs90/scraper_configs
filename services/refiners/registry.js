@@ -47,6 +47,8 @@ import noughtyaf from "./sites/noughtyaf.com.js";
 import pierre_chavin from "./sites/shop.pierre-chavin.com.js";
 import nonalcoholicwinesonline from "./sites/nonalcoholicwinesonline.com.js";
 import noblegreenwinesonline from "./sites/noblegreenwines.co.uk.js";
+import healthyplanetcanada from "./sites/healthyplanetcanada.com.js";
+import bittersandbottles from "./sites/bittersandbottles.com.js";
 
 // Registry map
 const registry = new Map([
@@ -93,7 +95,9 @@ const registry = new Map([
     ["noughtyaf.com", noughtyaf],
     ["shop.pierre-chavin.com", pierre_chavin],
     ["nonalcoholicwinesonline.com", nonalcoholicwinesonline],
-    ["noblegreenwines.co.uk", noblegreenwinesonline]
+    ["noblegreenwines.co.uk", noblegreenwinesonline],
+    ["healthyplanetcanada.com", healthyplanetcanada],
+    ["bittersandbottles.com", bittersandbottles]
 ]);
 
 export function getRefinerForUrl(rootUrl) {
