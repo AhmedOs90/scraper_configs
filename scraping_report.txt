@@ -1,11 +1,14 @@
-Total Sites Scraped: 1
-
+Total Sites Scraped: 2
 Total Products Scraped: 0
 Details per Site:
-Site Name: noughtyaf
-Root URL: https://noughtyaf.com
+Site Name: healthyplanetcanada
+Root URL: https://www.healthyplanetcanada.com
 Products Scraped: 0
-
+---
+Site Name: healthyplanetcanada
+Root URL: https://www.healthyplanetcanada.com
+Products Scraped: 0
+---
 Scraped Root URLs:
 https://drydrinker.com
 https://sansdrinks.com.au
@@ -51,6 +54,9 @@ https://boozefree.co.uk
 https://www.amavine.nl
 https://joinclubsoda.com
 https://freebarco.com
-
 https://keinundlow.at
 https://noughtyaf.com
+https://shop.pierre-chavin.com
+https://nonalcoholicwinesonline.com
+https://noblegreenwines.co.uk
+https://www.healthyplanetcanada.com

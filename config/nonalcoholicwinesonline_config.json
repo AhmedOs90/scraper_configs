@@ -1,0 +1,26 @@
+{
+    "rootUrl": "https://nonalcoholicwinesonline.com",
+    "baseUrl": "https://nonalcoholicwinesonline.com/collections/all",
+    "site_name": "nonalcoholicwinesonline",
+    "seller": "seller",
+    "collectionLinks": "/collections/all/",
+    "productsLinks": "/collections/all/products/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "price": "meta[property='og:price:amount']",
+            "currency": "meta[property='og:price:currency']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "description": ".rte.product-single__description"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": ".pagination .next a"
+    },
+    "level": 2
+}

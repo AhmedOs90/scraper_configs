@@ -1,0 +1,25 @@
+{
+    "rootUrl": "https://noblegreenwines.co.uk",
+    "baseUrl": "https://noblegreenwines.co.uk/products?keywords=Alcohol&submit=",
+    "site_name": "noblegreenwinesonline",
+    "seller": "seller",
+    "collectionLinks": "/t/",
+    "productsLinks": "/products/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "description": "meta[name='description']"
+        },
+        "main": {
+            "name": "h1.taxon-title[itemprop='name']",
+            "price": "div.product-price-standard",
+            "images": "#main-image img[itemprop='image']"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": "a[rel=\"next\"]"
+    },
+    "level": 1
+}
