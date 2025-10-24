@@ -50,6 +50,7 @@ import noblegreenwinesonline from "./sites/noblegreenwines.co.uk.js";
 import healthyplanetcanada from "./sites/healthyplanetcanada.com.js";
 import bittersandbottles from "./sites/bittersandbottles.com.js";
 import draydrinks from "./sites/draydrinks.com.js";
+import zerodrinks from "./sites/zerodrinks.co.za.js";
 
 // Registry map
 const registry = new Map([
@@ -99,7 +100,8 @@ const registry = new Map([
     ["noblegreenwines.co.uk", noblegreenwinesonline],
     ["healthyplanetcanada.com", healthyplanetcanada],
     ["bittersandbottles.com", bittersandbottles],
-    ["draydrinks.com", draydrinks]
+    ["draydrinks.com", draydrinks],
+    ["zerodrinks.co.za", zerodrinks]
 ]);
 
 export function getRefinerForUrl(rootUrl) {
