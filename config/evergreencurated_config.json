@@ -1,7 +1,7 @@
 {
-    "rootUrl": "https://zerodrinks.co.za",
-    "baseUrl": "https://zerodrinks.co.za/collections/drinks-only",
-    "site_name": "zerodrinks",
+    "rootUrl": "https://evergreencurated.com",
+    "baseUrl": "https://evergreencurated.com/collections/all-products",
+    "site_name": "evergreencurated",
     "seller": "seller",
     "productsLinks": "/products/",
     "collectionLinks": "/collections/",
@@ -11,15 +11,15 @@
         "header": {
             "name": "meta[property='og:title']",
             "description": "meta[name='description']",
+            "images": "meta[property='og:image']",
             "price": "meta[property='og:price:amount']",
-            "currency": "meta[property='og:price:currency']",
-            "images": "meta[property='og:image']"
+            "currency": "meta[property='og:price:currency']"
         },
         "main": {}
     },
     "pagination": {
         "type": "link",
-        "selector": ".pagination .next a"
+        "selector": ".pagination__item[aria-label=\"Next page\"]"
     },
     "level": 1
 }
