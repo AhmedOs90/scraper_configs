@@ -1,0 +1,25 @@
+{
+    "rootUrl": "https://zerodrinks.co.za",
+    "baseUrl": "https://zerodrinks.co.za/collections/drinks-only",
+    "site_name": "zerodrinks",
+    "seller": "seller",
+    "productsLinks": "/products/",
+    "collectionLinks": "/collections/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "description": "meta[name='description']",
+            "price": "meta[property='og:price:amount']",
+            "currency": "meta[property='og:price:currency']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {}
+    },
+    "pagination": {
+        "type": "link",
+        "selector": ".pagination .next a"
+    },
+    "level": 1
+}
