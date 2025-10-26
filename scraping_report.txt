@@ -1,8 +1,8 @@
 Total Sites Scraped: 1
 Total Products Scraped: 0
 Details per Site:
-Site Name: well
-Root URL: https://well.ca
+Site Name: alko
+Root URL: https://www.alko.fi
 Products Scraped: 0
 ---
 Scraped Root URLs:
@@ -61,3 +61,5 @@ https://www.draydrinks.com
 https://zerodrinks.co.za
 https://evergreencurated.com
 https://well.ca
+https://www.drinknil.co.za
+https://www.alko.fi
