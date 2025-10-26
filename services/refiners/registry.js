@@ -55,6 +55,7 @@ import evergreencurated from "./sites/evergreencurated.com.js";
 import well from "./sites/well.ca.js";
 import drinknil from "./sites/drinknil.co.za.js";
 import alko from "./sites/alko.fi.js";
+import bemakers from "./sites/trade.bemakers.com.js";
 
 // Registry map
 const registry = new Map([
@@ -110,6 +111,7 @@ const registry = new Map([
     ["well.ca", well],
     ["drinknil.co.za", drinknil],
     ["alko.fi", alko],
+    ["trade.bemakers.com", bemakers]
 ]);
 
 export function getRefinerForUrl(rootUrl) {
