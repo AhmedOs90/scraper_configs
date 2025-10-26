@@ -1,0 +1,24 @@
+{
+    "rootUrl": "https://www.themodernbartender.com",
+    "baseUrl": "https://www.themodernbartender.com/more/non-alcoholic/",
+    "site_name": "themodernbartender",
+    "seller": "seller",
+    "productLinkAttribute": "href",
+    "productLinkSelector": ".prod-card__img-link",
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "price": ".product__price",
+            "description": "#proTabPanelInformation .text-component"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": "nav.pagination a[aria-label=\"Go to next page\"]"
+    },
+    "level": 1
+}

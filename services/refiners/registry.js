@@ -56,6 +56,7 @@ import well from "./sites/well.ca.js";
 import drinknil from "./sites/drinknil.co.za.js";
 import alko from "./sites/alko.fi.js";
 import bemakers from "./sites/trade.bemakers.com.js";
+import themodernbartender from "./sites/themodernbartender.com.js";
 
 // Registry map
 const registry = new Map([
@@ -111,7 +112,8 @@ const registry = new Map([
     ["well.ca", well],
     ["drinknil.co.za", drinknil],
     ["alko.fi", alko],
-    ["trade.bemakers.com", bemakers]
+    ["trade.bemakers.com", bemakers],
+    ["themodernbartender.com", themodernbartender]
 ]);
 
 export function getRefinerForUrl(rootUrl) {
