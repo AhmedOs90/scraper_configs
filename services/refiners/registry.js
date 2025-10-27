@@ -50,6 +50,13 @@ import noblegreenwinesonline from "./sites/noblegreenwines.co.uk.js";
 import healthyplanetcanada from "./sites/healthyplanetcanada.com.js";
 import bittersandbottles from "./sites/bittersandbottles.com.js";
 import draydrinks from "./sites/draydrinks.com.js";
+import zerodrinks from "./sites/zerodrinks.co.za.js";
+import evergreencurated from "./sites/evergreencurated.com.js";
+import well from "./sites/well.ca.js";
+import drinknil from "./sites/drinknil.co.za.js";
+import alko from "./sites/alko.fi.js";
+import bemakers from "./sites/trade.bemakers.com.js";
+import themodernbartender from "./sites/themodernbartender.com.js";
 
 // Registry map
 const registry = new Map([
@@ -99,7 +106,14 @@ const registry = new Map([
     ["noblegreenwines.co.uk", noblegreenwinesonline],
     ["healthyplanetcanada.com", healthyplanetcanada],
     ["bittersandbottles.com", bittersandbottles],
-    ["draydrinks.com", draydrinks]
+    ["draydrinks.com", draydrinks],
+    ["zerodrinks.co.za", zerodrinks],
+    ["evergreencurated.com", evergreencurated],
+    ["well.ca", well],
+    ["drinknil.co.za", drinknil],
+    ["alko.fi", alko],
+    ["trade.bemakers.com", bemakers],
+    ["themodernbartender.com", themodernbartender]
 ]);
 
 export function getRefinerForUrl(rootUrl) {

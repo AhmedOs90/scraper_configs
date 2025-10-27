@@ -1,0 +1,23 @@
+{
+    "rootUrl": "https://trade.bemakers.com/dk/",
+    "baseUrl": "https://trade.bemakers.com/dk/collections/alkoholfri",
+    "site_name": "bemakers",
+    "seller": "seller",
+    "bannerSkip": "#confirm-age",
+    "productsLinks": "/products/",
+    "collectionLinks": "/collections/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "price": "p.product-price.h4.primary-font",
+            "description": ".product-description.rich-text-editor",
+            "country": ".bm-country-clickable .ml-2"
+        }
+    },
+    "level": 2
+}
