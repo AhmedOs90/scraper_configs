@@ -1,0 +1,28 @@
+{
+    "rootUrl": "https://www.drinknil.co.za",
+    "baseUrl": "https://www.drinknil.co.za/collections/all",
+    "site_name": "drinknil",
+    "seller": "seller",
+    "bannerSkip": ".mc-modal .mc-closeModal",
+    "productsLinks": "/products/",
+    "collectionLinks": "/collections/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "price": "meta[property='og:price:amount']",
+            "currency": "meta[property='og:price:currency']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "producer": "h2.product-single__vendor",
+            "name": "h1.product-single__title",
+            "description": "div.product-single__description"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": ".pagination .next a"
+    },
+    "level": 1
+}

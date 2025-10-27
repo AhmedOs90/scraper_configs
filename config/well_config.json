@@ -1,0 +1,27 @@
+{
+    "rootUrl": "https://well.ca",
+    "baseUrl": "https://well.ca/categories/non-alcoholic-beverages_5449.html",
+    "site_name": "well",
+    "seller": "seller",
+    "productsLinks": "/products/",
+    "collectionLinks": "/categories/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "price": "meta[property='og:price:amount']",
+            "currency": "meta[property='og:price:currency']",
+            "producer": "meta[property='og:brand']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "description": "div[itemprop=\"description\"]"
+        }
+    },
+    "pagination": {
+        "type": "button",
+        "selector": "#manual_load_button"
+    },
+    "level": 3
+}

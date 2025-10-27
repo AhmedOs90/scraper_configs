@@ -1,0 +1,24 @@
+{
+    "rootUrl": "https://www.healthyplanetcanada.com",
+    "baseUrl": "https://www.healthyplanetcanada.com/grocery/beverages/non-alcoholic.html",
+    "site_name": "healthyplanetcanada",
+    "seller": "seller",
+    "productLinkAttribute": "href",
+    "productLinkSelector": "li.item.product.product-item a.product-item-link",
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "description": "meta[property='og:description']",
+            "price": "meta[property='product:price:amount']",
+            "currency": "meta[property='product:price:currency']",            
+            "images": "meta[property='og:image']",
+            "producer": "meta[property='product:brand']"
+        },
+        "main": { }
+    },
+    "pagination": {
+        "type": "button",
+        "selector": "button.primary.amscroll-load-button.-after"
+    }
+}

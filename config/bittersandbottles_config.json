@@ -1,0 +1,27 @@
+{
+    "rootUrl": "https://www.bittersandbottles.com",
+    "baseUrl": "https://www.bittersandbottles.com/collections/alcohol-free",
+    "site_name": "bittersandbottles",
+    "seller": "seller",
+    "bannerSkip": ".m-a-v__action.m-a-v__enter .m-a-v__button",
+    "productsLinks": "/collections/alcohol-free/products/",
+    "collectionLinks": "/collections/alcohol-free/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "producer": ".product-vendor a",
+            "price": ".price--main .money",
+            "description": ".product-description.rte"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": ".pagination__next .pagination__item--link"
+    },
+    "level": 1
+}

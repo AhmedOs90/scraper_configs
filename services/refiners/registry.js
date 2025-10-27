@@ -44,6 +44,19 @@ import amavine from "./sites/amavine.nl.js";
 import joinclubsoda from "./sites/joinclubsoda.com.js";
 import keinundlow from "./sites/keinundlow.at.js";
 import noughtyaf from "./sites/noughtyaf.com.js";
+import pierre_chavin from "./sites/shop.pierre-chavin.com.js";
+import nonalcoholicwinesonline from "./sites/nonalcoholicwinesonline.com.js";
+import noblegreenwinesonline from "./sites/noblegreenwines.co.uk.js";
+import healthyplanetcanada from "./sites/healthyplanetcanada.com.js";
+import bittersandbottles from "./sites/bittersandbottles.com.js";
+import draydrinks from "./sites/draydrinks.com.js";
+import zerodrinks from "./sites/zerodrinks.co.za.js";
+import evergreencurated from "./sites/evergreencurated.com.js";
+import well from "./sites/well.ca.js";
+import drinknil from "./sites/drinknil.co.za.js";
+import alko from "./sites/alko.fi.js";
+import bemakers from "./sites/trade.bemakers.com.js";
+import themodernbartender from "./sites/themodernbartender.com.js";
 import innexpress from "./sites/inn-express.com.js";
 import disndis from "./sites/disndis.com.js";
 import drinkfreeco from "./sites/drinkfreeco.com.js";
@@ -92,6 +105,19 @@ const registry = new Map([
     ["joinclubsoda.com", joinclubsoda],
     ["keinundlow.at", keinundlow],
     ["noughtyaf.com", noughtyaf],
+    ["shop.pierre-chavin.com", pierre_chavin],
+    ["nonalcoholicwinesonline.com", nonalcoholicwinesonline],
+    ["noblegreenwines.co.uk", noblegreenwinesonline],
+    ["healthyplanetcanada.com", healthyplanetcanada],
+    ["bittersandbottles.com", bittersandbottles],
+    ["draydrinks.com", draydrinks],
+    ["zerodrinks.co.za", zerodrinks],
+    ["evergreencurated.com", evergreencurated],
+    ["well.ca", well],
+    ["drinknil.co.za", drinknil],
+    ["alko.fi", alko],
+    ["trade.bemakers.com", bemakers],
+    ["themodernbartender.com", themodernbartender],
     ["inn-express.com", innexpress],
     ["disndis.com", disndis],
     ["drinkfreeco.com", drinkfreeco],
