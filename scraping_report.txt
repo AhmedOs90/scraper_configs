@@ -1,11 +1,10 @@
 Total Sites Scraped: 1
-
 Total Products Scraped: 0
 Details per Site:
-Site Name: noughtyaf
-Root URL: https://noughtyaf.com
+Site Name: innexpress
+Root URL: https://www.inn-express.com
 Products Scraped: 0
-
+---
 Scraped Root URLs:
 https://drydrinker.com
 https://sansdrinks.com.au
@@ -51,6 +50,7 @@ https://boozefree.co.uk
 https://www.amavine.nl
 https://joinclubsoda.com
 https://freebarco.com
-
 https://keinundlow.at
 https://noughtyaf.com
+https://www.inn-express.com
+https://disndis.com

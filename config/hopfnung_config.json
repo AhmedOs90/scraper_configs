@@ -1,0 +1,53 @@
+{
+  "rootUrl": "https://hopfnung.ch",
+  "baseUrl": "https://hopfnung.ch/Alkoholfreie-Biere",
+  "site_name": "hopfnung",
+  "seller": "seller",
+
+  "productsLinks": "pageLinks",
+  "collectionLinks": "/Alkoholfreie-Biere",
+  "productLinkSelector": "a[href*='/Artikel/']",
+  "productLinkAttribute": "href",
+  "skipCollectionLinksInProducts": true,
+
+  "pagination": {
+    "type": "link",
+    "selector": "a[aria-label='Next page'], .pagination a[rel='next']"
+  },
+
+  "bannerSkip": null,
+  "moreConfig": true,
+
+  "selectors": {
+    "header": {
+      "name": "meta[property='og:title'], meta[name='twitter:title']",
+      "price": "meta[property='product:price:amount']",
+      "currency": "meta[property='product:price:currency']",
+      "description": "meta[name='description'], meta[property='og:description']",
+      "images": "meta[property='og:image']",
+      "abv": null,
+      "gluten_free": null,
+      "vegan": null,
+      "producer": null,
+      "energy": null,
+      "sugars": null,
+      "country": null,
+      "category": null
+    },
+    "main": {
+      "name": "h1.product__title, .product-title h1, .title-headline",
+      "price": ".price .money, .product-price .money",
+      "currency": ".price .money",
+      "description": ".product-description, .rte",
+      "images": ".product__media img, .gallery img, img[src*='/media/']",
+      "abv": null,
+      "gluten": null,
+      "vegan": null,
+      "producer": ".vendor, .product-vendor, .manufacturer",
+      "energy": null,
+      "sugars": null,
+      "country": null,
+      "category": ".breadcrumb li:last-child, nav.breadcrumbs li:last-child"
+    }
+  }
+}

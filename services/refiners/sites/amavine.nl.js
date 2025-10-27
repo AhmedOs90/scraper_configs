@@ -92,7 +92,7 @@ export default async function refine(rootUrl, product, page) {
   if (!product.producer && scraped.producer) product.producer = scraped.producer; // from "Merk"
   if (!product.abv && scraped.abv) product.abv = scraped.abv;
   if (!product.energy && scraped.energy) product.energy = scraped.energy;         // as-is
-  if (!product.sugars && scraped.sugars) product.sugars = scraped.sugars;         // as-is
+  if (!product.sugar && scraped.sugars) product.sugar = scraped.sugars;         // as-is
   if (!product.vegan && scraped.vegan) product.vegan = scraped.vegan;             // "vegan"
   if (!product.gluten_free && scraped.glutenFree) product.gluten_free = scraped.glutenFree; // "gluten free"
 

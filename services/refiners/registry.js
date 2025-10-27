@@ -44,6 +44,10 @@ import amavine from "./sites/amavine.nl.js";
 import joinclubsoda from "./sites/joinclubsoda.com.js";
 import keinundlow from "./sites/keinundlow.at.js";
 import noughtyaf from "./sites/noughtyaf.com.js";
+import innexpress from "./sites/inn-express.com.js";
+import disndis from "./sites/disndis.com.js";
+import drinkfreeco from "./sites/drinkfreeco.com.js";
+import hopfnung from "./sites/hopfnung.ch.js";
 
 // Registry map
 const registry = new Map([
@@ -87,13 +91,18 @@ const registry = new Map([
     ["amavine.nl", amavine],
     ["joinclubsoda.com", joinclubsoda],
     ["keinundlow.at", keinundlow],
-    ["noughtyaf.com", noughtyaf]
+    ["noughtyaf.com", noughtyaf],
+    ["inn-express.com", innexpress],
+    ["disndis.com", disndis],
+    ["drinkfreeco.com", drinkfreeco],
+    ["hopfnung.ch", hopfnung],
 ]);
 
 export function getRefinerForUrl(rootUrl) {
     const host = canonicalHostFromUrl(rootUrl);
+    console.log("Refiner registry lookup for host:", host);
     const siteRefiner = registry.get(host);
-
+    console.log("   Found site refiner?", Boolean(siteRefiner));
     // Return a composed refiner that runs siteRefiner (if any) then defaultRefiner
     return async function refine(rootUrlArg, product, page) {
         let out = product;

@@ -127,6 +127,7 @@ async function handleButtonPagination({
           : [];
         const pool = Array.from(new Set([...fromSel, ...fromSub]));
         const c = pool.length || all.length;
+        log.info(`[pagination] Collected ${c} product links (prev=${prev})`);
         return c > prev;
       },
       { timeout: 10000 },
