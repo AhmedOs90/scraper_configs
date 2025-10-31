@@ -22,5 +22,5 @@
         "type": "link",
         "selector": "nav.elementor-pagination a.page-numbers:first-of-type"
     },
-    "level": 3
+    "level": 2
 }

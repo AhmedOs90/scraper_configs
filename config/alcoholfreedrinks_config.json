@@ -5,10 +5,8 @@
     "seller": "seller",
     "productsLinks": "/product/",
     "collectionLinks": "/product-category/",
-    
+    "skipCollectionLinksInProducts": true,
     "moreConfig": true,
-    "level": 1,
-    "skipCollectionLinksInProducts": false,
     "selectors": {
         "header": {
             "name": "meta[property='og:title']",
@@ -26,5 +24,6 @@
     "pagination": {
         "type": "button",
         "selector": ".g-loadmore button"
-    }
+    },
+    "level": 1
 }
