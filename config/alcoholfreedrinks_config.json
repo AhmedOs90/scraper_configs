@@ -1,6 +1,6 @@
 {
-    "baseUrl": "https://www.alcoholfreedrinks.co.uk/product-category/",
     "rootUrl": "https://www.alcoholfreedrinks.co.uk",
+    "baseUrl": "https://www.alcoholfreedrinks.co.uk/product-category/",
     "site_name": "alcoholfreedrinks",
     "seller": "seller",
     "productsLinks": "/product/",
