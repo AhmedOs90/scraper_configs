@@ -65,6 +65,8 @@ import hopburnsblack from "./sites/hopburnsblack.co.uk.js";
 import tesco from "./sites/tesco.com.js";
 import thelightdrinker from "./sites/thelightdrinker.com.js";
 import afdrinks from "./sites/af-drinks.com.js";
+import puninwine from "./sites/puninwine.com.js";
+import threshers from "./sites/threshers.co.uk.js";
 
 // Registry map
 const registry = new Map([
@@ -129,7 +131,9 @@ const registry = new Map([
     ["hopburnsblack.co.uk", hopburnsblack],
     ["tesco.com", tesco],
     ["thelightdrinker.com", thelightdrinker],
-    ["af-drinks.com", afdrinks]
+    ["af-drinks.com", afdrinks],
+    ["puninwine.com", puninwine],
+    ["threshers.co.uk", threshers]
 ]);
 
 export function getRefinerForUrl(rootUrl) {
