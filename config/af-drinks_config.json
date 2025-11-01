@@ -16,7 +16,7 @@
             "country": ".reversed-link.active[aria-current=\"true\"]",
             "description": ".af-acc__rich",
             "price": ".product__price .price__regular"
-
-        }
+        },
+        "level": 1
     }
 }
