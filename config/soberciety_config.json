@@ -1,0 +1,28 @@
+{
+    "rootUrl": "https://soberciety.de",
+    "baseUrl": "https://soberciety.de/en/collections/all",
+    "site_name": "soberciety",
+    "seller": "seller",
+    "bannerSkip": "button.iubenda-cs-accept-btn",
+    "productsLinks": "/en/collections/all/products/",
+    "collectionLinks": "/en/collections/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "images": "meta[property='og:image']",
+            "price": "meta[property='og:price:amount']",
+            "currency": "meta[property='og:price:currency']"
+        },
+        "main": {
+            "description": ".accordion-item .accordion-details__content.rte",
+            "country": "button.disclosure__toggle"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": ".paginateCollectionBtnContainer .sf__btn.sf__btn-primary"
+    },
+    "level": 2
+}
