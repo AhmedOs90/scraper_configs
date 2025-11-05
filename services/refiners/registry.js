@@ -68,6 +68,7 @@ import afdrinks from "./sites/af-drinks.com.js";
 import puninwine from "./sites/puninwine.com.js";
 import threshers from "./sites/threshers.co.uk.js";
 import soberciety from "./sites/soberciety.de.js";
+import positivedrinks from "./sites/positivedrinks.co.js";
 
 // Registry map
 const registry = new Map([
@@ -135,7 +136,8 @@ const registry = new Map([
     ["af-drinks.com", afdrinks],
     ["puninwine.com", puninwine],
     ["threshers.co.uk", threshers],
-    ["soberciety.de", soberciety]
+    ["soberciety.de", soberciety],
+    ["positivedrinks.co", positivedrinks],
 ]);
 
 export function getRefinerForUrl(rootUrl) {
