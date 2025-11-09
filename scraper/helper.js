@@ -37,7 +37,7 @@ const refineFromApi = opts?.refineFromApi;                  // use the function 
             Prod.energy = Prod.energy || await page.$eval(config.selectors.main.energy, el => el.textContent.trim()).catch(() => null);
             Prod.sugar = Prod.sugar || await page.$eval(config.selectors.main.sugars, el => el.textContent.trim()).catch(() => null);
             Prod.category = Prod.category || await page.$eval(config.selectors.main.category, el => el.textContent.trim()).catch(() => null);
-            Prod.description = "";
+
 
          // 3) Your hardcoded per-site refine (kept)
     if (config.moreConfig && Prod.name !== "Name not found") {
