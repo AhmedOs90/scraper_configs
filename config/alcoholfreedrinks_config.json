@@ -1,14 +1,12 @@
 {
-    "baseUrl": "https://www.alcoholfreedrinks.co.uk/product-category/",
     "rootUrl": "https://www.alcoholfreedrinks.co.uk",
+    "baseUrl": "https://www.alcoholfreedrinks.co.uk/product-category/",
     "site_name": "alcoholfreedrinks",
     "seller": "seller",
     "productsLinks": "/product/",
     "collectionLinks": "/product-category/",
-    
+    "skipCollectionLinksInProducts": true,
     "moreConfig": true,
-    "level": 1,
-    "skipCollectionLinksInProducts": false,
     "selectors": {
         "header": {
             "name": "meta[property='og:title']",
@@ -26,5 +24,6 @@
     "pagination": {
         "type": "button",
         "selector": ".g-loadmore button"
-    }
+    },
+    "level": 1
 }

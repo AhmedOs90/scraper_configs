@@ -3,6 +3,8 @@ Total Products Scraped: 0
 Details per Site:
 Site Name: ginsiders
 Root URL: https://ginsiders.com
+Site Name: hopburnsblack
+Root URL: https://www.hopburnsblack.co.uk
 Products Scraped: 0
 ---
 Scraped Root URLs:
@@ -72,3 +74,8 @@ https://www.themodernbartender.com
 https://www.blackmarket.co.nz
 https://thefuss.club
 https://ginsiders.com
+https://www.inn-express.com
+https://disndis.com
+https://drinkfreeco.com
+https://hopfnung.ch
+https://www.hopburnsblack.co.uk

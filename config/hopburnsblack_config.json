@@ -1,26 +1,27 @@
 {
-    "rootUrl": "https://www.draydrinks.com",
-    "baseUrl": "https://www.draydrinks.com/collections/all",
-    "site_name": "draydrinks",
+    "rootUrl": "https://www.hopburnsblack.co.uk",
+    "baseUrl": "https://www.hopburnsblack.co.uk/collections/low-no-alcohol",
+    "site_name": "hopburnsblack",
     "seller": "seller",
-    "bannerSkip": "button.klaviyo-close-form",
-    "productsLinks": "/products/",
+    "productsLinks": "/collections/low-no-alcohol/products/",
     "collectionLinks": "/collections/",
+    "bannerSkip": "button.btn--popup-1.js-close-modal",
     "skipCollectionLinksInProducts": true,
     "moreConfig": true,
     "selectors": {
         "header": {
             "name": "meta[property='og:title']",
-            "description": "meta[property='og:description']",
             "images": "meta[property='og:image']",
             "price": "meta[property='og:price:amount']",
             "currency": "meta[property='og:price:currency']"
         },
-        "main": {}
+        "main": {
+            "description": "div.product-description"
+        }
     },
     "pagination": {
         "type": "link",
-        "selector": "a.pagination__next"
+        "selector": "a.js-pagination-load-more"
     },
-    "level": 0
+    "level": 1
 }

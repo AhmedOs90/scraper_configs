@@ -63,6 +63,14 @@ import drinkfreeco from "./sites/drinkfreeco.com.js";
 import hopfnung from "./sites/hopfnung.ch.js";
 import thefuss from './sites/thefuss.club.js';
 import ginsiders from './sites/ginsiders.com.js';
+import hopburnsblack from "./sites/hopburnsblack.co.uk.js";
+import tesco from "./sites/tesco.com.js";
+import thelightdrinker from "./sites/thelightdrinker.com.js";
+import afdrinks from "./sites/af-drinks.com.js";
+import puninwine from "./sites/puninwine.com.js";
+import threshers from "./sites/threshers.co.uk.js";
+import soberciety from "./sites/soberciety.de.js";
+import positivedrinks from "./sites/positivedrinks.co.js";
 
 // Registry map
 const registry = new Map([
@@ -126,6 +134,14 @@ const registry = new Map([
     ["hopfnung.ch", hopfnung],
     ["thefuss.club", thefuss],
     ["ginsiders.com", ginsiders],
+    ["hopburnsblack.co.uk", hopburnsblack],
+    ["tesco.com", tesco],
+    ["thelightdrinker.com", thelightdrinker],
+    ["af-drinks.com", afdrinks],
+    ["puninwine.com", puninwine],
+    ["threshers.co.uk", threshers],
+    ["soberciety.de", soberciety],
+    ["positivedrinks.co", positivedrinks],
 ]);
 
 export function getRefinerForUrl(rootUrl) {

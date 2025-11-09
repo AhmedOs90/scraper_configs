@@ -1,0 +1,26 @@
+{
+    "rootUrl": "https://threshers.co.uk",
+    "baseUrl": "https://threshers.co.uk/collections/alcoholalternatives",
+    "site_name": "threshers",
+    "seller": "seller",
+    "productsLinks": "/products/",
+    "collectionLinks": "/collections/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "description": ".product-description__custom.pTag",
+            "price": ".product-block--price [data-product-price] .visually-hidden, .product-block--price [data-compare-price] .visually-hidden",
+            "abv": ".product-block--sales-point .sales-point .icon-and-text span:last-child"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": ".pagination .next a"
+    },
+    "level": 1
+}
