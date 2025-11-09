@@ -61,6 +61,8 @@ import innexpress from "./sites/inn-express.com.js";
 import disndis from "./sites/disndis.com.js";
 import drinkfreeco from "./sites/drinkfreeco.com.js";
 import hopfnung from "./sites/hopfnung.ch.js";
+import thefuss from './sites/thefuss.club.js';
+import ginsiders from './sites/ginsiders.com.js';
 
 // Registry map
 const registry = new Map([
@@ -122,6 +124,8 @@ const registry = new Map([
     ["disndis.com", disndis],
     ["drinkfreeco.com", drinkfreeco],
     ["hopfnung.ch", hopfnung],
+    ["thefuss.club", thefuss],
+    ["ginsiders.com", ginsiders],
 ]);
 
 export function getRefinerForUrl(rootUrl) {

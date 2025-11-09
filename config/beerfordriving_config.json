@@ -1,0 +1,53 @@
+{
+  "rootUrl": "https://beerfordriving.com",
+  "baseUrl": "https://beerfordriving.com/beer/",
+  "site_name": "beerfordriving",
+  "seller": "not_seller",
+
+  "productsLinks": "/beer/",
+  "collectionLinks": "/beer/",
+  "productLinkSelector": "a[href^='/beer/']",
+  "productLinkAttribute": "href",
+  "skipCollectionLinksInProducts": false,
+
+  "pagination": null,
+  "bannerSkip": null,
+  "moreConfig": true,
+
+  "localization": {
+    "country": "US",
+    "language": "EN",
+    "currency": "USD"
+  },
+
+  "selectors": {
+    "header": {
+      "name": "meta[property='og:title'], meta[name='twitter:title']",
+      "description": "meta[name='description'], meta[property='og:description']",
+      "images": "meta[property='og:image']"
+    },
+    "main": {
+      "name": "main h1, article h1, h1.entry-title",
+      "price": "main :matches-css-before(content*='$'), main :matches-css(content*='$'), .price, [class*='price']",
+      "currency": "main :matches-css(content*='$'), .price, [class*='price']",
+      "description": "article, main .entry-content, main .post-content, main .container",
+      "images": "main img, article img",
+      "abv": "main :matches-css(content*='%'), main :matches-css-before(content*='%'), main p, main li, article p, article li",
+      "gluten": "main :matches-css(content*='gluten'), main a[href*='gluten'], main li:contains('gluten')",
+      "vegan": "main :matches-css(content*='vegan'), main a[href*='vegan'], main li:contains('vegan')",
+      "producer": "main a[href^='/beer/']:not([href='/beer/']):not([href$='/beer/'])",
+      "energy": "main :matches-css(content*='kcal'), main :matches-css(content*='Calories'), main p:contains('kcal'), main p:contains('Calories')",
+      "sugars": "main p:contains('Sugar'), main li:contains('Sugar'), main p:contains('g Sugar')",
+      "category": "main .breadcrumbs a:last-child, nav.breadcrumbs a:last-child"
+    }
+  },
+
+  "postProcess": {
+    "abvRegex": "(\\d+(?:\\.\\d+)?)\\s*%\\s*ABV",
+    "priceRegex": "\\$\\s*([0-9]+(?:\\.[0-9]{2})?)",
+    "caloriesRegex": "(\\d+)\\s*kcal|([0-9]+)\\s*Calories",
+    "sugarPer100mlRegex": "(\\d+(?:\\.\\d+)?)\\s*g\\s*Sugar\\s*/?\\s*100\\s*ml",
+    "countryFallback": "US",
+    "productCategoryDefault": "Beer"
+  }
+}

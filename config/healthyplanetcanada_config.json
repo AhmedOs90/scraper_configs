@@ -1,6 +1,6 @@
 {
     "rootUrl": "https://www.healthyplanetcanada.com",
-    "baseUrl": "https://www.healthyplanetcanada.com/grocery/beverages/non-alcoholic.html",
+    "baseUrl": "https://www.healthyplanetcanada.com/grocery/beverages/non-alcoholic",
     "site_name": "healthyplanetcanada",
     "seller": "seller",
     "productLinkAttribute": "href",
