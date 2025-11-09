@@ -20,5 +20,5 @@
         "type": "link",
         "selector": "nav.pagination a[aria-label=\"Go to next page\"]"
     },
-    "level": 1
+    "level": 0
 }

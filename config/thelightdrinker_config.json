@@ -1,0 +1,26 @@
+{
+    "rootUrl": "https://thelightdrinker.com",
+    "baseUrl": "https://thelightdrinker.com/?s=",
+    "site_name": "thelightdrinker",
+    "seller": "no",
+    "productsLinks": "/product/",
+    "collectionLinks": "/product-category/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "abv": ".elementor-element-27ba8df .elementor-widget-text-editor .elementor-widget-container",
+            "price": ".elementor-widget-woocommerce-product-price .price",
+            "description": ".elementor-element-8dc745e .elementor-shortcode"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": "nav.elementor-pagination a.page-numbers:first-of-type"
+    },
+    "level": 2
+}

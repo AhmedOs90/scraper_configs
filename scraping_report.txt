@@ -1,0 +1,72 @@
+Total Sites Scraped: 1
+Total Products Scraped: 0
+Details per Site:
+Site Name: hopburnsblack
+Root URL: https://www.hopburnsblack.co.uk
+Products Scraped: 0
+---
+Scraped Root URLs:
+https://drydrinker.com
+https://sansdrinks.com.au
+https://dryvariety.com
+https://alkoholfributik.dk
+https://thealcoholfreeco.co.uk
+https://www.alcoholvrijshop.nl
+https://ishspirits.com
+https://www.vildmedvin.dk
+https://beershoppen.dk
+https://shoppencph.dk
+https://www.nemlig.com
+https://thezeroproof.com
+https://proofnomore.com
+https://drinknolow.com
+https://worldofnix.com
+https://www.beyondbeer.de
+https://www.craftzero.com.au
+https://boisson.co
+https://upsidedrinks.com
+https://thebluedolphinstore.com
+https://www.drybutwet.com.au
+https://www.teedawn.com
+https://www.thesobrmarket.com
+https://www.alcoholfreedrinks.co.uk
+https://thenewbar.com
+https://collectivecraftbeer.com
+https://freespiritdrinkco.com.au
+https://www.vinello.eu
+https://www.danmurphys.com.au
+https://market.nabeerclub.com
+https://winesformothers.com
+https://zepeim.com
+https://minusmoonshine.com
+https://themindfuldrinking.com
+https://drinkdrystore.com
+https://www.sechey.com
+https://www.drinkpointzero.com
+https://sobersips.ca
+https://wisebartender.co.uk
+https://thechiller.co.nz
+https://boozefree.co.uk
+https://www.amavine.nl
+https://joinclubsoda.com
+https://freebarco.com
+https://keinundlow.at
+https://noughtyaf.com
+https://shop.pierre-chavin.com
+https://nonalcoholicwinesonline.com
+https://noblegreenwines.co.uk
+https://www.healthyplanetcanada.com
+https://www.bittersandbottles.com
+https://www.draydrinks.com
+https://zerodrinks.co.za
+https://evergreencurated.com
+https://well.ca
+https://www.drinknil.co.za
+https://www.alko.fi
+https://trade.bemakers.com
+https://www.themodernbartender.com
+https://www.inn-express.com
+https://disndis.com
+https://drinkfreeco.com
+https://hopfnung.ch
+https://www.hopburnsblack.co.uk
