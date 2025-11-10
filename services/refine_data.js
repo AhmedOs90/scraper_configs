@@ -1,7 +1,7 @@
 import { getRefinerForUrl } from "./refiners/registry.js";
 import { detectCategory, detectVeganAndgluten_free, extractABVFromText, categories } from "./refiners/refiners_helpers.js";
 
-export async function refineData(rootUrl, product, page) {
+export async function refineData(rootUrl, product, page, siteConfig) {
   // mirror your console piping for parity
   page.on("console", (msg) => {
     for (let i = 0; i < msg.args().length; ++i) {
@@ -11,7 +11,7 @@ export async function refineData(rootUrl, product, page) {
     }
   });
 
-  const refiner = getRefinerForUrl(rootUrl);
+  const refiner = getRefinerForUrl(rootUrl, siteConfig);
   const result = await refiner(rootUrl, product, page);
   return result || product;
 }

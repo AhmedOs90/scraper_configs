@@ -21,8 +21,8 @@
         }
     },
     "pagination": {
-        "type": "link",
-        "selector": ".paginateCollectionBtnContainer .sf__btn.sf__btn-primary"
-    },
+    "type": "link",
+    "selector": "nav.pagination a.pagination__item--next"
+  },
     "level": 2
 }

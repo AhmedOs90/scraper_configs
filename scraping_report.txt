@@ -1,10 +1,8 @@
 Total Sites Scraped: 1
 Total Products Scraped: 0
 Details per Site:
-Site Name: ginsiders
-Root URL: https://ginsiders.com
-Site Name: hopburnsblack
-Root URL: https://www.hopburnsblack.co.uk
+Site Name: nakedlifespirits
+Root URL: https://nakedlifespirits.com.au
 Products Scraped: 0
 ---
 Scraped Root URLs:
@@ -71,11 +69,25 @@ https://www.drinknil.co.za
 https://www.alko.fi
 https://trade.bemakers.com
 https://www.themodernbartender.com
-https://www.blackmarket.co.nz
 https://thefuss.club
 https://ginsiders.com
-https://www.inn-express.com
-https://disndis.com
-https://drinkfreeco.com
-https://hopfnung.ch
 https://www.hopburnsblack.co.uk
+https://www.tesco.com
+https://thelightdrinker.com
+https://www.af-drinks.com
+https://puninwine.com
+https://threshers.co.uk
+https://soberciety.de
+https://positivedrinks.co
+https://centralmarket.com
+https://softerdrink.ca
+https://nakedlifespirits.com.au
+https://decantalo.co.uk
+https://us.noughtyaf.com
+https://bws.com.au
+https://kodriget.dk
+https://nonalcwines.au
+https://beveragedaily.com
+https://wineandbeyond.ca
+https://todelli.com
+https://drinkdesoi.com

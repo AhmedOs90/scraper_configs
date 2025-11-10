@@ -90,7 +90,7 @@ const nutritionValues = await page.evaluate(() => {
 
 
 if (nutritionValues.energy) product.energy = nutritionValues.energy;
-if (nutritionValues.sugars) product.sugar = nutritionValues.sugars;
+if (nutritionValues.sugar) product.sugar = nutritionValues.sugar;
 
 
   // -------- 6) Category (optional) from breadcrumbs or badges ----------

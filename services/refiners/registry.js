@@ -71,6 +71,8 @@ import puninwine from "./sites/puninwine.com.js";
 import threshers from "./sites/threshers.co.uk.js";
 import soberciety from "./sites/soberciety.de.js";
 import positivedrinks from "./sites/positivedrinks.co.js";
+import softerdrink from "./sites/softerdrink.ca.js";
+import nakedlifespirits from "./sites/nakedlifespirits.com.au.js";
 
 // Registry map
 const registry = new Map([
@@ -142,9 +144,11 @@ const registry = new Map([
     ["threshers.co.uk", threshers],
     ["soberciety.de", soberciety],
     ["positivedrinks.co", positivedrinks],
+    ["softerdrink.ca", softerdrink],
+    ["nakedlifespirits.com.au", nakedlifespirits],
 ]);
 
-export function getRefinerForUrl(rootUrl) {
+export function getRefinerForUrl(rootUrl, siteConfig) {
     const host = canonicalHostFromUrl(rootUrl);
     console.log("Refiner registry lookup for host:", host);
     const siteRefiner = registry.get(host);
@@ -158,7 +162,7 @@ export function getRefinerForUrl(rootUrl) {
             console.error(`Site refiner error for ${host}: ${e.message}`);
         }
         try {
-            out = await defaultRefiner(rootUrlArg, out, page);
+            out = await defaultRefiner(rootUrlArg, out, page, siteConfig);
         } catch (e) {
             console.error(`Default refiner error: ${e.message}`);
         }

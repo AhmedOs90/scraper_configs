@@ -1,9 +1,9 @@
 {
-  "usableSessionsCount": 19,
-  "retiredSessionsCount": 0,
+  "usableSessionsCount": 32,
+  "retiredSessionsCount": 1,
   "sessions": [
     {
-      "id": "session_11078cd7Es",
+      "id": "session_Xdl49yy78F",
       "cookieJar": {
         "version": "tough-cookie@5.0.0",
         "storeType": "MemoryCookieStore",
@@ -16,14 +16,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-11-09T01:11:47.131Z",
-      "createdAt": "2025-11-09T00:21:47.131Z",
+      "expiresAt": "2025-11-10T03:43:03.702Z",
+      "createdAt": "2025-11-10T02:53:03.702Z",
       "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_kkpNKbmUCx",
+      "id": "session_giU5pKbCx0",
       "cookieJar": {
         "version": "tough-cookie@5.0.0",
         "storeType": "MemoryCookieStore",
@@ -33,243 +33,213 @@
         "prefixSecurity": "silent",
         "cookies": [
           {
-            "key": "sib_cuid",
-            "value": "6be9394e-d08a-4e4f-8b04-eecf6ca8d1c8",
-            "expires": "2026-05-09T21:21:54.000Z",
-            "domain": "ginsiders.com",
+            "key": "_clsk",
+            "value": "1b63ujz%5E1762743326221%5E25%5E1%5Ek.clarity.ms%2Fcollect",
+            "expires": "2025-11-11T02:55:26.000Z",
+            "domain": "nakedlifespirits.com.au",
             "path": "/",
             "hostOnly": false,
-            "creation": "2025-11-09T00:21:56.188Z",
-            "lastAccessed": "2025-11-09T00:23:17.313Z"
+            "creation": "2025-11-10T02:53:18.215Z",
+            "lastAccessed": "2025-11-10T02:55:26.411Z"
           },
           {
-            "key": "cookielawinfo-checkbox-obrigatorio-2",
-            "value": "no",
-            "expires": "2026-11-09T00:21:54.000Z",
-            "domain": "ginsiders.com",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-11-09T00:21:56.188Z",
-            "lastAccessed": "2025-11-09T00:23:17.313Z"
-          },
-          {
-            "key": "cookielawinfo-checkbox-vereist-nl",
-            "value": "no",
-            "expires": "2026-11-09T00:21:54.000Z",
-            "domain": "ginsiders.com",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-11-09T00:21:56.188Z",
-            "lastAccessed": "2025-11-09T00:23:17.313Z"
-          },
-          {
-            "key": "cookielawinfo-checkbox-notwendig",
-            "value": "no",
-            "expires": "2026-11-09T00:21:54.000Z",
-            "domain": "ginsiders.com",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-11-09T00:21:56.189Z",
-            "lastAccessed": "2025-11-09T00:23:17.313Z"
-          },
-          {
-            "key": "cookielawinfo-checkbox-richiesto",
-            "value": "no",
-            "expires": "2026-11-09T00:21:54.000Z",
-            "domain": "ginsiders.com",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-11-09T00:21:56.189Z",
-            "lastAccessed": "2025-11-09T00:23:17.313Z"
-          },
-          {
-            "key": "sbjs_first_add",
-            "value": "fd%3D2025-11-09%2000%3A21%3A53%7C%7C%7Cep%3Dhttps%3A%2F%2Fginsiders.com%2Fcategorie-produit%2Fgin-sans-alcool%2F%7C%7C%7Crf%3D%28none%29",
-            "expires": "2025-11-09T01:11:56.180Z",
-            "domain": "ginsiders.com",
+            "key": "_ga_B4T360DR7Q",
+            "value": "GS2.1.s1762743197$o1$g0$t1762743325$j57$l0$h0",
+            "expires": "2026-12-15T02:55:25.385Z",
+            "domain": "nakedlifespirits.com.au",
             "path": "/",
             "hostOnly": false,
-            "creation": "2025-11-09T00:21:56.189Z",
-            "lastAccessed": "2025-11-09T00:23:17.313Z"
-          },
-          {
-            "key": "sbjs_udata",
-            "value": "vst%3D1%7C%7C%7Cuip%3D%28none%29%7C%7C%7Cuag%3DMozilla%2F5.0%20%28Macintosh%3B%20Intel%20Mac%20OS%20X%2010_15_7%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F123.0.0.0%20Safari%2F537.36",
-            "expires": "2025-11-09T01:13:17.312Z",
-            "domain": "ginsiders.com",
-            "path": "/",
-            "hostOnly": false,
-            "creation": "2025-11-09T00:21:56.189Z",
-            "lastAccessed": "2025-11-09T00:23:17.313Z"
-          },
-          {
-            "key": "cookielawinfo-checkbox-necessaire",
-            "value": "yes",
-            "expires": "2026-11-09T00:21:54.000Z",
-            "domain": "ginsiders.com",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-11-09T00:21:56.189Z",
-            "lastAccessed": "2025-11-09T00:23:17.313Z"
-          },
-          {
-            "key": "sbjs_migrations",
-            "value": "1418474375998%3D1",
-            "expires": "2025-11-09T01:11:56.181Z",
-            "domain": "ginsiders.com",
-            "path": "/",
-            "hostOnly": false,
-            "creation": "2025-11-09T00:21:56.189Z",
-            "lastAccessed": "2025-11-09T00:23:17.313Z"
-          },
-          {
-            "key": "sbjs_first",
-            "value": "typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29",
-            "expires": "2025-11-09T01:11:56.181Z",
-            "domain": "ginsiders.com",
-            "path": "/",
-            "hostOnly": false,
-            "creation": "2025-11-09T00:21:56.189Z",
-            "lastAccessed": "2025-11-09T00:23:17.313Z"
-          },
-          {
-            "key": "sbjs_current",
-            "value": "typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29",
-            "expires": "2025-11-09T01:13:17.312Z",
-            "domain": "ginsiders.com",
-            "path": "/",
-            "hostOnly": false,
-            "creation": "2025-11-09T00:21:56.189Z",
-            "lastAccessed": "2025-11-09T00:23:17.312Z"
+            "creation": "2025-11-10T02:53:18.223Z",
+            "lastAccessed": "2025-11-10T02:55:26.411Z"
           },
           {
             "key": "_ga",
-            "value": "GA1.1.122990263.1762647714",
-            "expires": "2026-12-14T00:23:16.821Z",
-            "domain": "ginsiders.com",
+            "value": "GA1.1.26860982.1762743198",
+            "expires": "2026-12-15T02:53:17.902Z",
+            "domain": "nakedlifespirits.com.au",
             "path": "/",
             "hostOnly": false,
-            "creation": "2025-11-09T00:21:56.189Z",
-            "lastAccessed": "2025-11-09T00:23:17.312Z"
+            "creation": "2025-11-10T02:53:18.235Z",
+            "lastAccessed": "2025-11-10T02:55:26.411Z"
           },
           {
-            "key": "cookielawinfo-checkbox-requerido-2",
-            "value": "no",
-            "expires": "2026-11-09T00:21:54.000Z",
-            "domain": "ginsiders.com",
-            "path": "/",
-            "hostOnly": true,
-            "creation": "2025-11-09T00:21:56.189Z",
-            "lastAccessed": "2025-11-09T00:23:17.312Z"
-          },
-          {
-            "key": "sbjs_current_add",
-            "value": "fd%3D2025-11-09%2000%3A21%3A53%7C%7C%7Cep%3Dhttps%3A%2F%2Fginsiders.com%2Fcategorie-produit%2Fgin-sans-alcool%2F%7C%7C%7Crf%3D%28none%29",
-            "expires": "2025-11-09T01:11:56.181Z",
-            "domain": "ginsiders.com",
+            "key": "_shopify_s",
+            "value": "34416bf0-50d2-4852-b6e0-fcc8362ac07b",
+            "expires": "2025-11-10T03:25:25.543Z",
+            "domain": "nakedlifespirits.com.au",
             "path": "/",
             "hostOnly": false,
-            "creation": "2025-11-09T00:21:56.189Z",
-            "lastAccessed": "2025-11-09T00:23:17.312Z"
-          },
-          {
-            "key": "_ga_X1QDHNFFNJ",
-            "value": "GS2.1.s1762647714$o1$g1$t1762647797$j39$l0$h0",
-            "expires": "2026-12-14T00:23:17.064Z",
-            "domain": "ginsiders.com",
-            "path": "/",
-            "hostOnly": false,
-            "creation": "2025-11-09T00:21:56.189Z",
-            "lastAccessed": "2025-11-09T00:23:17.312Z"
+            "creation": "2025-11-10T02:53:18.235Z",
+            "lastAccessed": "2025-11-10T02:55:26.411Z"
           },
           {
             "key": "_fbp",
-            "value": "fb.1.1762647712065.2086339654.AQ",
-            "expires": "2026-02-07T00:23:17.000Z",
-            "domain": "ginsiders.com",
+            "value": "fb.2.1762743197567.8986195187679385",
+            "expires": "2026-02-08T02:55:25.000Z",
+            "domain": "nakedlifespirits.com.au",
             "path": "/",
             "hostOnly": false,
-            "creation": "2025-11-09T00:21:56.190Z",
-            "lastAccessed": "2025-11-09T00:23:17.312Z"
+            "creation": "2025-11-10T02:53:18.235Z",
+            "lastAccessed": "2025-11-10T02:55:26.411Z"
           },
           {
-            "key": "sbjs_session",
-            "value": "pgs%3D18%7C%7C%7Ccpg%3Dhttps%3A%2F%2Fginsiders.com%2Fproduct%2Fsir-chil-0%2F",
-            "expires": "2025-11-09T00:53:16.000Z",
-            "domain": "ginsiders.com",
-            "path": "/",
-            "hostOnly": false,
-            "creation": "2025-11-09T00:21:56.190Z",
-            "lastAccessed": "2025-11-09T00:23:17.312Z"
-          },
-          {
-            "key": "cookielawinfo-checkbox-required",
-            "value": "no",
-            "expires": "2026-11-09T00:21:54.000Z",
-            "domain": "ginsiders.com",
+            "key": "__kla_id",
+            "value": "eyJjaWQiOiJOV00xT0RRM1lqY3RZVGsxWXkwMFl6aGxMV0ZpTnpFdFlXUTJZVE13TUdFek1tSTMifQ==",
+            "expires": "2026-12-15T02:53:17.097Z",
+            "domain": "www.nakedlifespirits.com.au",
             "path": "/",
             "hostOnly": true,
-            "creation": "2025-11-09T00:21:56.190Z",
-            "lastAccessed": "2025-11-09T00:23:17.312Z"
+            "creation": "2025-11-10T02:53:18.235Z",
+            "lastAccessed": "2025-11-10T02:55:26.411Z"
           },
           {
-            "key": "aelia_customer_country",
-            "value": "EG",
-            "expires": "2025-11-09T01:11:56.181Z",
-            "domain": "ginsiders.com",
+            "key": "localization",
+            "value": "AU",
+            "expires": "2026-11-10T02:55:23.695Z",
+            "domain": "www.nakedlifespirits.com.au",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2025-11-10T02:53:18.235Z",
+            "lastAccessed": "2025-11-10T02:55:26.411Z"
+          },
+          {
+            "key": "_clck",
+            "value": "11ua05u%5E2%5Eg0w%5E0%5E2140",
+            "expires": "2026-11-10T02:53:16.000Z",
+            "domain": "nakedlifespirits.com.au",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2025-11-10T02:53:18.236Z",
+            "lastAccessed": "2025-11-10T02:55:26.411Z"
+          },
+          {
+            "key": "data-timeout",
+            "value": "false||false",
+            "expires": "2025-11-17T02:53:15.000Z",
+            "domain": "www.nakedlifespirits.com.au",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2025-11-10T02:53:18.236Z",
+            "lastAccessed": "2025-11-10T02:55:26.412Z"
+          },
+          {
+            "key": "_gcl_au",
+            "value": "1.1.275876636.1762743192",
+            "expires": "2026-02-08T02:53:12.000Z",
+            "domain": "nakedlifespirits.com.au",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2025-11-10T02:53:18.236Z",
+            "lastAccessed": "2025-11-10T02:55:26.411Z"
+          },
+          {
+            "key": "_ga_WG6800VT8W",
+            "value": "GS2.1.s1762743197$o1$g1$t1762743325$j53$l0$h0",
+            "expires": "2026-12-15T02:55:25.263Z",
+            "domain": "nakedlifespirits.com.au",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2025-11-10T02:53:18.236Z",
+            "lastAccessed": "2025-11-10T02:55:26.411Z"
+          },
+          {
+            "key": "keep_alive",
+            "value": "eyJ2IjoyLCJ0cyI6MTc2Mjc0MzMyNTEzMCwiZW52Ijp7IndkIjowLCJ1YSI6MSwiY3YiOjEsImJyIjoxfSwiYmh2Ijp7Im1hIjowLCJjYSI6MCwia2EiOjAsInNhIjowLCJrYmEiOjAsInRhIjowLCJ0IjowLCJubSI6MCwibXMiOjAsIm1qIjowLCJtc3AiOjAsInZjIjowLCJjcCI6MCwicmMiOjAsImtqIjowLCJraSI6MCwic3MiOjAsInNqIjowLCJzc20iOjAsInNwIjowLCJ0cyI6MCwidGoiOjAsInRwIjowLCJ0c20iOjB9LCJzZXMiOnsicCI6MjUsInMiOjE3NjI3NDMxOTQ5NDEsImQiOjEwNX19",
+            "expires": "2025-11-10T03:45:26.409Z",
+            "domain": "www.nakedlifespirits.com.au",
             "path": "/",
             "secure": true,
-            "hostOnly": false,
-            "creation": "2025-11-09T00:21:56.190Z",
-            "lastAccessed": "2025-11-09T00:23:17.312Z"
+            "hostOnly": true,
+            "creation": "2025-11-10T02:53:18.236Z",
+            "lastAccessed": "2025-11-10T02:55:26.411Z"
           },
           {
-            "key": "__stripe_mid",
-            "value": "d55787ed-c456-48d8-91f6-aeb5470d59a5515c4b",
-            "expires": "2026-11-09T00:23:16.000Z",
-            "domain": "ginsiders.com",
-            "path": "/",
-            "secure": true,
-            "hostOnly": false,
-            "creation": "2025-11-09T00:22:09.631Z",
-            "lastAccessed": "2025-11-09T00:23:17.312Z"
-          },
-          {
-            "key": "__stripe_sid",
-            "value": "9f4ad43c-de93-4c05-84a6-fe08e68e0bf421657c",
-            "expires": "2025-11-09T00:53:16.000Z",
-            "domain": "ginsiders.com",
-            "path": "/",
-            "secure": true,
-            "hostOnly": false,
-            "creation": "2025-11-09T00:22:09.632Z",
-            "lastAccessed": "2025-11-09T00:23:17.312Z"
-          },
-          {
-            "key": "wp_woocommerce_session_c728b36dc91d805913b63c8d15b2d1ce",
-            "value": "t_d697cb670149d715a9422e78d6ced3%7C1762820522%7C1762734122%7C%24generic%24hEaomxXpHRatAkNjCHyAoqQHufcBt6a4blO0Jryk",
-            "expires": "2025-11-11T00:22:03.556Z",
-            "domain": "ginsiders.com",
+            "key": "_shopify_essential",
+            "value": ":AZprroXuAAEAtRxdiZOC2SPVjpSoWrYeSXW_NyM1oPASEk7xR9fmHUWtx-j6UGJY9lP4xZEjnBCn4Gf8UM0WbUxrSLfyzlZ0A3b5bkKuTupgJvBPxb4sB4dgRqgaAwudO7s5T4sKJVEOzHx9BFQbXIJSUQx7iSrK8qqLq8bzP6beYWTBYi5cP41YYSCwoSp4FUqeJ0cjwwCwacUW5lD4_54h9B9WinNbvBxEou5LXJLbiT4peK3rTmiBA4FuEgHxO3OYkx4Gzb7cjHkRbXud8lJpz5BjAAoNEb5EBrgZ2dL1kCn7ur2FXICGBp058G1D4kdAvhuuPqBzFGv3Z88aOfsEAsh0EHHFex-8FrLFENa6cgwxkcbmpt7Elwrn:",
+            "expires": "2026-11-10T02:55:25.266Z",
+            "domain": "www.nakedlifespirits.com.au",
             "path": "/",
             "secure": true,
             "httpOnly": true,
+            "hostOnly": true,
+            "creation": "2025-11-10T02:53:18.236Z",
+            "lastAccessed": "2025-11-10T02:55:26.411Z"
+          },
+          {
+            "key": "_shopify_analytics",
+            "value": ":AZprroX8AAEANTpJ9KTn-ZpklAGsDiCfzsBKXWq2lSdpmLQ_a7zwbC7K9a7oUw548YMmcM05csCy3yc4K-EIGX4WZSs:",
+            "expires": "2026-11-10T02:53:10.997Z",
+            "domain": "www.nakedlifespirits.com.au",
+            "path": "/",
+            "secure": true,
+            "httpOnly": true,
+            "hostOnly": true,
+            "creation": "2025-11-10T02:53:18.237Z",
+            "lastAccessed": "2025-11-10T02:55:26.412Z"
+          },
+          {
+            "key": "_ga_MNF4F1F60K",
+            "value": "GS2.1.s1762743197$o1$g1$t1762743325$j57$l0$h0",
+            "expires": "2026-12-15T02:55:25.404Z",
+            "domain": "nakedlifespirits.com.au",
+            "path": "/",
             "hostOnly": false,
-            "creation": "2025-11-09T00:22:09.632Z",
-            "lastAccessed": "2025-11-09T00:23:17.312Z"
+            "creation": "2025-11-10T02:53:18.237Z",
+            "lastAccessed": "2025-11-10T02:55:26.411Z"
+          },
+          {
+            "key": "_shopify_y",
+            "value": "cdb44f77-2679-41e3-9c78-5e88106b4b86",
+            "expires": "2026-11-10T08:55:25.542Z",
+            "domain": "nakedlifespirits.com.au",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2025-11-10T02:53:18.237Z",
+            "lastAccessed": "2025-11-10T02:55:26.411Z"
+          },
+          {
+            "key": "cart_currency",
+            "value": "AUD",
+            "expires": "2025-11-24T02:55:25.541Z",
+            "domain": "www.nakedlifespirits.com.au",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2025-11-10T02:53:18.237Z",
+            "lastAccessed": "2025-11-10T02:55:26.412Z"
+          },
+          {
+            "key": "apt_pixel",
+            "value": "eyJkZXZpY2VJZCI6ImJhZjhhYWZmLTUwOGEtNGNkOC04MmEzLWU3YTU4NzIwZGExNiIsInVzZXJJZCI6bnVsbCwiZXZlbnRJZCI6NDUsImxhc3RFdmVudFRpbWUiOjE3NjI3NDMzMjYzODksImNoZWNrb3V0Ijp7ImJyYW5kIjoiYWZ0ZXJwYXkifX0=",
+            "expires": "2026-11-10T02:55:26.000Z",
+            "domain": "www.nakedlifespirits.com.au",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2025-11-10T02:53:38.523Z",
+            "lastAccessed": "2025-11-10T02:55:26.411Z"
+          },
+          {
+            "key": "amp_f24a38",
+            "value": "xYWth9YlhssHlYs5BGf0cn...1j9lqtmrl.1j9lr15lq.0.0.0",
+            "expires": "2026-11-10T02:55:26.000Z",
+            "domain": "nakedlifespirits.com.au",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2025-11-10T02:53:38.524Z",
+            "lastAccessed": "2025-11-10T02:55:26.410Z"
           }
         ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-11-09T01:11:47.145Z",
-      "createdAt": "2025-11-09T00:21:47.145Z",
-      "usageCount": 36,
+      "expiresAt": "2025-11-10T03:43:03.705Z",
+      "createdAt": "2025-11-10T02:53:03.705Z",
+      "usageCount": 51,
       "maxUsageCount": 50,
-      "errorScore": 0
+      "errorScore": 3
     },
     {
-      "id": "session_M1k8zu7PqC",
+      "id": "session_7vzJBi0g8T",
       "cookieJar": {
         "version": "tough-cookie@5.0.0",
         "storeType": "MemoryCookieStore",
@@ -282,14 +252,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-11-09T01:12:00.494Z",
-      "createdAt": "2025-11-09T00:22:00.494Z",
+      "expiresAt": "2025-11-10T03:43:25.228Z",
+      "createdAt": "2025-11-10T02:53:25.228Z",
       "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_e6wqlm0D26",
+      "id": "session_sbyp0viy6u",
       "cookieJar": {
         "version": "tough-cookie@5.0.0",
         "storeType": "MemoryCookieStore",
@@ -302,14 +272,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-11-09T01:12:09.888Z",
-      "createdAt": "2025-11-09T00:22:09.888Z",
+      "expiresAt": "2025-11-10T03:43:33.628Z",
+      "createdAt": "2025-11-10T02:53:33.628Z",
       "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_TClRoJeAPP",
+      "id": "session_fbrTfwagf6",
       "cookieJar": {
         "version": "tough-cookie@5.0.0",
         "storeType": "MemoryCookieStore",
@@ -322,14 +292,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-11-09T01:12:15.539Z",
-      "createdAt": "2025-11-09T00:22:15.539Z",
+      "expiresAt": "2025-11-10T03:43:39.348Z",
+      "createdAt": "2025-11-10T02:53:39.348Z",
       "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_usUCdphTcK",
+      "id": "session_uMFcB7akhW",
       "cookieJar": {
         "version": "tough-cookie@5.0.0",
         "storeType": "MemoryCookieStore",
@@ -342,14 +312,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-11-09T01:12:18.716Z",
-      "createdAt": "2025-11-09T00:22:18.716Z",
+      "expiresAt": "2025-11-10T03:43:43.003Z",
+      "createdAt": "2025-11-10T02:53:43.003Z",
       "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_lSSaHHKPzk",
+      "id": "session_RQpGLPPSs1",
       "cookieJar": {
         "version": "tough-cookie@5.0.0",
         "storeType": "MemoryCookieStore",
@@ -362,14 +332,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-11-09T01:12:22.415Z",
-      "createdAt": "2025-11-09T00:22:22.415Z",
+      "expiresAt": "2025-11-10T03:43:47.901Z",
+      "createdAt": "2025-11-10T02:53:47.901Z",
       "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_uEgt1ecqiA",
+      "id": "session_K72FD2ywDW",
       "cookieJar": {
         "version": "tough-cookie@5.0.0",
         "storeType": "MemoryCookieStore",
@@ -382,14 +352,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-11-09T01:12:29.347Z",
-      "createdAt": "2025-11-09T00:22:29.347Z",
+      "expiresAt": "2025-11-10T03:43:54.255Z",
+      "createdAt": "2025-11-10T02:53:54.255Z",
       "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_OfW3RINazN",
+      "id": "session_eZsRivzhAk",
       "cookieJar": {
         "version": "tough-cookie@5.0.0",
         "storeType": "MemoryCookieStore",
@@ -402,14 +372,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-11-09T01:12:33.041Z",
-      "createdAt": "2025-11-09T00:22:33.041Z",
+      "expiresAt": "2025-11-10T03:43:59.011Z",
+      "createdAt": "2025-11-10T02:53:59.011Z",
       "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_NzJBiciF6W",
+      "id": "session_ik5LHKWOpb",
       "cookieJar": {
         "version": "tough-cookie@5.0.0",
         "storeType": "MemoryCookieStore",
@@ -422,14 +392,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-11-09T01:12:37.087Z",
-      "createdAt": "2025-11-09T00:22:37.087Z",
+      "expiresAt": "2025-11-10T03:44:05.689Z",
+      "createdAt": "2025-11-10T02:54:05.689Z",
       "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_9P09afdyeW",
+      "id": "session_JxNZzobWIw",
       "cookieJar": {
         "version": "tough-cookie@5.0.0",
         "storeType": "MemoryCookieStore",
@@ -442,14 +412,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-11-09T01:12:41.276Z",
-      "createdAt": "2025-11-09T00:22:41.276Z",
+      "expiresAt": "2025-11-10T03:44:12.259Z",
+      "createdAt": "2025-11-10T02:54:12.259Z",
       "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_19Na0XA4Vp",
+      "id": "session_081YVKD9Cj",
       "cookieJar": {
         "version": "tough-cookie@5.0.0",
         "storeType": "MemoryCookieStore",
@@ -462,14 +432,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-11-09T01:12:47.650Z",
-      "createdAt": "2025-11-09T00:22:47.650Z",
+      "expiresAt": "2025-11-10T03:44:17.409Z",
+      "createdAt": "2025-11-10T02:54:17.409Z",
       "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_I08U0P1tpc",
+      "id": "session_M5Ebm3CKyC",
       "cookieJar": {
         "version": "tough-cookie@5.0.0",
         "storeType": "MemoryCookieStore",
@@ -482,14 +452,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-11-09T01:12:53.657Z",
-      "createdAt": "2025-11-09T00:22:53.657Z",
+      "expiresAt": "2025-11-10T03:44:20.756Z",
+      "createdAt": "2025-11-10T02:54:20.756Z",
       "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_JDDX2bCxSi",
+      "id": "session_HFC9Ts4NQU",
       "cookieJar": {
         "version": "tough-cookie@5.0.0",
         "storeType": "MemoryCookieStore",
@@ -502,14 +472,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-11-09T01:12:58.864Z",
-      "createdAt": "2025-11-09T00:22:58.864Z",
+      "expiresAt": "2025-11-10T03:44:24.136Z",
+      "createdAt": "2025-11-10T02:54:24.135Z",
       "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_4RnjQeSTmi",
+      "id": "session_yyhcDG5F7w",
       "cookieJar": {
         "version": "tough-cookie@5.0.0",
         "storeType": "MemoryCookieStore",
@@ -522,14 +492,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-11-09T01:13:02.639Z",
-      "createdAt": "2025-11-09T00:23:02.639Z",
+      "expiresAt": "2025-11-10T03:44:27.882Z",
+      "createdAt": "2025-11-10T02:54:27.882Z",
       "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_WDHzI3EOVg",
+      "id": "session_MN1DpnuTOr",
       "cookieJar": {
         "version": "tough-cookie@5.0.0",
         "storeType": "MemoryCookieStore",
@@ -542,14 +512,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-11-09T01:13:05.666Z",
-      "createdAt": "2025-11-09T00:23:05.666Z",
+      "expiresAt": "2025-11-10T03:44:32.877Z",
+      "createdAt": "2025-11-10T02:54:32.877Z",
       "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_G7YegcYXFf",
+      "id": "session_jXGGyQZ4wY",
       "cookieJar": {
         "version": "tough-cookie@5.0.0",
         "storeType": "MemoryCookieStore",
@@ -562,14 +532,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-11-09T01:13:08.545Z",
-      "createdAt": "2025-11-09T00:23:08.545Z",
+      "expiresAt": "2025-11-10T03:44:38.356Z",
+      "createdAt": "2025-11-10T02:54:38.356Z",
       "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_hCvHgy8gq0",
+      "id": "session_BroVwS8kFS",
       "cookieJar": {
         "version": "tough-cookie@5.0.0",
         "storeType": "MemoryCookieStore",
@@ -582,14 +552,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-11-09T01:13:11.592Z",
-      "createdAt": "2025-11-09T00:23:11.592Z",
+      "expiresAt": "2025-11-10T03:44:41.727Z",
+      "createdAt": "2025-11-10T02:54:41.727Z",
       "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
     },
     {
-      "id": "session_dQZs9Vpuu4",
+      "id": "session_59UV8o3IqE",
       "cookieJar": {
         "version": "tough-cookie@5.0.0",
         "storeType": "MemoryCookieStore",
@@ -602,8 +572,494 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2025-11-09T01:13:14.604Z",
-      "createdAt": "2025-11-09T00:23:14.604Z",
+      "expiresAt": "2025-11-10T03:44:45.482Z",
+      "createdAt": "2025-11-10T02:54:45.482Z",
+      "usageCount": 0,
+      "maxUsageCount": 50,
+      "errorScore": 0
+    },
+    {
+      "id": "session_8mA2Qdakxz",
+      "cookieJar": {
+        "version": "tough-cookie@5.0.0",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": []
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2025-11-10T03:44:51.567Z",
+      "createdAt": "2025-11-10T02:54:51.567Z",
+      "usageCount": 0,
+      "maxUsageCount": 50,
+      "errorScore": 0
+    },
+    {
+      "id": "session_IbKQGkDl9f",
+      "cookieJar": {
+        "version": "tough-cookie@5.0.0",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": []
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2025-11-10T03:44:55.848Z",
+      "createdAt": "2025-11-10T02:54:55.848Z",
+      "usageCount": 0,
+      "maxUsageCount": 50,
+      "errorScore": 0
+    },
+    {
+      "id": "session_9Yw4dBe81i",
+      "cookieJar": {
+        "version": "tough-cookie@5.0.0",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": []
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2025-11-10T03:45:00.671Z",
+      "createdAt": "2025-11-10T02:55:00.671Z",
+      "usageCount": 0,
+      "maxUsageCount": 50,
+      "errorScore": 0
+    },
+    {
+      "id": "session_OocysDRahA",
+      "cookieJar": {
+        "version": "tough-cookie@5.0.0",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": []
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2025-11-10T03:45:09.789Z",
+      "createdAt": "2025-11-10T02:55:09.789Z",
+      "usageCount": 0,
+      "maxUsageCount": 50,
+      "errorScore": 0
+    },
+    {
+      "id": "session_aKH4JThER2",
+      "cookieJar": {
+        "version": "tough-cookie@5.0.0",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": []
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2025-11-10T03:45:16.495Z",
+      "createdAt": "2025-11-10T02:55:16.495Z",
+      "usageCount": 0,
+      "maxUsageCount": 50,
+      "errorScore": 0
+    },
+    {
+      "id": "session_tODzkaNf9h",
+      "cookieJar": {
+        "version": "tough-cookie@5.0.0",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": []
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2025-11-10T03:45:19.943Z",
+      "createdAt": "2025-11-10T02:55:19.943Z",
+      "usageCount": 0,
+      "maxUsageCount": 50,
+      "errorScore": 0
+    },
+    {
+      "id": "session_9AgMIObJHJ",
+      "cookieJar": {
+        "version": "tough-cookie@5.0.0",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": []
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2025-11-10T03:45:23.151Z",
+      "createdAt": "2025-11-10T02:55:23.151Z",
+      "usageCount": 0,
+      "maxUsageCount": 50,
+      "errorScore": 0
+    },
+    {
+      "id": "session_kclnvb7K52",
+      "cookieJar": {
+        "version": "tough-cookie@5.0.0",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": []
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2025-11-10T03:45:27.125Z",
+      "createdAt": "2025-11-10T02:55:27.125Z",
+      "usageCount": 0,
+      "maxUsageCount": 50,
+      "errorScore": 0
+    },
+    {
+      "id": "session_hYUhI3z6kn",
+      "cookieJar": {
+        "version": "tough-cookie@5.0.0",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": [
+          {
+            "key": "amp_f24a38",
+            "value": "l4GDrOkUo3iKjQkuWz3alR...1j9lr1hvc.1j9lr270a.0.0.0",
+            "expires": "2026-11-10T02:56:00.000Z",
+            "domain": "nakedlifespirits.com.au",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2025-11-10T02:55:39.629Z",
+            "lastAccessed": "2025-11-10T02:56:04.478Z"
+          },
+          {
+            "key": "_clsk",
+            "value": "28fzab%5E1762743360345%5E5%5E1%5Ek.clarity.ms%2Fcollect",
+            "expires": "2025-11-11T02:56:00.000Z",
+            "domain": "nakedlifespirits.com.au",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2025-11-10T02:55:39.629Z",
+            "lastAccessed": "2025-11-10T02:56:04.478Z"
+          },
+          {
+            "key": "_ga_B4T360DR7Q",
+            "value": "GS2.1.s1762743336$o1$g1$t1762743363$j33$l0$h0",
+            "expires": "2026-12-15T02:56:03.883Z",
+            "domain": "nakedlifespirits.com.au",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2025-11-10T02:55:39.629Z",
+            "lastAccessed": "2025-11-10T02:56:04.478Z"
+          },
+          {
+            "key": "_ga",
+            "value": "GA1.1.1994589757.1762743337",
+            "expires": "2026-12-15T02:55:36.801Z",
+            "domain": "nakedlifespirits.com.au",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2025-11-10T02:55:39.629Z",
+            "lastAccessed": "2025-11-10T02:56:04.478Z"
+          },
+          {
+            "key": "__kla_id",
+            "value": "eyJjaWQiOiJPR0ZpWW1WaE5UZ3ROREl6TVMwMFlqTmhMVGszWVdZdFptWm1Namt6WmpnMll6Qm0ifQ==",
+            "expires": "2026-12-15T02:55:36.129Z",
+            "domain": "www.nakedlifespirits.com.au",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2025-11-10T02:55:39.630Z",
+            "lastAccessed": "2025-11-10T02:56:04.478Z"
+          },
+          {
+            "key": "_shopify_s",
+            "value": "7e32066c-2411-457e-b9de-aad75ecfc74e",
+            "expires": "2025-11-10T03:26:04.098Z",
+            "domain": "nakedlifespirits.com.au",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2025-11-10T02:55:39.630Z",
+            "lastAccessed": "2025-11-10T02:56:04.478Z"
+          },
+          {
+            "key": "_fbp",
+            "value": "fb.2.1762743335947.439481176399719451",
+            "expires": "2026-02-08T02:56:04.000Z",
+            "domain": "nakedlifespirits.com.au",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2025-11-10T02:55:39.630Z",
+            "lastAccessed": "2025-11-10T02:56:04.478Z"
+          },
+          {
+            "key": "localization",
+            "value": "AU",
+            "expires": "2026-11-10T02:56:01.463Z",
+            "domain": "www.nakedlifespirits.com.au",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2025-11-10T02:55:39.630Z",
+            "lastAccessed": "2025-11-10T02:56:04.478Z"
+          },
+          {
+            "key": "_clck",
+            "value": "1fnr7ta%5E2%5Eg0w%5E0%5E2140",
+            "expires": "2026-11-10T02:55:35.000Z",
+            "domain": "nakedlifespirits.com.au",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2025-11-10T02:55:39.630Z",
+            "lastAccessed": "2025-11-10T02:56:04.478Z"
+          },
+          {
+            "key": "data-timeout",
+            "value": "false||false",
+            "expires": "2025-11-17T02:55:34.000Z",
+            "domain": "www.nakedlifespirits.com.au",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2025-11-10T02:55:39.630Z",
+            "lastAccessed": "2025-11-10T02:56:04.478Z"
+          },
+          {
+            "key": "_gcl_au",
+            "value": "1.1.1067873994.1762743332",
+            "expires": "2026-02-08T02:55:32.000Z",
+            "domain": "nakedlifespirits.com.au",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2025-11-10T02:55:39.630Z",
+            "lastAccessed": "2025-11-10T02:56:04.478Z"
+          },
+          {
+            "key": "_ga_WG6800VT8W",
+            "value": "GS2.1.s1762743335$o1$g1$t1762743363$j32$l0$h0",
+            "expires": "2026-12-15T02:56:03.229Z",
+            "domain": "nakedlifespirits.com.au",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2025-11-10T02:55:39.630Z",
+            "lastAccessed": "2025-11-10T02:56:04.478Z"
+          },
+          {
+            "key": "keep_alive",
+            "value": "eyJ2IjoyLCJ0cyI6MTc2Mjc0MzM2MzQyNCwiZW52Ijp7IndkIjowLCJ1YSI6MSwiY3YiOjEsImJyIjoxfSwiYmh2Ijp7Im1hIjowLCJjYSI6MCwia2EiOjAsInNhIjowLCJrYmEiOjAsInRhIjowLCJ0IjowLCJubSI6MCwibXMiOjAsIm1qIjowLCJtc3AiOjAsInZjIjowLCJjcCI6MCwicmMiOjAsImtqIjowLCJraSI6MCwic3MiOjAsInNqIjowLCJzc20iOjAsInNwIjowLCJ0cyI6MCwidGoiOjAsInRwIjowLCJ0c20iOjB9LCJzZXMiOnsicCI6NiwicyI6MTc2Mjc0MzMzMzk5NywiZCI6MjN9fQ%3D%3D",
+            "expires": "2025-11-10T03:46:04.477Z",
+            "domain": "www.nakedlifespirits.com.au",
+            "path": "/",
+            "secure": true,
+            "hostOnly": true,
+            "creation": "2025-11-10T02:55:39.630Z",
+            "lastAccessed": "2025-11-10T02:56:04.478Z"
+          },
+          {
+            "key": "apt_pixel",
+            "value": "eyJkZXZpY2VJZCI6IjRjYjFiZjFlLTliNjUtNGI4ZC1iZjBkLTU1NDUzNGYzZjY3ZSIsInVzZXJJZCI6bnVsbCwiZXZlbnRJZCI6OSwibGFzdEV2ZW50VGltZSI6MTc2Mjc0MzM2MDUxNSwiY2hlY2tvdXQiOnsiYnJhbmQiOiJhZnRlcnBheSJ9fQ==",
+            "expires": "2026-11-10T02:56:00.000Z",
+            "domain": "www.nakedlifespirits.com.au",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2025-11-10T02:55:39.630Z",
+            "lastAccessed": "2025-11-10T02:56:04.478Z"
+          },
+          {
+            "key": "_shopify_essential",
+            "value": ":AZprsKkvAAEAR5O6GWZ_mYhyPovCtmY7GFpa1rlOpWugHXztknlxnA4C_f7tCphPqqPi0iqpHs2v7Sit_4oGlH0Id1tD44q4wuYj_2KdeLEvbHDo8WebAyLlX5yMBNavcNkNRRoD80KPGNiAl3gZWYN2lqlqGUH2hM3vEhonCFH3dujtxM6Pz57TgjdC8mhrGDCvSkVqcGBStpiv0d0zMLWTHeQC0znyHcie4b4MaqkQFzFTb9z5jAcqy70LO38YnQ4gWJU75R-3OmkDuilr_KElyXjmXS1nwBueDTPu1IG-DJWVSyy_3LpaQJ_eXrDZua-3vLv4ogtfNBO8D0r5BAG-q1P9tIBFGNu-jV1VWUh5Za_AibDZ1T9H9g:",
+            "expires": "2026-11-10T02:56:03.825Z",
+            "domain": "www.nakedlifespirits.com.au",
+            "path": "/",
+            "secure": true,
+            "httpOnly": true,
+            "hostOnly": true,
+            "creation": "2025-11-10T02:55:39.631Z",
+            "lastAccessed": "2025-11-10T02:56:04.478Z"
+          },
+          {
+            "key": "_shopify_analytics",
+            "value": ":AZprsKnTAAEAC-qk7W51QD9UW2QS9jiC_gtrueses70H-H3Oa6JoHk2upXxgxHDFNbdRMpWYpqbCdclUoGcJjOwvCyYmBV5bal1gKAohA_v2jF_kyQ8LlQ1jLWk-Z-l18HiaSNY43SAQZQIAgDF1jp1pZw:",
+            "expires": "2026-11-10T02:55:31.338Z",
+            "domain": "www.nakedlifespirits.com.au",
+            "path": "/",
+            "secure": true,
+            "httpOnly": true,
+            "hostOnly": true,
+            "creation": "2025-11-10T02:55:39.631Z",
+            "lastAccessed": "2025-11-10T02:56:04.478Z"
+          },
+          {
+            "key": "_ga_MNF4F1F60K",
+            "value": "GS2.1.s1762743335$o1$g1$t1762743363$j32$l0$h0",
+            "expires": "2026-12-15T02:56:03.139Z",
+            "domain": "nakedlifespirits.com.au",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2025-11-10T02:55:39.631Z",
+            "lastAccessed": "2025-11-10T02:56:04.478Z"
+          },
+          {
+            "key": "_shopify_y",
+            "value": "022da434-6d28-44be-852a-9ed1055ae5a8",
+            "expires": "2026-11-10T08:56:04.098Z",
+            "domain": "nakedlifespirits.com.au",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2025-11-10T02:55:39.631Z",
+            "lastAccessed": "2025-11-10T02:56:04.478Z"
+          },
+          {
+            "key": "cart_currency",
+            "value": "AUD",
+            "expires": "2025-11-24T02:56:04.098Z",
+            "domain": "www.nakedlifespirits.com.au",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2025-11-10T02:55:39.631Z",
+            "lastAccessed": "2025-11-10T02:56:04.478Z"
+          },
+          {
+            "key": "goodavUrl",
+            "value": "%23judgeme_product_reviews",
+            "expires": "2025-11-17T02:56:00.000Z",
+            "domain": "www.nakedlifespirits.com.au",
+            "path": "/",
+            "hostOnly": true,
+            "creation": "2025-11-10T02:55:55.818Z",
+            "lastAccessed": "2025-11-10T02:56:04.478Z"
+          }
+        ]
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2025-11-10T03:45:27.133Z",
+      "createdAt": "2025-11-10T02:55:27.133Z",
+      "usageCount": 12,
+      "maxUsageCount": 50,
+      "errorScore": 0
+    },
+    {
+      "id": "session_QjnCuqXCNl",
+      "cookieJar": {
+        "version": "tough-cookie@5.0.0",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": []
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2025-11-10T03:45:40.147Z",
+      "createdAt": "2025-11-10T02:55:40.147Z",
+      "usageCount": 0,
+      "maxUsageCount": 50,
+      "errorScore": 0
+    },
+    {
+      "id": "session_FlDCxMBv8l",
+      "cookieJar": {
+        "version": "tough-cookie@5.0.0",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": []
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2025-11-10T03:45:44.488Z",
+      "createdAt": "2025-11-10T02:55:44.488Z",
+      "usageCount": 0,
+      "maxUsageCount": 50,
+      "errorScore": 0
+    },
+    {
+      "id": "session_w18cgdsiqQ",
+      "cookieJar": {
+        "version": "tough-cookie@5.0.0",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": []
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2025-11-10T03:45:51.837Z",
+      "createdAt": "2025-11-10T02:55:51.837Z",
+      "usageCount": 0,
+      "maxUsageCount": 50,
+      "errorScore": 0
+    },
+    {
+      "id": "session_vEc8f0b6Vp",
+      "cookieJar": {
+        "version": "tough-cookie@5.0.0",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": []
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2025-11-10T03:45:57.039Z",
+      "createdAt": "2025-11-10T02:55:57.039Z",
+      "usageCount": 0,
+      "maxUsageCount": 50,
+      "errorScore": 0
+    },
+    {
+      "id": "session_fY9JN2hAqY",
+      "cookieJar": {
+        "version": "tough-cookie@5.0.0",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": []
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2025-11-10T03:46:00.702Z",
+      "createdAt": "2025-11-10T02:56:00.702Z",
       "usageCount": 0,
       "maxUsageCount": 50,
       "errorScore": 0
