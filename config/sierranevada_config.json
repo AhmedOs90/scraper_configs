@@ -1,0 +1,21 @@
+{
+    "rootUrl": "https://sierranevada.com",
+    "baseUrl": "https://sierranevada.com/family/non-alcoholic",
+    "site_name": "sierranevada",
+    "seller": "seller",
+    "bannerSkip": ".styles_ageGateContent__KQ_Q2 .hstack button:first-of-type",
+    "productsLinks": "/brews/",
+    "collectionLinks": "/family/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "name": "h1.styles_productTitle__RS9hN",
+            "price": ".styles_productPrice__OhovY span"
+        }
+    },
+    "level": 2
+}

@@ -85,7 +85,7 @@ async function runCrawlerForSite(config, rootUrl, last = false, opts = {}) {
     launchContext: {
       launchOptions: {
         // executablePath: '/usr/bin/chromium', // Corrected path
-        headless:  false, // Run in headless mode
+        // headless:  false, // Run in headless mode
         args: [
           '--no-sandbox', // Disable sandboxing for lower resource usage
           '--disable-setuid-sandbox',

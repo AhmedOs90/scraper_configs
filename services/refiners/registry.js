@@ -75,6 +75,7 @@ import softerdrink from "./sites/softerdrink.ca.js";
 import nakedlifespirits from "./sites/nakedlifespirits.com.au.js";
 import wineanthology from "./sites/wineanthology.com.js";
 import barrelandbatch from "./sites/barrelandbatch.com.au.js";
+import sierranevada from "./sites/sierranevada.com.js";
 
 // Registry map
 const registry = new Map([
@@ -149,7 +150,8 @@ const registry = new Map([
     ["softerdrink.ca", softerdrink],
     ["nakedlifespirits.com.au", nakedlifespirits],
     ["wineanthology.com", wineanthology],
-    ["barrelandbatch.com.au", barrelandbatch]
+    ["barrelandbatch.com.au", barrelandbatch],
+    ["sierranevada.com", sierranevada],
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {
