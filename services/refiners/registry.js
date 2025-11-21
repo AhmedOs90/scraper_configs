@@ -81,6 +81,7 @@ import drinksurely from "./sites/drinksurely.com.js";
 import vintageroots from "./sites/vintageroots.co.uk.js";
 import cheekyanddry from "./sites/cheekyanddry.com.js";
 import athleticbrewing from "./sites/athleticbrewing.ca.js";
+import albertabeerexchange from "./sites/albertabeerexchange.ca.js";
 
 // Registry map
 const registry = new Map([
@@ -161,7 +162,8 @@ const registry = new Map([
     ["drinksurely.com", drinksurely],
     ["vintageroots.co.uk", vintageroots],
     ["cheekyanddry.com", cheekyanddry],
-    ["athleticbrewing.ca", athleticbrewing]
+    ["athleticbrewing.ca", athleticbrewing],
+    ["albertabeerexchange.ca", albertabeerexchange]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {
