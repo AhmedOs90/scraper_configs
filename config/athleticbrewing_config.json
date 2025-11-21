@@ -1,0 +1,21 @@
+{
+    "rootUrl": "https://athleticbrewing.ca",
+    "baseUrl": "https://athleticbrewing.ca/collections/beer",
+    "site_name": "athleticbrewing",
+    "seller": "seller",
+    "productsLinks": "/collections/beer/products/",
+    "collectionLinks": "/collections/beer/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "name": "h1.product_title",
+            "price": ".mt-2\\.5.text-2xl.tracking-half.flex.flex-row.items-center span.text-abc-navy",
+            "description": ".product_description"
+        }
+    },
+    "level": 2
+}
