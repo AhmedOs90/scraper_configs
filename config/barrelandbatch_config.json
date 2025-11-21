@@ -1,0 +1,28 @@
+{
+    "rootUrl": "https://barrelandbatch.com.au",
+    "baseUrl": "https://barrelandbatch.com.au/collections/non-alcoholic",
+    "site_name": "barrelandbatch",
+    "seller": "seller",
+    "bannerSkip": "button.klaviyo-close-form",
+    "productsLinks": "/products/",
+    "collectionLinks": "/collections/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "images": "meta[property='og:image']",
+            "price": "meta[property='og:price:amount']",
+            "currency": "meta[property='og:price:currency']"
+        },
+        "main": {
+            "producer": ".brand-collection-link",
+            "name": ".product__title h1",
+            "description": ".product__description.rte.quick-add-hidden"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": "a.pagination__item--prev"
+    },
+    "level": 1
+}

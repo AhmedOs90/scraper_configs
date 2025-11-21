@@ -1,0 +1,23 @@
+{
+    "rootUrl": "https://wineanthology.com",
+    "baseUrl": "https://wineanthology.com/search?query=non-alcoholic&page=1",
+    "site_name": "wineanthology",
+    "seller": "seller",
+    "productLinkAttribute": "href",
+    "productLinkSelector": ".product-item .product-title > a",
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "description": "meta[property='og:description']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "price": ".product-price span[id^=\"price-value-\"]"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": ".next-page a"
+    }
+}

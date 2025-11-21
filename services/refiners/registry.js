@@ -73,6 +73,15 @@ import soberciety from "./sites/soberciety.de.js";
 import positivedrinks from "./sites/positivedrinks.co.js";
 import softerdrink from "./sites/softerdrink.ca.js";
 import nakedlifespirits from "./sites/nakedlifespirits.com.au.js";
+import wineanthology from "./sites/wineanthology.com.js";
+import barrelandbatch from "./sites/barrelandbatch.com.au.js";
+import sierranevada from "./sites/sierranevada.com.js";
+import guiltlesswines from "./sites/guiltlesswines.com.js";
+import drinksurely from "./sites/drinksurely.com.js";
+import vintageroots from "./sites/vintageroots.co.uk.js";
+import cheekyanddry from "./sites/cheekyanddry.com.js";
+import athleticbrewing from "./sites/athleticbrewing.ca.js";
+import albertabeerexchange from "./sites/albertabeerexchange.ca.js";
 
 // Registry map
 const registry = new Map([
@@ -146,6 +155,15 @@ const registry = new Map([
     ["positivedrinks.co", positivedrinks],
     ["softerdrink.ca", softerdrink],
     ["nakedlifespirits.com.au", nakedlifespirits],
+    ["wineanthology.com", wineanthology],
+    ["barrelandbatch.com.au", barrelandbatch],
+    ["sierranevada.com", sierranevada],
+    ["guiltlesswines.com", guiltlesswines],
+    ["drinksurely.com", drinksurely],
+    ["vintageroots.co.uk", vintageroots],
+    ["cheekyanddry.com", cheekyanddry],
+    ["athleticbrewing.ca", athleticbrewing],
+    ["albertabeerexchange.ca", albertabeerexchange]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {

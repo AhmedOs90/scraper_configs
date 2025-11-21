@@ -1,0 +1,21 @@
+{
+    "rootUrl": "https://vintageroots.co.uk",
+    "baseUrl": "https://vintageroots.co.uk/alcohol-free",
+    "site_name": "vintageroots",
+    "seller": "seller",
+    "collectionLinks": "/alcohol-free/",
+    "productLinkAttribute": "href",
+    "productLinkSelector": ".product-card__title a",
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "price": ".s-hero-split__block-info-4__item-price",
+            "description": ".description-product"
+        }
+    },
+    "level": 1
+}
