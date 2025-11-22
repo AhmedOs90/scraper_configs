@@ -85,6 +85,7 @@ import albertabeerexchange from "./sites/albertabeerexchange.ca.js";
 import mondaydistillery from "./sites/mondaydistillery.com.js";
 import sobercarpenter from "./sites/sobercarpenter.com.js";
 import thenaddrinks from "./sites/thenaddrinks.com.js";
+import masterofmalt from "./sites/masterofmalt.com.js";
 
 // Registry map
 const registry = new Map([
@@ -169,7 +170,8 @@ const registry = new Map([
     ["albertabeerexchange.ca", albertabeerexchange],
     ["mondaydistillery.com", mondaydistillery],
     ["sobercarpenter.com", sobercarpenter],
-    ["thenaddrinks.com", thenaddrinks]
+    ["thenaddrinks.com", thenaddrinks],
+    ["masterofmalt.com", masterofmalt]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {
