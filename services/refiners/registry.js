@@ -89,6 +89,7 @@ import masterofmalt from "./sites/masterofmalt.com.js";
 import collectiveartscreativity from "./sites/collectiveartscreativity.com.js";
 import espadafor from "./sites/espadafor.es.js";
 import liquorland from "./sites/liquorland.com.au.js";
+import moju_zero from "./sites/moju-zero.com.js";
 
 // Registry map
 const registry = new Map([
@@ -178,6 +179,7 @@ const registry = new Map([
     ["collectiveartscreativity.com", collectiveartscreativity],
     ["espadafor.es", espadafor],
     ["liquorland.com.au", liquorland],
+    ["moju-zero.com", moju_zero]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {
