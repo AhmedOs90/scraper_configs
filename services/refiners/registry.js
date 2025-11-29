@@ -86,6 +86,9 @@ import mondaydistillery from "./sites/mondaydistillery.com.js";
 import sobercarpenter from "./sites/sobercarpenter.com.js";
 import thenaddrinks from "./sites/thenaddrinks.com.js";
 import masterofmalt from "./sites/masterofmalt.com.js";
+import collectiveartscreativity from "./sites/collectiveartscreativity.com.js";
+import espadafor from "./sites/espadafor.es.js";
+import liquorland from "./sites/liquorland.com.au.js";
 
 // Registry map
 const registry = new Map([
@@ -171,7 +174,10 @@ const registry = new Map([
     ["mondaydistillery.com", mondaydistillery],
     ["sobercarpenter.com", sobercarpenter],
     ["thenaddrinks.com", thenaddrinks],
-    ["masterofmalt.com", masterofmalt]
+    ["masterofmalt.com", masterofmalt],
+    ["collectiveartscreativity.com", collectiveartscreativity],
+    ["espadafor.es", espadafor],
+    ["liquorland.com.au", liquorland],
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {
