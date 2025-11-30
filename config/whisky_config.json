@@ -1,0 +1,24 @@
+{
+    "rootUrl": "https://www.whisky.fr",
+    "baseUrl": "https://www.whisky.fr/nature-de-produit/boissons-sans-alcool.html",
+    "site_name": "whisky",
+    "seller": "seller",
+    "productLinkAttribute": "href",
+    "productLinkSelector": "article a.is-expanded",
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property=\"og:title\"]",
+            "images": "meta[property=\"og:image\"]"
+        },
+        "main": {
+            "price": ".product-price.final-price",
+            "description": "#tab-panel-0 section > div"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": "a[aria-label=\"Next page\"]"
+    },
+    "level": 1
+}
