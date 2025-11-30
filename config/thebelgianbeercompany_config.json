@@ -1,0 +1,26 @@
+{
+    "rootUrl": "https://www.thebelgianbeercompany.com",
+    "baseUrl": "https://www.thebelgianbeercompany.com/cat/soft-drinks-alcohol-free-beers",
+    "site_name": "thebelgianbeercompany",
+    "seller": "seller",
+    "productsLinks": "/p/",
+    "collectionLinks": "/cat/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "images": "meta[property='og:image']",
+            "price": "meta[property='product:price:amount']",
+            "currency": "meta[property='product:price:currency']"
+        },
+        "main": {
+            "description": ".woocommerce-product-details__short-description"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": "a.pagination-next"
+    },
+    "level": 1
+}

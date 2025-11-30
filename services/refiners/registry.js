@@ -91,6 +91,7 @@ import espadafor from "./sites/espadafor.es.js";
 import liquorland from "./sites/liquorland.com.au.js";
 import moju_zero from "./sites/moju-zero.com.js";
 import whisky from "./sites/whisky.fr.js";
+import thebelgianbeercompany from "./sites/thebelgianbeercompany.com.js";
 
 // Registry map
 const registry = new Map([
@@ -181,7 +182,8 @@ const registry = new Map([
     ["espadafor.es", espadafor],
     ["liquorland.com.au", liquorland],
     ["moju-zero.com", moju_zero],
-    ["whisky.fr", whisky]
+    ["whisky.fr", whisky],
+    ["thebelgianbeercompany.com", thebelgianbeercompany]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {
