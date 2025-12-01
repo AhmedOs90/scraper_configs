@@ -1,0 +1,21 @@
+{
+    "rootUrl": "https://mondaydistillery.com",
+    "baseUrl": "https://mondaydistillery.com/collections/all",
+    "site_name": "mondaydistillery",
+    "seller": "seller",
+    "productsLinks": "/collections/all/products/",
+    "collectionLinks": "/collections/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "price": ".product__price[data-product-price]",
+            "description": ".collapsible-content__inner.rte, .product-single__description.rte"
+        }
+    },
+    "level": 1
+}

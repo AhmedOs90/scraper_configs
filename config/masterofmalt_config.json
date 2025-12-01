@@ -1,0 +1,26 @@
+{
+    "rootUrl": "https://www.masterofmalt.com",
+    "baseUrl": "https://www.masterofmalt.com/no-and-low/shop-all",
+    "site_name": "masterofmalt",
+    "seller": "seller",
+    "bannerSkip": "#onetrust-accept-btn-handler",
+    "productLinkAttribute": "href",
+    "productLinkSelector": ".ais-Hits-item a",
+    "collectionLinks": "/no-and-low/shop-all/",
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "name": "h1.font-heading-condensed",
+            "price": ".font-heading span, .text-red-700.line-through, .text-4xl.font-bold.text-mom-darkBrownGrey",
+            "description": ".prose-sm"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": ".ais-Pagination-item--nextPage .ais-Pagination-link"
+    },
+    "level": 1
+}

@@ -1,0 +1,27 @@
+{
+    "rootUrl": "https://guiltlesswines.com",
+    "baseUrl": "https://guiltlesswines.com/collections/all",
+    "site_name": "guiltlesswines",
+    "seller": "seller",
+    "bannerSkip": "button[aria-label='close']",
+    "productsLinks": "/products/",
+    "collectionLinks": "/collections/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "images": "meta[property='og:image']",
+            "price": "meta[property='og:price:amount']",
+            "currency": "meta[property='og:price:currency']"
+        },
+        "main": {
+            "name": ".product__title h1",
+            "description": ".product__description.rte.quick-add-hidden"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": "a.pagination__item--prev"
+    },
+    "level": 1
+}
