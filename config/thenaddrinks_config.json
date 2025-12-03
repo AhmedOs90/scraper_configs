@@ -1,0 +1,26 @@
+{
+    "rootUrl": "https://thenaddrinks.com",
+    "baseUrl": "https://thenaddrinks.com/collections/all",
+    "site_name": "thenaddrinks",
+    "seller": "seller",
+    "productsLinks": "/products/",
+    "collectionLinks": "/collections/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "images": "meta[property='og:image']",
+            "price": "meta[property='og:price:amount']",
+            "currency": "meta[property='og:price:currency']"
+        },
+        "main": {
+            "name": ".product__title a .h1",
+            "description": ".product__description.rte.quick-add-hidden"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": "a[aria-label=\"Next page\"]"
+    },
+    "level": 2
+}

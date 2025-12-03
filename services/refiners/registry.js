@@ -74,6 +74,25 @@ import positivedrinks from "./sites/positivedrinks.co.js";
 import softerdrink from "./sites/softerdrink.ca.js";
 import nakedlifespirits from "./sites/nakedlifespirits.com.au.js";
 import decantalo from "./sites/decantalo.co.uk.js";
+import wineanthology from "./sites/wineanthology.com.js";
+import barrelandbatch from "./sites/barrelandbatch.com.au.js";
+import sierranevada from "./sites/sierranevada.com.js";
+import guiltlesswines from "./sites/guiltlesswines.com.js";
+import drinksurely from "./sites/drinksurely.com.js";
+import vintageroots from "./sites/vintageroots.co.uk.js";
+import cheekyanddry from "./sites/cheekyanddry.com.js";
+import athleticbrewing from "./sites/athleticbrewing.ca.js";
+import albertabeerexchange from "./sites/albertabeerexchange.ca.js";
+import mondaydistillery from "./sites/mondaydistillery.com.js";
+import sobercarpenter from "./sites/sobercarpenter.com.js";
+import thenaddrinks from "./sites/thenaddrinks.com.js";
+import masterofmalt from "./sites/masterofmalt.com.js";
+import collectiveartscreativity from "./sites/collectiveartscreativity.com.js";
+import espadafor from "./sites/espadafor.es.js";
+import liquorland from "./sites/liquorland.com.au.js";
+import moju_zero from "./sites/moju-zero.com.js";
+import whisky from "./sites/whisky.fr.js";
+import thebelgianbeercompany from "./sites/thebelgianbeercompany.com.js";
 
 // Registry map
 const registry = new Map([
@@ -148,6 +167,25 @@ const registry = new Map([
     ["softerdrink.ca", softerdrink],
     ["nakedlifespirits.com.au", nakedlifespirits],
     ["decantalo.co.uk", decantalo],
+    ["wineanthology.com", wineanthology],
+    ["barrelandbatch.com.au", barrelandbatch],
+    ["sierranevada.com", sierranevada],
+    ["guiltlesswines.com", guiltlesswines],
+    ["drinksurely.com", drinksurely],
+    ["vintageroots.co.uk", vintageroots],
+    ["cheekyanddry.com", cheekyanddry],
+    ["athleticbrewing.ca", athleticbrewing],
+    ["albertabeerexchange.ca", albertabeerexchange],
+    ["mondaydistillery.com", mondaydistillery],
+    ["sobercarpenter.com", sobercarpenter],
+    ["thenaddrinks.com", thenaddrinks],
+    ["masterofmalt.com", masterofmalt],
+    ["collectiveartscreativity.com", collectiveartscreativity],
+    ["espadafor.es", espadafor],
+    ["liquorland.com.au", liquorland],
+    ["moju-zero.com", moju_zero],
+    ["whisky.fr", whisky],
+    ["thebelgianbeercompany.com", thebelgianbeercompany]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {

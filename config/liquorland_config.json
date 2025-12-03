@@ -1,0 +1,25 @@
+{
+    "rootUrl": "https://www.liquorland.com.au",
+    "baseUrl": "https://www.liquorland.com.au/search?q=Non/$s=Non/0.0%3Calcohol_percent%3C0.05",
+    "site_name": "liquorland",
+    "seller": "seller",
+    "productLinkAttribute": "href",
+    "productLinkSelector": "a.thumbnail",
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "producer": ".product-brand",
+            "name": ".product-name",
+            "price": ".cell.small-12 .ProductPrice .FormattedAmount",
+            "description": ".product-description-container .product-description"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": "a.btnNext"
+    },
+    "level": 1
+}

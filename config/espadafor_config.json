@@ -1,0 +1,26 @@
+{
+    "rootUrl": "https://espadafor.es/en",
+    "baseUrl": "https://espadafor.es/en/tienda",
+    "site_name": "espadafor",
+    "seller": "seller",
+    "productsLinks": "/comprar/",
+    "collectionLinks": "/productos/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "images": "meta[property='og:image']",
+            "price": "meta[property='product:price:amount']",
+            "currency": "meta[property='product:price:currency']"
+        },
+        "main": {
+            "description": ".woocommerce-product-details__short-description"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": ".woocommerce-pagination .next.page-numbers"
+    },
+    "level": 1
+}
