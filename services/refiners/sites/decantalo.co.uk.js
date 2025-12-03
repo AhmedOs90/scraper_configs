@@ -91,7 +91,7 @@ export default async function refine(rootUrl, product, page) {
       }
     }
 
-    // Optional: you could also hydrate name/description from LD if needed
+    // Optional: hydrate name/description if you want
     // if (!product.name && ldProduct.name) product.name = ldProduct.name;
     // if (!product.description && ldProduct.description) product.description = ldProduct.description;
   } catch (e) {
@@ -123,15 +123,13 @@ export default async function refine(rootUrl, product, page) {
       if (alcoholText) {
         const lower = alcoholText.toLowerCase();
 
-        // Case 1: "Alcohol free" (or similar wording)
+        // Case 1: "Alcohol free"
         if (lower.includes("alcohol free")) {
-          // Your rule: if alcohol free → "< 0.5%"
           product.abv = "<0.5%";
         } else {
           // Case 2: explicit numeric like "0.5 %", "10%", etc.
           const m = alcoholText.match(/(\d+(?:[\.,]\d+)?)\s*%/);
           if (m) {
-            // Normalize comma to dot
             const num = m[1].replace(",", ".");
             product.abv = `${num}%`;
           }
@@ -140,6 +138,25 @@ export default async function refine(rootUrl, product, page) {
     }
   } catch (e) {
     console.error("decantalo.co.uk ABV extraction error:", e.message);
+  }
+
+  // ---- VEGAN FROM FEATURE STICKERS ----
+  try {
+    if (!product.vegan) {
+      const badges = await page.evaluate(() => {
+        return Array.from(
+          document.querySelectorAll(".phrase_feature_value")
+        ).map((el) => (el.textContent || "").trim().toLowerCase());
+      });
+
+      if (badges && badges.some((t) => t.includes("vegan"))) {
+        // Adjust to whatever convention you use in Lake:
+        // "yes", true, "1", etc.
+        product.vegan = "yes";
+      }
+    }
+  } catch (e) {
+    console.error("decantalo.co.uk vegan extraction error:", e.message);
   }
 
   return product;
