@@ -1,8 +1,8 @@
 Total Sites Scraped: 1
 Total Products Scraped: 0
 Details per Site:
-Site Name: decantalo
-Root URL: https://decantalo.co.uk
+Site Name: Kodriget
+Root URL: https://www.kodriget.dk
 Products Scraped: 0
 ---
 Scraped Root URLs:
@@ -83,9 +83,28 @@ https://nakedlifespirits.com.au
 https://decantalo.co.uk
 https://us.noughtyaf.com
 https://bws.com.au
-https://kodriget.dk
+https://www.kodriget.dk
 https://nonalcwines.au
 https://beveragedaily.com
 https://wineandbeyond.ca
 https://todelli.com
 https://drinkdesoi.com
+https://wineanthology.com
+https://barrelandbatch.com.au
+https://sierranevada.com
+https://guiltlesswines.com
+https://www.drinksurely.com
+https://vintageroots.co.uk
+https://www.cheekyanddry.com
+https://athleticbrewing.ca
+https://www.albertabeerexchange.ca
+https://mondaydistillery.com
+https://sobercarpenter.com
+https://thenaddrinks.com
+https://www.masterofmalt.com
+https://collectiveartscreativity.com
+https://espadafor.es
+https://www.liquorland.com.au
+https://www.moju-zero.com
+https://www.whisky.fr
+https://www.thebelgianbeercompany.com

@@ -93,7 +93,7 @@ import liquorland from "./sites/liquorland.com.au.js";
 import moju_zero from "./sites/moju-zero.com.js";
 import whisky from "./sites/whisky.fr.js";
 import thebelgianbeercompany from "./sites/thebelgianbeercompany.com.js";
-
+import kodriget from "./sites/kodriget.dk.js";
 // Registry map
 const registry = new Map([
     ["drydrinker.com", drydrinker],
@@ -166,7 +166,6 @@ const registry = new Map([
     ["positivedrinks.co", positivedrinks],
     ["softerdrink.ca", softerdrink],
     ["nakedlifespirits.com.au", nakedlifespirits],
-    ["decantalo.co.uk", decantalo],
     ["wineanthology.com", wineanthology],
     ["barrelandbatch.com.au", barrelandbatch],
     ["sierranevada.com", sierranevada],
@@ -185,7 +184,9 @@ const registry = new Map([
     ["liquorland.com.au", liquorland],
     ["moju-zero.com", moju_zero],
     ["whisky.fr", whisky],
-    ["thebelgianbeercompany.com", thebelgianbeercompany]
+    ["thebelgianbeercompany.com", thebelgianbeercompany],
+    ["decantalo.co.uk", decantalo],
+    ["kodriget.dk", kodriget]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {
