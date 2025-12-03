@@ -73,6 +73,7 @@ import soberciety from "./sites/soberciety.de.js";
 import positivedrinks from "./sites/positivedrinks.co.js";
 import softerdrink from "./sites/softerdrink.ca.js";
 import nakedlifespirits from "./sites/nakedlifespirits.com.au.js";
+import decantalo from "./sites/decantalo.co.uk.js";
 
 // Registry map
 const registry = new Map([
@@ -146,6 +147,7 @@ const registry = new Map([
     ["positivedrinks.co", positivedrinks],
     ["softerdrink.ca", softerdrink],
     ["nakedlifespirits.com.au", nakedlifespirits],
+    ["decantalo.co.uk", decantalo],
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {

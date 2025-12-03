@@ -1,83 +1,115 @@
+// pagination/handleScrollPagination.js
 import { delay } from '../helper.js';
 
 async function handleScrollPagination({
   page,
   log,
   config,
-  baseUrl,
+  baseUrl,               // not used right now but kept for symmetry
   productLinkSelector,
-  productLinkAttribute,
+  productLinkAttribute,  // not used here but kept for API consistency
 }) {
-  let hasMoreProducts = true;
-  let previousLinkCount = 0;
+  const productsLinksSubstr = config.productsLinks || null;
 
-  while (hasMoreProducts) {
-    const currentProductLinks = await page.$$eval(
-      productLinkSelector,
-      (elements, baseUrl, attribute, skipCollections, collectionLinks) =>
-        elements
-          .map(el => {
-            let href = el.getAttribute(attribute);
-            if (!href) return null;
-            if (!href.startsWith('http')) href = baseUrl + href;
+  if (!productLinkSelector && !productsLinksSubstr) {
+    log.info('[scroll-pagination] No product selector or productsLinks substring → skipping scroll pagination');
+    return;
+  }
 
-            const isCollection = href.includes(collectionLinks);
-            const isProduct = true;
-            if (skipCollections && !isProduct) return null;
-            return (isProduct || isCollection) ? href : null;
-          })
-          .filter(Boolean),
-      baseUrl,
-      productLinkAttribute,
-      config.skipCollectionLinksInProducts,
-      config.collectionLinks || 'collections/',
-    );
+  const maxLoops = config.pagination?.maxScrollLoops ?? 40;       // safety guard
+  const idleThreshold = config.pagination?.idleThreshold ?? 3;    // how many “no growth” loops before stop
+  const scrollDelayMs = config.pagination?.scrollDelayMs ?? 1500; // wait after each scroll
 
-    log.info(`length: ${currentProductLinks.length}`);
+  let previousCount = 0;
+  let idleLoops = 0;
 
-    if (currentProductLinks.length === previousLinkCount) {
-      const bannerSkip = await page.$(config.bannerSkip);
-      if (bannerSkip) {
-        log.info('banner accept button found, clicking...');
-        try {
-          await bannerSkip.click();
-          await delay(2000);
-        } catch (error) {
-          log.error(`Error clicking banner accept button: ${error.message}`);
-          break;
+  async function countProducts() {
+    // Prefer explicit selector
+    if (productLinkSelector) {
+      return page.$$eval(productLinkSelector, els => els.length);
+    }
+
+    // Fallback: substring on href
+    if (productsLinksSubstr) {
+      let x = await page.$$eval(
+        `a[href*="${productsLinksSubstr}"]`,
+        els => els[0]
+      )
+      console.log("Found products links:", );
+      return page.$$eval(
+        `a[href*="${productsLinksSubstr}"]`,
+        els => els.length
+      );
+    }
+
+    return 0;
+  }
+
+  for (let loop = 0; loop < maxLoops; loop++) {
+    const count = await countProducts();
+    log.info(`[scroll-pagination] Found ${count} product links (prev=${previousCount})`);
+
+    if (count === previousCount) {
+      idleLoops += 1;
+      log.info(`[scroll-pagination] No growth detected (idle ${idleLoops}/${idleThreshold})`);
+
+      // Try to clear cookie / consent banner once, same logic as button pagination
+      if (config.bannerSkip) {
+        const banner = await page.$(config.bannerSkip);
+        if (banner) {
+          try {
+            log.info(`[scroll-pagination] Banner found (${config.bannerSkip}) → clicking…`);
+            await banner.click();
+            await page
+              .waitForSelector(config.bannerSkip, { hidden: true, timeout: 5000 })
+              .catch(() => {});
+            await delay(600);
+
+            // After closing banner, reset idle count and continue loop (don’t stop yet)
+            idleLoops = 0;
+            continue;
+          } catch (e) {
+            log.warning(`[scroll-pagination] Banner click failed: ${e.message}`);
+          }
+        } else {
+          log.info('[scroll-pagination] Banner selector configured but element not found');
         }
-      } else {
-        log.info('No more products loaded. Pagination complete.');
+      }
+
+      if (idleLoops >= idleThreshold) {
+        log.info('[scroll-pagination] Reached idle threshold with no more products → stopping');
         break;
       }
-    }
-
-    previousLinkCount = currentProductLinks.length;
-
-    const seeMoreButton = await page.$(config.pagination.selector);
-    if (seeMoreButton) {
-      await page.evaluate(selector => {
-        const btn = document.querySelector(selector);
-        if (btn) btn.scrollIntoView({ behavior: 'instant', block: 'center' });
-      }, config.pagination.selector);
-
-      log.info('Scrolling Now...');
-
-      try {
-        await page.waitForFunction(
-          (sel, count) => document.querySelectorAll(sel).length > count,
-          { timeout: 10000 },
-          productLinkSelector,
-          previousLinkCount,
-        );
-      } catch (e) {
-        log.warning('Timeout: No new products appeared after Scrolling.');
-      }
     } else {
-      hasMoreProducts = false;
-      log.info('No "See More" button found. Stopping pagination.');
+      idleLoops = 0; // we got more products
+      previousCount = count;
     }
+
+    // Scroll to bottom to trigger the next batch
+    try {
+      await page.evaluate(() => {
+        const doc = document.documentElement;
+        const body = document.body;
+        const scrollHeight =
+          (doc && doc.scrollHeight) ||
+          (body && body.scrollHeight) ||
+          0;
+
+        window.scrollTo({
+          top: scrollHeight,
+          behavior: 'instant',
+        });
+      });
+      log.info('[scroll-pagination] Scrolled to bottom to trigger more products…');
+    } catch (e) {
+      log.warning(`[scroll-pagination] Scroll failed: ${e.message} → stopping`);
+      break;
+    }
+
+    await delay(scrollDelayMs);
   }
+
+  log.info('[scroll-pagination] Pagination complete');
 }
 
 export default handleScrollPagination;

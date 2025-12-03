@@ -1,0 +1,44 @@
+{
+  "rootUrl": "https://www.decantalo.co.uk",
+  "baseUrl": "https://www.decantalo.co.uk/en/non-alcoholic/",
+  "site_name": "decantalo",
+  "seller": "seller",
+
+  "productsLinks": "-volume-",
+  "collectionLinks": "/non-alcoholic/",
+  "skipCollectionLinksInProducts": true,
+"bannerSkip": "#cookiesplus-content .cookiesplus-accept",
+  "pagination": {
+    "type": "scroll",
+    "selector": "body"
+  },
+
+  "moreConfig": true,
+
+  "selectors": {
+    "header": {
+      "name": "meta[property='og:title'], meta[name='twitter:title'], h1",
+      "price": "meta[property='product:price:amount'], meta[property='og:price:amount'], meta[itemprop='price'], span[itemprop='price'], .product__price, .price span, span:contains('£'), span:contains('€')",
+      "currency": "meta[property='product:price:currency'], meta[property='og:price:currency'], meta[itemprop='priceCurrency'], .price, span:contains('£'), span:contains('€')",
+      "images": "meta[property='og:image'], meta[property='og:image:url'], .product__media img, .product-gallery img, img[itemprop='image']"
+    },
+
+    "main": {
+      "name": "h1.product-title, h1.product__title, h1",
+      "price": ".product__price, .price span, [itemprop='price'], span:contains('£'), span:contains('€')",
+      "currency": "[itemprop='priceCurrency'], .price span, span:contains('£'), span:contains('€')",
+      "description": ".product-description, .product__description, #tab-description, .tab-content .rte, .product-detail, .product__info",
+      "images": ".product__media img, .product-gallery img, img[itemprop='image']",
+
+      "abv": "li:contains('% vol'), p:contains('% vol'), li:contains('Alcohol content'), p:contains('Alcohol content'), li:contains('Alcohol free'), p:contains('Alcohol free'), li:contains('Alcohol'), p:contains('Alcohol'), li:contains('%'), p:contains('%')",
+
+      "gluten": "a:contains('gluten'), a:contains('Gluten'), li:contains('gluten'), li:contains('Gluten'), p:contains('gluten')",
+      "vegan": "a:contains('Vegan'), a:contains('vegan'), li:contains('Vegan'), li:contains('vegan'), p:contains('Vegan')",
+
+      "energy": "li:contains('kcal'), p:contains('kcal'), li:contains('Calories'), p:contains('Calories')",
+      "sugars": "li:contains('Sugar'), li:contains('Sugars'), p:contains('Sugar'), p:contains('Sugars')",
+
+      "category": ".breadcrumb li:last-child, nav.breadcrumbs li:last-child, .breadcrumbs a:last-child, nav[aria-label='breadcrumbs'] a:last-child"
+    }
+  }
+}

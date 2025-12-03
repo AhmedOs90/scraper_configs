@@ -95,8 +95,8 @@ async function waitForProductLinks(page, {
   }
   return false;
 }
-
 async function extractDynamicLinks({ page, crawler, config, url, baseUrl, rootUrl, log }) {
+
   const cfg = normalizeConfig(config);
 
   const productLinkSelector   = cfg.productLinkSelector || null;
@@ -117,8 +117,16 @@ async function extractDynamicLinks({ page, crawler, config, url, baseUrl, rootUr
       productLinkSelector, productLinkAttribute,
     });
   } else if (cfg.pagination?.type === 'scroll') {
-    await handleScrollPagination(page, cfg, baseUrl, productLinkSelector, productLinkAttribute, log);
-  }
+  await handleScrollPagination({
+    page,
+    log,
+    config: cfg,
+    baseUrl,
+    productLinkSelector,
+    productLinkAttribute,
+  });
+}
+
 
   // NEW: let the page render & settle on slower VM
   await hydrateAndSettle(page, { maxMs: cfg.renderWaitMs ?? 6000 });
@@ -187,6 +195,7 @@ async function extractDynamicLinks({ page, crawler, config, url, baseUrl, rootUr
         return v || null;
       };
 
+
       const productFromSelector = productLinkSelector
         ? Array.from(document.querySelectorAll(productLinkSelector))
             .map(el => getAttr(el, productLinkAttribute))
@@ -204,10 +213,11 @@ async function extractDynamicLinks({ page, crawler, config, url, baseUrl, rootUr
         uniq(hrefs)
           .map(href => toAbs(href, baseUrl))
           .filter(Boolean)
-          .filter(href => sameOrigin(href, baseUrl))
+          // .filter(href => sameOrigin(href, rootUrl))
           .filter(href => !ignorable(href));
 
       let normalizedProducts = normalizeFilter([...productFromSelector, ...productFromHref]);
+      // let normalizedProducts = ([...productFromSelector, ...productFromHref]);
       if (productsLinksSubstr) {
         normalizedProducts = normalizedProducts.filter(href => href.includes(productsLinksSubstr));
       }
@@ -218,8 +228,9 @@ async function extractDynamicLinks({ page, crawler, config, url, baseUrl, rootUr
     { baseUrl, productLinkSelector, productLinkAttribute, productsLinksSubstr, collectionLinksSubstr, skipCollections }
   );
 
+
   if (rawLinks.length === 0) {
-    const sample = await page.$$eval('a[href]', as => as.slice(0, 10).map(a => a.getAttribute('href')));
+    const sample = await page.$$eval('a[href]', as => as.map(a => a.getAttribute('href')));
     log.info('[extractDynamicLinks] No product/collection matches. Anchor sample:', sample);
   }
 

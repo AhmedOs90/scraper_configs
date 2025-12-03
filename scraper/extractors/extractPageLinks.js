@@ -88,8 +88,15 @@ async function extractPageLinks({ page, crawler, config, url, rootUrl, log }) {
         productLinkAttribute: cfg.productLinkAttribute || 'href',
       });
     } else if (cfg.pagination?.type === 'scroll') {
-      await handleScrollPagination(page, cfg, cfg.baseUrl, cfg.productLinkSelector || null, cfg.productLinkAttribute || 'href', log);
-    }
+await handleScrollPagination({
+        page,
+        log,
+        config: cfg,
+        baseUrl: cfg.baseUrl,
+        productLinkSelector: cfg.productLinkSelector || null,
+        productLinkAttribute: cfg.productLinkAttribute || 'href',
+      });
+        }
     // For link pagination we’ll run it AFTER initial harvesting so we can queue the first page immediately,
     // and then let the handler follow next links and queue subsequent pages.
   } catch (e) {

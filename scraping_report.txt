@@ -1,8 +1,8 @@
 Total Sites Scraped: 1
 Total Products Scraped: 0
 Details per Site:
-Site Name: nakedlifespirits
-Root URL: https://nakedlifespirits.com.au
+Site Name: decantalo
+Root URL: https://decantalo.co.uk
 Products Scraped: 0
 ---
 Scraped Root URLs:
@@ -78,8 +78,6 @@ https://www.af-drinks.com
 https://puninwine.com
 https://threshers.co.uk
 https://soberciety.de
-https://positivedrinks.co
-https://centralmarket.com
 https://softerdrink.ca
 https://nakedlifespirits.com.au
 https://decantalo.co.uk
