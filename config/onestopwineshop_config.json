@@ -1,0 +1,19 @@
+{
+    "rootUrl": "https://www.onestopwineshop.com",
+    "baseUrl": "https://www.onestopwineshop.com/collection/non-alcohol-wines/",
+    "site_name": "onestopwineshop",
+    "seller": "seller",
+    "productsLinks": "/product/",
+    "collectionLinks": "/collection/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "images": "meta[property='og:image']",
+            "price": "meta[property='og:site_name']"
+        },
+        "main": {}
+    },
+    "level": 1
+}

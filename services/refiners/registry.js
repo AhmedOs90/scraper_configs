@@ -94,6 +94,8 @@ import moju_zero from "./sites/moju-zero.com.js";
 import whisky from "./sites/whisky.fr.js";
 import thebelgianbeercompany from "./sites/thebelgianbeercompany.com.js";
 import kodriget from "./sites/kodriget.dk.js";
+import onestopwineshop from "./sites/onestopwineshop.com.js";
+
 // Registry map
 const registry = new Map([
     ["drydrinker.com", drydrinker],
@@ -186,7 +188,8 @@ const registry = new Map([
     ["whisky.fr", whisky],
     ["thebelgianbeercompany.com", thebelgianbeercompany],
     ["decantalo.co.uk", decantalo],
-    ["kodriget.dk", kodriget]
+    ["kodriget.dk", kodriget],
+    ["onestopwineshop.com", onestopwineshop]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {
