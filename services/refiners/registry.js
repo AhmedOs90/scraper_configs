@@ -97,6 +97,7 @@ import kodriget from "./sites/kodriget.dk.js";
 import onestopwineshop from "./sites/onestopwineshop.com.js";
 import lemoderato from "./sites/le-moderato.com.js";
 import wolffer from "./sites/wolffer.com.js";
+import sipyours from "./sites/sipyours.com.js";
 
 // Registry map
 const registry = new Map([
@@ -193,7 +194,8 @@ const registry = new Map([
     ["kodriget.dk", kodriget],
     ["onestopwineshop.com", onestopwineshop],
     ["le-moderato.com", lemoderato],
-    ["wolffer.com", wolffer]
+    ["wolffer.com", wolffer],
+    ["sipyours.com", sipyours]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {
