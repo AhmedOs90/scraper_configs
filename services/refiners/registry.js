@@ -96,6 +96,7 @@ import thebelgianbeercompany from "./sites/thebelgianbeercompany.com.js";
 import kodriget from "./sites/kodriget.dk.js";
 import onestopwineshop from "./sites/onestopwineshop.com.js";
 import lemoderato from "./sites/le-moderato.com.js";
+import wolffer from "./sites/wolffer.com.js";
 
 // Registry map
 const registry = new Map([
@@ -191,7 +192,8 @@ const registry = new Map([
     ["decantalo.co.uk", decantalo],
     ["kodriget.dk", kodriget],
     ["onestopwineshop.com", onestopwineshop],
-    ["le-moderato.com", lemoderato]
+    ["le-moderato.com", lemoderato],
+    ["wolffer.com", wolffer]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {
