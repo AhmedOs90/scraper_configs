@@ -99,6 +99,7 @@ import lemoderato from "./sites/le-moderato.com.js";
 import wolffer from "./sites/wolffer.com.js";
 import sipyours from "./sites/sipyours.com.js";
 import prikeshop from "./sites/prikeshop.lt.js";
+import vesselliquor from "./sites/vesselliquor.com.js";
 
 // Registry map
 const registry = new Map([
@@ -197,7 +198,8 @@ const registry = new Map([
     ["le-moderato.com", lemoderato],
     ["wolffer.com", wolffer],
     ["sipyours.com", sipyours],
-    ["prikeshop.lt", prikeshop]
+    ["prikeshop.lt", prikeshop],
+    ["vesselliquor.com", vesselliquor]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {
