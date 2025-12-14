@@ -1,0 +1,26 @@
+{
+    "rootUrl": "https://jomoclub.co.uk",
+    "baseUrl": "https://jomoclub.co.uk/collections/all",
+    "site_name": "jomoclub",
+    "seller": "seller",
+    "productsLinks": "/collections/all/products/",
+    "collectionLinks": "/collections/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "price": "meta[property='og:price:amount']",
+            "currency": "meta[property='og:price:currency']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "description": ".product-single__box__block--description"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": ".pagination .next a"
+    },
+    "level": 1
+}

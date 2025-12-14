@@ -101,6 +101,7 @@ import sipyours from "./sites/sipyours.com.js";
 import prikeshop from "./sites/prikeshop.lt.js";
 import vesselliquor from "./sites/vesselliquor.com.js";
 import seedlipdrinks from "./sites/seedlipdrinks.com.js";
+import jomoclub from "./sites/jomoclub.co.uk.js";
 
 // Registry map
 const registry = new Map([
@@ -201,7 +202,8 @@ const registry = new Map([
     ["sipyours.com", sipyours],
     ["prikeshop.lt", prikeshop],
     ["vesselliquor.com", vesselliquor],
-    ["seedlipdrinks.com", seedlipdrinks]
+    ["seedlipdrinks.com", seedlipdrinks],
+    ["jomoclub.co.uk", jomoclub]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {
