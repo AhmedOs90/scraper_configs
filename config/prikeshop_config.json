@@ -1,0 +1,26 @@
+{
+    "rootUrl": "https://prikeshop.lt/",
+    "baseUrl": "https://prikeshop.lt/product-category/other-drinks/",
+    "site_name": "prikeshop",
+    "seller": "seller",
+    "bannerSkip": "#button-age-check",
+    "productsLinks": "/product/",
+    "collectionLinks": "/product-category/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "name": "#title",
+            "description": ".short-description-text",
+            "price": ".product-size-price .woocommerce-Price-amount"
+        }
+    },
+    "paginatiopn": {
+        "type": "button",
+        "selector": ".woocommerce-pagination button[data-type=\"products\"]"
+    },
+    "level": 2
+}
