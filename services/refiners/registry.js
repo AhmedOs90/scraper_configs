@@ -105,6 +105,7 @@ import jomoclub from "./sites/jomoclub.co.uk.js";
 import altinadrinks from "./sites/altinadrinks.com.js";
 import kineuphorics from "./sites/kineuphorics.com.js";
 import heynolo from "./sites/heynolo.com.js";
+import passionspirits from "./sites/passionspirits.com.js";
 
 // Registry map
 const registry = new Map([
@@ -209,7 +210,8 @@ const registry = new Map([
     ["jomoclub.co.uk", jomoclub],
     ["altinadrinks.com", altinadrinks],
     ["kineuphorics.com", kineuphorics],
-    ["heynolo.com", heynolo]
+    ["heynolo.com", heynolo],
+    ["passionspirits.com", passionspirits]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {
