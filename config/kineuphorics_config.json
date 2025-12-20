@@ -1,0 +1,23 @@
+{
+    "rootUrl": "https://www.kineuphorics.com",
+    "baseUrl": "https://www.kineuphorics.com/pages/shop-all",
+    "site_name": "kineuphorics",
+    "seller": "seller",
+    "productsLinks": "/products/",
+    "collectionLinks": "/pages/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "description": "meta[property='og:description']",
+            "price": "meta[property='og:price:amount']",
+            "currency": "meta[property='og:price:currency']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "images": ".product-photos .main-container .zoom > img"
+        }
+    },
+    "level": 1
+}
