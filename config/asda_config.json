@@ -1,0 +1,21 @@
+{
+    "rootUrl": "https://www.asda.com/groceries/",
+    "baseUrl": "https://www.asda.com/groceries/beer-wine-spirits/no-low-alcohol",
+    "site_name": "asda",
+    "seller": "seller",
+    "productsLinks": "/groceries/product/no-low-alcohol-",
+    "collectionLinks": "/groceries/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "price": "[data-testid=\"txt-pdp-product-price\"] p",
+            "description": "[data-testid=\"content\"]"
+        }
+    },
+    "level": 2
+}
