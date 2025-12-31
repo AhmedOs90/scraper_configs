@@ -1,0 +1,24 @@
+{
+    "rootUrl": "https://www.beerritz.co.uk",
+    "baseUrl": "https://www.beerritz.co.uk/low-and-no-alcohol-beer",
+    "site_name": "beerritz",
+    "seller": "seller",
+    "productLinkAttribute": "href",
+    "productLinkSelector": "li.product-grid-item article .content > a",
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "images": "meta[property='og:image'], meta[property='og:image:secure_url'], meta[name='twitter:image']"
+        },
+        "main": {
+            "name": "h1[itemprop='name']",
+            "price": ".live-data-price .price .merlin-getstock-disc_price_vat",
+            "description": "#tabbed-panels .text-panel"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": ".page-nav .next a[rel='next']"
+    },
+    "level": 1
+}

@@ -94,6 +94,27 @@ import moju_zero from "./sites/moju-zero.com.js";
 import whisky from "./sites/whisky.fr.js";
 import thebelgianbeercompany from "./sites/thebelgianbeercompany.com.js";
 import kodriget from "./sites/kodriget.dk.js";
+import onestopwineshop from "./sites/onestopwineshop.com.js";
+import lemoderato from "./sites/le-moderato.com.js";
+import wolffer from "./sites/wolffer.com.js";
+import sipyours from "./sites/sipyours.com.js";
+import prikeshop from "./sites/prikeshop.lt.js";
+import vesselliquor from "./sites/vesselliquor.com.js";
+import seedlipdrinks from "./sites/seedlipdrinks.com.js";
+import jomoclub from "./sites/jomoclub.co.uk.js";
+import altinadrinks from "./sites/altinadrinks.com.js";
+import kineuphorics from "./sites/kineuphorics.com.js";
+import heynolo from "./sites/heynolo.com.js";
+import passionspirits from "./sites/passionspirits.com.js";
+import asda from "./sites/asda.com.js";
+import beerritz from "./sites/beerritz.co.uk.js";
+import diceys from "./sites/diceys.com.js";
+import smashd from "./sites/smashd.com.js";
+import _1001spirits from "./sites/1001spirits.com.js";
+import alambika from "./sites/alambika.ca.js";
+import waitrosecellar from "./sites/waitrosecellar.com.js";
+import belgianbeerfactory from "./sites/belgianbeerfactory.com.js"
+
 // Registry map
 const registry = new Map([
     ["drydrinker.com", drydrinker],
@@ -186,7 +207,27 @@ const registry = new Map([
     ["whisky.fr", whisky],
     ["thebelgianbeercompany.com", thebelgianbeercompany],
     ["decantalo.co.uk", decantalo],
-    ["kodriget.dk", kodriget]
+    ["kodriget.dk", kodriget],
+    ["onestopwineshop.com", onestopwineshop],
+    ["le-moderato.com", lemoderato],
+    ["wolffer.com", wolffer],
+    ["sipyours.com", sipyours],
+    ["prikeshop.lt", prikeshop],
+    ["vesselliquor.com", vesselliquor],
+    ["seedlipdrinks.com", seedlipdrinks],
+    ["jomoclub.co.uk", jomoclub],
+    ["altinadrinks.com", altinadrinks],
+    ["kineuphorics.com", kineuphorics],
+    ["heynolo.com", heynolo],
+    ["passionspirits.com", passionspirits],
+    ["asda.com", asda],
+    ["beerritz.co.uk", beerritz],
+    ["diceys.com", diceys],
+    ["smashd.com", smashd],
+    ["1001spirits.com", _1001spirits],
+    ["alambika.ca", alambika],
+    ["waitrosecellar.com", waitrosecellar],
+    ["belgianbeerfactory.com", belgianbeerfactory]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {

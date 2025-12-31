@@ -1,0 +1,20 @@
+{
+    "rootUrl": "https://www.seedlipdrinks.com",
+    "baseUrl": "https://www.seedlipdrinks.com/en-us/shop",
+    "site_name": "seedlipdrinks",
+    "seller": "seller",
+    "productLinkAttribute": "href",
+    "productLinkSelector": "li.relative > a[href]",
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "description": "meta[property='og:description']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "price": ".purchasing-options-label .type-title-m"
+        }
+    },
+    "level": 1
+}
