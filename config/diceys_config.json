@@ -1,0 +1,28 @@
+{
+    "rootUrl": "https://diceys.com",
+    "baseUrl": "https://diceys.com/onlinestore/shop/category/non-alcohol",
+    "site_name": "diceys",
+    "seller": "seller",
+    "bannerSkip": ".avwp-av button.yes",
+    "productsLinks": "/onlinestore/shop/product/",
+    "collectionLinks": "/onlinestore/shop/category/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "images": "meta[property='og:image']",
+            "producer": "meta[property='product:brand']",
+            "price": "meta[property='product:price:amount']",
+            "currency": "meta[property='product:price:currency']"
+        },
+        "main": {
+            "description": ".woocommerce-product-details__short-description"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": "a.snize-pagination-next"
+    },
+    "level": 1
+}
