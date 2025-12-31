@@ -22,5 +22,5 @@
         "type": "link",
         "selector": "a[title='Next']"
     },
-    "level": 0
+    "level": 1
 }
