@@ -107,6 +107,7 @@ import kineuphorics from "./sites/kineuphorics.com.js";
 import heynolo from "./sites/heynolo.com.js";
 import passionspirits from "./sites/passionspirits.com.js";
 import asda from "./sites/asda.com.js";
+import beerritz from "./sites/beerritz.co.uk.js";
 
 // Registry map
 const registry = new Map([
@@ -213,7 +214,8 @@ const registry = new Map([
     ["kineuphorics.com", kineuphorics],
     ["heynolo.com", heynolo],
     ["passionspirits.com", passionspirits],
-    ["asda.com", asda]
+    ["asda.com", asda],
+    ["beerritz.co.uk", beerritz]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {

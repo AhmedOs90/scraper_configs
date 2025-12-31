@@ -1,0 +1,25 @@
+// services/refiners/sites/beerritz.co.uk.js
+export default async function refine(rootUrl, product, page) {
+    // product.images = product.images
+    //     .replace('https://www.beerritz.co.uk', '')
+    //     .replace('http://www.beerritz.co.uk', '')
+    //     .trim();
+
+    product.currency = 'GBP';
+    product.country = 'UK';
+
+    product.producer = await page.evaluate(() => {
+        const li = Array.from(
+            document.querySelectorAll('.product-summary-list li')
+        ).find(el => el.textContent.startsWith('Brewery:'));
+        return li ? li.textContent.replace('Brewery:', '').trim() : null;
+    });
+
+    product.description = product.description
+        .replace('Product Details' , '')
+        .replace(/<[^>]+>/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
+    
+    return product;
+}
