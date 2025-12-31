@@ -20,5 +20,6 @@
     "pagination": {
         "type": "link",
         "selector": ".Pagination .NextPageLink a"
-    }
+    },
+    "level": 1
 }
