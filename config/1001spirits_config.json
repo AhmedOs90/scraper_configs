@@ -1,0 +1,24 @@
+{
+    "rootUrl": "https://www.1001spirits.com",
+    "baseUrl": "https://www.1001spirits.com/category/394/alcohol-free-beer",
+    "site_name": "1001spirits",
+    "seller": "seller",
+    "productsLinks": "/product/",
+    "collectionLinks": "/category/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "images": "meta[property='og:image']",
+            "name": "meta[property='og:title']",
+            "description": "meta[property='og:description']"
+        },
+        "main": {
+            "price": ".ProductCardPrices .Prices dd.Price"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": ".Pagination .NextPageLink a"
+    }
+}
