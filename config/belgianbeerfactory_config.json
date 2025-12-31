@@ -1,0 +1,25 @@
+{
+    "rootUrl": "https://www.belgianbeerfactory.com/en/",
+    "baseUrl": "https://www.belgianbeerfactory.com/en/belgian-beer/alcohol-volume-abv/10-3152388/",
+    "site_name": "belgianbeerfactory",
+    "seller": "seller",
+    "productLinkAttribute": "href",
+    "productLinkSelector": ".product-grid .product-block-image > a",
+    "bannerSkip": "button.dy-w-100.dy-mt-2.button-cta.button-large",
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "price": ".product-price .price",
+            "description": "#information .block-content"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": ".collection-pagination .paginate li.next > a"
+    },
+    "level": 1
+}
