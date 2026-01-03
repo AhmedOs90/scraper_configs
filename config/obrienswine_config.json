@@ -1,0 +1,26 @@
+{
+    "rootUrl": "https://www.obrienswine.ie",
+    "baseUrl": "https://www.obrienswine.ie/collections/alcohol-free-low-alcohol-drinks",
+    "site_name": "obrienswine",
+    "seller": "seller",
+    "productsLinks": "/products/",
+    "collectionLinks": "/collections/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "images": "meta[property='og:image']",
+            "price": "meta[property='og:price:amount']",
+            "currency": "meta[property='og:price:currency']"
+        },
+        "main": {
+            "description": ".product__description"
+        }
+    },
+    "pagination": {
+        "type": "button",
+        "selector": "button.ais-InfiniteHits-loadMore"
+    },
+    "level": 1
+}
