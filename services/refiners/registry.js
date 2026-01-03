@@ -115,6 +115,7 @@ import alambika from "./sites/alambika.ca.js";
 import waitrosecellar from "./sites/waitrosecellar.com.js";
 import belgianbeerfactory from "./sites/belgianbeerfactory.com.js"
 import wine_searcher from "./sites/wine-searcher.com.js"
+import belowbrewco from "./sites/belowbrewco.com.js";
 
 // Registry map
 const registry = new Map([
@@ -229,7 +230,8 @@ const registry = new Map([
     ["alambika.ca", alambika],
     ["waitrosecellar.com", waitrosecellar],
     ["belgianbeerfactory.com", belgianbeerfactory],
-    ["wine-searcher.com", wine_searcher]
+    ["wine-searcher.com", wine_searcher],
+    ["belowbrewco.com", belowbrewco]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {

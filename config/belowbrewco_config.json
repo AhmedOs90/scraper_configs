@@ -1,0 +1,22 @@
+{
+    "rootUrl": "https://belowbrewco.com",
+    "baseUrl": "https://belowbrewco.com/collections/beers",
+    "site_name": "belowbrewco",
+    "seller": "seller",
+    "productsLinks": "/collections/beers/products/",
+    "collectionLinks": "/collections/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "images": "meta[property='og:image']",
+            "price": "meta[property='og:price:amount']",
+            "currency": "meta[property='og:price:currency']"
+        },
+        "main": {
+            "description": ".product-info-block"
+        }
+    },
+    "level": 2
+}
