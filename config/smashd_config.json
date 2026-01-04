@@ -1,0 +1,20 @@
+{
+    "rootUrl": "https://smashd.com",
+    "baseUrl": "https://smashd.com/collections/all",
+    "site_name": "smashd",
+    "seller": "seller",
+    "productsLinks": "/collections/all/products/",
+    "collectionLinks": "/collections/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "price": "meta[property='product:price:amount']",
+            "currency": "meta[property='product:price:currency']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {}
+    },
+    "level": 2
+}

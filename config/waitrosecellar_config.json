@@ -1,0 +1,26 @@
+{
+    "rootUrl": "https://www.waitrosecellar.com",
+    "baseUrl": "https://www.waitrosecellar.com/shop/alcohol-free-and-low-alcohol",
+    "site_name": "waitrosecellar",
+    "seller": "seller",
+    "productsLinks": "/products/",
+    "collectionLinks": "/shop/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {},
+        "main": {
+            "name": "h1.ProductDescriptionPage_heading__EQgAJ",
+            "price": "span[data-testid='product-price']",
+            "images": "h1.ProductDescriptionPage_heading__EQgAJ",
+            "producer": "h1.ProductDescriptionPage_heading__EQgAJ",
+            "abv": "h1.ProductDescriptionPage_heading__EQgAJ",
+            "description": "h1.ProductDescriptionPage_heading__EQgAJ"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": "a[title='Next']"
+    },
+    "level": 1
+}

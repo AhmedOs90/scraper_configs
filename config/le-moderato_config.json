@@ -1,0 +1,21 @@
+{
+    "rootUrl": "https://le-moderato.com/en",
+    "baseUrl": "https://le-moderato.com/en/collections/all",
+    "site_name": "le-moderato",
+    "seller": "seller",
+    "productsLinks": "/products/",
+    "collectionLinks": "/collections/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "price": "meta[property='product:price:amount']",
+            "currency": "meta[property='product:price:currency']",
+            "images": "meta[property='og:image']",
+            "description": "meta[property='og:description']"
+        },
+        "main": {}
+    },
+    "level": 1
+}

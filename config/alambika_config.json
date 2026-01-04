@@ -1,0 +1,27 @@
+{
+    "rootUrl": "https://alambika.ca",
+    "baseUrl": "https://alambika.ca/collections/non-alcoholic-substitutes",
+    "site_name": "alambika",
+    "seller": "seller",
+    "productsLinks": "/products/",
+    "collectionLinks": "/collections/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "images": "meta[property='og:image']",
+            "price": "meta[property='og:price:amount']",
+            "currency": "meta[property='og:price:currency']"
+        },
+        "main": {
+            "producer": ".product__subtitle p",
+            "description": "#tab-0"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": ".pagination li.next a"
+    },
+    "level": 2
+}

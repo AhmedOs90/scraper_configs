@@ -1,0 +1,20 @@
+{
+    "rootUrl": "https://sipyours.com",
+    "baseUrl": "https://sipyours.com/collections/non-alcoholic-wine",
+    "site_name": "sipyours",
+    "seller": "seller",
+    "productsLinks": "/collections/non-alcoholic-wine/products/",
+    "collectionLinks": "/collections/non-alcoholic-wines/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "images": "meta[property='og:image']",
+            "currency": "meta[property='og:price:currency']",
+            "price": "meta[property='og:price:amount']"
+        },
+        "main": {}
+    },
+    "level": 1
+}

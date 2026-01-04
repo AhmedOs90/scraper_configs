@@ -1,0 +1,21 @@
+{
+    "rootUrl": "https://threespiritdrinks.com",
+    "baseUrl": "https://threespiritdrinks.com/collections/all",
+    "site_name": "threespiritdrinks",
+    "seller": "seller",
+    "productsLinks": "/products/",
+    "collectionLinks": "/collections/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "description": "meta[property='og:description']",
+            "price": "meta[property='og:price:amount']",
+            "currency": "meta[property='og:price:currency']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {}
+    },
+    "level": 1
+}
