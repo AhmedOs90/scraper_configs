@@ -13,6 +13,7 @@
     "selector": "body"
   },
 
+  "level": 1,
   "moreConfig": true,
 
   "selectors": {

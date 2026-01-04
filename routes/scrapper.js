@@ -1,8 +1,8 @@
 import express from 'express';
-import { runAllSites, runSite } from '../scraper/zero_scraper.js';
+import { runAllSites, runSite, runSiteWithConfig } from '../scraper/zero_scraper.js';
 import { extractMissingABV } from '../scraper/abv_extractor.js'; // 👈 use the new batch function
 import { randomUUID } from 'crypto';
-import { runSiteWithConfig } from '../scraper/zero_scraper.js';
+import { checkAllAvailability } from '../validators/check_all.js';
 
 const router = express.Router();
 
@@ -80,6 +80,16 @@ router.post('/start-scraping-config', async (req, res) => {
     return res.status(500).json({ message: 'Failed to run scraping.', error: error.message });
   }
 });
+router.post("/check-availability", async (req, res) => {
+  try {
+    const data = await checkAllAvailability(req.body || {});
+    return res.status(200).json({ message: "Availability check completed.", ...data });
+  } catch (error) {
+    console.error("check-availability error:", error);
+    return res.status(500).json({ message: "Availability check failed.", error: error.message });
+  }
+});
+
 
 export default router;
 

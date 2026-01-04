@@ -1,8 +1,8 @@
 Total Sites Scraped: 1
 Total Products Scraped: 0
 Details per Site:
-Site Name: Kodriget
-Root URL: https://www.kodriget.dk
+Site Name: virginwines
+Root URL: https://www.virginwines.co.uk
 Products Scraped: 0
 ---
 Scraped Root URLs:
@@ -80,10 +80,7 @@ https://threshers.co.uk
 https://soberciety.de
 https://softerdrink.ca
 https://nakedlifespirits.com.au
-https://decantalo.co.uk
 https://us.noughtyaf.com
-https://bws.com.au
-https://www.kodriget.dk
 https://nonalcwines.au
 https://beveragedaily.com
 https://wineandbeyond.ca
@@ -108,3 +105,6 @@ https://www.liquorland.com.au
 https://www.moju-zero.com
 https://www.whisky.fr
 https://www.thebelgianbeercompany.com
+https://www.virginwines.co.uk
+https://decantalo.co.uk
+https://www.kodriget.dk
