@@ -1,0 +1,24 @@
+{
+    "rootUrl": "https://www.wine-searcher.com",
+    "baseUrl": "https://www.wine-searcher.com/find/non-alcoholic#t6",
+    "site_name": "albertabeerexchange",
+    "seller": "seller",
+    "productLinkAttribute": "href",
+    "productLinkSelector": ".card-product__name > a",
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "images": "meta[property='og:image']",
+            "description": "meta[property='og:description']"
+        },
+        "main": {
+            "name": "h1[data-name-id]",
+            "price": ".prod-profile__avg-price .price .font-light-bold",
+            "currency": ".prod-profile__avg-price .price .small"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": ".pagination .page-item a[title='Next Page']"
+    }
+}
