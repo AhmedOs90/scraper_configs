@@ -13,14 +13,14 @@
             "name": "meta[property='og:title']"
         },
         "main": {
-            "price": "p.wQ1gta_priceText.wQ1gta_priceTextVertical",
+            "price": ".gyT8MW_priceText",
             "images": "img#carousel__product-image",
-            "description": "#accordion-panel-product-description",
-            "abv": "._3s5i3a_content h3:nth-of-type(2) + .OobGYfu9hvCUvH6"
+            "description": "#accordion-panel-product-description"
         }
     },
     "pagination": {
         "type": "link",
         "selector": "a[data-nextpreviousbtn=\"next\"]"
-    }
+    },
+    "level": 2
 }
