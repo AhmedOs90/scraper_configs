@@ -120,6 +120,7 @@ import threespiritdrinks from "./sites/threespiritdrinks.com.js";
 import obrienswine from "./sites/obrienswine.ie.js";
 import goodpairdays from "./sites/goodpairdays.com.js";
 import flaskandfield from "./sites/flaskandfield.com.js";
+import zeroclub from "./sites/zeroclub.com.au.js";
 
 // Registry map
 const registry = new Map([
@@ -239,7 +240,8 @@ const registry = new Map([
     ["threespiritdrinks.com", threespiritdrinks],
     ["obrienswine.ie", obrienswine],
     ["goodpairdays.com", goodpairdays],
-    ["flaskandfield.com", flaskandfield]
+    ["flaskandfield.com", flaskandfield],
+    ["zeroclub.com.au", zeroclub]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {
