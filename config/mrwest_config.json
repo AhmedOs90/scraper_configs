@@ -1,0 +1,25 @@
+{
+    "rootUrl": "https://mrwest.com.au",
+    "baseUrl": "https://mrwest.com.au/product-category/non-alcoholic/low-abv",
+    "site_name": "mrwest",
+    "seller": "seller",
+    "bannerSkip": ".age-gate-submit-yes",
+    "productsLinks": "/product/",
+    "collectionLinks": "/product-category/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {},
+        "main": {
+            "name": ".product_title.entry-title",
+            "price": "p.price",
+            "images": ".product_title.entry-title",
+            "description": "#tab-description"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": ".woocommerce-pagination a.next"
+    },
+    "level": 1
+}
