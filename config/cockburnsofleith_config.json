@@ -1,0 +1,22 @@
+{
+    "rootUrl": "https://www.cockburnsofleith.co.uk",
+    "baseUrl": "https://www.cockburnsofleith.co.uk/style/low-or-no-alcohol/",
+    "site_name": "cockburnsofleith",
+    "seller": "seller",
+    "bannerSkip": ".age-gate__submit.age-gate__submit--yes",
+    "productsLinks": "/product/",
+    "collectionLinks": "/style/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "price": "p.price .woocommerce-Price-amount",
+            "description": ".header-description"
+        }
+    },
+    "level": 1
+}

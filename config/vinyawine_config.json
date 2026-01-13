@@ -1,0 +1,20 @@
+{
+    "rootUrl": "https://vinyawine.com",
+    "baseUrl": "https://vinyawine.com/collections/no-alcohol",
+    "site_name": "vinyawine",
+    "seller": "seller",
+    "productsLinks": "/products/",
+    "collectionLinks": "/collections/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "description": "meta[name='description']",
+            "images": "meta[property='og:image']",
+            "price": "meta[property='og:price:amount']",
+            "currency": "meta[property='og:price:currency']"
+        },
+        "main": { }
+    }
+}
