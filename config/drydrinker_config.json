@@ -2,11 +2,11 @@
     "baseUrl": "https://drydrinker.com/collections/all",
     "rootUrl": "https://drydrinker.com",
     "collectionLinks": "collections/",
+    "skipCollectionLinksInProducts": true,
     "productsLinks": "products/",
     "moreConfig":true,
     "seller":"seller",
     "site_name":"drydrinker",
-    "skipCollectionLinksInProducts": true,
     "selectors": {
       "header": {
         "name": "meta[property='og:title']",

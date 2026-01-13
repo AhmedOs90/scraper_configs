@@ -118,6 +118,7 @@ import wine_searcher from "./sites/wine-searcher.com.js"
 import belowbrewco from "./sites/belowbrewco.com.js";
 import threespiritdrinks from "./sites/threespiritdrinks.com.js";
 import obrienswine from "./sites/obrienswine.ie.js";
+import kolonnenull from "./sites/kolonnenull.com.js";
 
 // Registry map
 const registry = new Map([
@@ -235,7 +236,8 @@ const registry = new Map([
     ["wine-searcher.com", wine_searcher],
     ["belowbrewco.com", belowbrewco],
     ["threespiritdrinks.com", threespiritdrinks],
-    ["obrienswine.ie", obrienswine]
+    ["obrienswine.ie", obrienswine],
+    ["kolonnenull.com", kolonnenull],
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {

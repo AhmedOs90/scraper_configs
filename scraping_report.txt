@@ -1,8 +1,8 @@
 Total Sites Scraped: 1
 Total Products Scraped: 0
 Details per Site:
-Site Name: virginwines
-Root URL: https://www.virginwines.co.uk
+Site Name: thenonalcoholicclub
+Root URL: https://thenonalcoholicclub.com
 Products Scraped: 0
 ---
 Scraped Root URLs:
@@ -30,6 +30,7 @@ https://www.drybutwet.com.au
 https://www.teedawn.com
 https://www.thesobrmarket.com
 https://www.alcoholfreedrinks.co.uk
+https://thenonalcoholicclub.com
 https://thenewbar.com
 https://collectivecraftbeer.com
 https://freespiritdrinkco.com.au
@@ -62,6 +63,8 @@ https://noblegreenwines.co.uk
 https://www.healthyplanetcanada.com
 https://www.bittersandbottles.com
 https://www.draydrinks.com
+https://www.positivedrinks.co
+https://surdyks.com
 https://zerodrinks.co.za
 https://evergreencurated.com
 https://well.ca
@@ -105,6 +108,32 @@ https://www.liquorland.com.au
 https://www.moju-zero.com
 https://www.whisky.fr
 https://www.thebelgianbeercompany.com
+https://www.onestopwineshop.com
+https://le-moderato.com
+https://wolffer.com
+https://sipyours.com
+https://prikeshop.lt
+https://vesselliquor.com
+https://www.seedlipdrinks.com
+https://jomoclub.co.uk
+https://altinadrinks.com
+https://www.kineuphorics.com
+https://heynolo.com
+https://passionspirits.com
+https://www.asda.com
+https://www.beerritz.co.uk
+https://diceys.com
+https://smashd.com
+https://www.1001spirits.com
+https://alambika.ca
+https://www.waitrosecellar.com
+https://www.belgianbeerfactory.com
+https://www.wine-searcher.com
+https://belowbrewco.com
+https://threespiritdrinks.com
+https://www.obrienswine.ie
+https://www.thebelgianbeercompany.com
 https://www.virginwines.co.uk
 https://decantalo.co.uk
 https://www.kodriget.dk
+https://beerfordriving.com
