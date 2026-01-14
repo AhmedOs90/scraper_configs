@@ -18,5 +18,6 @@
             "description": ".product-description"
         }
     },
-    "level": 0
+    "level": 0,
+    "purePlayer": true
 }

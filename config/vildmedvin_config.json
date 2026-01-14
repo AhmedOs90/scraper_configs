@@ -10,32 +10,31 @@
     "moreConfig": true,
     "skipCollectionLinksInProducts": true,
     "selectors": {
-      "header": {
-        "name": "meta[property='og:title']",
-        "price": "meta[property='product:price:amount']",
-        "currency": "meta[itemprop='priceCurrency']",
-        "description": "meta[name='description']",
-        "images": "meta[property='og:image']"
-      },
-      "main": {
-        "name": "[data-testid='productName']",
-        "price": "#CartContent .previous-price",
-        "description": "div.product-description",
-        "images": "img.product-image__thumb",
-        "abv": "td:has(strong:contains('Alkohol')) + td",
-        "energy": "td:has(strong:contains('Energi')) + td",
-        "sugar": "td:has(strong:contains('Sukker')) + td",
-        "gluten": "ul.product-features li:contains('Glutenfri')",
-        "vegan": "ul.product-features li:contains('Vegansk')",
-        "producer": "div.product-brand a",
-        "country": "td:has(strong:contains('Land')) + td",
-        "category": "td:has(strong:contains('Type')) + td"
-      }
+        "header": {
+            "name": "meta[property='og:title']",
+            "price": "meta[property='product:price:amount']",
+            "currency": "meta[itemprop='priceCurrency']",
+            "description": "meta[name='description']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "name": "[data-testid='productName']",
+            "price": "#CartContent .previous-price",
+            "description": "div.product-description",
+            "images": "img.product-image__thumb",
+            "abv": "td:has(strong:contains('Alkohol')) + td",
+            "energy": "td:has(strong:contains('Energi')) + td",
+            "sugar": "td:has(strong:contains('Sukker')) + td",
+            "gluten": "ul.product-features li:contains('Glutenfri')",
+            "vegan": "ul.product-features li:contains('Vegansk')",
+            "producer": "div.product-brand a",
+            "country": "td:has(strong:contains('Land')) + td",
+            "category": "td:has(strong:contains('Type')) + td"
+        }
     },
     "pagination": {
-  "type": "button",
-  "selector": "button.loadMoreButton"
+        "type": "button",
+        "selector": "button.loadMoreButton"
+    },
+    "purePlayer": true
 }
-
-  }
-  

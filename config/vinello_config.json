@@ -3,7 +3,6 @@
     "baseUrl": "https://www.vinello.eu/non-alcoholic-wine",
     "site_name": "vinello",
     "seller": "seller",
-
     "collectionLinks": "",
     "productsLinks": "",
     "productLinkSelector": ".card-side .horizontal--title > a.product--title, .product--info .only--vertical > a.product--title",
@@ -25,9 +24,9 @@
             "country": ".product--properties-row #attribute-2"
         }
     },
-
     "pagination": {
         "type": "button",
         "selector": "#listingLoadMore"
-    }
+    },
+    "purePlayer": true
 }

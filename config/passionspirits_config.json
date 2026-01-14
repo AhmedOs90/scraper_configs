@@ -8,7 +8,7 @@
     "productLinkSelector": ".MuiCard-root .MuiBox-root a > img",
     "moreConfig": true,
     "selectors": {
-        "header": { },
+        "header": {},
         "main": {
             "name": ".MuiGrid-item h1",
             "price": "h2.css-1hthql9",
@@ -19,5 +19,6 @@
     "pagination": {
         "type": "button",
         "selector": "button.MuiPaginationItem-previousNext[aria-label=\"Go to next page\"]"
-    }
+    },
+    "purePlayer": true
 }

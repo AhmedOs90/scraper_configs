@@ -5,11 +5,9 @@
     "seller": "seller",
     "collectionLinks": "/collections/",
     "skipCollectionLinksInProducts": true,
-
     "productsLinks": "/products/",
     "productLinkSelector": "",
     "productLinkAttribute": "",
-
     "moreConfig": true,
     "selectors": {
         "header": {
@@ -26,5 +24,6 @@
     "pagination": {
         "type": "link",
         "selector": ".pagination .page-item:last-child a.page-link"
-    }
+    },
+    "purePlayer": true
 }

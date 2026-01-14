@@ -1,46 +1,47 @@
 {
-  "rootUrl": "https://wisebartender.co.uk",
-  "baseUrl": "https://wisebartender.co.uk/collections/all",
-  "site_name": "wisebartender",
-  "seller": "seller",
-  "productsLinks": "/products/",
-  "collectionLinks": "/collections/",
-  "productLinkSelector": "a[href*=\"/products/\"]",
-  "productLinkAttribute": "href",
-  "skipCollectionLinksInProducts": true,
-  "pagination": {
-    "type": "link",
-    "selector": "a[aria-label='Next page']"
-  },
-  "bannerSkip": null,
-  "moreConfig": true,
-  "selectors": {
-    "header": {
-      "price": "meta[property='og:price:amount'], meta[property='product:price:amount']",
-      "currency": "meta[property='og:price:currency'], meta[property='product:price:currency']",
-      "description": "meta[name='description']",
-      "images": "meta[property='og:image']",
-      "abv": null,
-      "gluten_free": null,
-      "vegan": null,
-      "producer": "meta[property='product:brand']",
-      "energy": null,
-      "sugars": null,
-      "category": null
+    "rootUrl": "https://wisebartender.co.uk",
+    "baseUrl": "https://wisebartender.co.uk/collections/all",
+    "site_name": "wisebartender",
+    "seller": "seller",
+    "productsLinks": "/products/",
+    "collectionLinks": "/collections/",
+    "productLinkSelector": "a[href*=\"/products/\"]",
+    "productLinkAttribute": "href",
+    "skipCollectionLinksInProducts": true,
+    "pagination": {
+        "type": "link",
+        "selector": "a[aria-label='Next page']"
     },
-    "main": {
-      "name": ".product__info-container .product__title h1",
-      "price": ".price .price-item--regular, .price .price-item--sale",
-      "currency": ".price .price-item--regular, .price .price-item--sale",
-      "description": ".product__description, .product__accordion .rte, .product__accordion .product__accordion-content",
-      "images": ".product__media img, .product__gallery img",
-      "abv": null,
-      "gluten": null,
-      "vegan": null,
-      "producer": ".product__vendor, .product__block__text a.product__form__link, .product__text a",
-      "energy": null,
-      "sugars": null,
-      "category": ".breadcrumb li:last-child, nav.breadcrumbs li:last-child"
-    }
-  }
+    "bannerSkip": null,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "price": "meta[property='og:price:amount'], meta[property='product:price:amount']",
+            "currency": "meta[property='og:price:currency'], meta[property='product:price:currency']",
+            "description": "meta[name='description']",
+            "images": "meta[property='og:image']",
+            "abv": null,
+            "gluten_free": null,
+            "vegan": null,
+            "producer": "meta[property='product:brand']",
+            "energy": null,
+            "sugars": null,
+            "category": null
+        },
+        "main": {
+            "name": ".product__info-container .product__title h1",
+            "price": ".price .price-item--regular, .price .price-item--sale",
+            "currency": ".price .price-item--regular, .price .price-item--sale",
+            "description": ".product__description, .product__accordion .rte, .product__accordion .product__accordion-content",
+            "images": ".product__media img, .product__gallery img",
+            "abv": null,
+            "gluten": null,
+            "vegan": null,
+            "producer": ".product__vendor, .product__block__text a.product__form__link, .product__text a",
+            "energy": null,
+            "sugars": null,
+            "category": ".breadcrumb li:last-child, nav.breadcrumbs li:last-child"
+        }
+    },
+    "purePlayer": true
 }

@@ -1,45 +1,43 @@
 {
-  "rootUrl": "https://www.blackmarket.co.nz",
-  "baseUrl": "https://www.blackmarket.co.nz/collections/all",
-  "baseUrlS": "https://www.blackmarket.co.nz/collections/all",
-  "site_name": "blackmarket",
-  "seller": "seller",
-
-  "productsLinks": "/products/",
-  "collectionLinks": "/collections/",
-  "productLinkSelector": "a[href*=\"/products/\"]",
-  "productLinkAttribute": "href",
-  "skipCollectionLinksInProducts": true,
-
-  "pagination": {
-    "type": "button",
-    "selector": ".boost-products__load-more .btn.btn--primary"
-  },
-  "bannerSkip": null,
-  "moreConfig": true,
-
-  "selectors": {
-    "header": {
-      "name": "meta[property='og:title'], meta[name='twitter:title']",
-      "price": "meta[property='product:price:amount'], meta[property='og:price:amount']",
-      "currency": "meta[property='product:price:currency'], meta[property='og:price:currency']",
-      "description": "meta[name='description'], meta[property='og:description']",
-      "images": "meta[property='og:image'], meta[name='twitter:image']",
-      "producer": "meta[property='product:brand']"
+    "rootUrl": "https://www.blackmarket.co.nz",
+    "baseUrl": "https://www.blackmarket.co.nz/collections/all",
+    "baseUrlS": "https://www.blackmarket.co.nz/collections/all",
+    "site_name": "blackmarket",
+    "seller": "seller",
+    "productsLinks": "/products/",
+    "collectionLinks": "/collections/",
+    "productLinkSelector": "a[href*=\"/products/\"]",
+    "productLinkAttribute": "href",
+    "skipCollectionLinksInProducts": true,
+    "pagination": {
+        "type": "button",
+        "selector": ".boost-products__load-more .btn.btn--primary"
     },
-    "main": {
-      "name": "h1.product__title, h1.product-title, h1.product-title-inner, h1",
-      "price": ".price-item--regular, .price-item--sale, .price .money, .product__price .money, [data-product-price], .price--main .price-item",
-      "currency": ".price .money, .price-item--regular, .price-item--sale, [data-product-price]",
-      "description": ".product__description, .product-single__description, .product-description, .rte, .product__accordion .rte, .tab-content .rte",
-      "images": ".product__media img, .product-gallery img, img[src*='/products/'], .product__images img",
-      "abv": "li:contains('%'), li:contains('ABV'), li:contains('Alcohol'), p:contains('% ABV'), .product-specs li:contains('ABV')",
-      "gluten": "a[href*='gluten'], .tag:contains('gluten'), .badge:contains('gluten')",
-      "vegan": "a[href*='vegan'], .tag:contains('vegan'), .badge:contains('vegan')",
-      "producer": ".product__vendor, .product-vendor a, .product-meta__vendor a, .product-vendor",
-      "energy": "li:contains('kcal'), p:contains('kcal'), li:contains('Calories'), p:contains('Calories')",
-      "sugars": "li:contains('Sugar'), li:contains('Sugars'), p:contains('Sugar'), p:contains('Sugars')",
-      "category": ".breadcrumb li:last-child, nav.breadcrumbs li:last-child, .breadcrumbs a:last-child, nav[aria-label='breadcrumbs'] a:last-child"
-    }
-  }
+    "bannerSkip": null,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title'], meta[name='twitter:title']",
+            "price": "meta[property='product:price:amount'], meta[property='og:price:amount']",
+            "currency": "meta[property='product:price:currency'], meta[property='og:price:currency']",
+            "description": "meta[name='description'], meta[property='og:description']",
+            "images": "meta[property='og:image'], meta[name='twitter:image']",
+            "producer": "meta[property='product:brand']"
+        },
+        "main": {
+            "name": "h1.product__title, h1.product-title, h1.product-title-inner, h1",
+            "price": ".price-item--regular, .price-item--sale, .price .money, .product__price .money, [data-product-price], .price--main .price-item",
+            "currency": ".price .money, .price-item--regular, .price-item--sale, [data-product-price]",
+            "description": ".product__description, .product-single__description, .product-description, .rte, .product__accordion .rte, .tab-content .rte",
+            "images": ".product__media img, .product-gallery img, img[src*='/products/'], .product__images img",
+            "abv": "li:contains('%'), li:contains('ABV'), li:contains('Alcohol'), p:contains('% ABV'), .product-specs li:contains('ABV')",
+            "gluten": "a[href*='gluten'], .tag:contains('gluten'), .badge:contains('gluten')",
+            "vegan": "a[href*='vegan'], .tag:contains('vegan'), .badge:contains('vegan')",
+            "producer": ".product__vendor, .product-vendor a, .product-meta__vendor a, .product-vendor",
+            "energy": "li:contains('kcal'), p:contains('kcal'), li:contains('Calories'), p:contains('Calories')",
+            "sugars": "li:contains('Sugar'), li:contains('Sugars'), p:contains('Sugar'), p:contains('Sugars')",
+            "category": ".breadcrumb li:last-child, nav.breadcrumbs li:last-child, .breadcrumbs a:last-child, nav[aria-label='breadcrumbs'] a:last-child"
+        }
+    },
+    "purePlayer": true
 }

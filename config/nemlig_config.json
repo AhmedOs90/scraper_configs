@@ -11,26 +11,26 @@
     "productLinkSelector": "a.product-tile__link",
     "productLinkAttribute": "href",
     "selectors": {
-      "header": {
-        "name": "meta[property='og:title']",
-        "price": "meta[name='twitter:data1']",
-        "currency": "meta[property='product:price:currency']",
-        "description": "meta[property='og:description']",
-        "images": "meta[property='og:image']"
-      },
-      "main": {
-        "abv": {
-          "selector": null,
-          "regex": "(\\d+(\\.\\d+)?\\s*%)"
+        "header": {
+            "name": "meta[property='og:title']",
+            "price": "meta[name='twitter:data1']",
+            "currency": "meta[property='product:price:currency']",
+            "description": "meta[property='og:description']",
+            "images": "meta[property='og:image']"
         },
-        "gluten": null,
-        "vegan": null,
-        "producer": null
-      }
+        "main": {
+            "abv": {
+                "selector": null,
+                "regex": "(\\d+(\\.\\d+)?\\s*%)"
+            },
+            "gluten": null,
+            "vegan": null,
+            "producer": null
+        }
     },
     "pagination": {
-      "type": "link",
-      "selector": "a.pagination__next"
-    }
-  }
-  
+        "type": "link",
+        "selector": "a.pagination__next"
+    },
+    "purePlayer": true
+}

@@ -1,42 +1,39 @@
 {
-  "rootUrl": "https://thenewbar.com",
-  "baseUrl": "https://thenewbar.com/collections/all",
-  "site_name": "thenewbar",
-  "seller": "seller",
-
-  "productsLinks": "/products/",
-  "collectionLinks": "/collections/",
-  "productLinkSelector": "a[href*=\"/products/\"]",
-  "productLinkAttribute": "href",
-  "skipCollectionLinksInProducts": true,
-
-  "level":1,
-  "bannerSkip": null,
-  "moreConfig": true,
-
-  "selectors": {
-    "header": {
-      "name": "meta[property='og:title']",
-      "price": "meta[property='og:price:amount'], meta[property='product:price:amount']",
-      "currency": "meta[property='og:price:currency'], meta[property='product:price:currency']",
-      "description": "meta[name='description']",
-      "images": "meta[property='og:image']"
+    "rootUrl": "https://thenewbar.com",
+    "baseUrl": "https://thenewbar.com/collections/all",
+    "site_name": "thenewbar",
+    "seller": "seller",
+    "productsLinks": "/products/",
+    "collectionLinks": "/collections/",
+    "productLinkSelector": "a[href*=\"/products/\"]",
+    "productLinkAttribute": "href",
+    "skipCollectionLinksInProducts": true,
+    "level": 1,
+    "bannerSkip": null,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "price": "meta[property='og:price:amount'], meta[property='product:price:amount']",
+            "currency": "meta[property='og:price:currency'], meta[property='product:price:currency']",
+            "description": "meta[name='description']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "name": "h1.product__title, h1.page-title, h1",
+            "price": ".price__container .price-item--regular, .price__regular .price-item--regular, .price-item--regular",
+            "currency": ".price__container .price-item--regular, .price__regular .price-item--regular",
+            "description": ".product__description, .product__accordion, .rte, .prose",
+            "images": ".product__media img, .product-media img, img.product__media",
+            "abv": ".product__description:contains('ABV'), .rte:contains('ABV'), .product__accordion:contains('ABV')",
+            "gluten": ".product__description:contains('Gluten'), .rte:contains('Gluten'), .product__accordion:contains('Gluten')",
+            "vegan": ".product__description:contains('Vegan'), .rte:contains('Vegan'), .product__accordion:contains('Vegan')",
+            "producer": ".product__vendor a, .vendor a, .product__title + p a"
+        }
     },
-    "main": {
-      "name": "h1.product__title, h1.page-title, h1",
-      "price": ".price__container .price-item--regular, .price__regular .price-item--regular, .price-item--regular",
-      "currency": ".price__container .price-item--regular, .price__regular .price-item--regular",
-      "description": ".product__description, .product__accordion, .rte, .prose",
-      "images": ".product__media img, .product-media img, img.product__media",
-
-      "abv": ".product__description:contains('ABV'), .rte:contains('ABV'), .product__accordion:contains('ABV')",
-      "gluten": ".product__description:contains('Gluten'), .rte:contains('Gluten'), .product__accordion:contains('Gluten')",
-      "vegan": ".product__description:contains('Vegan'), .rte:contains('Vegan'), .product__accordion:contains('Vegan')",
-      "producer": ".product__vendor a, .vendor a, .product__title + p a"
-    }
-  },
-  "pagination": {
-    "type": "link",
-  "selector": "page-pagination .pagination__nav a[rel='next'], .pagination__nav a[aria-label='Next']"
-  }
+    "pagination": {
+        "type": "link",
+        "selector": "page-pagination .pagination__nav a[rel='next'], .pagination__nav a[aria-label='Next']"
+    },
+    "purePlayer": true
 }

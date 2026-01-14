@@ -3,12 +3,9 @@
     "baseUrl": "https://drinkdrystore.com/collections/drinkdrystore-all-products",
     "site_name": "drinkdrystore",
     "seller": "seller",
- 
     "productsLinks": "/products/",
     "collectionLinks": "/collections/",
     "skipCollectionLinksInProducts": true,
- 
- 
     "bannerSkip": "button.klaviyo-close-form",
     "moreConfig": true,
     "selectors": {
@@ -24,9 +21,9 @@
             "category": ".t-three-sections .col-md-4:last-child p"
         }
     },
- 
     "pagination": {
         "type": "link",
         "selector": ".infinite-scrolling .btn"
-    }
+    },
+    "purePlayer": true
 }

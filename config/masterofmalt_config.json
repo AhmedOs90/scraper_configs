@@ -22,5 +22,6 @@
         "type": "link",
         "selector": ".ais-Pagination-item--nextPage .ais-Pagination-link"
     },
-    "level": 1
+    "level": 1,
+    "purePlayer": true
 }

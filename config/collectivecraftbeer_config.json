@@ -17,15 +17,12 @@
             "images": "meta[property='og:image']",
             "description": "meta[name='twitter:description']"
         },
-        "main": {
-
-        }
+        "main": {}
     },
-
     "pagination": {
         "type": "link",
         "selector": ".pagination .next a"
     },
-
-    "bannerSkip": ".age-checker__btn.js-age-close"
+    "bannerSkip": ".age-checker__btn.js-age-close",
+    "purePlayer": true
 }

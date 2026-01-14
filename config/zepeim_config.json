@@ -3,14 +3,11 @@
     "baseUrl": "https://zepeim.com/non-alcoholic-beverages-wholesale-distribution/",
     "site_name": "zepeim",
     "seller": "seller",
-
     "collectionLinks": "",
     "skipCollectionLinksInProducts": false,
-
     "productsLinks": "",
     "productLinkSelector": ".productGrid .card .card-title > a, .productGrid .product .card-title > a, .product .card-title > a",
     "productLinkAttribute": "href",
-    
     "moreConfig": true,
     "selectors": {
         "header": {
@@ -26,5 +23,6 @@
     "pagination": {
         "type": "link",
         "selector": ".pagination-item--next a.pagination-link"
-    }
+    },
+    "purePlayer": true
 }

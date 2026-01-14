@@ -1,42 +1,34 @@
 {
-  "rootUrl": "https://www.virginwines.co.uk",
-  "baseUrl": "https://www.virginwines.co.uk/wines/non-alcoholic-wines?page=1",
-  "site_name": "virginwines",
-  "seller": "seller",
-
-  "productsLinks": "/wine/",
-  "collectionLinks": "/wines/",
-  "skipCollectionLinksInProducts": true,
-
-  "productLinkAttribute": "href",
-  "productLinkSelector": "a[href^='/wine/']",
-
-  "bannerSkip": "#onetrust-accept-btn-handler, button[aria-label*='Accept'], button[aria-label='Close'], .onetrust-close-btn-handler, .modal-close, .close",
-
-  "moreConfig": true,
-  "selectors": {
-    "header": {
-      "name": "meta[property='og:title'], meta[name='twitter:title']",
-      "description": "meta[property='og:description'], meta[name='description'], meta[name='twitter:description']",
-      "images": "meta[property='og:image'], meta[name='twitter:image']",
-
-      "currency": "meta[property='product:price:currency'], meta[property='og:price:currency'], meta[property='og:product:price:currency']"
-    },
-    "main": {
-              "abv": "ul.main-attributes.attributes li:first-child span.font-weight-bold.large",
-      "price": "[data-qa*='price'], [data-test*='price'], .price, .product-price, .pdp-price",
-      "description": "[data-qa*='description'], .product-description, .pdp-description, .product-content, .product-details",
+    "rootUrl": "https://www.virginwines.co.uk",
+    "baseUrl": "https://www.virginwines.co.uk/wines/non-alcoholic-wines?page=1",
+    "site_name": "virginwines",
+    "seller": "seller",
+    "productsLinks": "/wine/",
+    "collectionLinks": "/wines/",
+    "skipCollectionLinksInProducts": true,
+    "productLinkAttribute": "href",
+    "productLinkSelector": "a[href^='/wine/']",
+    "bannerSkip": "#onetrust-accept-btn-handler, button[aria-label*='Accept'], button[aria-label='Close'], .onetrust-close-btn-handler, .modal-close, .close",
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title'], meta[name='twitter:title']",
+            "description": "meta[property='og:description'], meta[name='description'], meta[name='twitter:description']",
+            "images": "meta[property='og:image'], meta[name='twitter:image']",
+            "currency": "meta[property='product:price:currency'], meta[property='og:price:currency'], meta[property='og:product:price:currency']"
+        },
+        "main": {
+            "abv": "ul.main-attributes.attributes li:first-child span.font-weight-bold.large",
+            "price": "[data-qa*='price'], [data-test*='price'], .price, .product-price, .pdp-price",
+            "description": "[data-qa*='description'], .product-description, .pdp-description, .product-content, .product-details",
             "producer": "a[data-gaaction='winemaker-info-click']",
-                  "vegan": "ul.other-classifications svg.classification.vegan + p"
-
-
-    }
-  },
-
-  "pagination": {
-    "type": "link",
-    "selector": "a[rel='next'], a[aria-label='Next'], a[aria-label*='Next'], .pagination a.next, li.pagination-next a"
-  },
-
-  "level": 1
+            "vegan": "ul.other-classifications svg.classification.vegan + p"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": "a[rel='next'], a[aria-label='Next'], a[aria-label*='Next'], .pagination a.next, li.pagination-next a"
+    },
+    "level": 1,
+    "purePlayer": true
 }

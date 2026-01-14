@@ -15,6 +15,7 @@
             "price": "meta[property='og:price:amount']",
             "currency": "meta[property='og:price:currency']"
         },
-        "main": { }
-    }
+        "main": {}
+    },
+    "purePlayer": true
 }

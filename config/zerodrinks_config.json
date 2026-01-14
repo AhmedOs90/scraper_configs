@@ -21,5 +21,6 @@
         "type": "link",
         "selector": ".pagination .next a"
     },
-    "level": 0
+    "level": 0,
+    "purePlayer": true
 }

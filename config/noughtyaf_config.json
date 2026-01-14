@@ -17,5 +17,6 @@
             "price": ".product-block [data-product-price]"
         }
     },
-    "level": 2
+    "level": 2,
+    "purePlayer": true
 }

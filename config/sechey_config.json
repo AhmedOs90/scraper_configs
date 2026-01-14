@@ -8,11 +8,10 @@
     "productLinkSelector": "a[href*='/products/']",
     "productLinkAttribute": "href",
     "skipCollectionLinksInProducts": true,
-"pagination": {
-  "type": "link",
-  "selector": ".pagination-arrow.pagination-next a"
-},
-
+    "pagination": {
+        "type": "link",
+        "selector": ".pagination-arrow.pagination-next a"
+    },
     "bannerSkip": null,
     "moreConfig": true,
     "selectors": {
@@ -37,5 +36,6 @@
             "sugars": null,
             "category": ".breadcrumb__item--current"
         }
-    }
+    },
+    "purePlayer": true
 }

@@ -19,5 +19,6 @@
             "country": ".bm-country-clickable .ml-2"
         }
     },
-    "level": 1
+    "level": 1,
+    "purePlayer": true
 }

@@ -1,53 +1,50 @@
 {
-  "rootUrl": "https://disndis.com",
-  "baseUrl": "https://disndis.com/collections/alcohol-free-wines",
-  "site_name": "disndis",
-  "seller": "seller",
-
-  "productsLinks": "/products/",
-  "collectionLinks": "/collections/all",
-  "productLinkSelector": "a[href*='/products/']",
-  "productLinkAttribute": "href",
-  "skipCollectionLinksInProducts": true,
-"pagination": {
-  "type": "link",
-  "selector": ".boost-pfs-filter-bottom-pagination a[aria-label='Page Next']"
-}
-    ,
-
-  "bannerSkip": null,
-  "moreConfig": true,
-
-  "selectors": {
-    "header": {
-      "name": "meta[property='og:title'], meta[name='twitter:title']",
-      "price": "meta[property='product:price:amount'], meta[property='og:price:amount']",
-      "currency": "meta[property='product:price:currency'], meta[property='og:price:currency']",
-      "description": "meta[name='description'], meta[property='og:description']",
-      "images": "meta[property='og:image']",
-      "abv": null,
-      "gluten_free": null,
-      "vegan": null,
-      "producer": null,
-      "energy": null,
-      "sugars": null,
-      "country": null,
-      "category": null
+    "rootUrl": "https://disndis.com",
+    "baseUrl": "https://disndis.com/collections/alcohol-free-wines",
+    "site_name": "disndis",
+    "seller": "seller",
+    "productsLinks": "/products/",
+    "collectionLinks": "/collections/all",
+    "productLinkSelector": "a[href*='/products/']",
+    "productLinkAttribute": "href",
+    "skipCollectionLinksInProducts": true,
+    "pagination": {
+        "type": "link",
+        "selector": ".boost-pfs-filter-bottom-pagination a[aria-label='Page Next']"
     },
-    "main": {
-      "name": ".product__title, h1.product-title, h1.title",
-      "price": ".price--regular .money, .price--sale .money, .product__price .money",
-      "currency": ".price--regular .money, .product__price .money",
-      "description": ".product__description, .product-single__description, .rte",
-      "images": ".product__media img, .product__image-gallery img",
-      "abv": "li:contains('Percentage of Alcohol'), li:contains('ABV')",
-      "gluten": "li:contains('Gluten')",
-      "vegan": "li:contains('Vegan')",
-      "producer": "li:contains('Brand'), .product-single__vendor, .vendor a",
-      "energy": "li:contains('kcal'), li:contains('Calories')",
-      "sugars": "li:contains('Sugar'), li:contains('Sugars')",
-      "country": "li:contains('Country')",
-      "category": ".breadcrumb li:last-child, nav.breadcrumbs li:last-child"
-    }
-  }
+    "bannerSkip": null,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title'], meta[name='twitter:title']",
+            "price": "meta[property='product:price:amount'], meta[property='og:price:amount']",
+            "currency": "meta[property='product:price:currency'], meta[property='og:price:currency']",
+            "description": "meta[name='description'], meta[property='og:description']",
+            "images": "meta[property='og:image']",
+            "abv": null,
+            "gluten_free": null,
+            "vegan": null,
+            "producer": null,
+            "energy": null,
+            "sugars": null,
+            "country": null,
+            "category": null
+        },
+        "main": {
+            "name": ".product__title, h1.product-title, h1.title",
+            "price": ".price--regular .money, .price--sale .money, .product__price .money",
+            "currency": ".price--regular .money, .product__price .money",
+            "description": ".product__description, .product-single__description, .rte",
+            "images": ".product__media img, .product__image-gallery img",
+            "abv": "li:contains('Percentage of Alcohol'), li:contains('ABV')",
+            "gluten": "li:contains('Gluten')",
+            "vegan": "li:contains('Vegan')",
+            "producer": "li:contains('Brand'), .product-single__vendor, .vendor a",
+            "energy": "li:contains('kcal'), li:contains('Calories')",
+            "sugars": "li:contains('Sugar'), li:contains('Sugars')",
+            "country": "li:contains('Country')",
+            "category": ".breadcrumb li:last-child, nav.breadcrumbs li:last-child"
+        }
+    },
+    "purePlayer": true
 }

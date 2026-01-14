@@ -27,5 +27,6 @@
     "pagination": {
         "type": "button",
         "selector": "button.js-load-more"
-    }
+    },
+    "purePlayer": true
 }

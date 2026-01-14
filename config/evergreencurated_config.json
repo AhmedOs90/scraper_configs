@@ -21,5 +21,6 @@
         "type": "link",
         "selector": ".pagination__item[aria-label=\"Next page\"]"
     },
-    "level": 1
+    "level": 1,
+    "purePlayer": true
 }

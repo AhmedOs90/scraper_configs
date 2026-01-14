@@ -1,51 +1,49 @@
 {
-  "rootUrl": "https://www.amavine.nl",
-  "baseUrl": "https://www.amavine.nl/webwinkel/",
-  "site_name": "amavine",
-  "seller": "seller",
+    "rootUrl": "https://www.amavine.nl",
+    "baseUrl": "https://www.amavine.nl/webwinkel/",
+    "site_name": "amavine",
+    "seller": "seller",
     "level": 0,
-  "productsLinks": "/product/",
-  "collectionLinks": "/product-categorie/",
-  "productLinkSelector": "a.woocommerce-LoopProduct__link, a.woocommerce-LoopProduct-link, a[href*='/product/']",
-  "productLinkAttribute": "href",
-  "skipCollectionLinksInProducts": true,
-
-  "pagination": {
-    "type": "link",
-    "selector": ".woocommerce-pagination a.next, a.next.page-numbers, .pagination a.next"
-  },
-
-  "bannerSkip": null,
-  "moreConfig": true,
-
-  "selectors": {
-    "header": {
-      "name": "meta[property='og:title']",
-      "price": "meta[property='product:price:amount'], meta[property='og:price:amount']",
-      "currency": "meta[property='product:price:currency'], meta[property='og:price:currency']",
-      "description": "meta[name='description'], meta[property='og:description']",
-      "images": "meta[property='og:image']",
-      "producer": null,
-      "abv": null,
-      "gluten_free": null,
-      "vegan": null,
-      "energy": null,
-      "sugars": null,
-      "category": null
+    "productsLinks": "/product/",
+    "collectionLinks": "/product-categorie/",
+    "productLinkSelector": "a.woocommerce-LoopProduct__link, a.woocommerce-LoopProduct-link, a[href*='/product/']",
+    "productLinkAttribute": "href",
+    "skipCollectionLinksInProducts": true,
+    "pagination": {
+        "type": "link",
+        "selector": ".woocommerce-pagination a.next, a.next.page-numbers, .pagination a.next"
     },
-    "main": {
-      "name": "h1.product_title, .product_title.entry-title, h1",
-      "price": ".summary .price .amount, .woocommerce-Price-amount .amount, .price .amount",
-      "currency": ".summary .price .woocommerce-Price-currencySymbol, .woocommerce-Price-currencySymbol",
-      "description": ".woocommerce-product-details__short-description, .entry-summary .woocommerce-product-details__short-description, .woocommerce-Tabs-panel--description, .product .entry-content",
-      "images": ".woocommerce-product-gallery__image img, .woocommerce-product-gallery img, img.wp-post-image",
-      "producer": ".product_meta .posted_in a",
-      "abv": "li:contains('ABV'), li:contains('%'), p:contains('ABV')",
-      "gluten": ".tagged_as a[href*='gluten'], .product_meta a:contains('gluten')",
-      "vegan": ".tagged_as a[href*='vegan'], .product_meta a:contains('vegan')",
-      "energy": "li:contains('kcal'), p:contains('kcal'), li:contains('Calories'), p:contains('Calories')",
-      "sugars": "li:contains('Sugar'), li:contains('Sugars'), li:contains('Suiker'), p:contains('Sugar'), p:contains('Sugars'), p:contains('Suiker')",
-      "category": ".woocommerce-breadcrumb a:last-child, nav.woocommerce-breadcrumb a:last-child, .breadcrumb a:last-child"
-    }
-  }
+    "bannerSkip": null,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "price": "meta[property='product:price:amount'], meta[property='og:price:amount']",
+            "currency": "meta[property='product:price:currency'], meta[property='og:price:currency']",
+            "description": "meta[name='description'], meta[property='og:description']",
+            "images": "meta[property='og:image']",
+            "producer": null,
+            "abv": null,
+            "gluten_free": null,
+            "vegan": null,
+            "energy": null,
+            "sugars": null,
+            "category": null
+        },
+        "main": {
+            "name": "h1.product_title, .product_title.entry-title, h1",
+            "price": ".summary .price .amount, .woocommerce-Price-amount .amount, .price .amount",
+            "currency": ".summary .price .woocommerce-Price-currencySymbol, .woocommerce-Price-currencySymbol",
+            "description": ".woocommerce-product-details__short-description, .entry-summary .woocommerce-product-details__short-description, .woocommerce-Tabs-panel--description, .product .entry-content",
+            "images": ".woocommerce-product-gallery__image img, .woocommerce-product-gallery img, img.wp-post-image",
+            "producer": ".product_meta .posted_in a",
+            "abv": "li:contains('ABV'), li:contains('%'), p:contains('ABV')",
+            "gluten": ".tagged_as a[href*='gluten'], .product_meta a:contains('gluten')",
+            "vegan": ".tagged_as a[href*='vegan'], .product_meta a:contains('vegan')",
+            "energy": "li:contains('kcal'), p:contains('kcal'), li:contains('Calories'), p:contains('Calories')",
+            "sugars": "li:contains('Sugar'), li:contains('Sugars'), li:contains('Suiker'), p:contains('Sugar'), p:contains('Sugars'), p:contains('Suiker')",
+            "category": ".woocommerce-breadcrumb a:last-child, nav.woocommerce-breadcrumb a:last-child, .breadcrumb a:last-child"
+        }
+    },
+    "purePlayer": true
 }

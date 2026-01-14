@@ -23,5 +23,6 @@
         "type": "button",
         "selector": "#manual_load_button"
     },
-    "level": 2
+    "level": 2,
+    "purePlayer": true
 }

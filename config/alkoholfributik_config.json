@@ -1,53 +1,49 @@
 {
-  "rootUrl": "https://www.alkoholfributik.dk",
-  "baseUrl": "https://www.alkoholfributik.dk/collections/all",
-  "site_name": "alkoholfributik",
-  "seller": "seller",
-
-  "productsLinks": "/products/",
-  "collectionLinks": "/collections/",
-  "productLinkSelector": "a[href*=\"/products/\"]",
-  "productLinkAttribute": "href",
-  "skipCollectionLinksInProducts": false,
-
-  "pagination": {
-    "type": "scroll",
-    "selector": "a[rel='next'], .pagination__item--next a, nav[aria-label='Pagination'] a[aria-label*='Næste'], nav[aria-label='Pagination'] a[aria-label*='Next']"
-  },
-
-  "bannerSkip": null,
-  "moreConfig": true,
-  "level": 2,
-
-  "selectors": {
-    "header": {
-      "name": "meta[property='og:title'], meta[name='og:title']",
-      "price": "meta[property='product:price:amount'], meta[property='og:price:amount']",
-      "currency": "meta[property='product:price:currency'], meta[property='og:price:currency']",
-      "description": "meta[name='description'], meta[property='og:description']",
-      "images": "meta[property='og:image']",
-      "producer": "meta[property='product:brand']",
-      "abv": null,
-      "gluten_free": null,
-      "vegan": null,
-      "energy": null,
-      "sugars": null,
-      "category": null
+    "rootUrl": "https://www.alkoholfributik.dk",
+    "baseUrl": "https://www.alkoholfributik.dk/collections/all",
+    "site_name": "alkoholfributik",
+    "seller": "seller",
+    "productsLinks": "/products/",
+    "collectionLinks": "/collections/",
+    "productLinkSelector": "a[href*=\"/products/\"]",
+    "productLinkAttribute": "href",
+    "skipCollectionLinksInProducts": false,
+    "pagination": {
+        "type": "scroll",
+        "selector": "a[rel='next'], .pagination__item--next a, nav[aria-label='Pagination'] a[aria-label*='Næste'], nav[aria-label='Pagination'] a[aria-label*='Next']"
     },
-    "main": {
-      "name": "h1, h1.product__title, h1.product-title",
-      "price": ".price-item--regular, .price-item--sale, .price__current .price-item, .price__current .money, [data-product-price], .price .money",
-      "currency": ".price-item--regular, .price-item--sale, .price__current .price-item, .price .money",
-      "description": "[data-product-description], .product__description, .product-single__description, .product-description, .rte, .product__accordion .rte",
-      "images": ".product__media img, .product-gallery img, img[src*='/products/']",
-      "producer": ".product__vendor, .product-meta__vendor a, .product-vendor, a[class^='ai-vendor-name-']",
-
-      "abv": "p:contains('% ·'), span:contains('% ·'), li:contains('% ·')",
-      "gluten": "a:contains('Glutenfri'), a:contains('glutenfri'), p:contains('Glutenfri'), li:contains('Glutenfri')",
-      "vegan": "a:contains('Vegan'), a:contains('vegan'), p:contains('Vegan'), li:contains('Vegan')",
-      "energy": "li:contains('kcal'), p:contains('kcal'), li:contains('Energi'), p:contains('Energi')",
-      "sugars": "li:contains('sukker'), li:contains('Sukker'), p:contains('sukker'), p:contains('Sukker')",
-      "category": ".breadcrumbs a:last-child, nav[aria-label='breadcrumbs'] a:last-child, .breadcrumb a:last-child"
-    }
-  }
+    "bannerSkip": null,
+    "moreConfig": true,
+    "level": 2,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title'], meta[name='og:title']",
+            "price": "meta[property='product:price:amount'], meta[property='og:price:amount']",
+            "currency": "meta[property='product:price:currency'], meta[property='og:price:currency']",
+            "description": "meta[name='description'], meta[property='og:description']",
+            "images": "meta[property='og:image']",
+            "producer": "meta[property='product:brand']",
+            "abv": null,
+            "gluten_free": null,
+            "vegan": null,
+            "energy": null,
+            "sugars": null,
+            "category": null
+        },
+        "main": {
+            "name": "h1, h1.product__title, h1.product-title",
+            "price": ".price-item--regular, .price-item--sale, .price__current .price-item, .price__current .money, [data-product-price], .price .money",
+            "currency": ".price-item--regular, .price-item--sale, .price__current .price-item, .price .money",
+            "description": "[data-product-description], .product__description, .product-single__description, .product-description, .rte, .product__accordion .rte",
+            "images": ".product__media img, .product-gallery img, img[src*='/products/']",
+            "producer": ".product__vendor, .product-meta__vendor a, .product-vendor, a[class^='ai-vendor-name-']",
+            "abv": "p:contains('% ·'), span:contains('% ·'), li:contains('% ·')",
+            "gluten": "a:contains('Glutenfri'), a:contains('glutenfri'), p:contains('Glutenfri'), li:contains('Glutenfri')",
+            "vegan": "a:contains('Vegan'), a:contains('vegan'), p:contains('Vegan'), li:contains('Vegan')",
+            "energy": "li:contains('kcal'), p:contains('kcal'), li:contains('Energi'), p:contains('Energi')",
+            "sugars": "li:contains('sukker'), li:contains('Sukker'), p:contains('sukker'), p:contains('Sukker')",
+            "category": ".breadcrumbs a:last-child, nav[aria-label='breadcrumbs'] a:last-child, .breadcrumb a:last-child"
+        }
+    },
+    "purePlayer": true
 }

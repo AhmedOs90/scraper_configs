@@ -30,5 +30,6 @@
     "pagination": {
         "type": "scroll",
         "selector": "div[x-intersect\\.full='fetchAndRenderNextPage()']"
-    }
+    },
+    "purePlayer": true
 }
