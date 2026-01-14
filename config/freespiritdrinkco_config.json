@@ -20,9 +20,9 @@
             "producer": ".product-vendor a"
         }
     },
-
     "pagination": {
         "type": "link",
         "selector": "a.js-pagination-load-more"
-    }
+    },
+    "purePlayer": true
 }

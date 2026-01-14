@@ -22,5 +22,6 @@
         "type": "link",
         "selector": "a[aria-label=\"Next page\"]"
     },
-    "level": 2
+    "level": 2,
+    "purePlayer": true
 }

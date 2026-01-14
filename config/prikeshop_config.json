@@ -22,5 +22,6 @@
         "type": "button",
         "selector": ".woocommerce-pagination button[data-type=\"products\"]"
     },
-    "level": 2
+    "level": 2,
+    "purePlayer": true
 }

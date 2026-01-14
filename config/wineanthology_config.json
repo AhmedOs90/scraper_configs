@@ -19,5 +19,6 @@
     "pagination": {
         "type": "link",
         "selector": ".next-page a"
-    }
+    },
+    "purePlayer": true
 }

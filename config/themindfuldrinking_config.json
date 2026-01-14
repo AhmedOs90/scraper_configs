@@ -1,16 +1,13 @@
 {
-
     "rootUrl": "https://themindfuldrinking.com",
     "baseUrl": "https://themindfuldrinking.com/collections/all",
     "site_name": "themindfuldrinking",
     "seller": "seller",
     "collectionLinks": "/collections/",
     "skipCollectionLinksInProducts": true,
-
     "productsLinks": "/products/",
     "productLinkSelector": "",
     "productLinkAttribute": "",
-
     "bannerSkip": ".om-popup-close-x",
     "moreConfig": true,
     "selectors": {
@@ -24,10 +21,9 @@
             "description": ".product__description.rte.quick-add-hidden"
         }
     },
-
     "pagination": {
-      "type": "link",
-      "selector": ".pagination__item[aria-label='Next page']"
-    }
-
+        "type": "link",
+        "selector": ".pagination__item[aria-label='Next page']"
+    },
+    "purePlayer": true
 }

@@ -3,30 +3,30 @@
     "rootUrl": "https://dryvariety.com",
     "collectionLinks": "collections/",
     "productsLinks": "products/",
-    "seller":"seller",
-    "site_name":"dryvariety",
-    "moreConfig":true,
+    "seller": "seller",
+    "site_name": "dryvariety",
+    "moreConfig": true,
     "skipCollectionLinksInProducts": true,
     "selectors": {
-      "header": {
-        "name": "meta[property='og:title']",
-        "price": "meta[property='product:price:amount']",
-        "currency": "meta[property='product:price:currency']",
-        "description": "meta[name='description']",
-        "images": "meta[property='og:image']"
-      },
-      "main": {
-        "abv": ".metafield-multi_line_text_field",
-        "energy": ".metafield-multi_line_text_field",
-        "sugar": ".metafield-multi_line_text_field",
-        "gluten": "div[data-tooltip='Gluten Free'] .sr-only",
-        "vegan": "div[data-tooltip='Vegan'] .sr-only",
-        "producer": ".product-meta__vendor a"
-      }
+        "header": {
+            "name": "meta[property='og:title']",
+            "price": "meta[property='product:price:amount']",
+            "currency": "meta[property='product:price:currency']",
+            "description": "meta[name='description']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "abv": ".metafield-multi_line_text_field",
+            "energy": ".metafield-multi_line_text_field",
+            "sugar": ".metafield-multi_line_text_field",
+            "gluten": "div[data-tooltip='Gluten Free'] .sr-only",
+            "vegan": "div[data-tooltip='Vegan'] .sr-only",
+            "producer": ".product-meta__vendor a"
+        }
     },
     "pagination": {
-      "type": "link",
-      "selector": "a.pagination__nav-item[rel='next']"
-    }
-  }
-  
+        "type": "link",
+        "selector": "a.pagination__nav-item[rel='next']"
+    },
+    "purePlayer": true
+}

@@ -29,5 +29,6 @@
     "pagination": {
         "type": "link",
         "selector": "li.next a"
-    }
+    },
+    "purePlayer": true
 }

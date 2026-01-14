@@ -22,5 +22,6 @@
     "pagination": {
         "type": "button",
         "sselector": "button.infinite-loader__load-more-button"
-    }
+    },
+    "purePlayer": true
 }

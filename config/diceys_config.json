@@ -24,5 +24,6 @@
         "type": "link",
         "selector": "a.snize-pagination-next"
     },
-    "level": 1
+    "level": 1,
+    "purePlayer": true
 }

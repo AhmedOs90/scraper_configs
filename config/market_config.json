@@ -3,14 +3,11 @@
     "baseUrl": "https://market.nabeerclub.com/buy-non-alcoholic-beer/",
     "site_name": "nabeerclub",
     "seller": "seller",
-
     "collectionLinks": "",
     "skipCollectionLinksInProducts": true,
-
     "productsLinks": "",
     "productLinkSelector": "li.product > a.woocommerce-LoopProduct-link.woocommerce-loop-product__link",
     "productLinkAttribute": "href",
-    
     "moreConfig": true,
     "selectors": {
         "header": {
@@ -19,8 +16,8 @@
         },
         "main": {
             "price": "p.price .woocommerce-Price-amount bdi",
-            "currency": "p.price .woocommerce-Price-currencySymbol"        
+            "currency": "p.price .woocommerce-Price-currencySymbol"
         }
-    }
-
+    },
+    "purePlayer": true
 }

@@ -11,14 +11,15 @@
             "name": "meta[property='og:title']",
             "description": "meta[property='og:description']",
             "price": "meta[property='product:price:amount']",
-            "currency": "meta[property='product:price:currency']",            
+            "currency": "meta[property='product:price:currency']",
             "images": "meta[property='og:image']",
             "producer": "meta[property='product:brand']"
         },
-        "main": { }
+        "main": {}
     },
     "pagination": {
         "type": "button",
         "selector": "button.primary.amscroll-load-button.-after"
-    }
+    },
+    "purePlayer": true
 }

@@ -1,40 +1,41 @@
 {
-  "rootUrl": "https://www.drybutwet.com.au",
-  "baseUrl": "https://www.drybutwet.com.au/shop/",
-  "site_name": "drybutwet",
-  "seller": "seller",
-  "productsLinks": "/product/",
-  "collectionLinks": "/category/",
-  "productLinkSelector": "a[href*=\"/product/\"]",
-  "productLinkAttribute": "href",
-  "skipCollectionLinksInProducts": true,
-  "pagination": {
-    "type": "link",
-  "selector": "a.next.page-numbers"
-  },
-  "bannerSkip": null,
-  "moreConfig": true,
-  "selectors": {
-    "header": {
-      "name": "meta[property='og:title']",
-      "price": "meta[property='product:price:amount'], meta[property='og:price:amount']",
-      "currency": "meta[property='product:price:currency'], meta[property='og:price:currency']",
-      "description": "meta[name='description']",
-      "images": "meta[property='og:image']"
+    "rootUrl": "https://www.drybutwet.com.au",
+    "baseUrl": "https://www.drybutwet.com.au/shop/",
+    "site_name": "drybutwet",
+    "seller": "seller",
+    "productsLinks": "/product/",
+    "collectionLinks": "/category/",
+    "productLinkSelector": "a[href*=\"/product/\"]",
+    "productLinkAttribute": "href",
+    "skipCollectionLinksInProducts": true,
+    "pagination": {
+        "type": "link",
+        "selector": "a.next.page-numbers"
     },
-    "main": {
-      "name": "h1.product_title",
-"price": "table tr:last-child td:last-child",
-      "currency": ".price .amount",
-      "description": ".woocommerce-product-details__short-description, .entry-summary p",
-      "images": ".woocommerce-product-gallery__image img",
-      "abv": "li:has(strong:contains('Graduación'))",
-      "gluten": ".woocommerce-product-attributes-item--gluten .woocommerce-product-attributes-item__value",
-      "vegan": ".woocommerce-product-attributes-item--vegan .woocommerce-product-attributes-item__value",
-      "producer": ".product_meta .posted_in a",
-      "energy": null,
-      "sugars": null,
-      "category": ".breadcrumb a:last-child"
-    }
-  }
+    "bannerSkip": null,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "price": "meta[property='product:price:amount'], meta[property='og:price:amount']",
+            "currency": "meta[property='product:price:currency'], meta[property='og:price:currency']",
+            "description": "meta[name='description']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "name": "h1.product_title",
+            "price": "table tr:last-child td:last-child",
+            "currency": ".price .amount",
+            "description": ".woocommerce-product-details__short-description, .entry-summary p",
+            "images": ".woocommerce-product-gallery__image img",
+            "abv": "li:has(strong:contains('Graduación'))",
+            "gluten": ".woocommerce-product-attributes-item--gluten .woocommerce-product-attributes-item__value",
+            "vegan": ".woocommerce-product-attributes-item--vegan .woocommerce-product-attributes-item__value",
+            "producer": ".product_meta .posted_in a",
+            "energy": null,
+            "sugars": null,
+            "category": ".breadcrumb a:last-child"
+        }
+    },
+    "purePlayer": true
 }

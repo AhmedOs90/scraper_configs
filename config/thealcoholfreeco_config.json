@@ -7,25 +7,25 @@
     "site_name": "thealcoholfreeco",
     "moreConfig": true,
     "selectors": {
-      "header": {
-        "name": "meta[property='og:title']",
-        "price": "meta[property='product:price:amount']",
-        "currency": "meta[property='product:price:currency']",
-        "description": "meta[name='description']",
-        "images": "meta[property='og:image']"
-      },
-      "main": {
-        "abv": "th:contains('ABV') + td",
-        "energy": "th:contains('Energy') + td",
-        "sugar": "th:contains('Sugar') + td",
-        "gluten": "div[data-tooltip='Gluten Free'] .sr-only",
-        "vegan": "div[data-tooltip='Vegan'] .sr-only",
-        "producer": ".product-meta__vendor a"
-      }
+        "header": {
+            "name": "meta[property='og:title']",
+            "price": "meta[property='product:price:amount']",
+            "currency": "meta[property='product:price:currency']",
+            "description": "meta[name='description']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "abv": "th:contains('ABV') + td",
+            "energy": "th:contains('Energy') + td",
+            "sugar": "th:contains('Sugar') + td",
+            "gluten": "div[data-tooltip='Gluten Free'] .sr-only",
+            "vegan": "div[data-tooltip='Vegan'] .sr-only",
+            "producer": ".product-meta__vendor a"
+        }
     },
     "pagination": {
-      "type": "link",
-      "selector": "a.next.page-numbers"
-    }
-  }
-  
+        "type": "link",
+        "selector": "a.next.page-numbers"
+    },
+    "purePlayer": true
+}

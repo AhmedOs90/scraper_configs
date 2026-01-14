@@ -22,5 +22,6 @@
         "type": "link",
         "selector": "a.collection-load-more.button"
     },
-    "level": 1
+    "level": 1,
+    "purePlayer": true
 }

@@ -20,5 +20,6 @@
     "pagination": {
         "type": "link",
         "selector": ".pagination .page-item a[title='Next Page']"
-    }
+    },
+    "purePlayer": true
 }

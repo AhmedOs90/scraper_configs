@@ -3,33 +3,31 @@
     "rootUrl": "https://proofnomore.com",
     "collectionLinks": "collections/",
     "productsLinks": "products/",
-    "moreConfig":true,
-    "seller":"seller",
+    "moreConfig": true,
+    "seller": "seller",
     "bannerSkip": "button.klaviyo-close-form",
-    "site_name":"proofnomore",
+    "site_name": "proofnomore",
     "skipCollectionLinksInProducts": true,
     "currency": "USD",
     "selectors": {
-      "header": {
-        "name": "meta[property='og:title']",
-      "price": ".price__current span:not(.visually-hidden)",  
-        "currency": "meta[property='og:price:currency']",
-        "description": "meta[name='description']",
-        "images": "meta[property='og:image']"
-      },
-      "main": {
-        "abv": ".product-info__abv-unit-size span:first-of-type",
-      "price": ".price__current span:not(.visually-hidden)",  
-        "gluten": "div[data-tooltip='Gluten Free'] .sr-only",
-        "vegan": "div[data-tooltip='Vegan'] .sr-only",
-        "producer": ".product-info__vendor a, .product-info__vendor span"
-      }
+        "header": {
+            "name": "meta[property='og:title']",
+            "price": ".price__current span:not(.visually-hidden)",
+            "currency": "meta[property='og:price:currency']",
+            "description": "meta[name='description']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "abv": ".product-info__abv-unit-size span:first-of-type",
+            "price": ".price__current span:not(.visually-hidden)",
+            "gluten": "div[data-tooltip='Gluten Free'] .sr-only",
+            "vegan": "div[data-tooltip='Vegan'] .sr-only",
+            "producer": ".product-info__vendor a, .product-info__vendor span"
+        }
     },
     "pagination": {
-  "type": "link",
-  "selector": "li.pagination--next > a.pagination--item"
-    
+        "type": "link",
+        "selector": "li.pagination--next > a.pagination--item"
+    },
+    "purePlayer": true
 }
-
-
-  }

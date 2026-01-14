@@ -21,5 +21,6 @@
         "type": "button",
         "selector": ".product-list-loader"
     },
-    "level": 1
+    "level": 1,
+    "purePlayer": true
 }

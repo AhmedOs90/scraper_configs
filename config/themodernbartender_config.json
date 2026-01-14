@@ -20,5 +20,6 @@
         "type": "link",
         "selector": "nav.pagination a[aria-label=\"Go to next page\"]"
     },
-    "level": 0
+    "level": 0,
+    "purePlayer": true
 }

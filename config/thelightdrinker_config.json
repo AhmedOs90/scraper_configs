@@ -22,5 +22,6 @@
         "type": "link",
         "selector": "nav.elementor-pagination a.page-numbers:first-of-type"
     },
-    "level": 2
+    "level": 2,
+    "purePlayer": true
 }
