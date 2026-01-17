@@ -126,6 +126,7 @@ import vinyawine from "./sites/vinyawine.com.js";
 import mrwest from "./sites/mrwest.com.au.js";
 import vinmedmere from "./sites/vinmedmere.dk.js";
 import eng_whisky from "./sites/eng.whisky.dk.js";
+import topdrinks from "./sites/topdrinks.dk.js";
 
 // Registry map
 const registry = new Map([
@@ -251,7 +252,8 @@ const registry = new Map([
     ["vinyawine.com", vinyawine],
     ["mrwest.com.au", mrwest],
     ["vinmedmere.dk", vinmedmere],
-    ["eng.whisky.dk", eng_whisky]
+    ["eng.whisky.dk", eng_whisky],
+    ["topdrinks.dk", topdrinks]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {
