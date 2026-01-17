@@ -73,7 +73,7 @@ import soberciety from "./sites/soberciety.de.js";
 import positivedrinks from "./sites/positivedrinks.co.js";
 import softerdrink from "./sites/softerdrink.ca.js";
 import nakedlifespirits from "./sites/nakedlifespirits.com.au.js";
-import decantalo from "./sites/decantalo.co.uk.js";
+import decantalo from "./sites/decantalo.dk.js";
 import wineanthology from "./sites/wineanthology.com.js";
 import barrelandbatch from "./sites/barrelandbatch.com.au.js";
 import sierranevada from "./sites/sierranevada.com.js";
@@ -218,7 +218,7 @@ const registry = new Map([
     ["moju-zero.com", moju_zero],
     ["whisky.fr", whisky],
     ["thebelgianbeercompany.com", thebelgianbeercompany],
-    ["decantalo.co.uk", decantalo],
+    ["decantalo.dk", decantalo],
     ["kodriget.dk", kodriget],
     ["onestopwineshop.com", onestopwineshop],
     ["le-moderato.com", lemoderato],
