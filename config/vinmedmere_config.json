@@ -1,0 +1,27 @@
+{
+    "rootUrl": "https://vinmedmere.dk",
+    "baseUrl": "https://vinmedmere.dk/shop/230-alkoholfri-vine",
+    "site_name": "vinmedmere",
+    "seller": "seller",
+    "productLinkAttribute": "href",
+    "productLinkSelector": ".productItem .m-productlist-figure a",
+    "collectionLinks": "/shop/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "price": ".h4.m-product-price",
+            "description": ".m-product-additional-info.description[itemprop='description'] .long-desc"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": "ul.pagination li:last-child a"
+    },
+    "purePlayer": true,
+    "level": 1
+}
