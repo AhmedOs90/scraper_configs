@@ -1,0 +1,25 @@
+{
+    "rootUrl": "https://www.hjhansen-vin.dk",
+    "baseUrl": "https://www.hjhansen-vin.dk/andre-vintyper/alkoholfri",
+    "site_name": "hjhansen-vin",
+    "seller": "seller",
+    "productLinkAttribute": "href",
+    "productLinkSelector": "a.styles__ItemLink-sc-1x222rq-11",
+    "bannerSkip": ".coi-banner__accept",
+    "moreConfig": true,
+    "selectors": {
+        "header": {},
+        "main": {
+            "name": ".styles__Title-sc-1we36xg-9.ckIvZM",
+            "producer": ".styles__Subtitle-sc-1we36xg-10.gzBJrC",
+            "price": ".styles__ItemPrice-sc-1x222rq-20.giWTkj",
+            "description": ".Styles__Content-sc-yegztu-6"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": ".styles__PaginationButtonWrapper-sc-1s9fh3a-3 a"
+    },
+    "purePlayer": true,
+    "level": 1
+}

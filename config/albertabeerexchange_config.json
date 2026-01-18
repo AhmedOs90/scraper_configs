@@ -6,7 +6,6 @@
     "productLinkAttribute": "href",
     "productLinkSelector": ".product-col a.product-block-title",
     "bannerSkip": "button.dy-w-100.dy-mt-2.button-cta.button-large",
-    "skipCollectionLinksInProducts": true,
     "moreConfig": true,
     "selectors": {
         "header": {
