@@ -73,7 +73,7 @@ import soberciety from "./sites/soberciety.de.js";
 import positivedrinks from "./sites/positivedrinks.co.js";
 import softerdrink from "./sites/softerdrink.ca.js";
 import nakedlifespirits from "./sites/nakedlifespirits.com.au.js";
-import decantalo from "./sites/decantalo.co.uk.js";
+import decantalo from "./sites/decantalo.dk.js";
 import wineanthology from "./sites/wineanthology.com.js";
 import barrelandbatch from "./sites/barrelandbatch.com.au.js";
 import sierranevada from "./sites/sierranevada.com.js";
@@ -126,6 +126,9 @@ import vinyawine from "./sites/vinyawine.com.js";
 import mrwest from "./sites/mrwest.com.au.js";
 import vinmedmere from "./sites/vinmedmere.dk.js";
 import eng_whisky from "./sites/eng.whisky.dk.js";
+import topdrinks from "./sites/topdrinks.dk.js";
+import kjaersommerfeldt from "./sites/kjaersommerfeldt.dk.js";
+import bilkatogo from "./sites/bilkatogo.dk.js";
 
 // Registry map
 const registry = new Map([
@@ -218,7 +221,7 @@ const registry = new Map([
     ["moju-zero.com", moju_zero],
     ["whisky.fr", whisky],
     ["thebelgianbeercompany.com", thebelgianbeercompany],
-    ["decantalo.co.uk", decantalo],
+    ["decantalo.dk", decantalo],
     ["kodriget.dk", kodriget],
     ["onestopwineshop.com", onestopwineshop],
     ["le-moderato.com", lemoderato],
@@ -251,7 +254,10 @@ const registry = new Map([
     ["vinyawine.com", vinyawine],
     ["mrwest.com.au", mrwest],
     ["vinmedmere.dk", vinmedmere],
-    ["eng.whisky.dk", eng_whisky]
+    ["eng.whisky.dk", eng_whisky],
+    ["topdrinks.dk", topdrinks],
+    ["kjaersommerfeldt.dk", kjaersommerfeldt],
+    ["bilkatogo.dk", bilkatogo]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {

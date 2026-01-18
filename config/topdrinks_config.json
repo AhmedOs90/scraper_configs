@@ -1,0 +1,26 @@
+{
+    "rootUrl": "https://www.topdrinks.dk",
+    "baseUrl": "https://www.topdrinks.dk/alkoholfri",
+    "site_name": "topdrinks",
+    "seller": "seller",
+    "bannerSkip": ".age-validation-modal .modal-footer button.action.primary",
+    "productLinkAttribute": "href",
+    "productLinkSelector": "li.product-item a.product-item-link",
+    "moreConfig": true,
+    "selectors": {
+        "header": {},
+        "main": {
+            "producer": ".pdp-brand",
+            "name": ".page-title-wrapper.product h1.page-title span.base",
+            "price": ".price-box .special-price .price",
+            "description": ".product-short-description-read-less",
+            "images": ".pdp-brand"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": ".pages a.action.next"
+    },
+    "purePlayer": true,
+    "level": 1
+}
