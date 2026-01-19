@@ -129,6 +129,8 @@ import eng_whisky from "./sites/eng.whisky.dk.js";
 import topdrinks from "./sites/topdrinks.dk.js";
 import kjaersommerfeldt from "./sites/kjaersommerfeldt.dk.js";
 import bilkatogo from "./sites/bilkatogo.dk.js";
+import hjhansen_vin from "./sites/hjhansen-vin.dk.js";
+import fleggaard from "./sites/fleggaard.dk.js";
 
 // Registry map
 const registry = new Map([
@@ -257,7 +259,9 @@ const registry = new Map([
     ["eng.whisky.dk", eng_whisky],
     ["topdrinks.dk", topdrinks],
     ["kjaersommerfeldt.dk", kjaersommerfeldt],
-    ["bilkatogo.dk", bilkatogo]
+    ["bilkatogo.dk", bilkatogo],
+    ["hjhansen-vin.dk", hjhansen_vin],
+    ["fleggaard.dk", fleggaard]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {
