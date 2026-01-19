@@ -71,19 +71,25 @@ async function hydrateAndSettle(page, { maxMs = 6000 } = {}) {
  * - Wait for UI to render/settle
  * - Collect internal links and queue them
  */
-async function extractPageLinks({ page, crawler, config, url, rootUrl, log }) {
+async function extractPageLinks({ page, crawler, config, url, rootUrl, log , entryUrlSet }) {
   const cfg = normalizeConfig(config);
 
   // Only act on the main landing page(s) this mode is meant for
-  if (url !== cfg.baseUrl && url !== cfg.baseUrlS) return;
+  // if (url !== cfg.baseUrl && url !== cfg.baseUrlS) return;
+if (!entryUrlSet?.has(url)) return;
 
   log.info(`"pageLinks" mode: extracting links from base page ${url}`);
 
   // ---- 1) Pagination (same contract as extractDynamicLinks) ----
   try {
     if (cfg.pagination?.type === 'button') {
+      const baseForAbs =
+  typeof cfg.baseUrl === "string"
+    ? cfg.baseUrl
+    : url; // current page URL is always correct + works for multiple entrypoints
+
       await handleButtonPagination({
-        page, log, config: cfg, baseUrl: cfg.baseUrl,
+        page, log, config: cfg, siteComingBaseUrl: baseForAbs,
         productLinkSelector: cfg.productLinkSelector || null,
         productLinkAttribute: cfg.productLinkAttribute || 'href',
       });
@@ -92,7 +98,7 @@ await handleScrollPagination({
         page,
         log,
         config: cfg,
-        baseUrl: cfg.baseUrl,
+        siteComingBaseUrl: baseForAbs,
         productLinkSelector: cfg.productLinkSelector || null,
         productLinkAttribute: cfg.productLinkAttribute || 'href',
       });

@@ -1,14 +1,14 @@
 // pagination/handleButtonPagination.js
 import { delay } from '../helper.js';
-
 async function handleButtonPagination({
   page,
   log,
   config,
-  baseUrl,
-  productLinkSelector,       // may be null
-  productLinkAttribute,      // defaults to 'href'
+  siteComingBaseUrl,
+  productLinkSelector,
+  productLinkAttribute,
 }) {
+
   const productsLinksSubstr = config.productsLinks || null;
   const collectionLinksSubstr = config.collectionLinks || null;
 
@@ -18,7 +18,7 @@ async function handleButtonPagination({
   async function collect() {
     return page.$$eval(
       'a[href]',
-      (allAs, { baseUrl, productLinkSelector, productLinkAttribute, productsLinksSubstr, collectionLinksSubstr }) => {
+      (allAs, { siteComingBaseUrl, productLinkSelector, productLinkAttribute, productsLinksSubstr, collectionLinksSubstr }) => {
         const toAbs = (href, base) => {
           try { return new URL(href, base).href; } catch { return null; }
         };
@@ -44,13 +44,13 @@ async function handleButtonPagination({
         const chosen = pool.length ? pool : allAs.map(el => el.getAttribute(productLinkAttribute)).filter(Boolean);
 
         const normalized = chosen
-          .map(href => toAbs(href, baseUrl))
+          .map(href => toAbs(href, siteComingBaseUrl))
           .filter(Boolean)
           .filter(href => !(hasCollectionSubstr && href.includes(collectionLinksSubstr)));
 
         return [...new Set(normalized)];
       },
-      { baseUrl, productLinkSelector, productLinkAttribute, productsLinksSubstr, collectionLinksSubstr }
+      { siteComingBaseUrl, productLinkSelector, productLinkAttribute, productsLinksSubstr, collectionLinksSubstr }
     );
   }
 

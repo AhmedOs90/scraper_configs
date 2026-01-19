@@ -5,7 +5,7 @@ async function handleScrollPagination({
   page,
   log,
   config,
-  baseUrl,               // not used right now but kept for symmetry
+  siteComingBaseUrl,               // not used right now but kept for symmetry
   productLinkSelector,
   productLinkAttribute,  // not used here but kept for API consistency
 }) {
@@ -31,11 +31,7 @@ async function handleScrollPagination({
 
     // Fallback: substring on href
     if (productsLinksSubstr) {
-      let x = await page.$$eval(
-        `a[href*="${productsLinksSubstr}"]`,
-        els => els[0]
-      )
-      console.log("Found products links:", );
+     
       return page.$$eval(
         `a[href*="${productsLinksSubstr}"]`,
         els => els.length

@@ -95,7 +95,7 @@ async function waitForProductLinks(page, {
   }
   return false;
 }
-async function extractDynamicLinks({ page, crawler, config, url, baseUrl, rootUrl, log }) {
+async function extractDynamicLinks({ page, crawler, config, url, siteComingBaseUrl, rootUrl, log, entryUrlSet  }) {
 
   const cfg = normalizeConfig(config);
 
@@ -113,7 +113,7 @@ async function extractDynamicLinks({ page, crawler, config, url, baseUrl, rootUr
   // Pagination pass (button/scroll) BEFORE link-grab
   if (cfg.pagination?.type === 'button') {
     await handleButtonPagination({
-      page, log, config: cfg, baseUrl,
+      page, log, config: cfg, siteComingBaseUrl,
       productLinkSelector, productLinkAttribute,
     });
   } else if (cfg.pagination?.type === 'scroll') {
@@ -121,7 +121,7 @@ async function extractDynamicLinks({ page, crawler, config, url, baseUrl, rootUr
     page,
     log,
     config: cfg,
-    baseUrl,
+    siteComingBaseUrl,
     productLinkSelector,
     productLinkAttribute,
   });
@@ -183,7 +183,7 @@ async function extractDynamicLinks({ page, crawler, config, url, baseUrl, rootUr
 
   const rawLinks = await page.$$eval(
     'a[href], :scope',
-    (root, { baseUrl, productLinkSelector, productLinkAttribute, productsLinksSubstr, collectionLinksSubstr, skipCollections }) => {
+    (root, { siteComingBaseUrl, productLinkSelector, productLinkAttribute, productsLinksSubstr, collectionLinksSubstr, skipCollections }) => {
       const allAs = Array.from(document.querySelectorAll('a[href]'));
       const toAbs = (href, base) => { try { return new URL(href, base).href; } catch { return null; } };
       const sameOrigin = (href, base) => { try { return new URL(href).origin === new URL(base).origin; } catch { return false; } };
@@ -211,7 +211,7 @@ async function extractDynamicLinks({ page, crawler, config, url, baseUrl, rootUr
 
       const normalizeFilter = (hrefs) =>
         uniq(hrefs)
-          .map(href => toAbs(href, baseUrl))
+          .map(href => toAbs(href, siteComingBaseUrl))
           .filter(Boolean)
           // .filter(href => sameOrigin(href, rootUrl))
           .filter(href => !ignorable(href));
@@ -225,7 +225,7 @@ async function extractDynamicLinks({ page, crawler, config, url, baseUrl, rootUr
 
       return uniq([...normalizedProducts, ...normalizedCollections]);
     },
-    { baseUrl, productLinkSelector, productLinkAttribute, productsLinksSubstr, collectionLinksSubstr, skipCollections }
+    { siteComingBaseUrl, productLinkSelector, productLinkAttribute, productsLinksSubstr, collectionLinksSubstr, skipCollections }
   );
 
 

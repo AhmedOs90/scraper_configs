@@ -2,7 +2,7 @@ import { PuppeteerCrawler, purgeDefaultStorages } from 'crawlee';
 import {  populateLake, saveProductsToCSV } from '../services/lake_populations.js';
 import { refineData } from '../services/refine_data.js';
 import { sendScrapingReport, updateScraperStatus } from '../services/report.js';
-import { extractProductData, delay } from './helper.js';
+import { extractProductData, delay, resolveEntryUrls } from './helper.js';
 import fs from 'fs';
 import path from 'path';
 import { findDuplication, filterProducts } from '../filtering_layer/fliteration.js';
@@ -12,7 +12,6 @@ import extractAllLinks from './extractors/extractAllLinks.js';
 import extractPageLinks from './extractors/extractPageLinks.js';
 import extractDynamicLinks from './extractors/extractDynamicLinks.js';
 import { buildApiRefine } from '../services/refine_data_api.js';
-
 // Load root URLs
 const rootUrls = JSON.parse(fs.readFileSync('./config/roots.json', 'utf-8'));
 
@@ -51,6 +50,8 @@ function loadConfigForSite(rootUrl) {
 }
 
 async function runCrawlerForSite(config, rootUrl, last = false, opts = {}) {
+const entryUrls = resolveEntryUrls(config);
+const entryUrlSet = new Set(entryUrls);
 
   const commit = opts?.commit === true; // default false
   const refineFunctionString = opts?.refineFunctionString; // may be undefined (that’s fine)
@@ -60,7 +61,7 @@ async function runCrawlerForSite(config, rootUrl, last = false, opts = {}) {
   let newProductsCount = 0;
   let updatedProductsCount = 0;
 
-  const baseUrl = rootUrl;
+const siteComingBaseUrl = rootUrl;
   let seller = config.seller;
   let site_name = config.site_name;
 
@@ -85,7 +86,7 @@ async function runCrawlerForSite(config, rootUrl, last = false, opts = {}) {
     launchContext: {
       launchOptions: {
         // executablePath: '/usr/bin/chromium', // Corrected path
-        headless:  false, // Run in headless mode
+        // headless:  false, // Run in headless mode
         args: [
           '--no-sandbox', // Disable sandboxing for lower resource usage
           '--disable-setuid-sandbox',
@@ -154,7 +155,7 @@ if (
           Prod.site_name = site_name;
           Prod.seller_or_not_seller = seller;
           Prod.seller = seller;
-          Prod.site_url = baseUrl;
+          Prod.site_url = siteComingBaseUrl;
           publicProductList.push(Prod);
           // log.info(`Product extracted: ${JSON.stringify(Prod)}`);
 
@@ -180,15 +181,20 @@ if (
       }
 
 
-      if (!isProductPage || url === config.baseUrl || url === config.baseUrlS) {
+const isEntryUrl = entryUrlSet.has(url);
+
+if (!isProductPage || isEntryUrl) {
           if (config.productsLinks === "alllinks") {
             log.info(`"alllinks" mode enabled. Extracting all internal links on ${url}...`);
             await extractAllLinks({ page, crawler, url, rootUrl, log });
           }
           else if (config.productsLinks === "pageLinks"  ) {
-            if(url === config.baseUrl || url === config.baseUrlS)
+            if(isEntryUrl)
             log.info(`"pageLinks" mode enabled on ${url}`);
-            await extractPageLinks({ page, crawler, config,url, rootUrl, log });
+            // await extractPageLinks({ page, crawler, config,url, rootUrl, log });
+            // call site
+            await extractPageLinks({ page, crawler, config, url, rootUrl, log, entryUrlSet });
+
           }
           
           else if (
@@ -196,7 +202,7 @@ if (
           (config.collectionLinks && await page.$(`a[href*="${config.collectionLinks}"]`))
         ) {
             log.info(`"dynamic" link mode on ${url}`);
-            await extractDynamicLinks({ page, crawler, config, url, baseUrl, rootUrl, log });
+            await extractDynamicLinks({ page, crawler, config, url, siteComingBaseUrl, rootUrl, log, entryUrlSet });
           }
 
         else {
@@ -234,8 +240,10 @@ if (
   process.on('SIGTERM', cleanup); // Handle `forever stop`
 
   try {
-    const urls = [config.baseUrl, config.baseUrlS].filter(Boolean);
-    await crawler.run(urls);
+    // const urls = [config.baseUrl, config.baseUrlS].filter(Boolean);
+    // await crawler.run(urls);
+
+await crawler.run(entryUrls);
 
     // Update global report data
     scrapedDataReport.totalSites += 1;

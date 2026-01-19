@@ -63,3 +63,18 @@ const refineFromApi = opts?.refineFromApi;                  // use the function 
     return new Promise(resolve => setTimeout(resolve, time));
   }
   
+
+  export function resolveEntryUrls(config) {
+  const urls = [];
+
+  // Backward compatible: baseUrl can be string OR array
+  if (Array.isArray(config.baseUrl)) urls.push(...config.baseUrl);
+  else if (typeof config.baseUrl === 'string') urls.push(config.baseUrl);
+
+  // Backward compatible: baseUrlS can be string OR array
+  if (Array.isArray(config.baseUrlS)) urls.push(...config.baseUrlS);
+  else if (typeof config.baseUrlS === 'string') urls.push(config.baseUrlS);
+
+  // clean
+  return [...new Set(urls.filter(Boolean).map(u => String(u).trim()).filter(Boolean))];
+}
