@@ -1,0 +1,26 @@
+{
+    "rootUrl": "https://www.kjaersommerfeldt.dk",
+    "baseUrl": "https://www.kjaersommerfeldt.dk/vin/alkoholfri/c-58673",
+    "site_name": "kjaersommerfeldt",
+    "seller": "seller",
+    "bannerSkip": "#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll",
+    "productLinkAttribute": "href",
+    "productLinkSelector": ".product-card .image-wrapper a.product-link",
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "description": ".specification-description__description",
+            "price": ".product-price__price"
+        }
+    },
+    "pagination": {
+        "type": "button",
+        "selector": "button.pagination-button"
+    },
+    "purePlayer": true,
+    "level": 1
+}

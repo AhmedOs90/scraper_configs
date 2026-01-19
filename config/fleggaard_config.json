@@ -1,0 +1,25 @@
+{
+    "rootUrl": "https://www.fleggaard.dk",
+    "baseUrl": "https://www.fleggaard.dk/da-dk?q=alkoholfri",
+    "site_name": "fleggaard",
+    "seller": "seller",
+    "productLinkAttribute": "href",
+    "productLinkSelector": "li article > div[class*='mb-3.5'][class*='mt-2'][class*='w-full'][class*='px-2'] > a",
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "description": "div[class*='my-4'][class*='text-sm']",
+            "price": "div.pb-3.pt-4 div.font-bold"
+        }
+    },
+    "pagination": {
+        "type": "button",
+        "selector": "div.mt-8 button[type='button']"
+    },
+    "purePlayer": true,
+    "level": 1
+}

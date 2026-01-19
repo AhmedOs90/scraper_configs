@@ -1,0 +1,22 @@
+{
+    "rootUrl": "https://www.bilkatogo.dk",
+    "baseUrl": "https://www.bilkatogo.dk/kategori/drikkevarer/oel/alkoholfri-oel",
+    "site_name": "bilkatogo",
+    "seller": "seller",
+    "productsLinks": "/produkt/",
+    "collectionLinks": "/kategori/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "name": ".product-title.text-break",
+            "price": ".product-price__integer",
+            "description": "#content-description"
+        }
+    },
+    "purePlayer": true,
+    "level": 2
+}
