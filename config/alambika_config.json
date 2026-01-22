@@ -1,6 +1,6 @@
 {
     "rootUrl": "https://alambika.ca",
-    "baseUrl": "https://alambika.ca/collections/non-alcoholic-substitutes",
+    "baseUrl": ["https://alambika.ca/collections/non-alcoholic-substitutes"],
     "site_name": "alambika",
     "seller": "seller",
     "productsLinks": "/products/",

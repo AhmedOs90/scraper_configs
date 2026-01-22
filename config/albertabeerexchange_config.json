@@ -1,6 +1,6 @@
 {
     "rootUrl": "https://www.albertabeerexchange.ca",
-    "baseUrl": "https://www.albertabeerexchange.ca/non-alcoholic",
+    "baseUrl": ["https://www.albertabeerexchange.ca/non-alcoholic"],
     "site_name": "albertabeerexchange",
     "seller": "seller",
     "productLinkAttribute": "href",

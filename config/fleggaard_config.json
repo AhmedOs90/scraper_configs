@@ -1,8 +1,12 @@
 {
     "rootUrl": "https://www.fleggaard.dk",
-    "baseUrl": "https://www.fleggaard.dk/da-dk?q=alkoholfri",
+    "baseUrl": [
+        "https://www.fleggaard.dk/da-dk/vin/alkoholfri-vin",
+        "https://www.fleggaard.dk/da-dk/oel/alkoholfri",
+        "https://www.fleggaard.dk/da-dk/spiritus/alkoholfri-spiritus"],
     "site_name": "fleggaard",
     "seller": "seller",
+    "bannerSkip": "button.coi-banner__accept",
     "productLinkAttribute": "href",
     "productLinkSelector": "li article > div[class*='mb-3.5'][class*='mt-2'][class*='w-full'][class*='px-2'] > a",
     "moreConfig": true,

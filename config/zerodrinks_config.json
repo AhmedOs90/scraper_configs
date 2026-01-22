@@ -1,6 +1,6 @@
 {
     "rootUrl": "https://zerodrinks.co.za",
-    "baseUrl": "https://zerodrinks.co.za/collections/drinks-only",
+    "baseUrl": ["https://zerodrinks.co.za/collections/drinks-only"],
     "site_name": "zerodrinks",
     "seller": "seller",
     "productsLinks": "/products/",
