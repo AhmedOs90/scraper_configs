@@ -132,6 +132,7 @@ import bilkatogo from "./sites/bilkatogo.dk.js";
 import hjhansen_vin from "./sites/hjhansen-vin.dk.js";
 import fleggaard from "./sites/fleggaard.dk.js";
 import supervin from "./sites/supervin.dk.js";
+import uhrskov_vine from "./sites/uhrskov-vine.dk.js";
 
 // Registry map
 const registry = new Map([
@@ -263,7 +264,8 @@ const registry = new Map([
     ["bilkatogo.dk", bilkatogo],
     ["hjhansen-vin.dk", hjhansen_vin],
     ["fleggaard.dk", fleggaard],
-    ["supervin.dk", supervin]
+    ["supervin.dk", supervin],
+    ["uhrskov-vine.dk", uhrskov_vine]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {
