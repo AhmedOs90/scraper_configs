@@ -1,0 +1,26 @@
+{
+    "rootUrl": "https://www.supervin.dk",
+    "baseUrl": "https://www.supervin.dk/alkoholfri",
+    "site_name": "supervin",
+    "seller": "seller",
+    "productLinkAttribute": "href",
+    "productLinkSelector": "a.product-image[href]",
+    "bannerSkip": "#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll",
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "price": "app-price-table .price.volume-discounted-price",
+            "description": ".product-description"
+        }
+    },
+    "pagination": {
+        "type": "scroll",
+        "selector": "app-loading-icon .loader"
+    },
+    "purePlayer": true,
+    "level": 2
+}

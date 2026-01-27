@@ -1,0 +1,27 @@
+{
+    "rootUrl": "https://www.uhrskov-vine.dk",
+    "baseUrl": [
+        "https://www.uhrskov-vine.dk/produkter/vin/alkoholfri-vin",
+        "https://www.uhrskov-vine.dk/produkter/spiritus/alkoholfri-spiritus"
+    ],
+    "site_name": "uhrskov-vine",
+    "seller": "seller",
+    "productLinkAttribute": "href",
+    "productLinkSelector": "a.product-title",
+    "bannerSkip": "button#updateButton.coi-banner__decline",
+    "moreConfig": true,
+    "selectors": {
+        "header": {},
+        "main": {
+            "name": ".product-name",
+            "price": "div.regular-price[id^=\"product-price-\"] > span.price",
+            "description": ".short-description"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": "a[title=\"Next\"]"
+    },
+    "purePlayer": true,
+    "level": 1
+}
