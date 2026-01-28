@@ -1,0 +1,23 @@
+{
+    "rootUrl": "https://gourmetsaft.dk",
+    "baseUrl": "https://gourmetsaft.dk/shop",
+    "site_name": "gourmetsaft",
+    "seller": "seller",
+    "productsLinks": "/vare/",
+    "collectionLinks": "/vare-kategori/",
+    "bannerSkip": ".iubenda-cs-accept-btn",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "price": ".elementor-element-3dcf8836 span.woocommerce-Price-amount.amount",
+            "description": ".woocommerce-product-details__short-description, .elementor-widget-text-editor .elementor-widget-container"
+        }
+    },
+    "purePlayer": true,
+    "level": 1
+}
