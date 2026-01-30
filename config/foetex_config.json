@@ -1,0 +1,30 @@
+{
+    "rootUrl": "https://www.foetex.dk",
+    "baseUrl": [
+        "https://www.foetex.dk/vin-spiritus/vin/alkoholfri-vin/pl/alkoholfri-vin/",
+        "https://www.foetex.dk/vin-spiritus/spiritus/alkoholfri-spiritus/pl/alkoholfri-spiritus/"
+    ],
+    "site_name": "foetex",
+    "seller": "seller",
+    "bannerSkip": "button.uc-accept-button[data-action-type=\"accept\"]",
+    "productsLinks": "/produkter/",
+    "collectionLinks": "/vin-spiritus/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "price": ".price .after-price.ss01-price",
+            "description": ".description-section .description-wrapper .description"
+        }
+    },
+    "pagination": {
+        "type": "button",
+        "selector": ".paging .paging-controls .v-btn"
+    },
+    "purePlayer": true,
+    "level": 1
+}
