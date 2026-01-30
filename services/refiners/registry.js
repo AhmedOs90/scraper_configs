@@ -27,7 +27,7 @@ import thesobrmarket from "./sites/thesobrmarket.com.js";
 import thenewbar from "./sites/thenewbar.com.js";
 import collectivecraftbeer from "./sites/collectivecraftbeer.com.js";
 import freespiritdrinkco from "./sites/freespiritdrinkco.com.au.js";
-import vinello from "./sites/vinello.eu.js";
+import vinello from "./sites/vinello.dk.js";
 import danmurphys from "./sites/danmurphys.com.au.js";
 import market from "./sites/market.nabeerclub.com.js";
 import winesformothers from "./sites/winesformothers.com.js";
@@ -162,7 +162,7 @@ const registry = new Map([
     ["thenewbar.com", thenewbar],
     ["collectivecraftbeer.com", collectivecraftbeer],
     ["freespiritdrinkco.com.au", freespiritdrinkco],
-    ["vinello.eu", vinello],
+    ["vinello.dk", vinello],
     ["danmurphys.com.au", danmurphys],
     ["market.nabeerclub.com", market],
     ["winesformothers.com", winesformothers],
