@@ -1,0 +1,39 @@
+{
+  "rootUrl": "https://www.sluktoersten.dk",
+  "baseUrl":  [
+    "https://www.sluktoersten.dk/produkt-kategori/oel/alkohol-frie-ol/",
+    "https://www.sluktoersten.dk/produkt-kategori/brands/bree-free/"],
+  "site_name": "sluktoersten",
+  "seller": "seller",
+    "bannerSkip": "button.age-gate__submit--yes",
+
+  "productsLinks": "pageLinks",
+  "collectionLinks": "/produkt-kategori/",
+  "skipCollectionLinksInProducts": true,
+
+  "level": 2,
+  "moreConfig": true,
+
+  "selectors": {
+    "header": {
+      "name": "meta[property='og:title']",
+      "price": "meta[property='product:price:amount'], meta[property='og:price:amount']",
+      "currency": "meta[property='product:price:currency']",
+      "description": "meta[property='og:description']",
+      "images": "meta[property='og:image']"
+    },
+
+    "main": {
+      "name": "h1.product_title",
+      "price": "p.price span.woocommerce-Price-amount",
+      "currency": "p.price span.woocommerce-Price-currencySymbol",
+      "description": ".woocommerce-product-details__short-description, .woocommerce-Tabs-panel--description",
+      "images": ".woocommerce-product-gallery__image img"
+    }
+  },
+
+  "filters": {
+    "nonAlcoholicOnly": true
+  }
+
+}

@@ -1,8 +1,10 @@
 {
     "rootUrl": "https://eng.whisky.dk",
-    "baseUrl": ["https://eng.whisky.dk/shop/non-alcoholic-wine-and-1493s1.html",
-"https://eng.whisky.dk/shop/non-alcoholic-wine-1394s1.html",
-"https://eng.whisky.dk/shop/lyres-non-alcoholic-2039c1.html"],
+    "baseUrl": [
+        "https://eng.whisky.dk/shop/non-alcoholic-wine-and-1493s1.html",
+        "https://eng.whisky.dk/shop/non-alcoholic-wine-1394s1.html",
+        "https://eng.whisky.dk/shop/lyres-non-alcoholic-2039c1.html"
+    ],
     "site_name": "whisky",
     "seller": "seller",
     "productLinkAttribute": "href",

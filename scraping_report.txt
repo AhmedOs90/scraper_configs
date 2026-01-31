@@ -1,8 +1,8 @@
 Total Sites Scraped: 1
 Total Products Scraped: 0
 Details per Site:
-Site Name: whisky
-Root URL: https://eng.whisky.dk
+Site Name: sluktoersten
+Root URL: https://www.sluktoersten.dk
 Products Scraped: 0
 ---
 Scraped Root URLs:
@@ -34,7 +34,7 @@ https://thenonalcoholicclub.com
 https://thenewbar.com
 https://collectivecraftbeer.com
 https://freespiritdrinkco.com.au
-https://www.vinello.eu
+https://www.vinello.dk
 https://www.danmurphys.com.au
 https://market.nabeerclub.com
 https://winesformothers.com
@@ -134,7 +134,7 @@ https://threespiritdrinks.com
 https://www.obrienswine.ie
 https://www.thebelgianbeercompany.com
 https://www.virginwines.co.uk
-https://decantalo.co.uk
+https://www.decantalo.dk
 https://www.kodriget.dk
 https://beerfordriving.com
 https://www.goodpairdays.com
@@ -145,3 +145,15 @@ https://vinyawine.com
 https://mrwest.com.au
 https://vinmedmere.dk
 https://eng.whisky.dk
+https://www.topdrinks.dk
+https://www.kjaersommerfeldt.dk
+https://www.bilkatogo.dk
+https://www.hjhansen-vin.dk
+https://www.fleggaard.dk
+https://www.supervin.dk
+https://www.uhrskov-vine.dk
+https://gourmetsaft.dk
+https://www.foetex.dk
+https://osterbrovin.dk
+https://philipsonwine.com
+https://www.sluktoersten.dk
