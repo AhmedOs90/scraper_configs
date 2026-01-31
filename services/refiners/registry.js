@@ -44,7 +44,7 @@ import amavine from "./sites/amavine.nl.js";
 import joinclubsoda from "./sites/joinclubsoda.com.js";
 import keinundlow from "./sites/keinundlow.at.js";
 import noughtyaf from "./sites/noughtyaf.com.js";
-import pierre_chavin from "./sites/shop.pierre-chavin.com.js";
+import pierre_chavin from "./sites/pierre-chavin.com.js";
 import nonalcoholicwinesonline from "./sites/nonalcoholicwinesonline.com.js";
 import noblegreenwinesonline from "./sites/noblegreenwines.co.uk.js";
 import healthyplanetcanada from "./sites/healthyplanetcanada.com.js";
@@ -137,6 +137,8 @@ import gourmetsaft from "./sites/gourmetsaft.dk.js";
 import foetex from "./sites/foetex.dk.js";
 import osterbrovin from "./sites/osterbrovin.dk.js";
 import philipsonwine from "./sites/philipsonwine.com.js";
+import meny from "./sites/shop.meny.dk.js";
+import dengyldneloeve from "./sites/dengyldneloeve.dk.js";
 
 // Registry map
 const registry = new Map([
@@ -181,7 +183,7 @@ const registry = new Map([
     ["joinclubsoda.com", joinclubsoda],
     ["keinundlow.at", keinundlow],
     ["noughtyaf.com", noughtyaf],
-    ["shop.pierre-chavin.com", pierre_chavin],
+    ["pierre-chavin.com", pierre_chavin],
     ["nonalcoholicwinesonline.com", nonalcoholicwinesonline],
     ["noblegreenwines.co.uk", noblegreenwinesonline],
     ["healthyplanetcanada.com", healthyplanetcanada],
@@ -273,7 +275,9 @@ const registry = new Map([
     ["gourmetsaft.dk", gourmetsaft],
     ["foetex.dk", foetex],
     ["osterbrovin.dk", osterbrovin],
-    ["philipsonwine.com", philipsonwine]
+    ["philipsonwine.com", philipsonwine],
+    ["shop.meny.dk", meny],
+    ["dengyldneloeve.dk", dengyldneloeve]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {
