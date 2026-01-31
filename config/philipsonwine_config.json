@@ -1,0 +1,27 @@
+{
+    "rootUrl": "https://philipsonwine.com",
+    "baseUrl": "https://philipsonwine.com/vin/alle-vine/typer/alkoholfri-vin",
+    "site_name": "philipsonwine",
+    "seller": "seller",
+    "bannerSkip": "button[aria-label=\"OK\"]",
+    "productsLinks": "/produkter/",
+    "collectionLinks": "/vin/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "images": "meta[property='og:image']",
+            "description": "meta[property='og:description']",
+            "name": "meta[property='og:title']"
+        },
+        "main": {
+            "price": ".js-main-price"
+        }
+    },
+    "pagination": {
+        "type": "button",
+        "selector": "#LoadMoreButton"
+    },
+    "purePlayer": true,
+    "level": 1
+}
