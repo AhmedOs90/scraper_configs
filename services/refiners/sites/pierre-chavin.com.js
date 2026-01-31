@@ -1,4 +1,4 @@
-// services/refiners/sites/shop.pierre-chavin.com.js
+// services/refiners/sites/pierre-chavin.com.js
 export default async function refine(rootUrl, product, page) {
     product.country = "France";
     product.description = product.description

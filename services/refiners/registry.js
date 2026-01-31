@@ -44,7 +44,7 @@ import amavine from "./sites/amavine.nl.js";
 import joinclubsoda from "./sites/joinclubsoda.com.js";
 import keinundlow from "./sites/keinundlow.at.js";
 import noughtyaf from "./sites/noughtyaf.com.js";
-import pierre_chavin from "./sites/shop.pierre-chavin.com.js";
+import pierre_chavin from "./sites/pierre-chavin.com.js";
 import nonalcoholicwinesonline from "./sites/nonalcoholicwinesonline.com.js";
 import noblegreenwinesonline from "./sites/noblegreenwines.co.uk.js";
 import healthyplanetcanada from "./sites/healthyplanetcanada.com.js";
@@ -181,7 +181,7 @@ const registry = new Map([
     ["joinclubsoda.com", joinclubsoda],
     ["keinundlow.at", keinundlow],
     ["noughtyaf.com", noughtyaf],
-    ["shop.pierre-chavin.com", pierre_chavin],
+    ["pierre-chavin.com", pierre_chavin],
     ["nonalcoholicwinesonline.com", nonalcoholicwinesonline],
     ["noblegreenwines.co.uk", noblegreenwinesonline],
     ["healthyplanetcanada.com", healthyplanetcanada],

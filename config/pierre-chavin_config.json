@@ -1,5 +1,5 @@
 {
-    "rootUrl": "https://shop.pierre-chavin.com/en",
+    "rootUrl": "https://pierre-chavin.com",
     "baseUrl": "https://shop.pierre-chavin.com/en/13-alcohol-free-wine-collection",
     "site_name": "pierre-chavin",
     "seller": "seller",
@@ -23,6 +23,6 @@
         "type": "link",
         "selector": "a.smooth200.next.js-search-link"
     },
-    "level": 1,
-    "purePlayer": true
+    "purePlayer": true,
+    "level": 1
 }
