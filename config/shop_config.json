@@ -1,0 +1,26 @@
+{
+    "rootUrl": "https://shop.meny.dk",
+    "baseUrl": "https://shop.meny.dk/alkoholfri-vin",
+    "site_name": "meny",
+    "seller": "seller",
+    "productLinkAttribute": "href",
+    "productLinkSelector": "a.product-card-img-link",
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "producer": ".producer-info",
+            "name": ".u-no-margin.product-name",
+            "price": ".unit-price",
+            "description": ".introduction-text"
+        }
+    },
+    "pagination": {
+        "type": "button",
+        "selector": "#LoadMoreButton"
+    },
+    "purePlayer": true,
+    "level": 1
+}
