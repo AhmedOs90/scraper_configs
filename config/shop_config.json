@@ -1,28 +1,26 @@
 {
-    "rootUrl": "https://shop.pierre-chavin.com/en",
-    "baseUrl": "https://shop.pierre-chavin.com/en/13-alcohol-free-wine-collection",
-    "site_name": "pierre-chavin",
+    "rootUrl": "https://shop.meny.dk",
+    "baseUrl": "https://shop.meny.dk/alkoholfri-vin",
+    "site_name": "meny",
     "seller": "seller",
-    "bannerSkip": "button.tarteaucitronCTAButton.tarteaucitronAllow",
     "productLinkAttribute": "href",
-    "productLinkSelector": "article.product-miniature a.subimage-true",
+    "productLinkSelector": "a.product-card-img-link",
     "moreConfig": true,
     "selectors": {
         "header": {
-            "name": "meta[property='og:title']",
-            "description": "meta[property='og:description']",
-            "images": "meta[property='og:image']",
-            "price": "meta[property='product:price:amount']",
-            "currency": "meta[property='product:price:currency']"
+            "images": "meta[property='og:image']"
         },
         "main": {
-            "producer": "a.product-brand"
+            "producer": ".producer-info",
+            "name": ".u-no-margin.product-name",
+            "price": ".unit-price",
+            "description": ".introduction-text"
         }
     },
     "pagination": {
-        "type": "link",
-        "selector": "a.smooth200.next.js-search-link"
+        "type": "button",
+        "selector": "#LoadMoreButton"
     },
-    "level": 1,
-    "purePlayer": true
+    "purePlayer": true,
+    "level": 1
 }

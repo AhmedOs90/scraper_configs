@@ -1,0 +1,27 @@
+{
+    "rootUrl": "https://dengyldneloeve.dk",
+    "baseUrl": "https://dengyldneloeve.dk/kat/andet/oevrige-andet/alkohol-fri",
+    "site_name": "dengyldneloeve",
+    "seller": "seller",
+    "bannerSkip": "button.coi-banner__accept",
+    "productsLinks": "/produkt/",
+    "collectionLinks": "/kat/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "name": ".product-title.product_title",
+            "price": ".price.product-page-price",
+            "description": "#tab-description"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": "a.next.page-number"
+    },
+    "purePlayer": true,
+    "level": 1
+}
