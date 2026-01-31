@@ -11,7 +11,9 @@ export const AVAILABILITY = Object.freeze({
   
 
 
-const SET_STOCK_URL = `$http://34.141.37.120:3002/availability/set-stock`;
+// const SET_STOCK_URL = `$http://34.141.37.120:3002/availability/set-stock`;
+const SET_STOCK_URL = "http://34.141.37.120:3002/availability/set-stock";
+
 
 function statusToInStock(status) {
   if (status === "IN_STOCK") return true;
@@ -221,29 +223,59 @@ async function detectAddToCartState(page) {
     return { present: true, enabled: !disabled, reason: disabled ? "atc_disabled_attr" : "atc_enabled" };
   });
 }
-
 async function detectOutOfStockText(page) {
   const text = await page.evaluate(() => (document.body?.innerText || "").toLowerCase());
+
   return (
+    // EN
     text.includes("sold out") ||
     text.includes("out of stock") ||
     text.includes("currently unavailable") ||
     text.includes("temporarily unavailable") ||
     text.includes("notify me when available") ||
     text.includes("notify me") ||
-    text.includes("back in stock")
+
+    // DA (Danish)
+    text.includes("udsolgt") ||
+    text.includes("ikke på lager") ||
+    text.includes("ikke paa lager") ||
+    text.includes("midlertidigt udsolgt") ||
+    text.includes("kommer snart") ||
+    text.includes("giv besked") ||          // "notify me"
+    text.includes("giv mig besked") ||
+
+    // SV/NO (nice bonus)
+    text.includes("slutsåld") ||
+    text.includes("slut i lager") ||
+    text.includes("ikke på lager") ||
+    text.includes("utsolgt")
   );
 }
 
 async function detectNotFoundText(page) {
   const text = await page.evaluate(() => (document.body?.innerText || "").toLowerCase());
+  const title = await page.title().catch(() => "");
+  const t = (title || "").toLowerCase();
+
   return (
+    // EN
     text.includes("page not found") ||
     text.includes("product not found") ||
     text.includes("we couldn’t find") ||
-    text.includes("sorry, this page does not exist")
+    text.includes("sorry, this page does not exist") ||
+
+    // DA
+    text.includes("siden blev ikke fundet") ||
+    text.includes("side blev ikke fundet") ||
+    text.includes("vi kunne ikke finde") ||
+    text.includes("denne side findes ikke") ||
+
+    // common 404 signals
+    t.includes("404") ||
+    text.includes("404")
   );
 }
+
 
 // -------------------- batch runner --------------------
 function logVerdict(log, rowId, status, httpStatus, signals = []) {
@@ -376,6 +408,17 @@ export async function checkAvailabilityBatch(rows, opts = {}) {
       }
 
       const atc = await detectAddToCartState(page);
+
+//       // If ATC exists but is disabled, it's almost always OUT_OF_STOCK on Shopify themes
+// if (atc.present && !atc.enabled) {
+//   const out = makeResult(AVAILABILITY.OUT_OF_STOCK, httpStatus, finalUrl, [
+//     "add_to_cart_present_but_disabled",
+//     ...(atc.reason ? [atc.reason] : []),
+//   ]);
+//   logVerdict(log, rowId, out.status, out.httpStatus, out.signals);
+//   resultsById.set(rowId, out);
+//   return;
+// }
 
       // ✅ if ATC is enabled, trust it and return IN_STOCK
       if (atc.present && atc.enabled) {
