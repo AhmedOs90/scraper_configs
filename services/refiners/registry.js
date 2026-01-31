@@ -27,7 +27,7 @@ import thesobrmarket from "./sites/thesobrmarket.com.js";
 import thenewbar from "./sites/thenewbar.com.js";
 import collectivecraftbeer from "./sites/collectivecraftbeer.com.js";
 import freespiritdrinkco from "./sites/freespiritdrinkco.com.au.js";
-import vinello from "./sites/vinello.eu.js";
+import vinello from "./sites/vinello.dk.js";
 import danmurphys from "./sites/danmurphys.com.au.js";
 import market from "./sites/market.nabeerclub.com.js";
 import winesformothers from "./sites/winesformothers.com.js";
@@ -135,6 +135,8 @@ import supervin from "./sites/supervin.dk.js";
 import uhrskov_vine from "./sites/uhrskov-vine.dk.js";
 import gourmetsaft from "./sites/gourmetsaft.dk.js";
 import foetex from "./sites/foetex.dk.js";
+import osterbrovin from "./sites/osterbrovin.dk.js";
+import philipsonwine from "./sites/philipsonwine.com.js";
 
 // Registry map
 const registry = new Map([
@@ -162,7 +164,7 @@ const registry = new Map([
     ["thenewbar.com", thenewbar],
     ["collectivecraftbeer.com", collectivecraftbeer],
     ["freespiritdrinkco.com.au", freespiritdrinkco],
-    ["vinello.eu", vinello],
+    ["vinello.dk", vinello],
     ["danmurphys.com.au", danmurphys],
     ["market.nabeerclub.com", market],
     ["winesformothers.com", winesformothers],
@@ -269,7 +271,9 @@ const registry = new Map([
     ["supervin.dk", supervin],
     ["uhrskov-vine.dk", uhrskov_vine],
     ["gourmetsaft.dk", gourmetsaft],
-    ["foetex.dk", foetex]
+    ["foetex.dk", foetex],
+    ["osterbrovin.dk", osterbrovin],
+    ["philipsonwine.com", philipsonwine]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {
