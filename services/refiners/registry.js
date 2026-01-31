@@ -135,6 +135,7 @@ import supervin from "./sites/supervin.dk.js";
 import uhrskov_vine from "./sites/uhrskov-vine.dk.js";
 import gourmetsaft from "./sites/gourmetsaft.dk.js";
 import foetex from "./sites/foetex.dk.js";
+import osterbrovin from "./sites/osterbrovin.dk.js";
 
 // Registry map
 const registry = new Map([
@@ -269,7 +270,8 @@ const registry = new Map([
     ["supervin.dk", supervin],
     ["uhrskov-vine.dk", uhrskov_vine],
     ["gourmetsaft.dk", gourmetsaft],
-    ["foetex.dk", foetex]
+    ["foetex.dk", foetex],
+    ["osterbrovin.dk", osterbrovin]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {
