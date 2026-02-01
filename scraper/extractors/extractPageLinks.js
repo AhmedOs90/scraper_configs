@@ -150,7 +150,7 @@ await handleScrollPagination({
   // ---- 4) Link-based pagination (follow "next" and repeat) ----
   try {
     if (cfg.pagination?.type === 'link') {
-      await handleLinkPagination({ page, log, config: cfg, crawler });
+      await handleLinkPagination({ page, log, config: cfg, crawler, entryUrlSet });
     }
   } catch (e) {
     log.warning(`[pageLinks] link pagination failed: ${e.message}`);

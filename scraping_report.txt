@@ -1,8 +1,8 @@
 Total Sites Scraped: 1
 Total Products Scraped: 0
 Details per Site:
-Site Name: sluktoersten
-Root URL: https://www.sluktoersten.dk
+Site Name: audreyclairecork
+Root URL: https://www.audreyclairecork.com
 Products Scraped: 0
 ---
 Scraped Root URLs:
@@ -57,7 +57,7 @@ https://www.inn-express.com
 https://disndis.com
 https://drinkfreeco.com
 https://hopfnung.ch
-https://shop.pierre-chavin.com
+https://pierre-chavin.com
 https://nonalcoholicwinesonline.com
 https://noblegreenwines.co.uk
 https://www.healthyplanetcanada.com
@@ -156,4 +156,12 @@ https://gourmetsaft.dk
 https://www.foetex.dk
 https://osterbrovin.dk
 https://philipsonwine.com
+https://shop.meny.dk
+https://dengyldneloeve.dk
 https://www.sluktoersten.dk
+https://toolbeer.dk
+https://www.lbv.dk
+https://toolbeer.dk
+https://kolonnenull.com
+https://mashgang.com
+https://www.audreyclairecork.com

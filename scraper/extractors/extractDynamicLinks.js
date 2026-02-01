@@ -255,7 +255,7 @@ async function extractDynamicLinks({ page, crawler, config, url, siteComingBaseU
   }
 
   if (cfg.pagination?.type === 'link') {
-    await handleLinkPagination({ page, log, config: cfg, crawler });
+    await handleLinkPagination({ page, log, config: cfg, crawler, entryUrlSet });
   }
 }
 

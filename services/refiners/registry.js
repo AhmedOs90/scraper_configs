@@ -139,6 +139,8 @@ import osterbrovin from "./sites/osterbrovin.dk.js";
 import philipsonwine from "./sites/philipsonwine.com.js";
 import meny from "./sites/shop.meny.dk.js";
 import dengyldneloeve from "./sites/dengyldneloeve.dk.js";
+import toolbeer from "./sites/toolbeer.dk.js";
+import lbv from "./sites/lbv.dk.js";
 
 // Registry map
 const registry = new Map([
@@ -277,7 +279,9 @@ const registry = new Map([
     ["osterbrovin.dk", osterbrovin],
     ["philipsonwine.com", philipsonwine],
     ["shop.meny.dk", meny],
-    ["dengyldneloeve.dk", dengyldneloeve]
+    ["dengyldneloeve.dk", dengyldneloeve],
+    ["toolbeer.dk", toolbeer],
+    ["lbv.dk", lbv],
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {

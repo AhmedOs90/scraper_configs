@@ -1,0 +1,49 @@
+{
+  "rootUrl": "https://toolbeer.dk",
+  "baseUrl": "https://toolbeer.dk/collections/alcohol-free-beer",
+  "site_name": "toolbeer",
+  "seller": "seller",
+  "productsLinks": "/products/",
+  "collectionLinks": "/collections/",
+  "productLinkSelector": "a[href*='/products/']",
+  "productLinkAttribute": "href",
+
+  "skipCollectionLinksInProducts": true,
+  "moreConfig": true,
+  "level": 2,
+
+  "selectors": {
+    "header": {
+      "name": "meta[property='og:title']",
+      "price": "meta[property='product:price:amount'], meta[property='og:price:amount']",
+      "currency": "meta[property='product:price:currency'], meta[property='og:price:currency']",
+      "description": "meta[name='description'], meta[property='og:description']",
+      "images": "meta[property='og:image']",
+
+      "category": "meta[property='product:type']",
+      "country": "meta[property='product:country_of_origin']",
+      "producer": "meta[property='product:brand']"
+
+      
+    },
+
+    "main": {
+      "name": "main h1, h1",
+      "currency": "main [data-currency], [data-currency]",
+
+      "images": "main img[src*='cdn.shopify.com'], img[src*='cdn.shopify.com']",
+
+      "producer": "main .product__text, main .product__vendor, main h2, .product__text, .product__vendor",
+
+      "description": "main .product__description, main .product__description .rte, main .rte, .product__description, .product__description .rte, .rte"
+
+
+    }
+  },
+
+  "filters": {
+    "nonAlcoholic": true,
+    "maxAbv": 0.5,
+    "keywordsAny": ["alcohol free", "alkoholfri", "non-alcoholic", "non alcoholic", "0.0", "0,0", "0%"]
+  }
+}
