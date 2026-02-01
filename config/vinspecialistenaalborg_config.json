@@ -1,12 +1,12 @@
 {
   "rootUrl": "https://www.vinspecialistenaalborg.dk",
   "baseUrl": "https://www.vinspecialistenaalborg.dk/produkt-kategori/alkoholfri/",
-  "site_name": "vinspecialistenaalborg",
+  "site_name": "Vinspecialisten Aalborg",
   "seller": "seller",
 
   "productsLinks": "/shop/alkoholfri/",
-  "collectionLinks": "/produkt-kategori/",
-  "productLinkSelector": "a[href*='/shop/alkoholfri/']",
+  "collectionLinks": "/produkt-kategori/alkoholfri/",
+  "productLinkSelector": "a[href*='/shop/alkoholfri/'], a[href*='/shop/aktuelle-vine/']",
   "productLinkAttribute": "href",
   "skipCollectionLinksInProducts": true,
 
@@ -14,27 +14,43 @@
   "level": 2,
 
   "pagination": {
-    "type": "link",
-    "selector": "li.next a"
+    "type": "page",
+    "selector": "nav.woocommerce-pagination a.next"
   },
 
   "selectors": {
     "header": {
-      "name": "h1.product_title.entry-title",
-      "price": "p.price bdi font",
+      "name": "meta[property='og:title'], h1.product_title",
+      "price": "p.price bdi",
       "currency": "span.woocommerce-Price-currencySymbol",
-      "description": ".woocommerce-Tabs-panel--description",
+      "description": "meta[name='description'], .woocommerce-product-details__short-description",
       "images": "div.woocommerce-product-gallery img",
-      "category": "span.posted_in a"
+      "producer": "span.brand, .product_meta .brand",
+
+      "abv": null,
+      "gluten_free": null,
+      "vegan": null,
+      "energy": null,
+      "sugars": null,
+      "category": "nav.woocommerce-breadcrumb a:last-child"
     },
 
     "main": {
-      "name": "h1.product_title.entry-title",
-      "price": "p.price bdi font",
-      "currency": "span.woocommerce-Price-currencySymbol",
-      "description": ".woocommerce-Tabs-panel--description",
+      "name": "h1.product_title",
+      "price": "p.price, .woocommerce-Price-amount",
+      "currency": ".woocommerce-Price-currencySymbol",
+      "description": ".woocommerce-product-details__short-description",
+
       "images": "div.woocommerce-product-gallery img",
-      "category": "span.posted_in a"
+      "producer": ".product_meta a[href*='product_tag']",
+
+      
+      "abv": "p:contains('%'), li:contains('%'), span:contains('%')",
+      "gluten": "li:contains('Gluten'), p:contains('Gluten')",
+      "vegan": "li:contains('Vegan'), p:contains('Vegan')",
+      "energy": "li:contains('kcal'), p:contains('kcal')",
+      "sugars": "li:contains('sukker'), p:contains('sukker')",
+      "category": "nav.woocommerce-breadcrumb a:last-child"
     }
   }
 }
