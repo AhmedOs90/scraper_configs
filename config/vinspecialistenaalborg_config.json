@@ -1,0 +1,40 @@
+{
+  "rootUrl": "https://www.vinspecialistenaalborg.dk",
+  "baseUrl": "https://www.vinspecialistenaalborg.dk/produkt-kategori/alkoholfri/",
+  "site_name": "vinspecialistenaalborg",
+  "seller": "seller",
+
+  "productsLinks": "/shop/alkoholfri/",
+  "collectionLinks": "/produkt-kategori/",
+  "productLinkSelector": "a[href*='/shop/alkoholfri/']",
+  "productLinkAttribute": "href",
+  "skipCollectionLinksInProducts": true,
+
+  "moreConfig": true,
+  "level": 2,
+
+  "pagination": {
+    "type": "link",
+    "selector": "li.next a"
+  },
+
+  "selectors": {
+    "header": {
+      "name": "h1.product_title.entry-title",
+      "price": "p.price bdi font",
+      "currency": "span.woocommerce-Price-currencySymbol",
+      "description": ".woocommerce-Tabs-panel--description",
+      "images": "div.woocommerce-product-gallery img",
+      "category": "span.posted_in a"
+    },
+
+    "main": {
+      "name": "h1.product_title.entry-title",
+      "price": "p.price bdi font",
+      "currency": "span.woocommerce-Price-currencySymbol",
+      "description": ".woocommerce-Tabs-panel--description",
+      "images": "div.woocommerce-product-gallery img",
+      "category": "span.posted_in a"
+    }
+  }
+}
