@@ -1,0 +1,55 @@
+{
+  "rootUrl": "https://kundetbedste.com",
+  "baseUrl": "https://kundetbedste.com/collections/alkoholfri",
+  "site_name": "kundetbedste",
+  "seller": "seller",
+
+  "productsLinks": "/products/",
+  "collectionLinks": "/collections/",
+  "productLinkSelector": "a[href*='/products/']",
+  "productLinkAttribute": "href",
+  "skipCollectionLinksInProducts": true,
+
+  "moreConfig": true,
+  "level": 2,
+
+  "pagination": {
+    "type": "scroll",
+    "selector": "a[rel='next'], .pagination__item--next a"
+  },
+
+  "selectors": {
+    "header": {
+      "name": "meta[property='og:title']",
+      "price": "meta[property='product:price:amount'], meta[property='og:price:amount']",
+      "currency": "meta[property='product:price:currency'], meta[property='og:price:currency']",
+      "description": "meta[name='description'], meta[property='og:description']",
+      "images": "meta[property='og:image']",
+      "producer": "meta[property='product:brand']",
+
+      "abv": null,
+      "gluten_free": null,
+      "vegan": null,
+      "energy": null,
+      "sugars": null,
+      "category": null
+    },
+
+    "main": {
+      "name": "h1, h1.product__title",
+      "price": ".price-item--regular, .price__current .money",
+      "currency": ".price-item--regular, .price__current .money",
+      "description": ".product__description, .rte, .product__accordion .rte",
+      "images": ".product__media img, .product-gallery img, img[src*='/products/']",
+
+      "producer": ".product__vendor, .product-meta__vendor a",
+
+      "abv": "p:contains('%'), li:contains('%')",
+      "gluten": "a:contains('Glutenfri'), p:contains('Glutenfri'), li:contains('Glutenfri')",
+      "vegan": "a:contains('Vegan'), p:contains('Vegan'), li:contains('Vegan')",
+      "energy": "li:contains('kcal'), p:contains('kcal'), li:contains('Energi'), p:contains('Energi')",
+      "sugars": "li:contains('sukker'), p:contains('sukker'), li:contains('Sukker'), p:contains('Sukker')",
+      "category": ".breadcrumbs a:last-child, nav[aria-label='breadcrumbs'] a:last-child"
+    }
+  }
+}

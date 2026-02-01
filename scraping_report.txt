@@ -1,8 +1,8 @@
 Total Sites Scraped: 1
 Total Products Scraped: 0
 Details per Site:
-Site Name: audreyclairecork
-Root URL: https://www.audreyclairecork.com
+Site Name: Vinspecialisten Aalborg
+Root URL: https://www.vinspecialistenaalborg.dk
 Products Scraped: 0
 ---
 Scraped Root URLs:
@@ -159,9 +159,5 @@ https://philipsonwine.com
 https://shop.meny.dk
 https://dengyldneloeve.dk
 https://www.sluktoersten.dk
-https://toolbeer.dk
-https://www.lbv.dk
-https://toolbeer.dk
-https://kolonnenull.com
-https://mashgang.com
-https://www.audreyclairecork.com
+https://kundetbedste.com
+https://www.vinspecialistenaalborg.dk
