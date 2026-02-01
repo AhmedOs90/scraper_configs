@@ -139,6 +139,8 @@ import osterbrovin from "./sites/osterbrovin.dk.js";
 import philipsonwine from "./sites/philipsonwine.com.js";
 import meny from "./sites/shop.meny.dk.js";
 import dengyldneloeve from "./sites/dengyldneloeve.dk.js";
+import lbv from "./sites/lbv.dk.js";
+import toolbeer from "./sites/toolbeer.dk.js";
 import sluktoersten from "./sites/sluktoersten.dk.js";
 import kundetbedste from "./sites/kundetbedste.com.js";
 import vinspecialistenaalborg from "./sites/vinspecialistenaalborg.dk.js";
@@ -281,6 +283,8 @@ const registry = new Map([
     ["philipsonwine.com", philipsonwine],
     ["shop.meny.dk", meny],
     ["dengyldneloeve.dk", dengyldneloeve],
+    ["lbv.dk", lbv],
+    ["toolbeer.dk", toolbeer],,
     ["sluktoersten.dk", sluktoersten],
     ["kundetbedste.com", kundetbedste],
     ["vinspecialistenaalborg.dk", vinspecialistenaalborg],

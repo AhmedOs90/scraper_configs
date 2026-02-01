@@ -1,4 +1,4 @@
-async function handleLinkPagination({ page, log, config, crawler }) {
+async function handleLinkPagination({ page, log, config, crawler,entryUrlSet }) {
   log.info('Handling pagination for link-based collection page...');
 
   const nextPageLink = await page.$(config.pagination.selector);
@@ -7,6 +7,11 @@ async function handleLinkPagination({ page, log, config, crawler }) {
     const nextPageUrl = await nextPageLink.evaluate(el => el.href);
     if (nextPageUrl) {
       log.info(`Next page URL found: ${nextPageUrl}`);
+            
+
+      entryUrlSet?.add(nextPageUrl);
+
+
       await crawler.addRequests([nextPageUrl]);
     }
   } else {

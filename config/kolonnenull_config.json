@@ -1,0 +1,57 @@
+
+{
+  "rootUrl": "https://kolonnenull.com",
+  "baseUrl": "https://kolonnenull.com/collections/all",
+  "site_name": "kolonnenull",
+  "seller": "seller",
+
+  "productsLinks": "/products/",
+  "collectionLinks": "/collections/",
+  "productLinkSelector": "a[href*='/products/']",
+  "productLinkAttribute": "href",
+  "skipCollectionLinksInProducts": true,
+
+  "moreConfig": true,
+  "level": 2,
+
+  "selectors": {
+    "header": {
+      "name": "meta[property='og:title']",
+      "price": "meta[property='product:price:amount'], meta[property='og:price:amount']",
+      "currency": "meta[property='product:price:currency'], meta[property='og:price:currency']",
+      "description": "meta[name='description'], meta[property='og:description']",
+      "images": "meta[property='og:image']",
+
+      "producer": "meta[property='product:brand']",
+
+      "gluten_free": null,
+      "vegan": null,
+      "category": null,
+      "country": null
+    },
+
+    "main": {
+      "name": "h1.product__title, h1",
+      "price": ".price-item--regular, .price-item--sale, [data-product-price]",
+      "currency": ".price-item--regular, .price-item--sale",
+
+      "description": ".product-area__rich-text-block, .rte",
+      "images": ".product__media img, img[src*='/products/']",
+      "producer": ".product__vendor, .product-meta__vendor a",
+
+      "gluten": ".product-area__rich-text-block",
+      "vegan": ".product-area__rich-text-block",
+      "energy": ".product-area__rich-text-block",
+      "sugars": ".product-area__rich-text-block",
+
+      "category": ".breadcrumb a:last-child, nav[aria-label='breadcrumbs'] a:last-child"
+    }
+  },
+
+  "pagination": {
+    "type": "link",
+    "selector": "a.pagination__item--next, a[rel='next']"
+  }
+}
+
+

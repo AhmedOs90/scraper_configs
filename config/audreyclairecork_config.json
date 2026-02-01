@@ -1,0 +1,36 @@
+{
+  "rootUrl": "https://www.audreyclairecork.com",
+  "baseUrl": "https://www.audreyclairecork.com/sans-alcohol/non-alcoholic-collection/",
+  "site_name": "audreyclairecork",
+  "seller": "seller",
+
+  "productsLinks": "pageLinks",
+  "collectionLinks": "/sans-alcohol/",
+  "productLinkAttribute": "href",
+  "productLinkSelector": "a[href$='.html']:not([href*='/sans-alcohol/']):not([href*='/service/']):not([href*='/my-account']):not([href*='wishlist']):not([href*='compare']):not([href*='cart']):not([href*='checkout'])",
+  "purePlayer": true,
+  "skipCollectionLinksInProducts": true,
+  "moreConfig": true,
+
+  "selectors": {
+    "header": {
+      "name": "meta[property='og:title']",
+      "price": "meta[property='product:price:amount'], meta[property='og:price:amount']",
+      "currency": "meta[property='product:price:currency'], meta[property='og:price:currency']",
+      "description": "meta[name='description'], meta[property='og:description']",
+      "images": "meta[property='og:image']"
+    },
+    "main": {
+      "name": "h1",
+      "price": ".price, .product-price, .product-details__price, .current-price, [class*='price']",
+      "description": ".details, .product-details, .product-description, [class*='description'], .tabs"
+    }
+  },
+
+  "pagination": {
+    "type": "link",
+    "selector": ".pagination li.next a, li.next.enabled a"
+  },
+
+  "level": 1
+}
