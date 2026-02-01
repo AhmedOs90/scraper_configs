@@ -75,7 +75,7 @@ const siteComingBaseUrl = rootUrl;
     scraper_status: 'running', // Status: Running
     scraped_dates: startTime,
   };
-  await sendScrapingReport(initialReportData);
+  // await sendScrapingReport(initialReportData);
   // updateScraperStatus(rootUrl, 'running'); // Update scraper status
 
   // const auth = await authorize(); // Ensure Google Sheets auth is initialized
@@ -259,7 +259,7 @@ await crawler.run(entryUrls);
     };
 
     console.log(`Sending scraping report for ${site_name}...`);
-    await sendScrapingReport(reportData);
+    // await sendScrapingReport(reportData);
     // await updateScraperStatus(rootUrl, 'completed'); // Update scraper status
 
   }

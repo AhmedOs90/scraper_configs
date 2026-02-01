@@ -1,11 +1,28 @@
-import axios from "axios";
 import fs from "fs";
 import path from "path";
 import { checkAvailabilityBatch } from "./check_availability.js";
 import { updateScraperStatus } from "../services/report.js";
+import { supabase } from "../services/supabaseClient.js";
 
-const API_BASE_URL = "http://34.141.37.120:3002";
-const SET_STOCK_URL = `${API_BASE_URL}/availability/set-stock`;
+async function fetchAvailabilityPage({ from, to }) {
+  const { data, error } = await supabase
+    .from("availability")
+    .select("id,url,in_stock,product_id,reseller_id,country_id")
+    .not("url", "is", null)
+    .range(from, to);
+
+  if (error) throw error;
+  return data ?? [];
+}
+
+async function setStockSupabase(id, in_stock) {
+  const { error } = await supabase
+    .from("availability")
+    .update({ in_stock, updated_at: new Date().toISOString() })
+    .eq("id", id);
+
+  if (error) throw error;
+}
 
 function getSiteNameFromUrl(rootUrl) {
   const host = new URL(rootUrl).hostname.toLowerCase();
@@ -18,7 +35,9 @@ function getSiteNameFromUrl(rootUrl) {
   const secondLast = clean[clean.length - 2];
   const looksLikeCcTld = last.length === 2 && secondLast.length <= 3;
 
-  return looksLikeCcTld && clean.length >= 3 ? clean[clean.length - 3] : clean[clean.length - 2];
+  return looksLikeCcTld && clean.length >= 3
+    ? clean[clean.length - 3]
+    : clean[clean.length - 2];
 }
 
 function loadConfigForSite(rootUrl) {
@@ -40,16 +59,17 @@ export async function checkAllAvailability({
   headless = true,
   timeoutMs = 30000,
   verbose = false,
+
+  // paging controls
+  pageSize = 1000,           // how many rows to pull per Supabase query
+  maxRows = Infinity,        // set e.g. 5000 for testing
 } = {}) {
   await updateScraperStatus("validating availability", "running");
-  console.log(`📥 fetching full check-list...`);
-  const resp = await axios.get(`${API_BASE_URL}/availability/check-list`);
-  const availabilities = resp.data?.availabilities || [];
-
-  console.log(`✅ got ${availabilities.length} rows`);
 
   const allResults = [];
   let buffer = [];
+  let totalFetched = 0;
+  let page = 0;
 
   async function runBatchAndUpdateStock(currentBatch) {
     console.log(`🚀 running crawler batch size=${currentBatch.length}`);
@@ -59,7 +79,6 @@ export async function checkAllAvailability({
       { headless, timeoutMs, maxConcurrency: 1 }
     );
 
-    // merge + update DB one-by-one
     for (const r of batchResults) {
       const ref = currentBatch.find((b) => b.id === r.id);
       const signals = [ref?.configSignal, ...(r.signals || [])].filter(Boolean);
@@ -70,14 +89,13 @@ export async function checkAllAvailability({
         signals,
       };
 
-      // store output for returning
       allResults.push(
         verbose ? out : { id: out.id, url: out.url, status: out.status, httpStatus: out.httpStatus }
       );
 
       const desired = statusToInStock(out.status);
       if (desired === null) {
-        console.log(`⏭️ skip set-stock id=${out.id} status=${out.status}`);
+        console.log(`⏭️ skip update id=${out.id} status=${out.status}`);
         continue;
       }
 
@@ -88,46 +106,68 @@ export async function checkAllAvailability({
       }
 
       try {
-        await axios.post(SET_STOCK_URL, { id: out.id, in_stock: desired });
-        console.log(`✅ set-stock id=${out.id} in_stock=${desired}`);
+        await setStockSupabase(out.id, desired);
+        console.log(`✅ supabase set-stock id=${out.id} in_stock=${desired}`);
       } catch (e) {
-        console.error(`🔴 set-stock failed id=${out.id}: ${e.message}`);
+        console.error(`🔴 supabase set-stock failed id=${out.id}: ${e.message}`);
       }
     }
 
     console.log(`✅ batch done. totalProcessed=${allResults.length}`);
   }
 
-  for (const row of availabilities) {
-    if (!row.url) continue;
+  console.log(`📥 fetching check-list from Supabase (pageSize=${pageSize})...`);
 
-    let config = null;
-    let configSignal = null;
+  while (totalFetched < maxRows) {
+    const from = page * pageSize;
+    const to = from + pageSize - 1;
 
-    try {
-      config = loadConfigForSite(row.url);
-    } catch (e) {
-      configSignal = `config_missing:${e.message}`;
+    const rows = await fetchAvailabilityPage({ from, to });
+    if (!rows.length) break;
+
+    totalFetched += rows.length;
+    console.log(`✅ fetched ${rows.length} rows (totalFetched=${totalFetched})`);
+
+    for (const row of rows) {
+      if (!row.url) continue;
+
+      let config = null;
+      let configSignal = null;
+
+      try {
+        config = loadConfigForSite(row.url);
+      } catch (e) {
+        configSignal = `config_missing:${e.message}`;
+      }
+
+      buffer.push({
+        id: row.id,
+        url: row.url,
+        config,
+        configSignal,
+        currentInStock: !!row.in_stock,
+        meta: {
+          productId: row.product_id,
+          resellerId: row.reseller_id,
+          countryId: row.country_id,
+        },
+      });
+
+      if (buffer.length >= batchSize) {
+        await runBatchAndUpdateStock(buffer);
+        buffer = [];
+      }
+
+      if (allResults.length >= maxRows) break;
     }
 
-    buffer.push({
-      id: row.id,
-      url: row.url,
-      config,
-      configSignal,
-      currentInStock: typeof row.in_stock === "number" ? row.in_stock === 1 : !!row.in_stock,
-      meta: { productId: row.productId, resellerId: row.resellerId, countryId: row.countryId },
-    });
-
-    if (buffer.length >= batchSize) {
-      await runBatchAndUpdateStock(buffer);
-      buffer = [];
-    }
+    page++;
   }
 
   if (buffer.length) {
     await runBatchAndUpdateStock(buffer);
   }
+
   await updateScraperStatus("validating availability", "completed");
   return { totalProcessed: allResults.length, results: allResults };
 }
