@@ -1,0 +1,22 @@
+{
+    "rootUrl": "https://www.lbv.dk",
+    "baseUrl": "https://www.lbv.dk/collections/alkoholfrit",
+    "site_name": "lbv",
+    "seller": "seller",
+    "productsLinks": "/collections/alkoholfrit/products/",
+    "collectionLinks": "/collections/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "description": "meta[property='og:description']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "price": ".product__price"
+        }
+    },
+    "purePlayer": true,
+    "level": 1
+}
