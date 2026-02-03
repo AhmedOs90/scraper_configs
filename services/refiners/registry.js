@@ -141,6 +141,8 @@ import meny from "./sites/shop.meny.dk.js";
 import dengyldneloeve from "./sites/dengyldneloeve.dk.js";
 import lbv from "./sites/lbv.dk.js";
 import toolbeer from "./sites/toolbeer.dk.js";
+import mashgang from "./sites/mashgang.com.js";
+import audreyclairecork from "./sites/audreyclairecork.com.js";
 
 // Registry map
 const registry = new Map([
@@ -282,6 +284,8 @@ const registry = new Map([
     ["dengyldneloeve.dk", dengyldneloeve],
     ["lbv.dk", lbv],
     ["toolbeer.dk", toolbeer],
+    ["mashgang.com", mashgang],
+    ["audreyclairecork.com", audreyclairecork],
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {

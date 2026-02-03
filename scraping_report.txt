@@ -1,8 +1,8 @@
 Total Sites Scraped: 1
 Total Products Scraped: 0
 Details per Site:
-Site Name: audreyclairecork
-Root URL: https://www.audreyclairecork.com
+Site Name: mashgang
+Root URL: https://mashgang.com
 Products Scraped: 0
 ---
 Scraped Root URLs:

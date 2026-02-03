@@ -1,102 +1,143 @@
-// services/refiners/sites/mashgang.com.js
 export default async function refine(rootUrl, product, page) {
-  // 1) Get producer from JSON-LD (Shopify commonly provides it)
-  const brand = await page
-    .evaluate(() => {
-      const els = Array.from(document.querySelectorAll('script[type="application/ld+json"]'));
-      for (const el of els) {
-        try {
-          const data = JSON.parse(el.textContent);
+  // 1) Producer from analytics script (brand)
+  const brand = await page.evaluate(() => {
+    const s = document.querySelector("script.analytics")?.textContent || "";
+    if (!s) return null;
 
-          const candidates = Array.isArray(data)
-            ? data
-            : data && data['@graph']
-              ? data['@graph']
-              : [data];
+    let m = s.match(/"brand"\s*:\s*"([^"]+)"/);
+    if (m?.[1]) return m[1].trim();
 
-          const prod = candidates.find((x) => {
-            const t = x?.['@type'];
-            return t === 'Product' || (Array.isArray(t) && t.includes('Product'));
-          });
+    m = s.match(/['"]brand['"]\s*:\s*['"]([^'"]+)['"]/);
+    if (m?.[1]) return m[1].trim();
 
-          if (!prod) continue;
+    return null;
+  }).catch(() => null);
 
-          const b = prod.brand;
-          if (!b) return null;
-          if (typeof b === 'string') return b.trim();
-          if (typeof b?.name === 'string') return b.name.trim();
+  product.producer = product.producer || brand;
 
-          return null;
-        } catch (_) {}
+  // 2) Try to open the "Nutrition Breakdown" collapsible (if closed)
+  try {
+    const toggleHandle = await page.$$eval("[role='button'][aria-controls]", (btns) => {
+      const norm = (s) =>
+        String(s || "")
+          .replace(/\u00a0|\u202f/g, " ")
+          .replace(/\s+/g, " ")
+          .trim()
+          .toLowerCase();
+
+      for (const btn of btns) {
+        const text = norm(btn.innerText || btn.textContent);
+        if (text.includes("nutrition breakdown")) {
+          return {
+            ariaExpanded: btn.getAttribute("aria-expanded"),
+            controls: btn.getAttribute("aria-controls"),
+          };
+        }
       }
       return null;
-    })
-    .catch(() => null);
+    });
 
-  // producer fallback
-  product.producer = product.producer || brand || "Mash Gang";
+    if (toggleHandle?.controls && toggleHandle.ariaExpanded === "false") {
+      await page.evaluate((controlsId) => {
+        const btn = document.querySelector(`[role="button"][aria-controls="${controlsId}"]`);
+        if (btn) btn.click();
+      }, toggleHandle.controls);
 
-  // 2) Extract calories + sugar from the description area text
-  const nutrition = await page
-    .evaluate(() => {
-      const pickText = (sel) => {
-        const el = document.querySelector(sel);
-        return (el?.innerText || el?.textContent || "").trim();
-      };
+      await page.waitForTimeout(250);
+    }
+  } catch (_) {}
 
-      // Prefer description containers where your <span><ul> lives
-      let txt =
-        pickText(".product__description") ||
-        pickText(".product-description") ||
-        pickText(".rte") ||
-        pickText("[data-product-description]") ||
-        pickText("main");
+  // 3) Extract nutrition text (prefer opened content)
+  const nutritionText = await page.evaluate(() => {
+    const norm = (s) =>
+      String(s || "")
+        .replace(/\u00a0|\u202f/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
 
-      const lower = txt.toLowerCase();
+    const btns = Array.from(document.querySelectorAll('[role="button"][aria-controls]'));
+    let controlsId = null;
 
-      // Calories pattern:
-      // "Naturally low in calories (only 31 per can)"
-      let calories = null;
-      const m = txt.match(/calories\s*\(only\s*(\d+)\s*per\s*can\)/i);
-      if (m) calories = m[1];
+    for (const btn of btns) {
+      const t = norm(btn.innerText || btn.textContent).toLowerCase();
+      if (t.includes("nutrition breakdown")) {
+        controlsId = btn.getAttribute("aria-controls");
+        break;
+      }
+    }
 
-      // Sugar pattern:
-      // "No added sugar."
-      let sugar = null;
-      if (lower.includes("no added sugar")) sugar = "0";
+    if (controlsId) {
+      const panel = document.getElementById(controlsId);
+      const panelText = norm(panel?.innerText || panel?.textContent || "");
+      if (panelText) return panelText;
+    }
 
-      return { calories, sugar, txt: lower };
-    })
-    .catch(() => ({ calories: null, sugar: null, txt: "" }));
+    const blocks = Array.from(document.querySelectorAll(".alchemy-rte"));
+    for (const el of blocks) {
+      const t = norm(el.innerText || el.textContent);
+      if (/Per\s*100\s*ml\s*:/i.test(t)) return t;
+    }
 
-  if (!product.energy && nutrition.calories) product.energy = nutrition.calories; // "31"
-  if (!product.sugar && nutrition.sugar) product.sugar = nutrition.sugar;        // "0"
+    return norm(document.body?.innerText || "");
+  }).catch(() => null);
 
-  // 3) Vegan / Gluten-free => YES / NO (based on page text)
-  // If you prefer "UNKNOWN" when not mentioned, tell me and I’ll switch it.
-  if (!product.vegan) {
-    product.vegan = nutrition.txt.includes("vegan") ? "YES" : "NO";
-  }
-
-  if (!product.gluten_free) {
-    const hasGF =
-      nutrition.txt.includes("gluten-free") ||
-      nutrition.txt.includes("gluten free") ||
-      nutrition.txt.includes("glutenvrij");
-    product.gluten_free = hasGF ? "YES" : "NO";
-  }
-
-  // 4) Country (Mash Gang is UK; optionally detect US storefront by URL)
-  const url = page.url?.() || "";
-  product.country = product.country || (url.toLowerCase().includes("/en-us") ? "US" : "UK");
-
-  // 5) Clean description like your other refiners
-  if (product.description) {
-    product.description = product.description
-      .replace(/<[^>]+>/g, "")
+  if (nutritionText) {
+    const text = nutritionText
+      .replace(/\u00a0|\u202f/g, " ")
       .replace(/\s+/g, " ")
       .trim();
+
+    const per100Match = text.match(/Per\s*100\s*ml\s*:\s*(.*?)(?=Per\s*\d+\s*ml|$)/i);
+    const per100 = (per100Match?.[1] || "").trim();
+
+    if (per100) {
+      const energyFull =
+        per100.match(/Energy\s*([0-9]+(?:[.,][0-9]+)?)\s*kcal\s*\/\s*([0-9]+(?:[.,][0-9]+)?)\s*kJ/i) ||
+        per100.match(/Energy\s*([0-9]+(?:[.,][0-9]+)?)\s*kJ\s*\/\s*([0-9]+(?:[.,][0-9]+)?)\s*kcal/i);
+
+      if (energyFull && !product.energy) {
+        const a = energyFull[1].replace(",", ".");
+        const b = energyFull[2].replace(",", ".");
+        if (/kcal\s*\/\s*\d/i.test(energyFull[0])) product.energy = `${a} kcal/${b} kJ`;
+        else product.energy = `${a} kJ/${b} kcal`;
+      } else if (!product.energy) {
+        const kcalOnly = per100.match(/Energy\s*([0-9]+(?:[.,][0-9]+)?)\s*kcal/i);
+        const kjOnly = per100.match(/Energy\s*([0-9]+(?:[.,][0-9]+)?)\s*kJ/i);
+        if (kcalOnly?.[1]) product.energy = `${kcalOnly[1].replace(",", ".")} kcal`;
+        else if (kjOnly?.[1]) product.energy = `${kjOnly[1].replace(",", ".")} kJ`;
+      }
+
+      const sugarMatch =
+        per100.match(/of\s*which\s*sugars\s*([0-9]+(?:[.,][0-9]+)?)\s*g/i) ||
+        per100.match(/\bsugars\s*([0-9]+(?:[.,][0-9]+)?)\s*g/i);
+
+      if (sugarMatch?.[1] && !product.sugar) {
+        product.sugar = `${sugarMatch[1].replace(",", ".")} g`;
+      }
+    }
   }
+
+  // ✅ 4) Vegan + Gluten-free from description block
+  const flags = await page.evaluate(() => {
+    const el =
+      document.querySelector(".product__description.rte") ||
+      document.querySelector(".product__description") ||
+      document.querySelector(".rte");
+
+    const txt = (el?.innerText || el?.textContent || "")
+      .replace(/\u00a0|\u202f/g, " ")
+      .replace(/\s+/g, " ")
+      .trim()
+      .toLowerCase();
+
+    return {
+      hasVegan: /\bvegan\b/.test(txt),
+      hasGlutenFree: /\bgluten\s*-\s*free\b/.test(txt) || /\bgluten\s*free\b/.test(txt) || /\bglutenfree\b/.test(txt),
+    };
+  }).catch(() => ({ hasVegan: false, hasGlutenFree: false }));
+
+  if (!product.vegan && flags.hasVegan) product.vegan = "vegan";
+  if (!product.gluten_free && flags.hasGlutenFree) product.gluten_free = "glutenfree";
 
   return product;
 }
