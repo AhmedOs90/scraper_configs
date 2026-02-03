@@ -7,7 +7,7 @@
   "seller": "seller",
     "bannerSkip": "button.age-gate__submit--yes",
 
-  "productsLinks": "pageLinks",
+  "productsLinks": "/shop/oel",
   "collectionLinks": "/produkt-kategori/",
   "skipCollectionLinksInProducts": true,
 

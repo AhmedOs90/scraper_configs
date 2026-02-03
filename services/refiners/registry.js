@@ -143,6 +143,9 @@ import lbv from "./sites/lbv.dk.js";
 import toolbeer from "./sites/toolbeer.dk.js";
 import mashgang from "./sites/mashgang.com.js";
 import audreyclairecork from "./sites/audreyclairecork.com.js";
+import sluktoersten from "./sites/sluktoersten.dk.js";
+import kundetbedste from "./sites/kundetbedste.com.js";
+import vinspecialistenaalborg from "./sites/vinspecialistenaalborg.dk.js";
 
 // Registry map
 const registry = new Map([
@@ -286,6 +289,10 @@ const registry = new Map([
     ["toolbeer.dk", toolbeer],
     ["mashgang.com", mashgang],
     ["audreyclairecork.com", audreyclairecork],
+    ["sluktoersten.dk", sluktoersten],
+    ["kundetbedste.com", kundetbedste],
+    ["vinspecialistenaalborg.dk", vinspecialistenaalborg],
+
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {
