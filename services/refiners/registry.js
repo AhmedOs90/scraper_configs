@@ -284,11 +284,10 @@ const registry = new Map([
     ["shop.meny.dk", meny],
     ["dengyldneloeve.dk", dengyldneloeve],
     ["lbv.dk", lbv],
-    ["toolbeer.dk", toolbeer],,
+    ["toolbeer.dk", toolbeer],
     ["sluktoersten.dk", sluktoersten],
     ["kundetbedste.com", kundetbedste],
-    ["vinspecialistenaalborg.dk", vinspecialistenaalborg],
-
+    ["vinspecialistenaalborg.dk", vinspecialistenaalborg]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {

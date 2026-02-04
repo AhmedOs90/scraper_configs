@@ -8,6 +8,11 @@ export default async function refine(rootUrl, product, page) {
         .replace(/\s+/g, " ")
         .trim();
 
+    product.price = product.price
+        .replace('DKK  ', '')
+        .replace(',', '.')
+        .trim();
+
     product.images = await page.evaluate(() => {
         const scripts = document.querySelectorAll('script[type="application/ld+json"]');
 
