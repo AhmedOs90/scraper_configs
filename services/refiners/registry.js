@@ -147,6 +147,7 @@ import vinspecialistenaalborg from "./sites/vinspecialistenaalborg.dk.js";
 import alcoholfreedrinks from "./sites/alcoholfreedrinks.co.uk.js";
 import audreyclairecork from "./sites/audreyclairecork.com.js";
 import beerfordriving from "./sites/beerfordriving.com.js";
+import blackmarket from "./sites/blackmarket.co.nz.js";
 
 // Registry map
 const registry = new Map([
@@ -293,7 +294,8 @@ const registry = new Map([
     ["vinspecialistenaalborg.dk", vinspecialistenaalborg],
     ["alcoholfreedrinks.co.uk", alcoholfreedrinks],
     ["audreyclairecork.com", audreyclairecork],
-    ["beerfordriving.com", beerfordriving]
+    ["beerfordriving.com", beerfordriving],
+    ["blackmarket.co.nz", blackmarket]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {
