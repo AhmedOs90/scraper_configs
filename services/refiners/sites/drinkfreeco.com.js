@@ -1,41 +1,46 @@
 // services/refiners/sites/drinkfreeco.com.js
 export default async function refine(rootUrl, product, page) {
-  const scraped = await page.evaluate(() => {
-    const items = Array.from(
-      document.querySelectorAll(".icon-with-text.icon-with-text--vertical .icon-with-text__item .inline-richtext")
-    );
+    product.country = 'Singapore';
 
-    const out = { abv: null, country: null, energy: null };
+    product.description = product.description
+        .replace(/<[^>]+>/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
 
-    for (const el of items) {
-      const t = (el.textContent || "").trim();
+    const details = await page.evaluate(() => {
+        const spans = Array.from(
+            document.querySelectorAll(
+                'ul.icon-with-text.icon-with-text--vertical li.icon-with-text__item span.h4.inline-richtext'
+            )
+        );
 
-      // ABV: "ABV: 0.0%"
-      if (/^\s*abv\s*:/i.test(t)) {
-        const m = t.match(/(\d+(?:\.\d+)?)\s*%/);
-        out.abv = m ? `${m[1]}%` : t.replace(/^\s*abv\s*:\s*/i, "").trim();
-        continue;
-      }
+        let abv = null;
+        let energy = null;
 
-      // Energy: "Energy: 20kcal per 100ml" (keep as-is, or extract number if you want)
-      if (/^\s*energy\s*:/i.test(t)) {
-        out.energy = t.replace(/^\s*energy\s*:\s*/i, "").trim(); // e.g. "20kcal per 100ml"
-        continue;
-      }
+        for (const span of spans) {
+            const text = (span.textContent || '').trim();
 
-      // Country: typically just a country name, no colon (e.g., "Australia")
-      // Guard: ignore obviously non-country keys that use colon
-      if (!t.includes(":") && !out.country) {
-        out.country = t;
-      }
-    }
+            if (!abv && /^ABV\s*:/i.test(text)) {
+                abv = text.replace(/^ABV\s*:\s*/i, '').trim();
+            }
 
-    return out;
-  });
+            if (!energy && /^Energy\s*:/i.test(text)) {
+                const raw = text.replace(/^Energy\s*:\s*/i, '').trim();
+                energy = raw
+                    .replace(/\s*per\s*/i, ' / ')
+                    .replace(/(\d)\s*(kcal)\b/i, '$1 $2')
+                    .replace(/\s+/g, ' ')
+                    .trim();
+            }
 
-  if (!product.abv && scraped.abv) product.abv = scraped.abv;
-  if (!product.country && scraped.country) product.country = scraped.country;
-  if (!product.energy && scraped.energy) product.energy = scraped.energy;
+            if (abv && energy) break;
+        }
 
-  return product;
+        return { abv, energy };
+    });
+
+    if (details?.abv) product.abv = details.abv;
+    if (details?.energy) product.energy = details.energy;
+
+    return product;
 }
