@@ -145,6 +145,7 @@ import sluktoersten from "./sites/sluktoersten.dk.js";
 import kundetbedste from "./sites/kundetbedste.com.js";
 import vinspecialistenaalborg from "./sites/vinspecialistenaalborg.dk.js";
 import alcoholfreedrinks from "./sites/alcoholfreedrinks.co.uk.js";
+import audreyclairecork from "./sites/audreyclairecork.com.js";
 
 // Registry map
 const registry = new Map([
@@ -289,7 +290,8 @@ const registry = new Map([
     ["sluktoersten.dk", sluktoersten],
     ["kundetbedste.com", kundetbedste],
     ["vinspecialistenaalborg.dk", vinspecialistenaalborg],
-    ["alcoholfreedrinks.co.uk", alcoholfreedrinks]
+    ["alcoholfreedrinks.co.uk", alcoholfreedrinks],
+    ["audreyclairecork.com", audreyclairecork]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {
