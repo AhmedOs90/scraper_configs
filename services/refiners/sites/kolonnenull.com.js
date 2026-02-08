@@ -1,39 +1,32 @@
+// services/refiners/sites/kolonnenull.com.js
 export default async function refine(rootUrl, product, page) {
-
-    // --- Static truths about Kolonne Null ---
-    product.abv = '0.0%';
-    product.producer = 'Kolonne Null';
-    product.country = 'Germany';
-    product.currency = product.currency || 'EUR';
-
-    // --- Clean description ---
-    const desc = product.description
-        ?.replace(/<[^>]+>/g, ' ')
-        .replace(/&nbsp;/g, ' ')
-        .replace(/\s+/g, ' ')
+    product.country = "Germany";
+    product.price = (product.price || "").replace(",", ".").trim();
+    product.description = (product.description || "")
+        .replace(/<[^>]+>/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
+    product.name = product.name
+        .replace(' - KOLONNE NULL', '')
         .trim();
 
-    if (!desc) return product;
+    const text = product.producer || "";
 
-    // --- Vegan ---
-    if (!product.vegan && /vegan/i.test(desc)) {
-        product.vegan = 'Yes';
+    const abvMatch = text.match(/(\d+(?:[.,]\d+)?)\s*%?\s*vol/i);
+    if (abvMatch) {
+        product.abv = `${abvMatch[1].replace(",", ".")} % vol`;
     }
 
-    // --- Gluten free ---
-    if (!product.gluten_free && /glutenfrei/i.test(desc)) {
-        product.gluten_free = 'Yes';
+    const energyMatch = text.match(/(\d+(?:[.,]\d+)?)\s*kcal/i);
+    if (energyMatch) {
+        product.energy = `${energyMatch[1].replace(",", ".")} kcal`;
     }
 
-    // --- Energy ---
-    if (!product.energy && /kalorienarm/i.test(desc)) {
-        product.energy = 'Low calorie';
+    const sugarMatch = text.match(/(?:Zucker|sugars?)\s+(\d+(?:[.,]\d+)?)\s*g/i);
+    if (sugarMatch) {
+        product.sugar = `${sugarMatch[1].replace(",", ".")} g`;
     }
 
-    // --- Sugar ---
-    if (!product.sugar && /kalorienarm/i.test(desc)) {
-        product.sugar = 'Low sugar';
-    }
-
+    product.producer = null;
     return product;
 }
