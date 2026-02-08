@@ -1,103 +1,30 @@
 // services/refiners/sites/decantalo.co.uk.js
 export default async function refine(rootUrl, product, page) {
-  // Try to read the JSON-LD Product data
-  const ldProduct = await page.evaluate(() => {
-    const scripts = Array.from(
-      document.querySelectorAll("script[type='application/ld+json']")
-    );
+    product.country = 'Denmark';
+    product.price = product.price.replace(',', '.').trim();
 
-    const nodes = [];
-
-    for (const s of scripts) {
-      const text = s.textContent || s.innerText || "";
-      if (!text.trim()) continue;
-
-      try {
-        const json = JSON.parse(text);
-
-        if (Array.isArray(json)) {
-          nodes.push(...json);
-        } else {
-          nodes.push(json);
-        }
-      } catch (e) {
-        // Some sites put invalid JSON in there – just ignore and continue
-        continue;
-      }
+    if (product.name.includes(",")) {
+        const [producer, ...rest] = product.name.split(",");
+        product.producer = producer.trim();
+        product.name = rest.join(",").trim();
     }
 
-    if (!nodes.length) return null;
+    product.description = product.description
+        .replace(/<[^>]+>/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
 
-    const isProductType = (node) => {
-      if (!node || !node["@type"]) return false;
-      if (typeof node["@type"] === "string") return node["@type"] === "Product";
-      if (Array.isArray(node["@type"])) return node["@type"].includes("Product");
-      return false;
-    };
+    product.abv = await page.evaluate(() => {
+        const label = [...document.querySelectorAll('.metafield-rich_text_field p')]
+            .find(p => p.textContent.trim() === 'Alcohol %:');
 
-    const products = nodes.filter(isProductType);
-    if (!products.length) return null;
+        if (!label) return null;
 
-    // Prefer the first Product that has an Offer with price
-    const hasPrice = (p) => {
-      if (!p.offers) return false;
-      if (Array.isArray(p.offers)) {
-        return p.offers.some((o) => o && (o.price || o.priceCurrency));
-      }
-      return Boolean(p.offers.price || p.offers.priceCurrency);
-    };
+        const valueEl = label.nextElementSibling;
+        if (!valueEl) return null;
 
-    let chosen = products.find(hasPrice) || products[0];
+        return valueEl.textContent.trim() + '%';
+    });
 
-    return chosen || null;
-  });
-
-  if (!ldProduct) {
-    // Nothing to refine from JSON-LD, just return what we already have
     return product;
-  }
-
-  // Pull data from the chosen Product node
-  try {
-    // ---- PRICE & CURRENCY ----
-    if (ldProduct.offers) {
-      const offer = Array.isArray(ldProduct.offers)
-        ? ldProduct.offers[0]
-        : ldProduct.offers;
-
-      if (offer) {
-        if (!product.price && offer.price) {
-          product.price = String(offer.price);
-        }
-
-        if (!product.currency && offer.priceCurrency) {
-          product.currency = String(offer.priceCurrency);
-        }
-      }
-    }
-
-    // ---- PRODUCER / BRAND ----
-    if (!product.producer) {
-      if (ldProduct.manufacturer && ldProduct.manufacturer.name) {
-        product.producer =
-          Array.isArray(ldProduct.manufacturer.name)
-            ? ldProduct.manufacturer.name[0]
-            : ldProduct.manufacturer.name;
-      } else if (ldProduct.brand && ldProduct.brand.name) {
-        product.producer =
-          Array.isArray(ldProduct.brand.name)
-            ? ldProduct.brand.name[0]
-            : ldProduct.brand.name;
-      }
-    }
-
-    // Optional: hydrate name/description if you want
-    // if (!product.name && ldProduct.name) product.name = ldProduct.name;
-    // if (!product.description && ldProduct.description) product.description = ldProduct.description;
-  } catch (e) {
-    console.error("decantalo.co.uk refiner error:", e.message);
-  }
-
-
-  return product;
 }
