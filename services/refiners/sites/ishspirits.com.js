@@ -1,28 +1,36 @@
 // services/refiners/sites/ishspirits.com.js
 export default async function refine(rootUrl, product, page) {
-  product.producer = "Ish";
-  product.country = "DK";
-  product.currency = "KR"; // preserving your original logic
+    product.producer = 'Ish';
+    product.country = 'Denmark';
+    product.currency = 'DKK';
 
-  product.energy = await page.evaluate(() => {
-    const elements = document.querySelectorAll("span.metafield-multi_line_text_field");
-    for (let el of elements) {
-      if (el.textContent.includes("Energy:")) {
-        return el.textContent.split("Energy:")[1].split("\n")[0].trim();
-      }
-    }
-    return null;
-  }).catch(() => null);
+    product.price = product.price
+        .replace(/<[^>]*>/g, '')
+        .replace(/\s+/g, ' ')
+        .trim()
+        .match(/\d+[.,]\d{2}/g)
+        ?.pop()
+        ?.replace(',', '.') ?? null;
 
-  product.sugar = await page.evaluate(() => {
-    const elements = document.querySelectorAll("span.metafield-multi_line_text_field");
-    for (let el of elements) {
-      if (el.textContent.includes("of which sugars:")) {
-        return el.textContent.split("of which sugars:")[1].split("\n")[0].trim();
-      }
-    }
-    return null;
-  }).catch(() => null);
+    product.energy = await page.evaluate(() => {
+        const elements = document.querySelectorAll("span.metafield-multi_line_text_field");
+        for (let el of elements) {
+            if (el.textContent.includes("Energy:")) {
+                return el.textContent.split("Energy:")[1].split("\n")[0].trim();
+            }
+        }
+        return null;
+    }).catch(() => null);
 
-  return product;
+    product.sugar = await page.evaluate(() => {
+        const elements = document.querySelectorAll("span.metafield-multi_line_text_field");
+        for (let el of elements) {
+            if (el.textContent.includes("of which sugars:")) {
+                return el.textContent.split("of which sugars:")[1].split("\n")[0].trim();
+            }
+        }
+        return null;
+    }).catch(() => null);
+
+    return product;
 }
