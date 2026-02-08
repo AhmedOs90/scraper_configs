@@ -3,25 +3,24 @@
     "baseUrl": "https://freespiritdrinkco.com.au/collections/all",
     "site_name": "freespiritdrinkco",
     "seller": "seller",
-    "collectionLinks": "/collections/",
-    "productsLinks": "/products/",
-    "productLinkSelector": "a[href^=\"/collections/\"][href*=\"/products/\"]",
-    "productLinkAttribute": "href",
+    "productsLinks": "/collections/all/products/",
+    "collectionLinks": "/products/",
     "skipCollectionLinksInProducts": true,
     "moreConfig": true,
     "selectors": {
         "header": {
             "name": "meta[property='og:title']",
-            "price": "meta[property='og:price:amount'], meta[property='product:price:amount']",
-            "currency": "meta[property='og:price:currency'], meta[property='product:price:currency']",
+            "price": "meta[property='og:price:amount']",
+            "currency": "meta[property='og:price:currency']",
             "images": "meta[property='og:image']"
         },
         "main": {
-            "producer": ".product-vendor a"
+            "producer": ".product-vendor a",
+            "description": ".product-description"
         }
     },
     "pagination": {
-        "type": "link",
+        "type": "scroll",
         "selector": "a.js-pagination-load-more"
     },
     "purePlayer": true
