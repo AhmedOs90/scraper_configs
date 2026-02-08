@@ -3,47 +3,22 @@
     "baseUrl": "https://www.inn-express.com/product-ranges/low-no-alcohol",
     "site_name": "innexpress",
     "seller": "seller",
-    "productsLinks": "pageLinks",
-    "collectionLinks": "/product-ranges/low-no-alcohol/",
-    "productLinkSelector": "a[href^='/product-ranges/']:not([href*='/product-ranges/low-no-alcohol'])",
-    "productLinkAttribute": "href",
-    "skipCollectionLinksInProducts": true,
     "bannerSkip": "#age-check-form input[name='legal-drinking-age'][value='Yes']",
+    "productLinkAttribute": "href",
+    "productLinkSelector": "li.product-grid-item[data-productcode] > article a",
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "description": "meta[name='description']"
+        },
+        "main": {
+            "name": ".product-detail-heading.h2.productname",
+            "price": ".product-detail-price-module"
+        }
+    },
     "pagination": {
         "type": "button",
         "selector": ".load-more-btn"
     },
-    "moreConfig": true,
-    "selectors": {
-        "header": {
-            "producer": "#product-detail-summary-module li:has(.icon-summary-brand) p",
-            "country": "#product-detail-summary-module li:has(.icon-summary-country) p",
-            "abv": "#product-detail-summary-module li:has(.icon-summary-abv) p",
-            "vegan": "#product-detail-summary-module li:has(.icon-summary-features) p",
-            "gluten_free": "#product-detail-summary-module li:has(.icon-summary-features) p",
-            "price": "meta[property='product:price:amount']",
-            "currency": "meta[property='product:price:currency']",
-            "description": "meta[name='description'], meta[property='og:description']",
-            "images": "meta[property='og:image']",
-            "energy": null,
-            "sugars": null,
-            "category": null
-        },
-        "main": {
-            "name": "#product-detail-heading, h1.productname, h1.product-detail-heading",
-            "price": ".merlin-getstock-disc_price, .price-module .price",
-            "currency": ".price-module .price",
-            "description": ".product-description, #product-detail-summary-module + .content-module p, .product-detail-main p",
-            "images": "#product-media img",
-            "abv": "#product-detail-summary-module li:has(strong:contains('ABV'))",
-            "gluten": "#product-detail-summary-module li:has(strong:contains('Features'))",
-            "vegan": "#product-detail-summary-module li:has(strong:contains('Features'))",
-            "producer": "#product-detail-summary-module li:has(strong:contains('Brand'))",
-            "energy": ".nutritional li:has(strong:contains('Energy'))",
-            "sugars": ".nutritional li:has(strong:contains('Sugar')), .nutritional li:has(strong:contains('Sugars'))",
-            "country": "#product-detail-summary-module li:has(strong:contains('Country'))",
-            "category": "ul.breadcrumb li:nth-child(3)"
-        }
-    },
-    "purePlayer": true
+    "purePlayer": false
 }

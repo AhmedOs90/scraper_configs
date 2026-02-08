@@ -1,49 +1,83 @@
 // services/refiners/sites/inn-express.com.js
 export default async function refine(rootUrl, product, page) {
-    console.log("   called"  );
+    product.country = 'UK';
+    product.currency = 'GBP';
+    product.price = product.price
+        .replace('£', '')
+        .trim();
 
-  const scraped = await page.evaluate(() => {
-    const box = document.querySelector("#product-detail-summary-module");
-    if (!box) return {};
+    product.images = await page.evaluate(() => {
+        const scripts = document.querySelectorAll(
+            'script[type="application/ld+json"]'
+        );
 
-    const rows = Array.from(box.querySelectorAll("li"));
-    const out = {};
-    const getTxt = (el) => (el?.textContent || "").trim();
+        for (const s of scripts) {
+            try {
+                const json = JSON.parse(s.textContent);
 
-    for (const li of rows) {
-      const p = li.querySelector("p");
-      const strong = li.querySelector("strong");
-      const label = getTxt(strong).replace(/:$/, "").toLowerCase(); // e.g., "brand", "country", "abv", "features"
-      const full = getTxt(p);
+                const candidates = json['@graph'] ?? [json];
 
-      if (!label || !full) continue;
+                for (const obj of candidates) {
+                    const type = obj['@type'];
+                    const isProduct =
+                        type === 'Product' ||
+                        (Array.isArray(type) && type.includes('Product'));
 
-      const value = full.replace(/^\s*[^:]+:\s*/i, "").trim(); // strip "Label: "
+                    if (isProduct && obj.image) {
+                        if (Array.isArray(obj.image)) {
+                            return obj.image;
+                        }
 
-      if (label === "brand") {
-        out.producer = value || null;
-      } else if (label === "country") {
-        out.country = value || null;
-      } else if (label === "abv") {
-        // Normalize "0%" / "0.0%" etc
-        const m = value.match(/(\d+(?:\.\d+)?)\s*%/);
-        out.abv = m ? `${m[1]}%` : value;
-      } else if (label === "features") {
-        const v = value.toLowerCase();
-        if (/vegan/.test(v)) out.vegan = "vegan";
-        if (/(gluten[\s-]?free|glut[ée]n\s*frei|gf\b)/i.test(v)) out.gluten_free = "gluten free";
-      }
-    }
+                        if (typeof obj.image === 'string') {
+                            return [obj.image];
+                        }
 
-    return out;
-  });
+                        if (typeof obj.image === 'object' && obj.image.url) {
+                            return [obj.image.url];
+                        }
+                    }
+                }
+            } catch {}
+        }
 
-  // Assign back without clobbering anything you already captured
-  if (!product.producer && scraped.producer) product.producer = scraped.producer;
-  if (!product.country && scraped.country) product.country = scraped.country;
-  if (!product.abv && scraped.abv) product.abv = scraped.abv;
-  if (!product.vegan && scraped.vegan) product.vegan = scraped.vegan;
-  if (!product.gluten_free && scraped.gluten_free) product.gluten_free = scraped.gluten_free;
+        return [];
+    });
 
-  return product;
+    product.producer = await page.evaluate(() => {
+        const brandEl = document.querySelector(
+            '#product-detail-summary-module li p strong'
+        );
+
+        const items = document.querySelectorAll(
+            '#product-detail-summary-module li p'
+        );
+
+        for (const p of items) {
+            const text = p.textContent.trim();
+
+            if (text.startsWith('Brand:')) {
+                return text.replace('Brand:', '').trim();
+            }
+        }
+
+        return null;
+    });
+
+    product.abv = await page.evaluate(() => {
+        const items = document.querySelectorAll(
+            '#product-detail-summary-module li p'
+        );
+
+        for (const p of items) {
+            const text = p.textContent.trim();
+
+            if (text.startsWith('ABV:')) {
+                return text.replace('ABV:', '').trim();
+            }
+        }
+
+        return null;
+    });
+
+    return product;
 }
