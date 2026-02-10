@@ -151,6 +151,8 @@ import blackmarket from "./sites/blackmarket.co.nz.js";
 import drybutwet from "./sites/drybutwet.com.au.js";
 import kolonnenull from "./sites/kolonnenull.com.js";
 import mashgang from "./sites/mashgang.com.js";
+import surdyks from "./sites/surdyks.com.js";
+import thealcoholfreeco from "./sites/thealcoholfreeco.co.uk.js";
 
 // Registry map
 const registry = new Map([
@@ -301,7 +303,9 @@ const registry = new Map([
     ["blackmarket.co.nz", blackmarket],
     ["drybutwet.com.au", drybutwet],
     ["kolonnenull.com", kolonnenull],
-    ["mashgang.com", mashgang]
+    ["mashgang.com", mashgang],
+    ["surdyks.com", surdyks],
+    ["thealcoholfreeco.co.uk", thealcoholfreeco]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {
