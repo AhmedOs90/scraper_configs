@@ -1,41 +1,30 @@
 {
     "rootUrl": "https://thebluedolphinstore.com",
-    "baseUrl": "https://www.thebluedolphinstore.com/tienda-bebidas-sin-alcohol/",
+    "baseUrl": [
+        "https://www.thebluedolphinstore.com/categoria-producto/cervezas-sin-alcohol/",
+        "https://www.thebluedolphinstore.com/categoria-producto/vinos-sin-alcohol/",
+        "https://www.thebluedolphinstore.com/categoria-producto/destilados-sin-alcohol/"
+    ],
     "site_name": "thebluedolphinstore",
     "seller": "seller",
     "productsLinks": "/producto/",
     "collectionLinks": "/categoria-producto/",
-    "productLinkSelector": "a[href]",
-    "productLinkAttribute": "href",
-    "skipCollectionLinksInProducts": false,
-    "pagination": {
-        "type": "button",
-        "selector": "button[aria-label=\"Load More\"]"
-    },
-    "bannerSkip": null,
+    "skipCollectionLinksInProducts": true,
     "moreConfig": true,
     "selectors": {
         "header": {
             "name": "meta[property='og:title']",
-            "price": "meta[property='product:price:amount']",
-            "currency": "meta[property='product:price:currency']",
-            "description": "meta[name='description']",
             "images": "meta[property='og:image']"
         },
         "main": {
-            "name": "h1.product__title",
-            "price": ".price-item--regular",
-            "currency": ".price-item--regular",
-            "description": ".product__description",
-            "images": ".product__media img",
-            "abv": null,
-            "gluten": ".product__description:contains('gluten')",
-            "vegan": ".product__description:contains('vegan')",
-            "producer": ".product__vendor, .vendor",
-            "energy": null,
-            "sugars": null,
-            "category": ".breadcrumb li:last-child"
+            "price": ".woocommerce-Price-amount.amount",
+            "description": ".woocommerce-product-details__short-description",
+            "energy": ".woocommerce-Tabs-panel--description"
         }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": "a.next.page-numbers"
     },
     "purePlayer": true
 }
