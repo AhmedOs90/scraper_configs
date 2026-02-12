@@ -153,6 +153,7 @@ import kolonnenull from "./sites/kolonnenull.com.js";
 import mashgang from "./sites/mashgang.com.js";
 import surdyks from "./sites/surdyks.com.js";
 import thealcoholfreeco from "./sites/thealcoholfreeco.co.uk.js";
+import virginwines from "./sites/virginwines.co.uk.js";
 
 // Registry map
 const registry = new Map([
@@ -305,7 +306,8 @@ const registry = new Map([
     ["kolonnenull.com", kolonnenull],
     ["mashgang.com", mashgang],
     ["surdyks.com", surdyks],
-    ["thealcoholfreeco.co.uk", thealcoholfreeco]
+    ["thealcoholfreeco.co.uk", thealcoholfreeco],
+    ["virginwines.co.uk", virginwines]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {
