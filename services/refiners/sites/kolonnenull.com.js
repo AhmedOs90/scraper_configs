@@ -2,7 +2,7 @@
 export default async function refine(rootUrl, product, page) {
     product.country = "Germany";
     product.price = (product.price || "").replace(",", ".").trim();
-    product.description = (product.description || "")
+    product.description = product.description
         .replace(/<[^>]+>/g, "")
         .replace(/\s+/g, " ")
         .trim();

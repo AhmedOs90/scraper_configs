@@ -9,6 +9,5 @@ export default async function refine(rootUrl, product, page) {
     if (cutIndex !== -1) {
         product.description = product.description.slice(0, cutIndex + 1).trim();
     }
-
     return product;
 }

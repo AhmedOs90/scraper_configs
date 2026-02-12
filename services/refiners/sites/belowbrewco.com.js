@@ -31,6 +31,5 @@ export default async function refine(rootUrl, product, page) {
         const tableText = await page.$eval('.product-description table', el => el.innerText);
         parseNutrition(tableText);
     } catch (e) {}
-
     return product;
 }

@@ -29,6 +29,5 @@ export default async function refine(rootUrl, product, page) {
     }
 
     product.name = product.name.replace(' alkoholfrei', '').trim();
-
     return product;
 }

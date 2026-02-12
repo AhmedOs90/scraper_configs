@@ -1,5 +1,6 @@
 // services/refiners/sites/uhrskov-vine.dk.js
 export default async function refine(rootUrl, product, page) {
+    
     product.country = 'Denmark';
     product.currency = 'DKK';
 
@@ -52,7 +53,6 @@ export default async function refine(rootUrl, product, page) {
         const value = match[1].replace(',', '.');
         return value + '%';
     });
-
 
     return product;
 }

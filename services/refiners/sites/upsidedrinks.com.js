@@ -56,13 +56,11 @@ export default async function refine(rootUrl, product, page) {
                         const name = (brand.name || "").toString().trim();
                         return name || null;
                     }
-                } catch {
-                    // continue
-                }
+                } catch { }
             }
 
             return null;
         })
-        .catch(() => null);
+    .catch(() => null);
     return product;
 }

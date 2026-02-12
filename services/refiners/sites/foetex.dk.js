@@ -31,6 +31,5 @@ export default async function refine(rootUrl, product, page) {
     });
 
     product.producer = producer;
-
     return product;
 }

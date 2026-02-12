@@ -31,6 +31,5 @@ export default async function refine(rootUrl, product, page) {
     if (details['Alcohol'] === 'Alcohol free' && abvIsNull) {
         product.abv = '<0.5%';
     }
-
     return product;
 }

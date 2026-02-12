@@ -67,6 +67,5 @@ export default async function refine(rootUrl, product, page) {
     if (!product.sugar && scraped.sugars) product.sugar = scraped.sugars;
     if (!product.vegan && scraped.vegan) product.vegan = scraped.vegan;
     if (!product.gluten_free && scraped.glutenFree) product.gluten_free = scraped.glutenFree;
-
     return product;
 }

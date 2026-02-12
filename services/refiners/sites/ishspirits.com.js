@@ -31,6 +31,5 @@ export default async function refine(rootUrl, product, page) {
         }
         return null;
     }).catch(() => null);
-
     return product;
 }

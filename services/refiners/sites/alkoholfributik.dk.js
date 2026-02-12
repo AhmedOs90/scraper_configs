@@ -29,6 +29,5 @@ export default async function refine(rootUrl, product, page) {
     });
 
     if (brand) product.producer = brand;
-
     return product;
 }

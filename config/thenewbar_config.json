@@ -5,11 +5,7 @@
     "seller": "seller",
     "productsLinks": "/products/",
     "collectionLinks": "/collections/",
-    "productLinkSelector": "a[href*=\"/products/\"]",
-    "productLinkAttribute": "href",
     "skipCollectionLinksInProducts": true,
-    "level": 1,
-    "bannerSkip": null,
     "moreConfig": true,
     "selectors": {
         "header": {
@@ -33,7 +29,8 @@
     },
     "pagination": {
         "type": "link",
-        "selector": "page-pagination .pagination__nav a[rel='next'], .pagination__nav a[aria-label='Next']"
+        "selector": ".pagination__nav a[rel=\"next\"]"
     },
+    "level": 1,
     "purePlayer": true
 }

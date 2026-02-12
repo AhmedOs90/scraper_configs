@@ -23,6 +23,5 @@ export default async function refine(rootUrl, product, page) {
         product.producer = producerName;
         product.name = productName;
     }
-
     return product;
 }

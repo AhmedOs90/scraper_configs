@@ -1,4 +1,4 @@
-// services/refiners/sites/decantalo.co.uk.js
+// services/refiners/sites/kodriget.dk.js
 export default async function refine(rootUrl, product, page) {
     product.country = 'Denmark';
     product.price = product.price.replace(',', '.').trim();
@@ -25,6 +25,5 @@ export default async function refine(rootUrl, product, page) {
 
         return valueEl.textContent.trim() + '%';
     });
-
     return product;
 }

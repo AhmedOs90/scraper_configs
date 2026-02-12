@@ -1,5 +1,4 @@
 // services/refiners/sites/zepeim.com.js
-
 export default async function refine(rootUrl, product, page) {
     const details = await page.evaluate(() => {
         const items = document.querySelectorAll(".productView-description-tabContent ul li");
@@ -74,6 +73,5 @@ export default async function refine(rootUrl, product, page) {
 
         product.price = rawPrice;
     }
-
     return product;
 }

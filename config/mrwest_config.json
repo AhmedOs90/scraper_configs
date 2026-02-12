@@ -22,5 +22,5 @@
         "selector": ".woocommerce-pagination a.next"
     },
     "level": 1,
-    "purePlayer": true
+    "purePlayer": false
 }

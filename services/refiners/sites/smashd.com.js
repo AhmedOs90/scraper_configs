@@ -29,6 +29,5 @@ export default async function refine(rootUrl, product, page) {
             product.sugar = unit === 'g' || unit === 'mg' ? `${value}${unit}` : value;
         }
     }
-
     return product;
 }

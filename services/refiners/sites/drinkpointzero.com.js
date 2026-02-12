@@ -7,9 +7,9 @@ export default async function refine(rootUrl, product, page) {
         return el ? el.innerText : '';
     });
 
-    const match = descText.match(/Alcohol Content:\s*([\d.]+)%\s*ABV/i);
+    const match = descText.match(/Alcohol Content:\s*([\d.]+)%?\s*ABV/i);
     if (match) {
-        product.abv = match[1];
+        product.abv = match[1].includes('%') ? match[1] : `${match[1]}%`;
     }
 
     if (product.name && product.name.includes(' - ')) {
@@ -17,6 +17,5 @@ export default async function refine(rootUrl, product, page) {
         product.producer = producer.trim();
         product.name = rest.join(' - ').trim();
     }
-
     return product;
 }

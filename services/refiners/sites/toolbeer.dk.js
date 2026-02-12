@@ -63,6 +63,5 @@ export default async function refine(rootUrl, product, page) {
             product.sugar = `${lessThan ? "<" : ""}${val} g`;
         }
     }
-
     return product;
 }

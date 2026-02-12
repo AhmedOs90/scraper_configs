@@ -1,17 +1,12 @@
+// services/refiners/sites/soberciety.de.js
 export default async function refine(rootUrl, product, page) {
     product.price = product.price.replace(',', '.').trim();
-
-    if (product.country) {
-        product.country = product.country.replace(/\s*\([^)]*\)/g, '').trim();
-    }
-
-    if (product.description) {
-        product.description = product.description
-            .replace(/<[^>]*>/g, '')
-            .replace(/\s+/g, ' ')
-            .trim();
-    }
-
+    product.country = 'Germany';
+    product.description = product.description
+        ?.replace(/<[^>]*>/g, '')
+        ?.replace(/\s+/g, ' ')
+        ?.trim();
+        
     const data = await page.evaluate(() => {
         const result = { abv: null, energy: null, sugar: null };
         const table = document.querySelector('.nutrition-table');
@@ -59,7 +54,6 @@ export default async function refine(rootUrl, product, page) {
     product.energy = data.energy;
     product.sugar = data.sugar;
 
-    // Fallback 1
     if (!product.abv) {
         product.abv = await page.evaluate(() => {
             const el = document.querySelector('.icon-list .has-icon p');
@@ -70,7 +64,6 @@ export default async function refine(rootUrl, product, page) {
         });
     }
 
-    // Fallback 2
     if (!product.abv) {
         product.abv = await page.evaluate(() => {
             const el = document.querySelector('.accordion-details__content');
@@ -87,11 +80,9 @@ export default async function refine(rootUrl, product, page) {
             if (!script) return null;
             const text = script.textContent || '';
 
-            // Try Brand first
             let match = text.match(/Brand:\s*"([^"]+)"/);
             if (match) return match[1].trim();
 
-            // Fallback to Categories array second element
             match = text.match(/Categories":\s*\[\s*"[^"]*",\s*"([^"]+)"\s*\]/);
             return match ? match[1].trim() : null;
         } catch {

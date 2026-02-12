@@ -17,6 +17,6 @@
             "price": ".product__price"
         }
     },
-    "purePlayer": true,
+    "purePlayer": false,
     "level": 1
 }

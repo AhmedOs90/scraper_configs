@@ -22,6 +22,5 @@ export default async function refine(rootUrl, product, page) {
 
     product.abv = abv;
     product.sugar = sugar;
-
     return product;
 }

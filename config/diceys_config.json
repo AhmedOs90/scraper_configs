@@ -25,5 +25,5 @@
         "selector": "a.snize-pagination-next"
     },
     "level": 1,
-    "purePlayer": true
+    "purePlayer": false
 }

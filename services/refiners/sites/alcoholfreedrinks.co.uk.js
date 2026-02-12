@@ -48,6 +48,5 @@ export default async function refine(rootUrl, product, page) {
     if (facts.sugar) product.sugar = facts.sugar;
     if (facts.vegan) product.vegan = 'Vegan';
     if (facts.glutenFree) product.gluten_free = 'Gluten free';
-
     return product;
 }

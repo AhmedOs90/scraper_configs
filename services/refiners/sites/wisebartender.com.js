@@ -76,6 +76,5 @@ export default async function refine(rootUrl, product, page) {
     if (extracted.glutenFree) product.gluten_free = 'Gluten free';
     if (extracted.energy) product.energy = extracted.energy;
     if (extracted.sugars) product.sugar = extracted.sugars;
-
     return product;
 }

@@ -13,6 +13,5 @@ export default async function refine(rootUrl, product, page) {
 
         return match ? match[1] : null;
     });
-
     return product;
 }

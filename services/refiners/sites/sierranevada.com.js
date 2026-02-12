@@ -36,6 +36,6 @@ export default async function refine(rootUrl, product, page) {
     product.currency = "USD";
     product.producer = "Sierra Nevada Brewing Co.";
     product.price = product.price.replace("$", "").trim();
-
+    
     return product;
 }

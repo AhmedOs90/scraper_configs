@@ -38,6 +38,5 @@ export default async function refine(rootUrl, product, page) {
         const m = product.abv.match(/(\d+(?:\.\d+)?)\s*%/);
         product.abv = m ? `${m[1]}%` : product.abv.trim();
     }
-
     return product;
 }

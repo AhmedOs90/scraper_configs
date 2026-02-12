@@ -10,6 +10,5 @@ export default async function refine(rootUrl, product, page) {
         .trim();
 
     product.price = `${product.price} / 24 Bottles`;
-
     return product;
 }

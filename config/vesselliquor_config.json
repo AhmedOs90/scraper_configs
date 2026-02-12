@@ -23,5 +23,5 @@
         "selector": "nav.pagination a[rel=\"next\"]"
     },
     "level": 1,
-    "purePlayer": true
+    "purePlayer": false
 }

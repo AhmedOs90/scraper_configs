@@ -21,5 +21,5 @@
         "type": "link",
         "selector": "a.pagination__next"
     },
-    "purePlayer": true
+    "purePlayer": false
 }

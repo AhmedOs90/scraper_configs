@@ -3,10 +3,10 @@
     "baseUrl": "https://drinkdrystore.com/collections/drinkdrystore-all-products",
     "site_name": "drinkdrystore",
     "seller": "seller",
+    "bannerSkip": "button.klaviyo-close-form",
     "productsLinks": "/products/",
     "collectionLinks": "/collections/",
     "skipCollectionLinksInProducts": true,
-    "bannerSkip": "button.klaviyo-close-form",
     "moreConfig": true,
     "selectors": {
         "header": {

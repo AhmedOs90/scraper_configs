@@ -12,6 +12,5 @@ export default async function refine(rootUrl, product, page) {
         const m = script.textContent.match(/"item_category2"\s*:\s*"([^"]+)"/);
         return m ? m[1] : null;
     }).catch(() => null);
-
     return product;
 }

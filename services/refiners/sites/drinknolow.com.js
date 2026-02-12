@@ -28,6 +28,5 @@ export default async function refine(rootUrl, product, page) {
     product.vegan = flags.vegan ? "Vegan" : product.vegan || null;
     product.gluten_free = flags.glutenfree ? "Gluten free" : product.gluten_free || null;
     product.abv = flags.abv || product.abv || null;
-
     return product;
 }

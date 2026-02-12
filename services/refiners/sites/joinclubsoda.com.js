@@ -39,6 +39,5 @@ export default async function refine(rootUrl, product, page) {
     product.abv = extra.abv;
     product.energy = extra.energy;
     product.sugar = extra.sugar;
-
     return product;
 }

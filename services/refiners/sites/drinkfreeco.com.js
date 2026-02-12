@@ -41,6 +41,5 @@ export default async function refine(rootUrl, product, page) {
 
     if (details?.abv) product.abv = details.abv;
     if (details?.energy) product.energy = details.energy;
-
     return product;
 }

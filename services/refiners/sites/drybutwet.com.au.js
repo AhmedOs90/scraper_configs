@@ -25,6 +25,5 @@ export default async function refine(rootUrl, product, page) {
     if (energyMatch) {
         product.energy = energyMatch[1].trim();
     }
-
     return product;
 }

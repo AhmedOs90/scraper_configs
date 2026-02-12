@@ -8,6 +8,5 @@ export default async function refine(rootUrl, product, page) {
 
     product.description = product.description
         .replace('Description ', '');
-        
     return product;
 }
