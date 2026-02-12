@@ -51,6 +51,5 @@ export default async function refine(rootUrl, product, page) {
     product.energy = data.energy;
     product.country = "USA";
     product.producer = "YOURS";
-
     return product;
 }

@@ -1,28 +1,21 @@
 {
-    "baseUrl": "https://proofnomore.com/collections/shop-all-na-beverages",
     "rootUrl": "https://proofnomore.com",
-    "collectionLinks": "collections/",
-    "productsLinks": "products/",
-    "moreConfig": true,
-    "seller": "seller",
-    "bannerSkip": "button.klaviyo-close-form",
+    "baseUrl": "https://proofnomore.com/collections/shop-all-na-beverages",
     "site_name": "proofnomore",
+    "seller": "seller",
+    "productsLinks": "/products/",
+    "collectionLinks": "/collections/",
+    "bannerSkip": "button.klaviyo-close-form",
     "skipCollectionLinksInProducts": true,
-    "currency": "USD",
+    "moreConfig": true,
     "selectors": {
         "header": {
             "name": "meta[property='og:title']",
-            "price": ".price__current span:not(.visually-hidden)",
-            "currency": "meta[property='og:price:currency']",
-            "description": "meta[name='description']",
+            "description": "meta[property='og:description']",
             "images": "meta[property='og:image']"
         },
         "main": {
-            "abv": ".product-info__abv-unit-size span:first-of-type",
-            "price": ".price__current span:not(.visually-hidden)",
-            "gluten": "div[data-tooltip='Gluten Free'] .sr-only",
-            "vegan": "div[data-tooltip='Vegan'] .sr-only",
-            "producer": ".product-info__vendor a, .product-info__vendor span"
+            "price": ".orignal_reg_price"
         }
     },
     "pagination": {

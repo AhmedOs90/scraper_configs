@@ -50,6 +50,5 @@ export default async function refine(rootUrl, product, page) {
     if (sugarMatch) {
         product.sugar = `${sugarMatch[1]} g`;
     }
-
     return product;
 }

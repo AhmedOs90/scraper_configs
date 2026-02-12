@@ -17,6 +17,5 @@ export default async function refine(rootUrl, product, page) {
     });
 
     product.abv = abv;
-
     return product;
 }

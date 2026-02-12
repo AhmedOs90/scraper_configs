@@ -1,93 +1,67 @@
 // services/refiners/sites/ginsiders.com.js
 export default async function refine(rootUrl, product, page) {
-  // Helper to normalize text: trim, lowercase, remove diacritics
-  const norm = (s) =>
-    (s || "")
-      .toString()
-      .trim()
-      .toLowerCase()
-      .normalize("NFD")
-      .replace(/\p{Diacritic}+/gu, "");
+    product.country = 'France';
+    product.currency = 'EUR';
+    product.price = product.price
+        .replace('€', '')
+        .replace(',', '.')
+        .trim();
 
-  const data = await page
-    .evaluate(() => {
-      const getTxt = (el) =>
-        (el?.textContent || "")
-          .replace(/\s+/g, " ")
-          .trim();
+    product.description = product.description
+        .replace(/<[^>]+>/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
 
-      const rows = Array.from(
-        document.querySelectorAll(
-          ".woocommerce-product-attributes tr, .shop_attributes tr"
-        )
-      );
+    const data = await page.evaluate(() => {
+        const scripts = document.querySelectorAll('script[type="application/ld+json"]');
 
-      const out = { abvRaw: null, brandRaw: null };
+        for (const s of scripts) {
+            try {
+                const json = JSON.parse(s.textContent);
 
-      for (const tr of rows) {
-        const th = tr.querySelector("th, .woocommerce-product-attributes-item__label");
-        const td = tr.querySelector("td, .woocommerce-product-attributes-item__value");
-        const label = getTxt(th);
-        const value = getTxt(td);
+                const items = json['@graph'] ?? [json];
 
-        if (!label || !value) continue;
+                for (const obj of items) {
+                    const type = obj['@type'];
+                    const isProduct =
+                        type === 'Product' ||
+                        (Array.isArray(type) && type.includes('Product'));
 
-        out.pairs ??= [];
-        out.pairs.push([label, value]);
-
-        // capture likely ABV rows (French)
-        // e.g., "Degrée Alcool", "Degré d'alcool", "Degre alcool", "Taux d'alcool"
-        // also tolerate generic "Alcool"
-        const l = label.toLowerCase();
-        if (
-          /degre|degre\s*d.?alcool|taux\s*d.?alcool|alcool/.test(l)
-        ) {
-          out.abvRaw = value;
+                    if (isProduct) {
+                        return {
+                            images: obj.image
+                                ? Array.isArray(obj.image)
+                                    ? obj.image
+                                    : [obj.image]
+                                : [],
+                            producer: obj.brand?.name ?? null
+                        };
+                    }
+                }
+            } catch {}
         }
 
-        // capture Marque → producer
-        if (/marque/i.test(label)) {
-          out.brandRaw = value;
-        }
-      }
+        return { images: [], producer: null };
+    });
 
-      return out;
-    })
-    .catch(() => null);
+    product.images = data.images;
+    product.producer = data.producer;
 
-  // --- ABV normalize ---
-  if (data?.abvRaw && !product.abv) {
-    let v = data.abvRaw.trim();
+    const nutritionText = await page.evaluate(() => {
+        const el = document.querySelector('#tab-description');
+        return el ? el.innerText : '';
+    });
 
-    // Common “Sans alcool” forms
-    if (/sans\s*alcool/i.test(v)) {
-      product.abv = "0%";
-    } else {
-      // Extract number + % (tolerate comma)
-      // e.g., "0%", "0,5 %", "0.5% vol"
-      const m = v.match(/(\d+(?:[.,]\d+)?)\s*%/);
-      if (m && m[1]) {
-        const num = m[1].replace(",", ".");
-        // Keep one decimal at most (optional)
-        const n = Number.parseFloat(num);
-        if (Number.isFinite(n)) {
-          product.abv = `${n % 1 === 0 ? n.toFixed(0) : n}%`;
-        } else {
-          product.abv = `${num}%`;
-        }
-      } else {
-        // If value is literally "0" or "0,0" without a percent sign
-        const n0 = v.match(/^\s*(0+(?:[.,]0+)?)\s*$/);
-        if (n0) product.abv = "0%";
-      }
+    const norm = nutritionText.replace(/\s+/g, ' ').trim();
+
+    const energyMatch = norm.match(/Calories:\s*([^,]+?kJ\s*\/\s*[^,]+?kcal)/i);
+    if (energyMatch) {
+        product.energy = energyMatch[1].trim();
     }
-  }
 
-  // --- Producer from "Marque" if present ---
-  if (data?.brandRaw && !product.producer) {
-    // Many Woo stores wrap it in <p> — keep text only
-    product.producer = data.brandRaw.replace(/^\s*by\s+/i, "").trim();
-  }
-
-  return product;
+    const sugarMatch = norm.match(/of which\s*([\d.,]+)\s*g?\s*sugars/i);
+    if (sugarMatch) {
+        product.sugar = `${sugarMatch[1].replace(',', '.')} g`;
+    }
+    return product;
 }

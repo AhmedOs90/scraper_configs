@@ -1,11 +1,17 @@
 // services/refiners/sites/uhrskov-vine.dk.js
 export default async function refine(rootUrl, product, page) {
+    
     product.country = 'Denmark';
     product.currency = 'DKK';
 
     product.description = product.description
         .replace(/<[^>]+>/g, "")
         .replace(/\s+/g, " ")
+        .trim();
+
+    product.price = product.price
+        .replace('DKK  ', '')
+        .replace(',', '.')
         .trim();
 
     product.images = await page.evaluate(() => {
@@ -33,6 +39,19 @@ export default async function refine(rootUrl, product, page) {
         }
 
         return [];
+    });
+
+    product.abv = await page.evaluate(() => {
+        const el = document.querySelector('div.attribute-table');
+        if (!el) return '';
+
+        const text = el.innerText;
+        const match = text.match(/(?:^|[^\w])(\d+(?:[.,]\d+)?)\s*%(?=\s|$)/);
+
+        if (!match) return '';
+
+        const value = match[1].replace(',', '.');
+        return value + '%';
     });
 
     return product;

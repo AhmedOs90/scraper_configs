@@ -23,5 +23,5 @@
         "selector": "a[data-nextpreviousbtn=\"next\"]"
     },
     "level": 2,
-    "purePlayer": true
+    "purePlayer": false
 }

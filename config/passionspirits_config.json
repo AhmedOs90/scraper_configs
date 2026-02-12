@@ -20,5 +20,5 @@
         "type": "button",
         "selector": "button.MuiPaginationItem-previousNext[aria-label=\"Go to next page\"]"
     },
-    "purePlayer": true
+    "purePlayer": false
 }

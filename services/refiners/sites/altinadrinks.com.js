@@ -57,6 +57,5 @@ export default async function refine(rootUrl, product, page) {
 
     product.energy = nutrition.energy;
     product.sugar = nutrition.sugar;
-    
     return product;
 }

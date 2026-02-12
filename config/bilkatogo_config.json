@@ -17,6 +17,6 @@
             "description": "#content-description"
         }
     },
-    "purePlayer": true,
-    "level": 2
+    "level": 2,
+    "purePlayer": false
 }

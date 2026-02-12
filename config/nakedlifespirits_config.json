@@ -3,33 +3,20 @@
     "baseUrl": "https://nakedlifespirits.com.au/collections/all",
     "site_name": "nakedlifespirits",
     "seller": "seller",
-    "productsLinks": "/products/",
+    "bannerSkip": "button.verification_btn_accept",
+    "productsLinks": "/collections/all/products/",
     "collectionLinks": "/collections/",
-    "productLinkSelector": "a[href*=\"/products/\"]",
-    "productLinkAttribute": "href",
     "skipCollectionLinksInProducts": true,
     "moreConfig": true,
-    "purePlayer": true,
-    "pagination": {
-        "type": "link",
-        "selector": "a[rel='next'], .pagination__item--next a, .pagination a[title='Next']"
-    },
     "selectors": {
         "header": {
             "name": "meta[property='og:title']",
-            "price": "meta[property='product:price:amount']",
-            "currency": "meta[property='product:price:currency']",
-            "description": "meta[name='description'], meta[property='og:description']",
             "images": "meta[property='og:image']",
-            "producer": "meta[property='product:brand']"
+            "description": "meta[property='og:description']"
         },
         "main": {
-            "name": "h1.product__title, h1",
-            "price": ".price__container .money, .price .money, [data-product-price]",
-            "currency": ".price__container .money",
-            "description": ".product__description, .rte",
-            "images": ".product__media img, .product-gallery img",
-            "producer": ".product__vendor a, .product-vendor a"
+            "price": ".product__price .money"
         }
-    }
+    },
+    "purePlayer": true
 }

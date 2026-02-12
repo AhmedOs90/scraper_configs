@@ -34,6 +34,5 @@ export default async function refine(rootUrl, product, page) {
         const el = document.querySelector("#tab-panel-4 tr:nth-child(4) td p");
         return el ? el.textContent.trim() : null;
     });
-
     return product;
 }

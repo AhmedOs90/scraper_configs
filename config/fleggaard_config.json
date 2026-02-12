@@ -24,6 +24,6 @@
         "type": "button",
         "selector": "div.mt-8 button[type='button']"
     },
-    "purePlayer": true,
-    "level": 1
+    "level": 1,
+    "purePlayer": false
 }

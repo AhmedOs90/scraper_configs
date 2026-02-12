@@ -1,105 +1,71 @@
 // services/refiners/sites/amavine.nl.js
-import { detectCategory, categories } from "../refiners_helpers.js";
-
 export default async function refine(rootUrl, product, page) {
-  const scraped = await page.evaluate(() => {
-    const rows = Array.from(
-      document.querySelectorAll(".woocommerce-product-attributes.shop_attributes tr")
-    );
-    const getTxt = (el) => (el?.textContent || "").trim();
+    product.country = 'Netherlands';
+    product.currency = 'EUR';
 
-    // Build label -> value map
-    const kv = {};
-    for (const tr of rows) {
-      const label = getTxt(tr.querySelector("th")).toLowerCase();
-      const value = getTxt(tr.querySelector("td"));
-      if (label) kv[label] = value;
-    }
+    const scraped = await page.evaluate(() => {
+        const getTxt = (el) => (el?.textContent || '').trim();
+        const rows = Array.from(
+            document.querySelectorAll('.woocommerce-product-attributes.shop_attributes tr')
+        );
 
-    const hasWord = (s, word) => new RegExp(`\\b${word}\\b`, "i").test(s || "");
+        const pick = (re) => {
+            for (const tr of rows) {
+                const label = getTxt(tr.querySelector('th')).toLowerCase();
+                const value = getTxt(tr.querySelector('td'));
+                if (label && re.test(label)) return (value || '').trim() || null;
+            }
+            return null;
+        };
 
-    // Country
-    let country = null;
-    for (const [label, value] of Object.entries(kv)) {
-      if (/(land.*herkomst|land van herkomst|herkomst|land|country|origine)/i.test(label)) {
-        country = value || null;
-        break;
-      }
-    }
+        const hasWord = (s, word) => new RegExp(`\\b${word}\\b`, 'i').test(s || '');
 
-    // Producer (Merk)
-    let producer = null;
-    for (const [label, value] of Object.entries(kv)) {
-      if (/\bmerk\b/i.test(label)) {
-        producer = value || null; // copy as-is
-        break;
-      }
-    }
+        const producer = pick(/\b(merk|brand)\b/i);
 
-    // ABV (Alcoholpercentage): copy value as-is (no parsing)
-    let abv = null;
-    for (const [label, value] of Object.entries(kv)) {
-      if (label.includes("alcoholpercentage")) {
-        abv = (value || "").trim();
-        break;
-      }
-    }
+        let abv = pick(/\b(alcoholpercentage|alcohol percentage)\b/i);
+        abv = abv?.replace('Kleiner dan ', '<').trim();
 
-    // Energy: copy as-is
-    let energy = null;
-    for (const [label, value] of Object.entries(kv)) {
-      if (/(calorie|kcal)/i.test(label)) {
-        energy = (value || "").trim();
-        break;
-      }
-    }
+        let energy = pick(/\b(calorie|kcal)\b/i);
+        energy = energy
+            ?.replace('Deze informatie wordt aangegeven bij elk afzonderlijk product in de online boetiek', '')
+            .replace(/\s+/g, ' ')
+            .replace(',', '.')
+            .trim();
 
-    // Sugars: copy as-is
-    let sugars = null;
-    for (const [label, value] of Object.entries(kv)) {
-      if (/\bsuiker|suikers\b/i.test(label)) {
-        sugars = (value || "").trim();
-        break;
-      }
-    }
+        let sugars = pick(/\b(suiker|suikers|sugars)\b/i);
+        sugars = sugars
+            ?.replace('Deze informatie wordt aangegeven bij elk afzonderlijk product in de online boetiek', '')
+            .replace(/\s+/g, ' ')
+            .replace(',', '.')
+            .trim();
 
-    // Vegan (Ja/Nee or contains 'vegan')
-    let vegan = null;
-    for (const [label, value] of Object.entries(kv)) {
-      if (/\bvegan\b/i.test(label)) {
-        if (/^\s*(ja|yes)\s*$/i.test(value) || hasWord(value, "vegan")) {
-          vegan = "vegan";
+        let vegan = null;
+        const veganVal = pick(/\bvegan\b/i);
+        if (veganVal && (/^\s*(ja|yes)\s*$/i.test(veganVal) || hasWord(veganVal, 'vegan'))) {
+            vegan = 'vegan';
         }
-        break;
-      }
-    }
 
-    // Gluten-free: look for the word "gluten" (or 'glutenvrij')
-    let glutenFree = null;
-    for (const [label, value] of Object.entries(kv)) {
-      if (hasWord(label, "gluten") || /glutenvrij/i.test(label) ||
-          hasWord(value, "gluten") || /glutenvrij/i.test(value)) {
-        glutenFree = "gluten free";
-        break;
-      }
-    }
+        let glutenFree = null;
+        for (const tr of rows) {
+            const label = getTxt(tr.querySelector('th'));
+            const value = getTxt(tr.querySelector('td'));
+            if (
+                hasWord(label, 'gluten') || /glutenvrij/i.test(label) ||
+                hasWord(value, 'gluten') || /glutenvrij/i.test(value)
+            ) {
+                glutenFree = 'gluten free';
+                break;
+            }
+        }
 
-    return { country, producer, abv, energy, sugars, vegan, glutenFree };
-  });
+        return { producer, abv, energy, sugars, vegan, glutenFree };
+    });
 
-  // Assign back without clobbering existing values
-  if (!product.country && scraped.country) product.country = scraped.country;
-  if (!product.producer && scraped.producer) product.producer = scraped.producer; // from "Merk"
-  if (!product.abv && scraped.abv) product.abv = scraped.abv;
-  if (!product.energy && scraped.energy) product.energy = scraped.energy;         // as-is
-  if (!product.sugar && scraped.sugars) product.sugar = scraped.sugars;         // as-is
-  if (!product.vegan && scraped.vegan) product.vegan = scraped.vegan;             // "vegan"
-  if (!product.gluten_free && scraped.glutenFree) product.gluten_free = scraped.glutenFree; // "gluten free"
-
-  // Optional: category fallback
-  if (!product.product_category) {
-    product.product_category = detectCategory(product.name, product.description, categories);
-  }
-
-  return product;
+    if (!product.producer && scraped.producer) product.producer = scraped.producer;
+    if (!product.abv && scraped.abv) product.abv = scraped.abv;
+    if (!product.energy && scraped.energy) product.energy = scraped.energy;
+    if (!product.sugar && scraped.sugars) product.sugar = scraped.sugars;
+    if (!product.vegan && scraped.vegan) product.vegan = scraped.vegan;
+    if (!product.gluten_free && scraped.glutenFree) product.gluten_free = scraped.glutenFree;
+    return product;
 }

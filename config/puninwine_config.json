@@ -22,5 +22,5 @@
         "type": "scroll",
         "selector": ".beacon"
     },
-    "purePlayer": true
+    "purePlayer": false
 }

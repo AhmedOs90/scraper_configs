@@ -11,19 +11,16 @@ export default async function refine(rootUrl, product, page) {
 
     await page.waitForSelector(scope);
 
-    // Energy (multiple)
     product.energy = await page.$$eval(
         `${scope} p.attribute-Energy`,
         els => els.map(e => e.textContent.trim()).join(' / ') || null
     );
 
-    // Sugar
     product.sugar = await page.$eval(
         `${scope} p.attribute-Sugar`,
         el => el.textContent.trim()
     ).catch(() => null);
 
-    // Special features
     const special = await page.$eval(
         `${scope} p.attribute-special_feature`,
         el => el.textContent.toLowerCase()
@@ -31,6 +28,5 @@ export default async function refine(rootUrl, product, page) {
 
     if (special.includes('vegan')) product.vegan = 'Vegan';
     if (special.includes('gluten free')) product.gluten_free = 'Gluten free';
-
     return product;
 }

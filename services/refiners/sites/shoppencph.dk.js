@@ -1,7 +1,9 @@
 // services/refiners/sites/shoppencph.dk.js
-import { extractABVFromText } from "../refiners_helpers.js";
-
 export default async function refine(rootUrl, product, page) {
-  product.abv = product.abv || extractABVFromText(product.name, product.description);
-  return product;
+    product.country = 'Denmark';
+    product.price = product.price.replace(',', '.').trim();
+    
+    const match = product.name.match(/(\<?\d+(?:[.,]\d+)?)\s*%/);
+    product.abv = match ? match[1].replace(',', '.') + '%' : null;
+    return product;
 }

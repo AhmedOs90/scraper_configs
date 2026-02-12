@@ -3,11 +3,8 @@
     "baseUrl": "https://winesformothers.com/shop-non-alcoholic-wines-for-moms/",
     "site_name": "winesformothers",
     "seller": "seller",
-    "collectionLinks": "",
-    "skipCollectionLinksInProducts": false,
-    "productsLinks": "",
-    "productLinkSelector": ".productGrid .card-title a, .productGrid h3 a",
     "productLinkAttribute": "href",
+    "productLinkSelector": ".productGrid .card-title a, .productGrid h3 a",
     "moreConfig": true,
     "selectors": {
         "header": {

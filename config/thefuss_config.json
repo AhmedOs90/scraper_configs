@@ -3,39 +3,26 @@
     "baseUrl": "https://thefuss.club/collections/low-and-no-alcohol/Alcohol-Free",
     "site_name": "thefussclub",
     "seller": "seller",
+    "bannerSkip": "#button__enter",
     "productsLinks": "/products/",
     "collectionLinks": "/collections/",
-    "productLinkSelector": "a[href*='/products/']",
-    "productLinkAttribute": "href",
     "skipCollectionLinksInProducts": true,
-    "moreConfig": true,
-    "pagination": {
-        "type": "link",
-        "selector": "a[rel='next'], .pagination__item--next a, .pagination a[title='Next'], .pagination-custom__next"
-    },
-    "bannerSkip": null,
+    "moreConfig": true, 
     "selectors": {
         "header": {
             "name": "meta[property='og:title']",
-            "price": "meta[property='product:price:amount'], meta[property='og:price:amount']",
-            "currency": "meta[property='product:price:currency'], meta[property='og:price:currency']",
-            "description": "meta[name='description'], meta[property='og:description']",
-            "images": "meta[property='og:image']",
-            "producer": ".product__meta--vendor a, .product__meta--vendor .label-font a, .product-meta__vendor a, .product-vendor a, .product-vendor, [itemprop='brand']"
+            "price": "meta[property='og:price:amount']",
+            "currency": "meta[property='og:price:currency']",            
+            "images": "meta[property='og:image']"
         },
         "main": {
-            "name": "h1.product__title, h1.product-title, h1",
-            "currency": ".price-item--regular, .price-item--sale, .price .money",
-            "description": ".product__description, .rte, .product-single__description",
-            "images": ".product__media img, .product-gallery img, img[src*='/products/']",
-            "abv": "li:contains('ABV'), li:contains('Alcohol'), p:contains('% ABV')",
-            "gluten": "a[href*='gluten'], li:contains('gluten')",
-            "vegan": "a[href*='vegan'], li:contains('vegan')",
-            "producer": ".product__vendor, .product-meta__vendor a, .product-vendor",
-            "energy": "li:contains('kcal'), p:contains('Calories')",
-            "sugars": "li:contains('Sugar'), p:contains('Sugar')",
-            "category": "nav[aria-label='breadcrumbs'] a:last-child, .breadcrumbs a:last-child"
+            "producer": ".product__meta--vendor",
+            "description": ".product-form-block .notes-box"
         }
     },
-    "purePlayer": true
+    "pagination": {
+        "type": "scroll",
+        "selector": ".footer-wrapper"
+    },
+    "purePlayer": false
 }

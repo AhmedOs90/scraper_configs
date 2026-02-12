@@ -7,7 +7,7 @@
     "site_name": "uhrskov-vine",
     "seller": "seller",
     "productLinkAttribute": "href",
-    "productLinkSelector": "a.product-title",
+    "productLinkSelector": "div.item.col-xs-6.col-sm-4.col-md-3 div.panel.panel-default > a.product-image",
     "bannerSkip": "button#updateButton.coi-banner__decline",
     "moreConfig": true,
     "selectors": {
@@ -22,6 +22,6 @@
         "type": "link",
         "selector": "a[title=\"Next\"]"
     },
-    "purePlayer": true,
-    "level": 1
+    "level": 1,
+    "purePlayer": false
 }

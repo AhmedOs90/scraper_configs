@@ -1,6 +1,6 @@
 {
     "rootUrl": "https://www.1001spirits.com",
-    "baseUrl": ["https://www.1001spirits.com/category/394/alcohol-free-beer"],
+    "baseUrl": "https://www.1001spirits.com/category/394/alcohol-free-beer",
     "site_name": "1001spirits",
     "seller": "seller",
     "productsLinks": "/product/",
@@ -22,5 +22,5 @@
         "selector": ".Pagination .NextPageLink a"
     },
     "level": 1,
-    "purePlayer": true
+    "purePlayer": false
 }

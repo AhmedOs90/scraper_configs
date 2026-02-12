@@ -1,36 +1,25 @@
 {
-    "baseUrl": "https://www.nemlig.com/dagligvarer/drikkevarer/oel/alkoholfri",
-    "baseUrlS": "https://www.nemlig.com/vin/alkoholfri-vin",
     "rootUrl": "https://www.nemlig.com",
-    "collectionLinks": "",
-    "productsLinks": "pageLinks",
-    "moreConfig": true,
-    "seller": "nemlig.com",
+    "baseUrl": "https://www.nemlig.com/dagligvarer/nye-varer-inspiration/alkoholfri-produkter",
     "site_name": "nemlig",
-    "skipCollectionLinksInProducts": true,
-    "productLinkSelector": "a.product-tile__link",
+    "seller": "seller",
+    "bannerSkip": "button.coi-banner__accept",
     "productLinkAttribute": "href",
+    "productLinkSelector": "a.product-card[data-automation=\"prdktItemAreaSrch\"]",
+    "moreConfig": true,
     "selectors": {
         "header": {
             "name": "meta[property='og:title']",
-            "price": "meta[name='twitter:data1']",
-            "currency": "meta[property='product:price:currency']",
-            "description": "meta[property='og:description']",
-            "images": "meta[property='og:image']"
+            "images": "meta[property='og:image']",
+            "description": "meta[property='og:description']"
         },
         "main": {
-            "abv": {
-                "selector": null,
-                "regex": "(\\d+(\\.\\d+)?\\s*%)"
-            },
-            "gluten": null,
-            "vegan": null,
-            "producer": null
+            "price": ".product-detail__price-container .nem-price-container__price.ng-star-inserted"
         }
     },
     "pagination": {
         "type": "link",
         "selector": "a.pagination__next"
     },
-    "purePlayer": true
+    "purePlayer": false
 }

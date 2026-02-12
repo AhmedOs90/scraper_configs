@@ -1,49 +1,23 @@
 {
     "rootUrl": "https://www.kodriget.dk",
     "baseUrl": "https://www.kodriget.dk/collections/carina-alkohols-fri",
-    "site_name": "Kodriget",
-    "seller": "Kodriget",
+    "site_name": "kodriget",
+    "seller": "seller",
+    "bannerSkip": "button.cm__btn[data-role=\"all\"]",
     "productsLinks": "/products/",
-    "collectionLinks": "/collections/carina-alkohols-fri",
-    "productLinkSelector": "a[href*=\"/products/\"]",
-    "productLinkAttribute": "href",
+    "collectionLinks": "/collections/",
     "skipCollectionLinksInProducts": true,
     "moreConfig": true,
-    "pagination": {
-        "type": "link",
-        "selector": ".pagination a[rel='next'], .pagination__item--next a, a[aria-label='Næste'], a[aria-label='Next']",
-        "maxPages": 10
-    },
-    "level": 1,
     "selectors": {
         "header": {
-            "name": "meta[property='og:title'], meta[name='og:title'], meta[name='title']",
-            "price": "meta[property='product:price:amount'], meta[property='og:price:amount']",
-            "currency": "meta[property='product:price:currency'], meta[property='og:price:currency']",
-            "description": "meta[name='description'], meta[property='og:description']",
-            "images": "meta[property='og:image']",
-            "producer": "meta[name='author'], meta[property='product:brand']",
-            "abv": null,
-            "gluten_free": null,
-            "vegan": null,
-            "energy": null,
-            "sugars": null,
-            "category": "meta[property='product:category']"
+            "name": "meta[property='og:title']",
+            "price": "meta[property='product:price:amount']",
+            "currency": "meta[property='product:price:currency']",
+            "description": "meta[name='twitter:description']",
+            "images": "meta[property='og:image']"
         },
-        "main": {
-            "name": "h1, h1.product-title, h1.product__title",
-            "price": ".product-price, .product-price span, .price, .product-main-price, [itemprop='price']",
-            "currency": ".price, .product-price, [itemprop='priceCurrency']",
-            "description": ".product-description, .product-text, #product-content, .rte",
-            "images": ".product-images img, .product-gallery img, .product-image img, img[itemprop='image']",
-            "producer": "p:contains('Producent'), li:contains('Producent'), .product-meta, .product-vendor",
-            "abv": "p:contains('Alkohol %'), li:contains('Alkohol %'), p:contains('Alkohol:'), li:contains('Alkohol:')",
-            "gluten": "p:contains('glutenfri'), li:contains('glutenfri'), p:contains('gluten-fri'), li:contains('gluten-fri')",
-            "vegan": "p:contains('vegan'), p:contains('vegansk'), li:contains('vegan'), li:contains('vegansk')",
-            "energy": "p:contains('kcal'), li:contains('kcal'), p:contains('Energi'), li:contains('Energi')",
-            "sugars": "p:contains('sukker'), p:contains('sukkerarter'), li:contains('sukker'), li:contains('sukkerarter')",
-            "category": ".breadcrumb li:last-child a, .breadcrumbs a:last-child, .product-category"
-        }
+        "main": { }
     },
-    "purePlayer": true
+    "level": 1,
+    "purePlayer": false
 }

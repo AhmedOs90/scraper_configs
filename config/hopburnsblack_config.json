@@ -3,9 +3,9 @@
     "baseUrl": "https://www.hopburnsblack.co.uk/collections/low-no-alcohol",
     "site_name": "hopburnsblack",
     "seller": "seller",
+    "bannerSkip": "button.btn--popup-1.js-close-modal",
     "productsLinks": "/collections/low-no-alcohol/products/",
     "collectionLinks": "/collections/",
-    "bannerSkip": "button.btn--popup-1.js-close-modal",
     "skipCollectionLinksInProducts": true,
     "moreConfig": true,
     "selectors": {
