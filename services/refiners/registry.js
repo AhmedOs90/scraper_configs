@@ -144,6 +144,7 @@ import toolbeer from "./sites/toolbeer.dk.js";
 import sluktoersten from "./sites/sluktoersten.dk.js";
 import kundetbedste from "./sites/kundetbedste.com.js";
 import vinspecialistenaalborg from "./sites/vinspecialistenaalborg.dk.js";
+import beermerchants from "./sites/beermerchants.com.js";
 
 // Registry map
 const registry = new Map([
@@ -284,11 +285,11 @@ const registry = new Map([
     ["shop.meny.dk", meny],
     ["dengyldneloeve.dk", dengyldneloeve],
     ["lbv.dk", lbv],
-    ["toolbeer.dk", toolbeer],,
+    ["toolbeer.dk", toolbeer],
     ["sluktoersten.dk", sluktoersten],
     ["kundetbedste.com", kundetbedste],
     ["vinspecialistenaalborg.dk", vinspecialistenaalborg],
-
+    ["beermerchants.com", beermerchants]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {

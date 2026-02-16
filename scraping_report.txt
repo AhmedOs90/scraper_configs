@@ -1,8 +1,8 @@
 Total Sites Scraped: 1
 Total Products Scraped: 0
 Details per Site:
-Site Name: Vinspecialisten Aalborg
-Root URL: https://www.vinspecialistenaalborg.dk
+Site Name: beermerchants
+Root URL: https://www.beermerchants.com
 Products Scraped: 0
 ---
 Scraped Root URLs:
@@ -161,3 +161,11 @@ https://dengyldneloeve.dk
 https://www.sluktoersten.dk
 https://kundetbedste.com
 https://www.vinspecialistenaalborg.dk
+https://toolbeer.dk
+https://www.lbv.dk
+https://toolbeer.dk
+https://kolonnenull.com
+https://mashgang.com
+https://www.audreyclairecork.com
+https://refinemoments.com
+https://www.beermerchants.com
