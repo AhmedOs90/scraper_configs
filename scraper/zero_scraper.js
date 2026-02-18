@@ -75,8 +75,8 @@ const siteComingBaseUrl = rootUrl;
     scraper_status: 'running', // Status: Running
     scraped_dates: startTime,
   };
-  await sendScrapingReport(initialReportData);
-  updateScraperStatus(rootUrl, 'running'); // Update scraper status
+  // await sendScrapingReport(initialReportData);
+  // updateScraperStatus(rootUrl, 'running'); // Update scraper status
 
   // const auth = await authorize(); // Ensure Google Sheets auth is initialized
 
@@ -85,8 +85,8 @@ const siteComingBaseUrl = rootUrl;
 
     launchContext: {
       launchOptions: {
-        executablePath: '/usr/bin/chromium', // Corrected path
-        headless:  false, // Run in headless mode
+        // executablePath: '/usr/bin/chromium', // Corrected path
+        // headless:  false, // Run in headless mode
         args: [
           '--no-sandbox', // Disable sandboxing for lower resource usage
           '--disable-setuid-sandbox',
@@ -164,13 +164,13 @@ if (
           // }
           if (Prod.name != "Name not found") {
             saveProductsToCSV([Prod], "my_scraped_data.csv")
-            let resp = await populateLake(Prod);
-            if (resp == "updated") {
-              updatedProductsCount++; // Increment updated product count
-            }
-            else {
-              newProductsCount++; // Increment new product count
-            }
+            // let resp = await populateLake(Prod);
+            // if (resp == "updated") {
+            //   updatedProductsCount++; // Increment updated product count
+            // }
+            // else {
+            //   newProductsCount++; // Increment new product count
+            // }
             siteData.productsScraped += 1;
           }
         } else {
@@ -259,8 +259,8 @@ await crawler.run(entryUrls);
     };
 
     console.log(`Sending scraping report for ${site_name}...`);
-    await sendScrapingReport(reportData);
-    await updateScraperStatus(rootUrl, 'completed'); // Update scraper status
+    // await sendScrapingReport(reportData);
+    // await updateScraperStatus(rootUrl, 'completed'); // Update scraper status
 
   }
   catch (e) {
