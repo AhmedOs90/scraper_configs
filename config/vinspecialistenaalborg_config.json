@@ -10,6 +10,7 @@
   "productLinkAttribute": "href",
   "skipCollectionLinksInProducts": true,
 
+  "purePlayer": true,
   "moreConfig": true,
   "level": 2,
 
@@ -21,9 +22,8 @@
   "selectors": {
     "header": {
       "name": "meta[property='og:title'], h1.product_title",
-      "price": "p.price bdi",
       "currency": "span.woocommerce-Price-currencySymbol",
-      "description": "meta[name='description'], .woocommerce-product-details__short-description",
+      "description": "meta[property='og:description']",
       "images": "div.woocommerce-product-gallery img",
       "producer": "span.brand, .product_meta .brand",
 
@@ -37,7 +37,7 @@
 
     "main": {
       "name": "h1.product_title",
-      "price": "p.price, .woocommerce-Price-amount",
+      "price": "p.price .woocommerce-Price-amount bdi",
       "currency": ".woocommerce-Price-currencySymbol",
       "description": ".woocommerce-product-details__short-description",
 

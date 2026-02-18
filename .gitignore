@@ -6,3 +6,4 @@ node_modules/
 storage/
 scraping_reports.txt
 .env
+my_scraped_data.csv

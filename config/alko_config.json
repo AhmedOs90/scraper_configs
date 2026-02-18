@@ -6,6 +6,7 @@
     "bannerSkip": "#onetrust-accept-btn-handler",
     "productLinkAttribute": "href",
     "productLinkSelector": ".js-product-link",
+    "addtoCartSelector": "section[aria-label='Purchasing'] button[aria-label*=' to basket'][type='button']",
     "moreConfig": true,
     "selectors": {
         "header": {

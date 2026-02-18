@@ -5,6 +5,7 @@
     "productsLinks": "products/",
     "moreConfig": true,
     "seller": "seller",
+    "addtoCartSelector": "button.js-form-submit[type='submit']",
     "bannerSkip": "button.klaviyo-close-form",
     "site_name": "thezeroproof",
     "skipCollectionLinksInProducts": true,

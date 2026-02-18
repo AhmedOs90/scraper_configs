@@ -146,6 +146,9 @@ import audreyclairecork from "./sites/audreyclairecork.com.js";
 import sluktoersten from "./sites/sluktoersten.dk.js";
 import kundetbedste from "./sites/kundetbedste.com.js";
 import vinspecialistenaalborg from "./sites/vinspecialistenaalborg.dk.js";
+import kolonnenull from "./sites/kolonnenull.com.js";
+import densidstedraabe from "./sites/densidstedraabe.dk.js";
+import alkoholfrishop from "./sites/alkoholfrishop.dk.js";
 
 // Registry map
 const registry = new Map([
@@ -292,6 +295,9 @@ const registry = new Map([
     ["sluktoersten.dk", sluktoersten],
     ["kundetbedste.com", kundetbedste],
     ["vinspecialistenaalborg.dk", vinspecialistenaalborg],
+    ["kolonnenull.com", kolonnenull],
+    ["densidstedraabe.dk", densidstedraabe],
+    ["alkoholfrishop.dk", alkoholfrishop]
 
 ]);
 

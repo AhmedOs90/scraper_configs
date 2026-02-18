@@ -11,6 +11,7 @@
   "productLinkAttribute": "href",
   "skipCollectionLinksInProducts": true,
 
+  "purePlayer": true,
   "moreConfig": true,
   "level": 2,
 
@@ -22,12 +23,9 @@
       "description": "meta[name='description'], meta[property='og:description']",
       "images": "meta[property='og:image']",
 
-      "producer": "meta[property='product:brand']",
+      "producer": "meta[property='product:brand']"
 
-      "gluten_free": null,
-      "vegan": null,
-      "category": null,
-      "country": null
+      
     },
 
     "main": {
@@ -37,14 +35,9 @@
 
       "description": ".product-area__rich-text-block, .rte",
       "images": ".product__media img, img[src*='/products/']",
-      "producer": ".product__vendor, .product-meta__vendor a",
+      "producer": ".product__vendor, .product-meta__vendor a"
 
-      "gluten": ".product-area__rich-text-block",
-      "vegan": ".product-area__rich-text-block",
-      "energy": ".product-area__rich-text-block",
-      "sugars": ".product-area__rich-text-block",
-
-      "category": ".breadcrumb a:last-child, nav[aria-label='breadcrumbs'] a:last-child"
+      
     }
   },
 

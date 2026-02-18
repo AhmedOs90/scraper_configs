@@ -1,0 +1,54 @@
+{
+  "rootUrl": "https://www.alkoholfrishop.dk",
+  "baseUrlS": [
+"https://www.alkoholfrishop.dk/non-alcoholic-wine",
+"https://www.alkoholfrishop.dk/non-alcoholic-sparkling-wines",
+"https://www.alkoholfrishop.dk/alcohol-free-minibar",
+"https://www.alkoholfrishop.dk/non-alcoholic-spirits",
+"https://www.alkoholfrishop.dk/non-alcoholic-mixers",
+"https://www.alkoholfrishop.dk/non-alcoholic-beer",
+"https://www.alkoholfrishop.dk/non-alcoholic-cocktails"
+],
+  "site_name": "alkoholfrishop",
+  "seller": "seller",
+
+  "collectionLinks": "",
+  "productsLinks": "pageLinks",
+  
+  "skipCollectionLinksInProducts": true,
+
+  "moreConfig": true,
+
+  "productPageCheckSelector": "body.catalog-product-view, form#product_addtocart_form, .product-info-main",
+
+  "selectors": {
+    "header": {
+      "name": "meta[property='og:title'], meta[name='twitter:title']",
+      "price": "meta[property='product:price:amount']",
+      "currency": "meta[property='product:price:currency']",
+      "description": "meta[property='og:description']",
+      "images": "meta[property='og:image'], meta[property='og:image:secure_url']",
+      "category": "meta[property='product:category'], meta[property='og:type']"
+    },
+    "main": {
+      "name": "h1.page-title span.base, h1.page-title, span.base[data-ui-id='page-title-wrapper'], main h1",
+      "price": "span.price-container span.price, [data-price-type='finalPrice'] span.price, .product-info-main .price-box .price",
+      "currency": "meta[itemprop='priceCurrency'], .price-box, .price-container",
+      "description": "div.product.attribute.description div.value, div.product.attribute.overview div.value, .product-info-main .product.attribute",
+      "images": ".fotorama__stage__frame img.fotorama__img, .product.media img",
+      "gluten": "",
+      "vegan": "",
+      "producer": "",
+      "energy": "",
+      "sugars": "",
+      "category": ".breadcrumbs a:last-child, .breadcrumbs li:last-child, meta[property='product:category']"
+    }
+  },
+
+  "pagination": {
+    "type": "link",
+  "selector": ".pages .pages-item-next a.action.next"
+  },
+
+  "level": 2
+}

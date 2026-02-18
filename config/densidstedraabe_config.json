@@ -1,0 +1,63 @@
+{
+  "rootUrl": "https://www.densidstedraabe.dk",
+  "baseUrl": "https://www.densidstedraabe.dk/collections/non-alko",
+  "site_name": "densidstedraabe",
+  "seller": "seller",
+
+  "collectionLinks": "/collections/",
+  "productsLinks": "/products/",
+  "skipCollectionLinksInProducts": true,
+
+  "productLinkSelector": "a[href^='/products/'], a[href*='/products/'], a[href*='densidstedraabe.dk/products/']",
+  "productLinkAttribute": "href",
+
+  "moreConfig": true,
+  "level": 2,
+
+  "productPageCheckSelector": "form[action*='/cart/add'], form[action*='/cart'] input[name='id'], button[name='add'], button[type='submit'][name='add']",
+
+  "selectors": {
+    "header": {
+      "name": "meta[property='og:title']",
+      "price": "meta[property='product:price:amount'], meta[property='og:price:amount']",
+      "currency": "meta[property='product:price:currency'], meta[property='og:price:currency']",
+      "country": "meta[property='og:locale']",
+      "description": "meta[property='og:description'], meta[name='description']",
+      "images": "meta[property='og:image'], meta[property='og:image:secure_url']",
+      "producer": "meta[property='product:brand'], meta[name='author']",
+
+      "abv": "meta[name='__nope__']",
+      "gluten_free": "meta[name='__nope__']",
+      "vegan": "meta[name='__nope__']",
+      "energy": "meta[name='__nope__']",
+      "sugars": "meta[name='__nope__']",
+
+      "category": "meta[property='product:type'], meta[property='product:category'], meta[property='og:type']"
+    },
+    "main": {
+      "name": "main h1, h1, .product__title, .product-title",
+
+      "price": "[data-product-price] .money, [data-product-price], .product__price .money, .product__price, .price .money, .price-item--regular, .price__current .money",
+      "currency": "[data-currency], [data-shop-currency], .money",
+
+      "country": ".product__vendor, [data-country], .country",
+      "description": "main .product__description, main .product__description .rte, main .rte, .product__description, .product__description .rte, .rte, [class*='description']",
+      "images": "main img[src*='cdn.shopify.com']:not([src*='icon']):not([src*='logo']), img[src*='cdn.shopify.com']:not([src*='icon']):not([src*='logo'])",
+
+      "producer": ".product__vendor, .vendor, [data-vendor]",
+
+      "abv": ".__nope__",
+      "gluten": ".__nope__",
+      "vegan": ".__nope__",
+      "energy": ".__nope__",
+      "sugars": ".__nope__",
+
+      "category": ".breadcrumb a:last-child, [data-product-type], .product-type"
+    }
+  },
+
+  "pagination": {
+    "type": "link",
+    "selector": "a[rel='next'], .pagination a[rel='next'], .pagination__item--next a, a.pagination__nav-item[rel='next']"
+  }
+}

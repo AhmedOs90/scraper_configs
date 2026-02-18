@@ -33,6 +33,33 @@ export async function populateLake(product) {
     return 'error';
   }
 }
+
+
+export async function populateLakeProcessed(product) {
+  try {
+    console.log(`Pushing for product ${product.name}...`);
+
+    const response = await axios.post(`${API_BASE_URL}/lake_processed`, product);
+    console.log(`Response for product ${product.name}:`, response.data);
+
+    // Check API response for status
+    if (response.data && response.data.status) {
+      if (response.data.status.toLowerCase() === 'updated') {
+        return 'updated';
+      } else if (response.data.status.toLowerCase() === 'new') {
+        return 'new';
+      }
+    }
+
+    // Default to "new" if no status provided
+    return 'new';
+  } catch (error) {
+    console.error(`Error populating product ${product.name}:`, error.message);
+    return 'error';
+  }
+}
+
+
 const API_BASE_URL_CLASSIFY = "http://34.141.37.120:8000";
 
 const API_URL = `${API_BASE_URL_CLASSIFY}/process_products`;
@@ -118,13 +145,11 @@ export async function saveProductsToCSV(products, filename = 'scraped_products.c
 
 
 export async function getClassifiedNeedsInvestigation() {
-  const API_URL = 'http://34.141.37.120:3002/lake/classified';
+  const API_URL = 'http://34.141.37.120:3002/lake_processed/classified';
   const payload = {
     classifiedValue: 2,      // needs investigation
     page: 0,
     rowsPerPage: 10000,
-    reviewed: null,
-    cleaned: 0
   };
 
   try {
