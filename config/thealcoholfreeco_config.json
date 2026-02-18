@@ -1,31 +1,25 @@
 {
-    "baseUrl": "https://thealcoholfreeco.co.uk/product-category/beer/",
     "rootUrl": "https://thealcoholfreeco.co.uk",
-    "collectionLinks": "product-category/",
-    "productsLinks": "product/",
-    "seller": "seller",
+    "baseUrl": "https://thealcoholfreeco.co.uk/collections/all",
     "site_name": "thealcoholfreeco",
+    "seller": "seller",
+    "bannerSkip": ".age-gate__content .button--primary",
+    "productsLinks": "/products/",
+    "collectionLinks": "/collections/",
     "moreConfig": true,
     "selectors": {
         "header": {
             "name": "meta[property='og:title']",
             "price": "meta[property='product:price:amount']",
             "currency": "meta[property='product:price:currency']",
-            "description": "meta[name='description']",
+            "description": "meta[name='twitter:description'], meta[property='og:description']",
             "images": "meta[property='og:image']"
         },
-        "main": {
-            "abv": "th:contains('ABV') + td",
-            "energy": "th:contains('Energy') + td",
-            "sugar": "th:contains('Sugar') + td",
-            "gluten": "div[data-tooltip='Gluten Free'] .sr-only",
-            "vegan": "div[data-tooltip='Vegan'] .sr-only",
-            "producer": ".product-meta__vendor a"
-        }
+        "main": { }
     },
     "pagination": {
         "type": "link",
-        "selector": "a.next.page-numbers"
+        "selector": "a.pagination__item[rel=\"next\"]"
     },
     "purePlayer": true
 }

@@ -21,6 +21,6 @@
         "type": "button",
         "selector": "#LoadMoreButton"
     },
-    "purePlayer": true,
-    "level": 1
+    "level": 1,
+    "purePlayer": false
 }

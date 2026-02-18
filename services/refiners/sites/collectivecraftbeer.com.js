@@ -1,7 +1,8 @@
 // services/refiners/sites/collectivecraftbeer.com.js
-import { extractABVFromText } from "../refiners_helpers.js";
-
 export default async function refine(rootUrl, product, page) {
+    
+    product.country = 'Canada';
+
     product.producer = await page.evaluate(() => {
         const ld = Array.from(document.querySelectorAll('script[type="application/ld+json"]'))
             .map(s => { try { return JSON.parse(s.textContent); } catch { return null; } })
@@ -12,8 +13,17 @@ export default async function refine(rootUrl, product, page) {
             }
         return null;
     });
-    
-    // product.abv = extractABVFromText(product.name, product.description);
+
+    product.description = product.description
+        .replace(/<[^>]+>/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
+
+    const abvMatch = product.description.match(/ABV:\s*([\d.]+%)/i);
+
+    if (abvMatch) {
+        product.abv = abvMatch[1];
+    }
 
     return product;
 }

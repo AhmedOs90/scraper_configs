@@ -1,24 +1,55 @@
 // services/refiners/sites/drydrinker.com.js
-import { detectCategory, categories } from "../refiners_helpers.js";
-
 export default async function refine(rootUrl, product, page) {
-    console.log("Refining product:", product.name);
-  product.energy = await page.evaluate(() => {
-    const energyEl = document.evaluate(
-      "//div[contains(@class, 'feature-chart__table-row') and div[contains(text(), 'Energy')]]/div[2]",
-      document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null
-    ).singleNodeValue;
-    return energyEl ? energyEl.textContent.trim() : null;
-  });
+    product.country = 'UK';
+    product.abv = product.abv?.replace(' ABV', '').trim();
 
-  product.sugar = await page.evaluate(() => {
-    const sugarEl = document.evaluate(
-      "//div[contains(@class, 'feature-chart__table-row') and div[contains(text(), 'Sugars')]]/div[2]",
-      document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null
-    ).singleNodeValue;
-    return sugarEl ? sugarEl.textContent.trim() : null;
-  });
+    product.description = product.description
+        .replace(/<[^>]+>/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
 
-  product.product_category = detectCategory(product.name, product.description, categories);
-  return product;
+    product.sugar = await page.evaluate(() => {
+        const sugarEl = document.evaluate(
+            "//tr[td[contains(translate(text(),'SUGARS','sugars'),'sugars')]]/td[2]",
+            document,
+            null,
+            XPathResult.FIRST_ORDERED_NODE_TYPE,
+            null
+        ).singleNodeValue;
+
+        return sugarEl ? sugarEl.textContent.trim() : null;
+    });
+
+    product.energy = await page.evaluate(() => {
+        const energyEl = document.evaluate(
+            "//tr[td[contains(translate(text(),'ENERGY','energy'),'energy')]]/td[2]",
+            document,
+            null,
+            XPathResult.FIRST_ORDERED_NODE_TYPE,
+            null
+        ).singleNodeValue;
+
+        return energyEl ? energyEl.textContent.trim() : null;
+    });
+
+    product.producer = await page.evaluate(() => {
+        const scripts = Array.from(
+            document.querySelectorAll('script[type="application/ld+json"]')
+        );
+
+        for (const s of scripts) {
+            try {
+                const json = JSON.parse(s.textContent);
+
+                if (json["@type"] === "Product" && json.brand?.name) {
+                    return json.brand.name.trim();
+                }
+            } catch {
+                continue;
+            }
+        }
+
+        return null;
+    });
+    return product;
 }

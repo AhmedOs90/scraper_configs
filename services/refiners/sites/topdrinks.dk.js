@@ -14,8 +14,6 @@ export default async function refine(rootUrl, product, page) {
         .replace(/\s+/g, " ")
         .trim();
 
-    // await page.waitForSelector('script[type="application/ld+json"]', { timeout: 10000 });
-
     product.abv = await page.evaluate(() => {
         const rows = Array.from(document.querySelectorAll('.attr-row'));
         for (const row of rows) {
@@ -47,6 +45,5 @@ export default async function refine(rootUrl, product, page) {
 
         return [];
     });
-
     return product;
 }

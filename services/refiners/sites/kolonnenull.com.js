@@ -1,3 +1,4 @@
+// services/refiners/sites/kolonnenull.com.js
 export default async function refine(rootUrl, product, page) {
   // 1) Flags + nutrition from the page
   const out = await page

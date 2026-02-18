@@ -1,14 +1,12 @@
 {
     "rootUrl": "https://themindfuldrinking.com",
-    "baseUrl": "https://themindfuldrinking.com/collections/all",
+    "baseUrl": "https://themindfuldrinking.com/collections/all?filter.p.m.custom._abv=%E2%89%A40.5%25",
     "site_name": "themindfuldrinking",
     "seller": "seller",
+    "bannerSkip": "#pge_CEsF__TEq .om-global-close-button",
+    "productsLinks": "/products/",
     "collectionLinks": "/collections/",
     "skipCollectionLinksInProducts": true,
-    "productsLinks": "/products/",
-    "productLinkSelector": "",
-    "productLinkAttribute": "",
-    "bannerSkip": ".om-popup-close-x",
     "moreConfig": true,
     "selectors": {
         "header": {

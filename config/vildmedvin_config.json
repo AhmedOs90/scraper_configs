@@ -1,40 +1,25 @@
 {
-    "baseUrl": "https://www.vildmedvin.dk/alkoholfri",
     "rootUrl": "https://www.vildmedvin.dk",
-    "collectionLinks": "",
-    "productLinkSelector": "a[data-testid='productLink']",
-    "productLinkAttribute": "href",
-    "bannerSkip": "button.coi-banner__accept",
-    "seller": "seller",
+    "baseUrl": "https://www.vildmedvin.dk/alkoholfri",
     "site_name": "vildmedvin",
+    "seller": "seller",
+    "bannerSkip": "button.coi-banner__accept",
+    "productLinkAttribute": "href",
+    "productLinkSelector": "a[data-testid='productLink']",
     "moreConfig": true,
-    "skipCollectionLinksInProducts": true,
     "selectors": {
         "header": {
-            "name": "meta[property='og:title']",
-            "price": "meta[property='product:price:amount']",
-            "currency": "meta[itemprop='priceCurrency']",
-            "description": "meta[name='description']",
-            "images": "meta[property='og:image']"
+            "name": "meta[name='og:title']",
+            "images": "meta[name='og:image']",
+            "description": "meta[name='description']"
         },
         "main": {
-            "name": "[data-testid='productName']",
-            "price": "#CartContent .previous-price",
-            "description": "div.product-description",
-            "images": "img.product-image__thumb",
-            "abv": "td:has(strong:contains('Alkohol')) + td",
-            "energy": "td:has(strong:contains('Energi')) + td",
-            "sugar": "td:has(strong:contains('Sukker')) + td",
-            "gluten": "ul.product-features li:contains('Glutenfri')",
-            "vegan": "ul.product-features li:contains('Vegansk')",
-            "producer": "div.product-brand a",
-            "country": "td:has(strong:contains('Land')) + td",
-            "category": "td:has(strong:contains('Type')) + td"
+            "price": ".price.serif.large-qty, .previous-price"
         }
     },
     "pagination": {
         "type": "button",
         "selector": "button.loadMoreButton"
     },
-    "purePlayer": true
+    "purePlayer": false
 }

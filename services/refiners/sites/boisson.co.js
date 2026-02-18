@@ -1,21 +1,20 @@
 // services/refiners/sites/boisson.co.js
 export default async function refine(rootUrl, product, page) {
-  product.abv = product.abv || await page.evaluate(() => {
-    const body = document.querySelector('#description-1');
-    if (!body) return null;
-    const ps = Array.from(body.querySelectorAll('p'));
-    for (const p of ps) {
-      const label = (p.textContent || '').trim().toLowerCase();
-      if (label.includes('alcohol by volume')) {
-        const ul = p.nextElementSibling;
-        if (ul && ul.tagName.toLowerCase() === 'ul') {
-          const li = ul.querySelector('li');
-          return li?.textContent?.trim() || null;
-        }
-      }
-    }
-    return null;
-  }).catch(() => null);
+    product.country = "USA";
 
-  return product;
+    product.abv = await page.evaluate(() => {
+        const el = document.querySelector("#description-1");
+        if (!el) return null;
+
+        const text = el.innerText;
+        const match = text.match(/(\d+(\.\d+)?%)/);
+
+        return match ? match[1] : null;
+    });
+
+    product.description = product.description
+        .replace(/<[^>]+>/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
+    return product;
 }

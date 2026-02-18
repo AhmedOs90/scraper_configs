@@ -1,12 +1,12 @@
 {
-    "baseUrl": "https://beershoppen.dk/collections/alkoholfri-ol",
     "rootUrl": "https://beershoppen.dk",
-    "collectionLinks": "collections/",
-    "productsLinks": "collections/alkoholfri-ol/products/",
-    "moreConfig": true,
-    "seller": "seller",
+    "baseUrl": "https://beershoppen.dk/collections/alkoholfri-ol",
     "site_name": "beershoppen",
+    "seller": "seller",
+    "productsLinks": "collections/alkoholfri-ol/products/",
+    "collectionLinks": "collections/",
     "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
     "selectors": {
         "header": {
             "name": "meta[property='og:title']",
@@ -26,5 +26,5 @@
         "type": "link",
         "selector": "span.next a"
     },
-    "purePlayer": true
+    "purePlayer": false
 }

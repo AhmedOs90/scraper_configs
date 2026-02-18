@@ -18,7 +18,6 @@ export default async function refine(rootUrl, product, page) {
             return null;
         }
     });
-    product.producer = producer || product.producer;
-    
+    product.producer = producer;
     return product;
 }

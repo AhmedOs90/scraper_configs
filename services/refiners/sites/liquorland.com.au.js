@@ -14,6 +14,5 @@ export default async function refine(rootUrl, product, page) {
         );
         return li?.querySelector('.val')?.textContent.trim() || null;
     });
-
     return product;
 }

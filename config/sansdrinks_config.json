@@ -1,33 +1,26 @@
 {
-    "baseUrl": "https://sansdrinks.com.au/collections/buy-all-non-alcoholic-drinks",
     "rootUrl": "https://sansdrinks.com.au",
-    "collectionLinks": "collections/",
-    "productsLinks": "products/",
-    "skipCollectionLinksInProducts": true,
-    "bannerSkip": "button.klaviyo-close-form",
-    "seller": "seller",
+    "baseUrl": "https://sansdrinks.com.au/collections/buy-all-non-alcoholic-drinks",
     "site_name": "sansdrinks",
+    "seller": "seller",
+    "bannerSkip": "button.klaviyo-close-form",
+    "productsLinks": "/products/",
+    "collectionLinks": "/collections/",
+    "skipCollectionLinksInProducts": true,
     "moreConfig": true,
     "selectors": {
         "header": {
             "name": "meta[property='og:title']",
+            "description": "meta[property='og:description']",
+            "images": "meta[property='og:image']",
             "price": "meta[property='og:price:amount']",
-            "currency": "meta[property='og:price:currency']",
-            "description": "meta[name='description']",
-            "images": "meta[property='og:image']"
+            "currency": "meta[property='og:price:currency']"
         },
-        "main": {
-            "energy": "th:contains('Calories') + td",
-            "sugar": "th:contains('Sugar') + td",
-            "abv": "th:contains('ABV') + td",
-            "gluten": ".description_product_feature",
-            "vegan": ".description_product_feature",
-            "producer": ".product-info__vendor a, .product-info__vendor span"
-        }
+        "main": { }
     },
     "pagination": {
         "type": "button",
-        "selector": ".paginateCollectionBtnContainer .sf__btn.sf__btn-primary"
+        "selector": "button[data-load-more]"
     },
     "purePlayer": true
 }

@@ -33,6 +33,5 @@ export default async function refine(rootUrl, product, page) {
         product.name = jsonLd.name?.trim();
         product.producer = jsonLd.brand?.name?.trim();
     }
-
     return product;
 }

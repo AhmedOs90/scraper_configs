@@ -1,29 +1,25 @@
 {
     "rootUrl": "https://www.alcoholfreedrinks.co.uk",
-    "baseUrl": "https://www.alcoholfreedrinks.co.uk/product-category/",
+    "baseUrl": "https://alcoholfreedrinks.co.uk/collections/all/",
     "site_name": "alcoholfreedrinks",
     "seller": "seller",
-    "productsLinks": "/product/",
-    "collectionLinks": "/product-category/",
+    "productsLinks": "/products/",
+    "collectionLinks": "/collections/",
     "skipCollectionLinksInProducts": true,
     "moreConfig": true,
     "selectors": {
         "header": {
             "name": "meta[property='og:title']",
-            "price": "meta[property='product:price:amount']",
-            "currency": "meta[property='product:price:currency']",
+            "price": "meta[property='og:price:amount']",
+            "currency": "meta[property='og:price:currency']",
             "description": "meta[name='description']",
             "images": "meta[property='og:image']"
         },
-        "main": {
-            "category": ".breadcrumb a:last-child",
-            "gluten_free": ".tagged_as a[href*='gluten-free']",
-            "vegan": ".tagged_as a[href*='vegan']"
-        }
+        "main": { }
     },
     "pagination": {
-        "type": "button",
-        "selector": ".g-loadmore button"
+        "type": "scroll",
+        "selector": ".email-signup-block"
     },
     "level": 1,
     "purePlayer": true

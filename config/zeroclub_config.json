@@ -1,6 +1,6 @@
 {
     "rootUrl": "https://zeroclub.com.au",
-    "baseUrl": ["https://zeroclub.com.au/collections/all"],
+    "baseUrl": "https://zeroclub.com.au/collections/all",
     "site_name": "zeroclub",
     "seller": "seller",
     "productsLinks": "/products/",

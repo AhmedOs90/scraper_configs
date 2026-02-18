@@ -23,6 +23,6 @@
         "type": "link",
         "selector": ".listing--bottom-paging .paging--link:first-of-type"
     },
-    "purePlayer": true,
-    "level": 1
+    "level": 1,
+    "purePlayer": false
 }

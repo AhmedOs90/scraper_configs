@@ -17,6 +17,5 @@ export default async function refine(rootUrl, product, page) {
         const match = text.match(/(\d+(?:\.\d+)?)%/);
         return match ? match[0] : null;
     });
-
     return product;
 }

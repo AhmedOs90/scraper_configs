@@ -1,49 +1,22 @@
 {
-  "rootUrl": "https://mashgang.com",
-  "baseUrl": "https://mashgang.com/collections/beer",
-  "site_name": "mashgang",
-  "seller": "seller",
-  "collectionLinks": "/collections/",
-  "productsLinks": "/products/",
-  "skipCollectionLinksInProducts": true,
-  "productLinkAttribute": "href",
-  "productLinkSelector": "a[href^='/products/'], a[href*='mashgang.com/products/']",
-  "moreConfig": true,
-  "productPageCheckSelector": "form[action*='/cart/add'], form[action*='/cart'] input[name='id']",
-  "selectors": {
-    "header": {
-      "name": "meta[property='og:title']",
-      "price": "meta[property='product:price:amount'], meta[property='og:price:amount']",
-      "currency": "meta[property='product:price:currency'], meta[property='og:price:currency']",
-      "country": "meta[property='og:locale']",
-      "description": "meta[property='og:description'], meta[name='description']",
-      "images": "meta[property='og:image'], meta[property='og:image:secure_url']",
-      "abv": "meta[name='alcohol_by_volume'], meta[property='product:alcohol_by_volume']",
-      "gluten_free": "meta[name='gluten_free'], meta[property='product:gluten_free']",
-      "vegan": "meta[name='vegan'], meta[property='product:vegan']",
-      "producer": "meta[property='product:brand'], meta[name='author']",
-    
-      "category": "meta[property='product:category'], meta[property='og:type']"
+    "rootUrl": "https://mashgang.com",
+    "baseUrl": "https://mashgang.com/collections/beer",
+    "site_name": "mashgang",
+    "seller": "seller",
+    "collectionLinks": "/collections/",
+    "productsLinks": "/products/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "price": "meta[property='product:price:amount']",
+            "currency": "meta[property='product:price:currency']",
+            "images": "meta[property='og:image']",
+            "description": "meta[property='og:description']"
+        },
+        "main": { }
     },
-    "main": {
-      "name": "main h1, .product__title, .product-title, h1",
-      "price": "  [data-product-price], .product__price .money, .product__price",
-      "currency": ".price__container, .price-item, [data-currency], [data-shop-currency]",
-      "country": ".product__vendor, [data-country], .country",
-      "description": ".product__description, .product-description, .rte, [data-product-description], [class*='description']",
-      "images": "main img[src*='cdn.shopify.com']:not([src*='icon']):not([src*='logo'])",
-      "abv": ".abv, [data-abv], [class*='abv']",
-      "gluten": ".gluten, [data-gluten], [class*='gluten']",
-      "vegan": ".vegan, [data-vegan], [class*='vegan']",
-      "producer": ".product__vendor, .vendor, [data-vendor]",
-      "energy": ".energy, [data-energy], [class*='energy']",
-      "sugars": ".sugar, .sugars, [data-sugar], [data-sugars]",
-      "category": ".breadcrumb a:last-child, [data-product-type], .product-type"
-    }
-  },
-  "pagination": {
-    "type": "link",
-    "selector": "a[rel='next'], .pagination a[rel='next'], a.pagination__nav-item[rel='next']"
-  },
-  "level": 1
+    "level": 1,
+    "purePlayer": true
 }

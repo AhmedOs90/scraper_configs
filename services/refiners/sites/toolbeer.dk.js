@@ -1,57 +1,67 @@
+// services/refiners/sites/toolbeer.dk.js
 export default async function refine(rootUrl, product, page) {
-  const info = await page.evaluate(() => {
-    const rows = Array.from(document.querySelectorAll(".product__info-line"));
+    product.country = "Denmark";
+    product.producer = "To Øl";
+    product.price = product.price.replace(",", ".").trim();
 
-    const out = {
-      abv: null,
-      nutritionText: null
-    };
+    const info = await page.evaluate(() => {
+        const rows = Array.from(document.querySelectorAll(".product__info-line"));
 
-    for (const row of rows) {
-      const label = row.querySelector(".product__info-line_label")?.textContent?.trim()?.toLowerCase();
-      const value = row.querySelector(".product__info-line_content")?.textContent?.trim() || null;
+        const out = {
+            abv: null,
+            nutritionText: null
+        };
 
-      if (!label || !value) continue;
+        for (const row of rows) {
+            const label = row
+                .querySelector(".product__info-line_label")
+                ?.textContent?.trim()
+                ?.toLowerCase();
 
-      if (label === "abv") out.abv = value;
+            const value =
+                row.querySelector(".product__info-line_content")?.textContent?.trim() ||
+                null;
 
-      // Nutrition line label
-      if (label.includes("nutrition facts per 100 ml")) {
-        out.nutritionText = value;
-      }
+            if (!label || !value) continue;
+
+            if (label === "abv") out.abv = value;
+
+            if (label.includes("nutrition facts per 100 ml")) {
+                out.nutritionText = value;
+            }
+        }
+
+        return out;
+    }).catch(() => ({ abv: null, nutritionText: null }));
+
+    if (info.abv) {
+        const abvMatch = info.abv.match(/(\d+(?:[.,]\d+)?)\s*%/);
+        if (abvMatch) {
+            product.abv = `${abvMatch[1].replace(",", ".")}%`;
+        }
     }
 
-    return out;
-  }).catch(() => ({ abv: null, nutritionText: null }));
+    if (info.nutritionText) {
+        const txt = info.nutritionText.replace(/\s+/g, " ").trim();
 
-  // ABV (e.g. "0.5% VOL.")
-  if (info.abv) product.abv = info.abv;
+        const kcalMatch = txt.match(/(\d+(?:[.,]\d+)?)\s*kcal/i);
+        const kjMatch = txt.match(/(\d+(?:[.,]\d+)?)\s*kJ/i);
 
-  // Nutrition parsing (from something like:
-  // "Energy 126 kJ/23 kcal | ... | Sugars 5.0 g | ..."
-  if (info.nutritionText) {
-    const txt = info.nutritionText.replace(/\s+/g, " ").trim();
+        if (kcalMatch) {
+            product.energy = `${kcalMatch[1].replace(",", ".")} kcal`;
+        } else if (kjMatch) {
+            product.energy = `${kjMatch[1].replace(",", ".")} kJ`;
+        }
 
-    // Extract energy (prefer kcal if present)
-    // Matches: "23 kcal" OR "126 kJ/23 kcal"
-    const kcalMatch = txt.match(/(\d+(?:[.,]\d+)?)\s*kcal/i);
-    const kjMatch = txt.match(/(\d+(?:[.,]\d+)?)\s*kJ/i);
+        const sugarMatch = txt.match(
+            /sugars?\s*(?:[:])?\s*(<\s*)?(\d+(?:[.,]\d+)?)\s*g/i
+        );
 
-    // Store as strings like your pipeline expects (refineData/defaultRefiner can normalize later)
-    if (kcalMatch) product.energy = `${kcalMatch[1].replace(",", ".")} kcal`;
-    else if (kjMatch) product.energy = `${kjMatch[1].replace(",", ".")} kJ`;
-
-    // Extract sugars (matches "Sugars 5.0 g")
-    const sugarMatch = txt.match(/sugars?\s*(?:[:])?\s*(<\s*)?(\d+(?:[.,]\d+)?)\s*g/i);
-    if (sugarMatch) {
-      const lessThan = Boolean(sugarMatch[1]);
-      const val = sugarMatch[2].replace(",", ".");
-      product.sugar = `${lessThan ? "<" : ""}${val} g`;
+        if (sugarMatch) {
+            const lessThan = Boolean(sugarMatch[1]);
+            const val = sugarMatch[2].replace(",", ".");
+            product.sugar = `${lessThan ? "<" : ""}${val} g`;
+        }
     }
-
-    // Optional: keep the whole nutrition string (handy for debugging/QA)
-    product.energy = txt;
-  }
-
-  return product;
+    return product;
 }

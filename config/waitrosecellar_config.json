@@ -23,5 +23,5 @@
         "selector": "a[title='Next']"
     },
     "level": 1,
-    "purePlayer": true
+    "purePlayer": false
 }

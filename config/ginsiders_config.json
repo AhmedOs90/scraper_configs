@@ -1,42 +1,23 @@
 {
     "rootUrl": "https://ginsiders.com",
-    "baseUrl": "https://ginsiders.com/categorie-produit/gin-sans-alcool/",
+    "baseUrl": "https://ginsiders.com/categorie-produit/gin-sans-alcool",
     "site_name": "ginsiders",
     "seller": "seller",
     "productsLinks": "/product/",
     "collectionLinks": "/categorie-produit/",
-    "productLinkSelector": "ul.products li.product a.woocommerce-LoopProduct__link, a.woocommerce-LoopProduct-link, a[href*=\"/produit/\"]",
-    "productLinkAttribute": "href",
     "skipCollectionLinksInProducts": true,
-    "pagination": {
-        "type": "link",
-        "selector": "li.ais-Pagination-item--nextPage:not(.ais-Pagination-item--disabled) a.ais-Pagination-link[href]:not([href='#'])"
-    },
-    "bannerSkip": null,
     "moreConfig": true,
     "selectors": {
-        "header": {
-            "name": "meta[property='og:title']",
-            "price": "meta[property='product:price:amount'], meta[name='twitter:data1']",
-            "currency": "meta[property='product:price:currency'], meta[name='twitter:label1']",
-            "description": "meta[name='description'], meta[property='og:description']",
-            "images": "meta[property='og:image']",
-            "producer": null
-        },
+        "header": { },
         "main": {
-            "name": "h1.product_title, .product_title.entry-title, h1",
-            "price": ".summary .price .amount, .summary .price bdi",
-            "currency": ".summary .price .woocommerce-Price-currencySymbol",
-            "description": ".woocommerce-product-details__short-description, .product .entry-summary .woocommerce-product-details__short-description, .product .entry-content, .rte, .wp-block-paragraph",
-            "images": ".woocommerce-product-gallery__image img, .woocommerce-product-gallery img, img.wp-post-image",
-            "abv": "p:contains('% ABV'), li:contains('% ABV'), p:contains('ABV'), li:contains('Alcool'), p:contains('% alcool')",
-            "gluten": "a[href*='gluten'], li:contains('sans gluten'), p:contains('sans gluten')",
-            "vegan": "a[href*='vegan'], li:contains('vegan'), p:contains('végétalien'), p:contains('végane')",
-            "producer": ".summary .product_meta .posted_in a, .product_meta .brand a, .product_meta .sku_wrapper + a, .product__meta--vendor a",
-            "energy": "li:contains('kcal'), p:contains('kcal'), li:contains('calories'), p:contains('calories')",
-            "sugars": "li:contains('sucre'), li:contains('sucres'), p:contains('sucre'), p:contains('sucres')",
-            "category": ".woocommerce-breadcrumb a:last-of-type, nav.breadcrumbs a:last-child"
+            "name": ".product_title.entry-title",
+            "price": ".price .woocommerce-Price-amount.amount",
+            "description": ".woocommerce-product-details__short-description"
         }
     },
-    "purePlayer": true
+    "pagination": {
+        "type": "button",
+        "selector": ".ais-Pagination-item--nextPage .ais-Pagination-link"
+    },
+    "purePlayer": false
 }

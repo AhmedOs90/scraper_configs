@@ -1,5 +1,5 @@
 {
-    "rootUrl": "https://www.alko.fi/en/",
+    "rootUrl": "https://www.alko.fi/en",
     "baseUrl": "https://www.alko.fi/en/products/non-alcoholic",
     "site_name": "alko",
     "seller": "seller",
@@ -23,5 +23,6 @@
         "selector": ".product-list-loader"
     },
     "level": 1,
-    "purePlayer": true
+    "purePlayer": false
+    
 }

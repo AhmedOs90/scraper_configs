@@ -1,0 +1,56 @@
+{
+  "rootUrl": "https://refinemoments.com",
+  "baseUrl": "https://refinemoments.com/collections/all",
+  "site_name": "refinemoments",
+  "seller": "seller",
+
+  "productsLinks": "/products/",
+  "collectionLinks": "/collections/",
+
+  "productLinkSelector": "a[href*=\"/products/\"]",
+  "productLinkAttribute": "href",
+  "skipCollectionLinksInProducts": true,
+  "pureplayer": true,
+
+  "bannerSkip": null,
+  "moreConfig": true,
+  "level": 1,
+
+  "pagination": {
+    "type": "link",
+    "selector": "a[rel='next'], .pagination__item--next a, .pagination__next a, nav[aria-label='Pagination'] a[aria-label*='Next']"
+  },
+
+  "selectors": {
+    "header": {
+      "name": "meta[property='og:title'], meta[name='twitter:title']",
+      "price": "meta[property='product:price:amount'], meta[property='og:price:amount']",
+      "currency": "meta[property='product:price:currency'], meta[property='og:price:currency']",
+      
+      "description": "meta[name='description'], meta[property='og:description']",
+      "images": "meta[property='og:image'], meta[property='og:image:secure_url'], meta[name='twitter:image']",
+      
+      "gluten_free": "meta[name='__missing__']",
+      "vegan": "meta[name='__missing__']",
+      "producer": "meta[property='product:brand'], meta[name='author'], meta[name='brand']",
+      "energy": "meta[name='__missing__']",
+      "sugars": "meta[name='__missing__']",
+      "category": "meta[name='__missing__']"
+    },
+
+    "main": {
+      "name": "h1",
+      "price": "span.price-item.price-item--regular[data-product-price]",
+      "currency": ".price-item--regular, .price-item--sale, .price__current .money, .price .money, [data-product-price], .product__price .money",
+      "country": "meta[name='__missing__']",
+      "description": ".product__description, .product-single__description, .product-description, .rte, [data-product-description]",
+      "images": ".product__media img, .product-gallery img, img[src*='/products/']",
+      "gluten": "meta[name='__missing__']",
+      "vegan": "meta[name='__missing__']",
+      "producer": ".product__vendor, .product-vendor a, .product-meta__vendor a, .product__block__text a",
+      "energy": "meta[name='__missing__']",
+      "sugars": "meta[name='__missing__']",
+      "category": "meta[name='__missing__']"
+    }
+  }
+}

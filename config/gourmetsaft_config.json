@@ -18,6 +18,6 @@
             "description": ".woocommerce-product-details__short-description, .elementor-widget-text-editor .elementor-widget-container"
         }
     },
-    "purePlayer": true,
-    "level": 1
+    "level": 1,
+    "purePlayer": true
 }

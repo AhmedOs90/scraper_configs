@@ -12,7 +12,7 @@
         "header": {},
         "main": {
             "name": ".product_title.entry-title",
-            "price": "p.price",
+            "price": ".price .woocommerce-Price-amount.amount",
             "images": ".product_title.entry-title",
             "description": "#tab-description"
         }
@@ -22,5 +22,5 @@
         "selector": ".woocommerce-pagination a.next"
     },
     "level": 1,
-    "purePlayer": true
+    "purePlayer": false
 }

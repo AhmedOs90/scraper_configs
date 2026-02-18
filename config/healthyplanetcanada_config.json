@@ -5,7 +5,6 @@
     "seller": "seller",
     "productLinkAttribute": "href",
     "productLinkSelector": "li.item.product.product-item a.product-item-link",
-    "moreConfig": true,
     "selectors": {
         "header": {
             "name": "meta[property='og:title']",

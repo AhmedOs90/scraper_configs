@@ -13,6 +13,5 @@ export default async function refine(rootUrl, product, page) {
         const el = document.querySelector('.af-fact--cal .af-fact__big');
         return el ? el.textContent.trim() : null;
     });
-
     return product;
 }

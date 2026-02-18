@@ -5,46 +5,23 @@
     "seller": "seller",
     "productsLinks": "/products/",
     "collectionLinks": "/collections/",
-    "productLinkSelector": "a[href*='/products/']",
-    "productLinkAttribute": "href",
     "skipCollectionLinksInProducts": true,
-    "pagination": {
-        "type": "link",
-        "selector": "a.pagination__item.pagination__item--prev[aria-label='Next page']"
-    },
-    "bannerSkip": null,
     "moreConfig": true,
     "selectors": {
         "header": {
-            "name": "meta[property='og:title'], meta[name='twitter:title']",
-            "price": "meta[property='product:price:amount'], meta[property='og:price:amount']",
-            "currency": "meta[property='product:price:currency'], meta[property='og:price:currency']",
-            "description": "meta[name='description'], meta[property='og:description']",
-            "images": "meta[property='og:image']",
-            "abv": null,
-            "gluten_free": null,
-            "vegan": null,
-            "producer": null,
-            "energy": null,
-            "sugars": null,
-            "country": null,
-            "category": null
+            "name": "meta[property='og:title']",
+            "price": "meta[property='og:price:amount']",
+            "currency": "meta[property='og:price:currency']",
+            "images": "meta[property='og:image']"
         },
         "main": {
-            "name": "h1.product__title, h1.product-title, h1.product-name, .product-title h1",
-            "price": ".price-item--regular, .price .money, .product__price .money, .price__current .money",
-            "currency": ".price-item--regular, .price .money, .product__price .money, .price__current .money",
-            "description": ".product__description, .product-single__description, .rte, .product-description",
-            "images": ".product__media img, .product-gallery img, .product__image img, img[src*='/products/']",
-            "abv": null,
-            "gluten": null,
-            "vegan": null,
             "producer": ".product__text.inline-richtext",
-            "energy": null,
-            "sugars": null,
-            "country": null,
-            "category": ".breadcrumb li:last-child, nav.breadcrumbs li:last-child, .breadcrumbs a:last-child"
+            "description": ".product__description"
         }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": "a.pagination__item.pagination__item--prev[aria-label='Next page']"
     },
     "purePlayer": true
 }

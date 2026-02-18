@@ -1,25 +1,32 @@
 // services/refiners/sites/drinknolow.com.js
-
 export default async function refine(rootUrl, product, page) {
-  // Brand from #viewed_product
-  product.producer = await page.evaluate(() => {
-    const scriptTag = document.querySelector("#viewed_product");
-    if (!scriptTag) return null;
-    const content = scriptTag.textContent || "";
-    const match = content.match(/Brand:\s*"([^"]+)"/);
-    return match ? match[1] : null;
-  });
+    product.country = 'USA';
 
-  // Vegan / gluten-free flags from metafields
-  const flags = await page.evaluate(() => {
-    const spans = document.querySelectorAll("span.metafield-multi_line_text_field");
-    if (!spans.length) return { vegan: false, glutenfree: false };
-    const text = Array.from(spans).map(s => s.innerText).join(" ").toLowerCase();
-    return { vegan: text.includes("vegan"), glutenfree: text.includes("gluten") };
-  });
+    product.description = product.description
+        .replace(/<[^>]+>/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
 
-  product.vegan = flags.vegan ? "Vegan" : product.vegan || null;
-  product.gluten_free = flags.glutenfree ? "Gluten free" : product.gluten_free || null;
+    const flags = await page.evaluate(() => {
+        const spans = document.querySelectorAll("span.metafield-multi_line_text_field");
+        if (!spans.length) return { vegan: false, glutenfree: false, abv: null };
 
-  return product;
+        const text = Array.from(spans).map(s => s.innerText).join(" ");
+        const lower = text.toLowerCase();
+
+        const abvMatch =
+            lower.match(/less\s+than\s+(\d+(?:\.\d+)?)\s*%/) ||
+            lower.match(/<\s*(\d+(?:\.\d+)?)\s*%/);
+
+        return {
+            vegan: lower.includes("vegan"),
+            glutenfree: lower.includes("gluten"),
+            abv: abvMatch ? `${abvMatch[1]}%` : null,
+        };
+    });
+
+    product.vegan = flags.vegan ? "Vegan" : product.vegan || null;
+    product.gluten_free = flags.glutenfree ? "Gluten free" : product.gluten_free || null;
+    product.abv = flags.abv || product.abv || null;
+    return product;
 }

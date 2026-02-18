@@ -3,11 +3,9 @@
     "baseUrl": "https://minusmoonshine.com/collections/all",
     "site_name": "minusmoonshine",
     "seller": "seller",
+    "productsLinks": "/products/",
     "collectionLinks": "/collections/",
     "skipCollectionLinksInProducts": true,
-    "productsLinks": "/products/",
-    "productLinkSelector": "",
-    "productLinkAttribute": "",
     "moreConfig": true,
     "selectors": {
         "header": {

@@ -1,10 +1,10 @@
 {
-    "baseUrl": "https://www.alcoholvrijshop.nl/collections/all",
     "rootUrl": "https://www.alcoholvrijshop.nl",
-    "collectionLinks": "collections/",
-    "productsLinks": "alllinks",
-    "seller": "seller",
+    "baseUrl": "https://www.alcoholvrijshop.nl/collections/all",
     "site_name": "alcoholvrijshop",
+    "seller": "seller",
+    "productsLinks": "alllinks",
+    "collectionLinks": "/collections/",
     "moreConfig": true,
     "selectors": {
         "header": {
@@ -27,5 +27,5 @@
         "type": "link",
         "selector": "a.pagination__nav-item[rel='next']"
     },
-    "purePlayer": true
+    "purePlayer": false
 }

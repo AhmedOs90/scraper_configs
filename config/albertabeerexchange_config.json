@@ -1,11 +1,11 @@
 {
     "rootUrl": "https://www.albertabeerexchange.ca",
-    "baseUrl": ["https://www.albertabeerexchange.ca/non-alcoholic"],
+    "baseUrl": "https://www.albertabeerexchange.ca/non-alcoholic",
     "site_name": "albertabeerexchange",
     "seller": "seller",
+    "bannerSkip": "button.dy-w-100.dy-mt-2.button-cta.button-large",
     "productLinkAttribute": "href",
     "productLinkSelector": ".product-col a.product-block-title",
-    "bannerSkip": "button.dy-w-100.dy-mt-2.button-cta.button-large",
     "moreConfig": true,
     "selectors": {
         "header": {
@@ -22,5 +22,5 @@
         "selector": "a.collection-load-more.button"
     },
     "level": 1,
-    "purePlayer": true
+    "purePlayer": false
 }

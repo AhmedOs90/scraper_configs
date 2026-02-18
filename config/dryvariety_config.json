@@ -1,10 +1,10 @@
 {
-    "baseUrl": "https://dryvariety.com/collections/all",
     "rootUrl": "https://dryvariety.com",
-    "collectionLinks": "collections/",
-    "productsLinks": "products/",
-    "seller": "seller",
+    "baseUrl": "https://dryvariety.com/collections/all",
     "site_name": "dryvariety",
+    "seller": "seller",
+    "productsLinks": "products/",
+    "collectionLinks": "collections/",
     "moreConfig": true,
     "skipCollectionLinksInProducts": true,
     "selectors": {

@@ -18,6 +18,5 @@ export default async function refine(rootUrl, product, page) {
     if (abvMatch) {
         product.abv = abvMatch[1];
     }
-
     return product;
 }
