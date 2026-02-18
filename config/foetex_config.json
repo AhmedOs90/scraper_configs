@@ -25,6 +25,6 @@
         "type": "button",
         "selector": ".paging .paging-controls .v-btn"
     },
-    "purePlayer": true,
-    "level": 1
+    "level": 1,
+    "purePlayer": false
 }

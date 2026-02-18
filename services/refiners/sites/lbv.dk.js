@@ -18,6 +18,5 @@ export default async function refine(rootUrl, product, page) {
                 .replace(/\./g, '')
                 .slice(0, 2);
     }
-
     return product;
 }

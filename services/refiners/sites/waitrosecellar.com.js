@@ -38,6 +38,5 @@ export default async function refine(rootUrl, product, page) {
         const el = document.querySelector('.gg01_tab_content p.gg01_product_description');
         return el ? el.textContent.replace(/\s+/g, ' ').trim() : "";
     });
-
     return product;
 }

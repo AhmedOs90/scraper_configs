@@ -1,47 +1,74 @@
 // services/refiners/sites/sansdrinks.com.au.js
 export default async function refine(rootUrl, product, page) {
-  product.energy = await page.evaluate(() => {
-    const th = Array.from(document.querySelectorAll("th")).find(el => el.textContent.includes("Calories"));
-    return th ? th.nextElementSibling?.textContent?.trim() ?? null : null;
-  }).catch(() => null);
+    product.country = 'Australia';
+    product.name = product.name.replace(' |  Sans Drinks  Australia  ', '').trim();
+    product.description = product.description
+        .replace(/<[^>]+>/g, '')
+        .replace(/\s+/g, ' ')
+        .trim();
 
-  product.sugar = await page.evaluate(() => {
-    const th = Array.from(document.querySelectorAll("th")).find(el => el.textContent.includes("Sugar"));
-    return th ? th.nextElementSibling?.textContent?.trim() ?? null : null;
-  }).catch(() => null);
+    const nutrition = await page
+        .evaluate(() => {
+            const normalize = (s) => (s || '').replace(/\s+/g, ' ').trim().toLowerCase();
 
-  product.abv = product.abv || await page.evaluate(() => {
-    const th = Array.from(document.querySelectorAll("th")).find(el => el.textContent.includes("ABV"));
-    return th ? th.nextElementSibling?.textContent?.trim() ?? null : null;
-  }).catch(() => null);
+            const valueFor = (...needles) => {
+                const ths = Array.from(document.querySelectorAll('th'));
+                const th = ths.find((el) => {
+                    const t = normalize(el.textContent);
+                    return needles.some((n) => t.includes(normalize(n)));
+                });
+                const tdText = th?.nextElementSibling?.textContent;
+                return tdText ? tdText.replace(/\s+/g, ' ').trim() : null;
+            };
 
-  const productDataArray = await page.evaluate(() => {
-    const scriptTags = Array.from(document.querySelectorAll("script.tpt-seo-schema"));
-    const data = [];
-    scriptTags.forEach(scriptTag => {
-      const scriptContent = scriptTag.textContent || "";
-      const match = scriptContent.match(/var preAsssignedValue = ({[\s\S]*?});/);
-      if (match && match[1]) {
-        try {
-          // eslint-disable-next-line no-eval
-          const parsedData = eval("(" + match[1] + ")");
-          data.push(parsedData);
-        } catch {}
-      }
-    });
-    return data;
-  });
+            return {
+                energy: valueFor('energy', 'calories'),
+                sugar: valueFor('sugars', 'sugar', '- sugars'),
+                abv: valueFor('abv'),
+            };
+        })
+        .catch(() => ({ energy: null, sugar: null, abv: null }));
 
-  if (Array.isArray(productDataArray) && productDataArray.length > 0) {
-    for (const data of productDataArray) {
-      product.producer = data["product.vendor"] || product.producer || null;
-    }
-  }
+    product.energy = nutrition.energy;
+    product.sugar = nutrition.sugar;
+    product.abv = product.abv || nutrition.abv;
 
-  product.vegan = product.vegan && /vegan/i.test(product.vegan) ? "Vegan" : null;
-  product.gluten_free = product.gluten_free && /glutten/i.test(product.gluten_free) ? "gluten_free" : null;
+    product.producer = await page
+        .evaluate(() => {
+            const scripts = Array.from(
+                document.querySelectorAll('script[type="application/ld+json"]')
+            );
 
-  return product;
+            const tryParse = (txt) => {
+                try {
+                    return JSON.parse(txt);
+                } catch {
+                    return null;
+                }
+            };
+
+            const nodes = scripts
+                .map((s) => tryParse(s.textContent || s.innerText || ''))
+                .filter(Boolean)
+                .flatMap((j) => (Array.isArray(j) ? j : [j]));
+
+            const productLd = nodes.find((j) => {
+                const t = j?.['@type'];
+                return t === 'Product' || (Array.isArray(t) && t.includes('Product'));
+            });
+
+            const b = productLd?.brand;
+
+            if (typeof b === 'string') {
+                return b.trim() || null;
+            }
+
+            if (b && typeof b === 'object') {
+                return (b.name || b.legalName || '').toString().trim() || null;
+            }
+
+            return null;
+        })
+        .catch(() => null);
+    return product;
 }
-
-

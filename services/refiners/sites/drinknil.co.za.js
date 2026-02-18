@@ -10,6 +10,5 @@ export default async function refine(rootUrl, product, page) {
         .replace(/<\/?[^>]+(>|$)/g, '')
         .replace(/\s*\n\s*/g, ' ')
         .trim();
-
     return product;
 }

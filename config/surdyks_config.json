@@ -1,41 +1,24 @@
 {
     "rootUrl": "https://surdyks.com",
-    "baseUrl": "https://surdyks.com/beer/",
+    "baseUrl": "https://surdyks.com/feature/?_bc_fsnf=1&Web+Type=Non-Alcoholic",
     "site_name": "surdyks",
     "seller": "seller",
-    "productsLinks": "pageLinks",
-    "productLinkSelector": "h4 a, h3 a, .product-title a, .card-title a",
     "productLinkAttribute": "href",
-    "skipCollectionLinksInProducts": true,
-    "pagination": {
-        "type": "link",
-        "selector": "li.pagination-item--next a.pagination-link"
-    },
-    "bannerSkip": null,
+    "productLinkSelector": ".product .card__media",
     "moreConfig": true,
     "selectors": {
         "header": {
             "name": "meta[property='og:title']",
-            "price": "meta[property='product:price:amount'], meta[property='og:price:amount']",
-            "currency": "meta[property='product:price:currency'], meta[property='og:price:currency']",
-            "description": "meta[name='description'], meta[property='og:description']",
-            "images": "meta[property='og:image']",
-            "producer": "meta[name='brand'], meta[property='product:brand']"
+            "price": "meta[property='product:price:amount']",
+            "currency": "meta[property='product:price:currency']",
+            "description": "meta[property='og:description']",
+            "images": "meta[property='og:image']"
         },
-        "main": {
-            "name": "h1, .productView-title, .product-title",
-            "price": ".price, .productView-price, [itemprop='price'], .price--withoutTax, .price--withTax, .price-value",
-            "currency": ".price abbr, .price .currency, [itemprop='priceCurrency']",
-            "description": ".productView-description, .description, #tab-description, .productView-info, .rte",
-            "images": ".productView-image img, .productView-images img, .product-gallery img, img[src*='cdn']",
-            "producer": ".productView-brand, .brand, [itemprop='brand']",
-            "category": "nav.breadcrumbs a:nth-last-child(2), .breadcrumbs a:nth-last-child(2), .breadcrumb a:nth-last-child(2)",
-            "abv": "li:contains('ABV'), li:contains('Alcohol'), p:contains('% ABV'), .productView-description p:contains('%')",
-            "gluten": "a[href*='gluten'], .tag:contains('gluten')",
-            "vegan": "a[href*='vegan'], .tag:contains('vegan')",
-            "energy": "p:contains('kcal'), li:contains('Calories')",
-            "sugars": "p:contains('Sugar'), li:contains('Sugar')"
-        }
+        "main": { }
     },
-    "purePlayer": true
+    "pagination": {
+        "type": "link",
+        "selector": ".pagination-item--next > .pagination-link"
+    },
+    "purePlayer": false
 }

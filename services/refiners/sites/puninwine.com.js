@@ -12,6 +12,5 @@ export default async function refine(rootUrl, product, page) {
         const el = document.querySelector('.descriptions');
         return el ? el.innerText.replace(/\s+/g, ' ').trim() : null;
     });
-    
     return product;
 }

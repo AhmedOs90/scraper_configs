@@ -47,6 +47,5 @@ export default async function refine(rootUrl, product, page) {
     if (/vegan/i.test(accordionText)) {
         product.vegan = 'Vegan';
     }
-
     return product;
 }

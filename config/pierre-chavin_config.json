@@ -23,6 +23,6 @@
         "type": "link",
         "selector": "a.smooth200.next.js-search-link"
     },
-    "purePlayer": true,
-    "level": 1
+    "level": 1,
+    "purePlayer": false
 }

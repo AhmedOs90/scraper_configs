@@ -1,24 +1,17 @@
 // services/refiners/sites/teedawn.com.js
-import { extractABVFromText } from "../refiners_helpers.js";
-
 export default async function refine(rootUrl, product, page) {
-  product.abv = product.abv || await page.evaluate(() => {
-    const container = document.querySelector('.ProductItem-details-excerpt');
-    if (!container) return null;
-    const lines = (container.innerText || '').toLowerCase().split('\n');
-    for (const line of lines) {
-      if (line.includes('alkoholprocent')) {
-        const m = line.match(/(\d+(?:[.,]\d+)?)\s*%/);
-        if (m) return m[1].replace(',', '.') + '%';
-      }
-    }
-    return null;
-  }).catch(() => null);
+    product.country = 'Denmark';
+    product.producer = 'Teedawn';
 
-  // Fallbacks
-  product.abv = product.abv || extractABVFromText(product.name, product.description);
-  if (!product.abv && /0\s*%/.test(`${product.name || ''}`)) product.abv = "0%";
+    product.description = product.description
+        .replace(/<[^>]+>/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
 
-  product.producer = product.producer || "teedawn";
-  return product;
+    product.abv =
+        (product.description.match(/alkoholprocent\s*:\s*(\d+(?:[.,]\d+)?\s*%)/i)?.[1] ??
+        product.description.match(/(?!100%)(\d+(?:[.,]\d+)?\s*)%\s*(?:weizen|pilsner\/lager|pilsner|lager|ipa|stout|porter|ale|wheat|weissbier|vienna|radler\/shandy)/i)
+            ?.[0]
+            ?.match(/\d+(?:[.,]\d+)?\s*%/)?.[0]);
+    return product;
 }

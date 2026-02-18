@@ -23,5 +23,5 @@
         "selector": "nav.elementor-pagination a.page-numbers:first-of-type"
     },
     "level": 2,
-    "purePlayer": true
+    "purePlayer": false
 }

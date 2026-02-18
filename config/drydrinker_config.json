@@ -1,12 +1,13 @@
 {
-    "baseUrl": "https://drydrinker.com/collections/all",
     "rootUrl": "https://drydrinker.com",
-    "collectionLinks": "collections/",
-    "skipCollectionLinksInProducts": true,
-    "productsLinks": "products/",
-    "moreConfig": true,
-    "seller": "seller",
+    "baseUrl": "https://drydrinker.com/collections/all",
     "site_name": "drydrinker",
+    "seller": "seller",
+    "bannerSkip": "button.button--primary[is=\"close-button\"]",
+    "productsLinks": "/products/",
+    "collectionLinks": "/collections/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
     "selectors": {
         "header": {
             "name": "meta[property='og:title']",

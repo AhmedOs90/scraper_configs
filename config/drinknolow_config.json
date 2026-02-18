@@ -1,33 +1,28 @@
 {
-    "baseUrl": "https://drinknolow.com/collections/all",
     "rootUrl": "https://drinknolow.com",
-    "collectionLinks": "collections/",
-    "productsLinks": "products/",
-    "moreConfig": true,
+    "baseUrl": "https://drinknolow.com/collections/all",
+    "site_name": "drinknolow",
     "seller": "seller",
     "bannerSkip": "button.klaviyo-close-form",
-    "site_name": "drinknolow",
+    "productsLinks": "/products/",
+    "collectionLinks": "/collections/",
     "skipCollectionLinksInProducts": true,
-    "currency": "USD",
+    "moreConfig": true,
     "selectors": {
         "header": {
             "name": "meta[property='og:title']",
             "price": "meta[property='og:price:amount']",
             "currency": "meta[property='og:price:currency']",
-            "description": "meta[name='description']",
-            "images": "meta[property='og:image']"
+            "images": "meta[property='og:image']",
+            "producer": "meta[itemprop='brand']"
         },
         "main": {
-            "abv": ".product-info__abv-unit-size span:first-of-type",
-            "price": ".price__current span:not(.visually-hidden)",
-            "gluten": "div[data-tooltip='Gluten Free'] .sr-only",
-            "vegan": "div[data-tooltip='Vegan'] .sr-only",
-            "producer": ".product-info__vendor a, .product-info__vendor span"
+            "description": ".accordion-content .metafield-multi_line_text_field"
         }
     },
     "pagination": {
-        "type": "scroll",
-        "selector": "div[x-intersect\\.full='fetchAndRenderNextPage()']"
+        "type": "button",
+        "selector": ".mt-2.text-center button.btn--load"
     },
     "purePlayer": true
 }

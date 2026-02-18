@@ -1,25 +1,70 @@
 // services/refiners/sites/craftzero.com.au.js
 export default async function refine(rootUrl, product, page) {
-  const pickDisclosure = async (label) => {
-    return page.evaluate((lbl) => {
-      const els = document.querySelectorAll('.product-info-accordion .disclosure__title .with-icon__beside');
-      for (const el of els) {
-        if (el.textContent?.trim() === lbl) {
-          const content = el.closest('details')?.querySelector('.disclosure__content p');
-          return content?.textContent?.trim() || null;
-        }
-      }
-      return null;
-    }, label).catch(() => null);
-  };
+    product.country = 'Australia';
+    product.name = product.name.replace(' | Craftzero', '').trim();
+    product.description = product.description.replace(' | Available at CraftZero', '').trim();
 
-  product.abv     = product.abv     || await pickDisclosure('ABV');
-  product.country = product.country || await pickDisclosure('Country of Origin');
+    const abvText = await page.evaluate(() => {
+        const titles = Array.from(document.querySelectorAll('h2.accordion__title'));
+        const title = titles.find(
+            (el) => (el.textContent || '').trim().toLowerCase() === 'alcohol content'
+        );
+        if (!title) return null;
 
-  // Site shows “Nutritional Info Per 100ml” as a blob; store as-is
-  const nutr = await pickDisclosure('Nutritional Info Per 100ml');
-  product.energy = product.energy || nutr || null;
-  product.sugar = product.sugar || nutr || null;
+        const accordion = title.closest('.product__accordion, .accordion');
+        if (!accordion) return null;
 
-  return product;
+        const p = accordion.querySelector('.accordion__content__inner p');
+        return (p?.textContent || '').trim() || null;
+    });
+
+    if (abvText) {
+        product.abv = abvText;
+    }
+
+    const nutrition = await page.evaluate(() => {
+        const titles = Array.from(document.querySelectorAll('h2.accordion__title'));
+        const title = titles.find(
+            (el) =>
+                (el.textContent || '')
+                    .trim()
+                    .toLowerCase() === 'nutritional information per 100ml'
+        );
+        if (!title) return null;
+
+        const accordion = title.closest('.product__accordion, .accordion');
+        if (!accordion) return null;
+
+        const span = accordion.querySelector('.accordion__content__inner span');
+        const text = (span?.textContent || '').trim();
+        if (!text) return null;
+
+        const caloriesMatch = text.match(/Calories:\s*([\d.]+)/i);
+        const sugarMatch = text.match(/Sugars?:\s*([\d.]+g)/i);
+
+        return {
+            calories: caloriesMatch ? caloriesMatch[1] : null,
+            sugar: sugarMatch ? sugarMatch[1] : null,
+        };
+    });
+
+    if (nutrition?.sugar) {
+        product.sugar = nutrition.sugar;
+    }
+
+    if (nutrition?.calories) {
+        product.energy = nutrition.calories;
+    }
+
+    const producer = await page.evaluate(() => {
+        const script = document.querySelector('script#viewed_product');
+        const text = script?.textContent || '';
+        const match = text.match(/Brand:\s*"([^"]+)"/);
+        return match ? match[1].trim() : null;
+    });
+
+    if (producer) {
+        product.producer = producer;
+    }
+    return product;
 }

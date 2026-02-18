@@ -1,10 +1,5 @@
 // services/refiners/sites/beerritz.co.uk.js
 export default async function refine(rootUrl, product, page) {
-    // product.images = product.images
-    //     .replace('https://www.beerritz.co.uk', '')
-    //     .replace('http://www.beerritz.co.uk', '')
-    //     .trim();
-
     product.currency = 'GBP';
     product.country = 'UK';
 
@@ -20,6 +15,5 @@ export default async function refine(rootUrl, product, page) {
         .replace(/<[^>]+>/g, "")
         .replace(/\s+/g, " ")
         .trim();
-    
     return product;
 }

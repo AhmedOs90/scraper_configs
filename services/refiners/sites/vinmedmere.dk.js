@@ -23,6 +23,5 @@ export default async function refine(rootUrl, product, page) {
     if (match) {
         product.abv = match[0].replace(/\s+/g, "");
     }
-
     return product;
 }

@@ -19,6 +19,5 @@ export default async function refine(rootUrl, product, page) {
         '.woocommerce-product-attributes-item--attribute_pa_producer .woocommerce-product-attributes-item__value a',
         el => el.textContent.trim()
     );
-
     return product;
 }

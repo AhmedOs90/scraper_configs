@@ -25,6 +25,5 @@ export default async function refine(rootUrl, product, page) {
     product.producer = info.producer;
     product.vegan = info.vegan;
     product.gluten_free = info.gluten_free;
-    
     return product;
 }

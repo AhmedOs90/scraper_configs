@@ -16,6 +16,5 @@ export default async function refine(rootUrl, product, page) {
         .replace(',', '.')
         .replace(/\.$/, '')
         .trim();
-
     return product;
 }

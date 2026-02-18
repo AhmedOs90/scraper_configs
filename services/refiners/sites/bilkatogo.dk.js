@@ -29,11 +29,11 @@ export default async function refine(rootUrl, product, page) {
                 if (!label || !value) continue;
 
                 if ((label.includes('energy') || label.includes('energi')) && !result.energy) {
-                    result.energy = value; // keeps unit (kJ)
+                    result.energy = value;
                 }
 
                 if (label.includes('sugars') || label.includes('sukker')) {
-                    result.sugar = value; // keeps unit (g)
+                    result.sugar = value;
                 }
             }
             return result;
@@ -67,6 +67,5 @@ export default async function refine(rootUrl, product, page) {
             return null;
         }
     );
-
     return product;
 }

@@ -22,6 +22,6 @@
         "type": "link",
         "selector": "a.next.page-number"
     },
-    "purePlayer": true,
+    "purePlayer": false,
     "level": 1
 }

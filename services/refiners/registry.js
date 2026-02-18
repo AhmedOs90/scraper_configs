@@ -145,6 +145,16 @@ import sluktoersten from "./sites/sluktoersten.dk.js";
 import kundetbedste from "./sites/kundetbedste.com.js";
 import vinspecialistenaalborg from "./sites/vinspecialistenaalborg.dk.js";
 import beermerchants from "./sites/beermerchants.com.js";
+import alcoholfreedrinks from "./sites/alcoholfreedrinks.co.uk.js";
+import audreyclairecork from "./sites/audreyclairecork.com.js";
+import beerfordriving from "./sites/beerfordriving.com.js";
+import blackmarket from "./sites/blackmarket.co.nz.js";
+import drybutwet from "./sites/drybutwet.com.au.js";
+import kolonnenull from "./sites/kolonnenull.com.js";
+import mashgang from "./sites/mashgang.com.js";
+import surdyks from "./sites/surdyks.com.js";
+import thealcoholfreeco from "./sites/thealcoholfreeco.co.uk.js";
+import virginwines from "./sites/virginwines.co.uk.js";
 
 // Registry map
 const registry = new Map([
@@ -290,6 +300,16 @@ const registry = new Map([
     ["kundetbedste.com", kundetbedste],
     ["vinspecialistenaalborg.dk", vinspecialistenaalborg],
     ["beermerchants.com", beermerchants]
+    ["alcoholfreedrinks.co.uk", alcoholfreedrinks],
+    ["audreyclairecork.com", audreyclairecork],
+    ["beerfordriving.com", beerfordriving],
+    ["blackmarket.co.nz", blackmarket],
+    ["drybutwet.com.au", drybutwet],
+    ["kolonnenull.com", kolonnenull],
+    ["mashgang.com", mashgang],
+    ["surdyks.com", surdyks],
+    ["thealcoholfreeco.co.uk", thealcoholfreeco],
+    ["virginwines.co.uk", virginwines]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {

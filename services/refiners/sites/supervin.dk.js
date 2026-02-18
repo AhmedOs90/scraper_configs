@@ -27,14 +27,11 @@ export default async function refine(rootUrl, product, page) {
 
                 if (typeof node.brand === 'string') return node.brand;
                 if (typeof node.brand === 'object') return node.brand.name || null;
-            } catch {
-                // ignore
-            }
+            } catch { }
         }
         return null;
     });
 
     product.producer = brand;
-
     return product;
 }
