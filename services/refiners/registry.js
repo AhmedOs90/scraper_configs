@@ -144,6 +144,7 @@ import toolbeer from "./sites/toolbeer.dk.js";
 import sluktoersten from "./sites/sluktoersten.dk.js";
 import kundetbedste from "./sites/kundetbedste.com.js";
 import vinspecialistenaalborg from "./sites/vinspecialistenaalborg.dk.js";
+import beermerchants from "./sites/beermerchants.com.js";
 import alcoholfreedrinks from "./sites/alcoholfreedrinks.co.uk.js";
 import audreyclairecork from "./sites/audreyclairecork.com.js";
 import beerfordriving from "./sites/beerfordriving.com.js";
@@ -298,6 +299,7 @@ const registry = new Map([
     ["sluktoersten.dk", sluktoersten],
     ["kundetbedste.com", kundetbedste],
     ["vinspecialistenaalborg.dk", vinspecialistenaalborg],
+    ["beermerchants.com", beermerchants]
     ["alcoholfreedrinks.co.uk", alcoholfreedrinks],
     ["audreyclairecork.com", audreyclairecork],
     ["beerfordriving.com", beerfordriving],
