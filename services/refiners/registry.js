@@ -47,7 +47,6 @@ import noughtyaf from "./sites/noughtyaf.com.js";
 import pierre_chavin from "./sites/pierre-chavin.com.js";
 import nonalcoholicwinesonline from "./sites/nonalcoholicwinesonline.com.js";
 import noblegreenwinesonline from "./sites/noblegreenwines.co.uk.js";
-import healthyplanetcanada from "./sites/healthyplanetcanada.com.js";
 import bittersandbottles from "./sites/bittersandbottles.com.js";
 import draydrinks from "./sites/draydrinks.com.js";
 import zerodrinks from "./sites/zerodrinks.co.za.js";
@@ -148,16 +147,14 @@ import kundetbedste from "./sites/kundetbedste.com.js";
 import vinspecialistenaalborg from "./sites/vinspecialistenaalborg.dk.js";
 import beermerchants from "./sites/beermerchants.com.js";
 import alcoholfreedrinks from "./sites/alcoholfreedrinks.co.uk.js";
-import audreyclairecork from "./sites/audreyclairecork.com.js";
 import beerfordriving from "./sites/beerfordriving.com.js";
 import blackmarket from "./sites/blackmarket.co.nz.js";
 import drybutwet from "./sites/drybutwet.com.au.js";
 import kolonnenull from "./sites/kolonnenull.com.js";
-import mashgang from "./sites/mashgang.com.js";
 import surdyks from "./sites/surdyks.com.js";
 import thealcoholfreeco from "./sites/thealcoholfreeco.co.uk.js";
 import virginwines from "./sites/virginwines.co.uk.js";
-import kolonnenull from "./sites/kolonnenull.com.js";
+
 import densidstedraabe from "./sites/densidstedraabe.dk.js";
 import alkoholfrishop from "./sites/alkoholfrishop.dk.js";
 
@@ -207,7 +204,6 @@ const registry = new Map([
     ["pierre-chavin.com", pierre_chavin],
     ["nonalcoholicwinesonline.com", nonalcoholicwinesonline],
     ["noblegreenwines.co.uk", noblegreenwinesonline],
-    ["healthyplanetcanada.com", healthyplanetcanada],
     ["bittersandbottles.com", bittersandbottles],
     ["draydrinks.com", draydrinks],
     ["zerodrinks.co.za", zerodrinks],
@@ -302,21 +298,19 @@ const registry = new Map([
     ["lbv.dk", lbv],
     ["toolbeer.dk", toolbeer],
     ["mashgang.com", mashgang],
-    ["audreyclairecork.com", audreyclairecork]
+    ["audreyclairecork.com", audreyclairecork],
     ["sluktoersten.dk", sluktoersten],
     ["kundetbedste.com", kundetbedste],
     ["vinspecialistenaalborg.dk", vinspecialistenaalborg],
-    ["beermerchants.com", beermerchants]
+    ["beermerchants.com", beermerchants],
     ["alcoholfreedrinks.co.uk", alcoholfreedrinks],
-    ["audreyclairecork.com", audreyclairecork],
     ["beerfordriving.com", beerfordriving],
     ["blackmarket.co.nz", blackmarket],
     ["drybutwet.com.au", drybutwet],
     ["kolonnenull.com", kolonnenull],
-    ["mashgang.com", mashgang],
     ["surdyks.com", surdyks],
     ["thealcoholfreeco.co.uk", thealcoholfreeco],
-    ["virginwines.co.uk", virginwines]    ["kolonnenull.com", kolonnenull],
+    ["virginwines.co.uk", virginwines],
     ["densidstedraabe.dk", densidstedraabe],
     ["alkoholfrishop.dk", alkoholfrishop]
 
