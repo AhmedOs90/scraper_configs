@@ -1,0 +1,41 @@
+{
+    "rootUrl": "https://itsundone.com",
+    "baseUrl": [
+        "https://itsundone.com/collections/all"
+    ],
+    "site_name": "itsundone",
+    "seller": "seller",
+    "currency": "USD",
+    "productsLinks": "products/",
+    "collectionLinks": "collections/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "productLinkSelector": "a[href*='products/']",
+    "productLinkAttribute": "href",
+    "bannerSkip": "button.cky-btn-accept, .popup-close, button[aria-label='Close']",
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "description": "meta[property='og:description'], meta[name='description']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "name": "meta[property='og:title']",
+            "price": ".h4.sales-price, .price-list--product .sales-price",
+            "description": "meta[property='og:description']",
+            "images": "meta[property='og:image']"
+        }
+    },
+    "pagination": {
+        "type": "scroll",
+        "selector": ".collection__loading"
+    },
+    "purePlayer": true,
+    "_notes": [
+        "Shopify store selling non-alcoholic spirits (USD).",
+        "No og:price:amount/og:price:currency — price extracted from .sales-price element.",
+        "h1 is a popup, not product title — use og:title for name.",
+        "Price text includes prefix 'Sale price' — refiner strips it.",
+        "Brand is always UNDONE."
+    ]
+}

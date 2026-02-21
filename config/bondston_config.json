@@ -1,0 +1,70 @@
+{
+  "rootUrl": "https://www.bondston.com",
+  "baseUrl": [
+    "https://www.bondston.com/discover-c521",
+    "https://www.bondston.com/rum-c12",
+    "https://www.bondston.com/whisky-c21",
+    "https://www.bondston.com/gin-c28",
+    "https://www.bondston.com/cognacs-c2",
+    "https://www.bondston.com/vodka-c18",
+    "https://www.bondston.com/wine-c17",
+    "https://www.bondston.com/liqueurs-c11",
+    "https://www.bondston.com/drinks-c400",
+    "https://www.bondston.com/non-alcoholic-wine-c365",
+    "https://www.bondston.com/non-alcoholic-spirits-c380"
+  ],
+  "site_name": "bondston",
+  "seller": "seller",
+  "currency": "EUR",
+  "productsLinks": "-p",
+  "collectionLinks": "-c",
+  "skipCollectionLinksInProducts": true,
+  "moreConfig": true,
+  "productLinkSelector": "a[href*='-p']",
+  "productLinkAttribute": "href",
+  "bannerSkip": "#country-select-modal button, #country-select-modal .c-btn--transparent",
+  "selectors": {
+    "header": {
+      "name": "meta[property='og:title'], meta[name='twitter:title']",
+      "price": "meta[property='product:price:amount'], meta[property='og:price:amount'], meta[itemprop='price']",
+      "currency": "meta[property='product:price:currency'], meta[property='og:price:currency'], meta[itemprop='priceCurrency']",
+      "country": "meta[property='product:country'], meta[name='product:country'], meta[itemprop='countryOfOrigin']",
+      "description": "meta[property='og:description'], meta[name='description']",
+      "images": "meta[property='og:image'], meta[name='twitter:image'], meta[property='og:image:secure_url']",
+      "abv": "meta[name='alcohol'], meta[property='product:alcohol'], meta[itemprop='alcoholContent']",
+      "gluten_free": "meta[name='gluten_free'], meta[property='product:gluten_free']",
+      "vegan": "meta[name='vegan'], meta[property='product:vegan']",
+      "producer": "meta[name='brand'], meta[property='product:brand'], meta[itemprop='brand']",
+      "energy": "meta[name='energy'], meta[property='product:energy']",
+      "sugars": "meta[name='sugars'], meta[property='product:sugars']",
+      "category": "meta[property='product:category'], meta[name='category']"
+    },
+    "main": {
+      "name": "main h1, h1",
+      "price": "main .p-final-price, main .c-price__actual, main .price, main .product-price, main .detail-price, span[itemprop='price'], .p-final-price, .price",
+      "currency": "main .p-final-price, main .c-price__actual, main .price, main .product-price, main .detail-price, span[itemprop='priceCurrency'], .price",
+      "country": "main .param-country, main [itemprop='countryOfOrigin'], main .product-country, .param-country",
+      "description": "main .js-product-description, main [itemprop='description'], main .product-description, main #description, main .tab-content, .js-product-description, .product-description",
+      "images": "main img[src*='rshop'], main img[src*='bondston'], img[src*='rshop'], img[src*='bondston']",
+      "abv": "main .param-abv, main [itemprop*='alcohol'], main .product-alcohol, .param-abv",
+      "gluten": "main .param-gluten, main [data-param='Gluten'], .param-gluten",
+      "vegan": "main .param-vegan, main [data-param='Vegan'], .param-vegan",
+      "producer": "main a[href*='-m'], .product a[href*='-m']",
+      "energy": "main .param-energy, main [data-param='Energy'], .param-energy",
+      "sugars": "main .param-sugar, main [data-param='Sugars'], .param-sugar",
+      "category": "nav.breadcrumb a:last-child, .breadcrumb a:last-child, main a[href*='-c']"
+    }
+  },
+  "pagination": {
+    "type": "link",
+    "selector": "a[rel='next'], a[title='Next'], a[aria-label='Next'], .pagination a.next, .paginator a.next, .c-pagination__item--next a"
+  },
+  "level": 1,
+  "purePlayer": true,
+  "_notes": [
+    "IMPORTANT: only treat URLs containing productsLinks (-p) as product pages. Listing pages like /akciove-produkty must not call extractProductData().",
+    "Use productLinkSelector to enqueue product links from listing pages.",
+    "bannerSkip dismisses the country-selection modal that appears on every page load.",
+    "Default currency is EUR — prices on the site are in Euros."
+  ]
+}
