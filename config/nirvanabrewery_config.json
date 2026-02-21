@@ -1,0 +1,42 @@
+{
+    "rootUrl": "https://nirvanabrewery.com",
+    "baseUrl": [
+        "https://nirvanabrewery.com/collections/shop"
+    ],
+    "site_name": "nirvanabrewery",
+    "seller": "seller",
+    "currency": "GBP",
+    "productsLinks": "products/",
+    "collectionLinks": "collections/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "productLinkSelector": "a[href*='products/']",
+    "productLinkAttribute": "href",
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "price": "meta[property='og:price:amount']",
+            "currency": "meta[property='og:price:currency']",
+            "description": "meta[property='og:description'], meta[name='description']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "name": "h1.product__title, h1",
+            "price": ".price-item--regular, .price-item--sale, .price .money",
+            "description": ".product__description, .accordion-details, details .accordion__content",
+            "images": ".product__media-item img, .product__media img",
+            "producer": ".product__vendor a, .product__vendor span"
+        }
+    },
+    "pagination": {
+        "type": "scroll",
+        "selector": ".collection__loading"
+    },
+    "purePlayer": true,
+    "_notes": [
+        "Shopify store selling alcohol-free craft beers (GBP).",
+        "Producer is always Nirvana Brewery.",
+        "ABV usually in product title or description (e.g. '0.5% ABV').",
+        "No intrusive popups — only Smile.io rewards badge (non-blocking)."
+    ]
+}
