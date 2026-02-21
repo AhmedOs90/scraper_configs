@@ -1,14 +1,14 @@
 {
     "rootUrl": "https://nirvanabrewery.com",
     "baseUrl": [
-        "https://nirvanabrewery.com/collections/shop"
+        "https://nirvanabrewery.com/collections/beers"
     ],
     "site_name": "nirvanabrewery",
     "seller": "seller",
-    "currency": "GBP",
+    
     "productsLinks": "products/",
     "collectionLinks": "collections/",
-    "skipCollectionLinksInProducts": true,
+    "skipCollectionLinksInProducts": false,
     "moreConfig": true,
     "productLinkSelector": "a[href*='products/']",
     "productLinkAttribute": "href",
