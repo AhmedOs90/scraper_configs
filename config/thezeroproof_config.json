@@ -3,6 +3,7 @@
     "baseUrl": "https://thezeroproof.com/collections/all",
     "site_name": "thezeroproof",
     "seller": "seller",
+    "addtoCartSelector": "button.js-form-submit[type='submit']",
     "bannerSkip": "button.klaviyo-close-form",
     "productsLinks": "/products/",
     "collectionLinks": "/collections/",

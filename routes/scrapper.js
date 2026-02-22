@@ -104,6 +104,7 @@ router.post('/start-scraping-config', async (req, res) => {
     return res.status(500).json({ message: 'Failed to run scraping.', error: error.message });
   }
 });
+
 router.post("/check-availability", async (req, res) => {
   try {
     const data = await checkAllAvailability(req.body || {});
@@ -113,6 +114,7 @@ router.post("/check-availability", async (req, res) => {
     return res.status(500).json({ message: "Availability check failed.", error: error.message });
   }
 });
+
 router.post("/check-availability-one", async (req, res) => {
   try {
     const { url, headless = true, timeoutMs = 30000 } = req.body || {};
@@ -136,5 +138,6 @@ router.post("/check-availability-one", async (req, res) => {
     return res.status(500).json({ message: "Single availability check failed.", error: error.message });
   }
 });
+
 export default router;
 

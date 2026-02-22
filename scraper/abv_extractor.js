@@ -1,23 +1,27 @@
 import { PuppeteerCrawler, purgeDefaultStorages } from 'crawlee';
 import fs from 'fs';
 import path from 'path';
-import { populateLake, getClassifiedNeedsInvestigation } from '../services/lake_populations.js';
+import { populateLake, getClassifiedNeedsInvestigation, populateLakeProcessed } from '../services/lake_populations.js';
 
-function loadSiteConfig(url) {
-  const hostname = new URL(url).hostname.replace(/^www\./, '').split('.')[0];
-  const configPath = path.join('./config', `${hostname}_config.json`);
-  
-  if (!fs.existsSync(configPath)) {
-    console.warn(`⚠️ Config not found for ${hostname} (${configPath})`);
-    throw new Error(`Config not found for ${hostname}`);
+function loadSiteConfig(rootUrl) {
+  let site_name = new URL(rootUrl).hostname.split('.')[0];
+
+  if (site_name == "www") {
+    site_name = new URL(rootUrl).hostname.split('.')[1];
   }
 
-  console.log(`✅ Found config for ${hostname} at ${configPath}`);
-  return JSON.parse(fs.readFileSync(configPath, 'utf-8'));
+  // Extract site name
+  const configPath = path.join('./config', `${site_name}_config.json`);
+  console.log(configPath);
+  if (fs.existsSync(configPath)) {
+    return JSON.parse(fs.readFileSync(configPath, 'utf-8'));
+  } else {
+    throw new Error(`Configuration file not found for ${site_name} at ${configPath}`);
+  }
 }
 
 function detectZeroAlcohol(text = '') {
-  const terms = ['alcohol free', 'alcohol-free', 'non alcoholic', 'non-alcoholic', 'zero alcohol', 'zero-alcohol', '0.0%', 'Alcohol Removed'];
+  const terms = ['alcohol free', 'alcohol-free', 'non alcoholic', 'non-alcoholic', 'zero alcohol', 'zero-alcohol', '0.0%', 'alcohol removed'];
   const lower = text.toLowerCase();
   return terms.some(term => lower.includes(term));
 }
@@ -25,8 +29,10 @@ function detectZeroAlcohol(text = '') {
 export async function extractMissingABV() {
   const products = await getClassifiedNeedsInvestigation();
 
+  console.log(`🔎 Processing ${products.length} total products`);
+
   const toProcess = products.filter(p =>
-    (!p.abv || p.abv.trim() === '') &&
+    (!p.abv || p.abv.trim() === 'N/A') &&
     p.url && p.name && p.description
   );
 
@@ -92,7 +98,7 @@ export async function extractMissingABV() {
 
         if (extracted.abv && extracted.abv !== product.abv) {
           product.abv = extracted.abv;
-          await populateLake(product);
+          await populateLakeProcessed(product);
           console.log(`✅ Updated ABV for ${product.name}: ${extracted.abv} (${extracted.method})`);
         } else {
           console.log(`⏭️ No ABV found for ${product.name}`);
