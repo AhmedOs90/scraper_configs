@@ -22,5 +22,6 @@
         "type": "link",
         "selector": ".boost-pfs-filter-bottom-pagination a[aria-label='Page Next']"
     },
-    "purePlayer": false
+    "purePlayer": false,
+    "level": 1
 }

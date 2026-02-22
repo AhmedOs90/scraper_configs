@@ -5,23 +5,22 @@
     "seller": "seller",
     "bannerSkip": "#onetrust-accept-btn-handler",
     "productLinkAttribute": "href",
-    "productLinkSelector": ".js-product-link",
+    "productLinkSelector": "article[id^=\"product-\"] > a[href^=\"/en/products/\"]",
     "moreConfig": true,
     "selectors": {
         "header": {
             "name": "meta[property='og:title']",
+            "description": "meta[property='og:description']",
             "images": "meta[property='og:image']"
         },
         "main": {
-            "price": ".js-price-container",
-            "description": ".taste-description .html-print"
+            "abv": "p.text-primary-dark.order-first.text-xl.leading-\\[100\\%\\].font-semibold"
         }
     },
     "pagination": {
-        "type": "button",
-        "selector": ".product-list-loader"
+        "type": "link",
+        "selector": "a[href*=\"page=\"].mt-2.mb-8"
     },
     "level": 1,
     "purePlayer": false
-    
 }

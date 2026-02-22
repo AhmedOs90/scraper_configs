@@ -25,5 +25,6 @@
         "type": "link",
         "selector": ".infinite-scrolling .btn"
     },
+    "level": 1,
     "purePlayer": true
 }

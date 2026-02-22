@@ -19,6 +19,6 @@
             "images": ".product-photos .main-container .zoom > img"
         }
     },
-    "level": 1,
+    "level": 0,
     "purePlayer": true
 }

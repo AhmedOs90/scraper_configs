@@ -21,6 +21,6 @@
         "type": "scroll",
         "selector": "app-loading-icon .loader"
     },
-    "level": 2,
+    "level": 0,
     "purePlayer": false
 }

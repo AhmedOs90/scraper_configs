@@ -23,6 +23,6 @@
         "type": "link",
         "selector": ".pagination__item:not(.pagination__item--current)"
     },
-    "level": 1,
+    "level": 0,
     "purePlayer": false
 }

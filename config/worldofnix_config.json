@@ -16,11 +16,12 @@
             "description": "meta[property='og:description']",
             "images": "meta[property='og:image']"
         },
-        "main": { }
+        "main": {}
     },
     "pagination": {
         "type": "scroll",
         "selector": ".shopify-section-group-footer-group.section-wrapper"
     },
+    "level": 1,
     "purePlayer": true
 }

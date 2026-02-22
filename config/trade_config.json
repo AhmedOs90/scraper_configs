@@ -1,5 +1,5 @@
 {
-    "rootUrl": "https://trade.bemakers.com/dk/",
+    "rootUrl": "https://trade.bemakers.com/dk",
     "baseUrl": "https://trade.bemakers.com/dk/collections/alkoholfri",
     "site_name": "bemakers",
     "seller": "seller",
@@ -19,6 +19,6 @@
             "country": ".bm-country-clickable .ml-2"
         }
     },
-    "level": 1,
+    "level": 0,
     "purePlayer": false
 }

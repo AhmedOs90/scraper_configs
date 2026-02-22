@@ -15,11 +15,12 @@
             "description": "meta[name='description']",
             "images": "meta[property='og:image']"
         },
-        "main": { }
+        "main": {}
     },
     "pagination": {
         "type": "link",
         "selector": "a[aria-label='Next page']"
     },
+    "level": 1,
     "purePlayer": true
 }

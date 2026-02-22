@@ -16,8 +16,8 @@
             "description": "meta[name='twitter:description']",
             "images": "meta[property='og:image']"
         },
-        "main": { }
+        "main": {}
     },
-    "level": 1,
+    "level": 0,
     "purePlayer": false
 }

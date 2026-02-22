@@ -3,7 +3,8 @@
     "baseUrl": [
         "https://www.fleggaard.dk/da-dk/vin/alkoholfri-vin",
         "https://www.fleggaard.dk/da-dk/oel/alkoholfri",
-        "https://www.fleggaard.dk/da-dk/spiritus/alkoholfri-spiritus"],
+        "https://www.fleggaard.dk/da-dk/spiritus/alkoholfri-spiritus"
+    ],
     "site_name": "fleggaard",
     "seller": "seller",
     "bannerSkip": "button.coi-banner__accept",
@@ -24,6 +25,6 @@
         "type": "button",
         "selector": "div.mt-8 button[type='button']"
     },
-    "level": 1,
+    "level": 0,
     "purePlayer": false
 }

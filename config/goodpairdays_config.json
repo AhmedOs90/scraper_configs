@@ -1,11 +1,11 @@
 {
-    "rootUrl": "https://www.goodpairdays.com/au/",
+    "rootUrl": "https://www.goodpairdays.com",
     "baseUrl": "https://www.goodpairdays.com/au/collections/non-alcoholic",
     "site_name": "goodpairdays",
     "seller": "seller",
     "bannerSkip": ".sc-jtggT.fbFsga",
-    "productsLinks": "/products/details/",
-    "collectionLinks": "/collections/",
+    "productsLinks": "/au/products/details/",
+    "collectionLinks": "/au/collections/",
     "skipCollectionLinksInProducts": true,
     "moreConfig": true,
     "selectors": {
@@ -14,9 +14,9 @@
             "images": "meta[property='og:image']"
         },
         "main": {
-            "price": ".sc-TuwoP.arrdf"
+            "price": ".sc-cfWELz.bmCSFh"
         }
     },
-    "level": 1,
+    "level": -1,
     "purePlayer": false
 }
