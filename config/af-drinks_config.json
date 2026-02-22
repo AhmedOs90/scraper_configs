@@ -3,21 +3,22 @@
     "baseUrl": "https://www.af-drinks.com/en-nz/collections/full-range",
     "site_name": "af-drinks",
     "seller": "seller",
-    "productsLinks": "/en-nz/collections/full-range/products/",
+    "bannerSkip": "button.af-gate__go",
+    "productsLinks": "/en-nz/products/",
     "collectionLinks": "/en-nz/collections/",
     "skipCollectionLinksInProducts": true,
     "moreConfig": true,
     "selectors": {
         "header": {
             "name": "meta[property='og:title']",
-            "images": "meta[property='og:image']"
+            "images": "meta[property='og:image']",
+            "description": "meta[property='og:description']"
         },
         "main": {
             "country": ".reversed-link.active[aria-current=\"true\"]",
-            "description": ".af-acc__rich",
             "price": ".product__price .price__regular"
         }
     },
-    "level": 1,
+    "level": 0,
     "purePlayer": true
 }

@@ -23,5 +23,6 @@
         "type": "link",
         "selector": "a.pagination__item.pagination__item--prev[aria-label='Next page']"
     },
+    "level": 1,
     "purePlayer": true
 }

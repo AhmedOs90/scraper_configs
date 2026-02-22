@@ -21,5 +21,6 @@
         "type": "button",
         "sselector": "button.infinite-loader__load-more-button"
     },
-    "purePlayer": false
+    "purePlayer": false,
+    "level": 0
 }

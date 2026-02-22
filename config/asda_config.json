@@ -1,5 +1,5 @@
 {
-    "rootUrl": "https://www.asda.com/",
+    "rootUrl": "https://www.asda.com",
     "baseUrl": "https://www.asda.com/groceries/beer-wine-spirits/no-low-alcohol",
     "site_name": "asda",
     "seller": "seller",
@@ -17,6 +17,6 @@
             "description": "[data-testid=\"content\"]"
         }
     },
-    "level": 2,
+    "level": 1,
     "purePlayer": false
 }

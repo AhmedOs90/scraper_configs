@@ -1,16 +1,11 @@
 // services/refiners/sites/puninwine.com.js
 export default async function refine(rootUrl, product, page) {
     product.country = 'Cyprus';
-    
-    product.abv = await page.evaluate(() => {
-        const el = [...document.querySelectorAll('.constitutions__item')]
-            .find(i => i.querySelector('.constitutions__name')?.textContent.trim() === 'Alcohol:');
-        return el?.querySelector('.constitutions__value')?.textContent.trim() || null;
-    });
-
-    product.description = await page.evaluate(() => {
-        const el = document.querySelector('.descriptions');
-        return el ? el.innerText.replace(/\s+/g, ' ').trim() : null;
-    });
+    product.price = product.price.replace(',', '.').trim();
+    product.name = product.name.replace(' |  Sans Drinks  Australia  ', '').trim();
+    product.description = product.description
+        .replace(/<[^>]+>/g, '')
+        .replace(/\s+/g, ' ')
+        .trim();
     return product;
 }

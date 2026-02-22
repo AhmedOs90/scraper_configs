@@ -29,6 +29,6 @@
         "type": "scroll",
         "selector": ".submit-button"
     },
-    "level": 2,
+    "level": 1,
     "purePlayer": true
 }

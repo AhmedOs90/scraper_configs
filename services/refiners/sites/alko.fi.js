@@ -1,25 +1,44 @@
 // services/refiners/sites/alko.fi.js
 export default async function refine(rootUrl, product, page) {
-    product.price = await page.$eval('.js-price-container', el => el.getAttribute('content'));
-    product.currency = "EUR";
     product.country = "Finland";
+    product.currency = "EUR";
 
-    const details = await page.evaluate(() => {
-        const getFact = (label) => {
-            const el = [...document.querySelectorAll('.fact-label')]
-                .find(e => e.textContent.trim().toUpperCase() === label);
-            return el?.nextElementSibling?.textContent.trim() || null;
+    const price = await page.evaluate(() => {
+        const script = document.querySelector(
+            'script[type="application/ld+json"]'
+        );
+        if (!script) return null;
+
+        try {
+            const data = JSON.parse(script.textContent);
+            return data?.offers?.price || null;
+        } catch {
+            return null;
+        }
+    });
+
+    const extra = await page.evaluate(() => {
+        const rows = Array.from(
+            document.querySelectorAll('[role="tabpanel"] li')
+        );
+
+        const getValue = (label) => {
+            const row = rows.find(
+                (r) => r.querySelector("span")?.innerText.trim() === label
+            );
+            return row?.querySelector("div")?.innerText.trim() || null;
         };
 
         return {
-            abv: getFact('ALCOHOL'),
-            sugar: getFact('SUGAR'),
-            energy: getFact('ENERGY'),
+            sugar: getValue("Sugars"),
+            energy: getValue("Energy"),
+            producer: getValue("Producer"),
         };
     });
 
-    product.abv = details.abv;
-    product.sugar = details.sugar;
-    product.energy = details.energy;
+    if (price) product.price = parseFloat(price);
+    if (extra.sugar) product.sugar = extra.sugar;
+    if (extra.energy) product.energy = extra.energy;
+    if (extra.producer) product.producer = extra.producer;
     return product;
 }

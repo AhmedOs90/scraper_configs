@@ -1,31 +1,39 @@
 // services/refiners/sites/noblegreenwines.co.uk.js
 export default async function refine(rootUrl, product, page) {
-    product.price = product.price
-        .replace(/Single Price:/i, '')
-        .replace(/£/g, '')
-        .replace(/\s+/g, ' ')
-        .trim();
+    product.country = "UK";
+    product.currency = "GBP";
+    product.name = product.name.replace(' | Noble Green Wines', '').trim();
+    product.price = product.price.replace('£', '').trim();
 
-    product.abv = await page.evaluate(() => {
-        const row = [...document.querySelectorAll('#product-properties tr')]
-        .find(tr => tr.querySelector('td')?.textContent.trim() === 'ABV');
-        return row ? row.querySelectorAll('td')[1].textContent.trim() : null;
+    const details = await page.evaluate(() => {
+        const rows = Array.from(document.querySelectorAll('dl > div'));
+        const map = {};
+
+        rows.forEach(row => {
+            const key = row.querySelector('dt')?.textContent.trim();
+            const value = row.querySelector('dd')?.textContent.trim();
+            if (key && value) {
+                map[key] = value;
+            }
+        });
+
+        return map;
     });
 
-    product.currency = "GBP";
-    product.country = "UK";
-    
-    if (product.description) {
-        const text = product.description.toLowerCase();
+    if (details.ABV) {
+        product.abv = details.ABV;
+    }
 
-        if (text.includes('vegan')) {
+    if (details.Dietary) {
+        const dietary = details.Dietary.toLowerCase();
+
+        if (dietary.includes('vegan')) {
             product.vegan = 'Vegan';
         }
 
-        if (text.match(/\bgluten[-\s]?free\b/)) {
+        if (dietary.includes('gluten')) {
             product.gluten_free = 'Gluten free';
         }
     }
-    
     return product;
 }

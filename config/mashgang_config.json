@@ -15,7 +15,7 @@
             "images": "meta[property='og:image']",
             "description": "meta[property='og:description']"
         },
-        "main": { }
+        "main": {}
     },
     "level": 1,
     "purePlayer": true

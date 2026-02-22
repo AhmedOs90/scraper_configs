@@ -3,24 +3,23 @@
     "baseUrl": "https://www.albertabeerexchange.ca/non-alcoholic",
     "site_name": "albertabeerexchange",
     "seller": "seller",
-    "bannerSkip": "button.dy-w-100.dy-mt-2.button-cta.button-large",
     "productLinkAttribute": "href",
-    "productLinkSelector": ".product-col a.product-block-title",
+    "productLinkSelector": "li .prod-card__img-link",
     "moreConfig": true,
     "selectors": {
         "header": {
             "name": "meta[property='og:title']",
+            "description": "meta[property='og:description']",
             "images": "meta[property='og:image']"
         },
         "main": {
-            "price": ".product-price .price",
-            "description": ".product-description"
+            "price": ".product__price"
         }
     },
     "pagination": {
         "type": "link",
-        "selector": "a.collection-load-more.button"
+        "selector": "nav.pagination a.pagination__item[aria-label=\"Go to next page\"]"
     },
-    "level": 1,
+    "level": 0,
     "purePlayer": false
 }

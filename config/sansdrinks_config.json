@@ -16,11 +16,12 @@
             "price": "meta[property='og:price:amount']",
             "currency": "meta[property='og:price:currency']"
         },
-        "main": { }
+        "main": {}
     },
     "pagination": {
         "type": "button",
         "selector": "button[data-load-more]"
     },
+    "level": 1,
     "purePlayer": true
 }

@@ -1,14 +1,16 @@
 // services/refiners/sites/minusmoonshine.com.js
 export default async function refine(rootUrl, product, page) {
-    let name = product.name || "";
-    const m = name.match(/^(.+?)\s*[—–-]\s*(.+)$/);
-    
-    if (m) {
-        product.producer = product.producer || m[1].trim();
-        name = m[2].trim();
+    product.country = 'USA';
+
+    const dashMatch = product.name.match(/^(.+?)\s*[—–-]\s*(.+)$/);
+    if (dashMatch) {
+        const [, producer, namePart] = dashMatch;
+        product.producer ??= producer.trim();
+        product.name = namePart.trim();
     }
 
-    name = name.replace(/,\s*\d+.*$/i, "").trim();
-    product.name = name;
+    product.name = product.name
+        .replace(/,\s*\d+.*$/i, "")
+        .trim();
     return product;
 }

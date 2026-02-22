@@ -3,7 +3,7 @@
     "baseUrl": "https://hopfnung.ch/Alkoholfreie-Biere",
     "site_name": "hopfnung",
     "seller": "seller",
-    "productLinkAttribute": "href",    
+    "productLinkAttribute": "href",
     "productLinkSelector": "a.img-w.block[href]",
     "skipCollectionLinksInProducts": true,
     "moreConfig": true,
@@ -18,5 +18,6 @@
             "description": ".desc"
         }
     },
-    "purePlayer": false
+    "purePlayer": false,
+    "level": -1
 }

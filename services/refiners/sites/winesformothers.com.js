@@ -1,5 +1,7 @@
 // services/refiners/sites/wineformothers.com.js
 export default async function refine(rootUrl, product, page) {
+    product.country = 'USA';
+    
     const text = await page.evaluate(() => {
         const getTxt = (el) => (el?.innerText || el?.textContent || "").trim();
         const block = document.querySelector("#tab-description");

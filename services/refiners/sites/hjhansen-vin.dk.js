@@ -11,6 +11,7 @@ export default async function refine(rootUrl, product, page) {
     product.price = product.price
         .replace('pr. flaske', '')
         .replace(',', '.')
+        .replace(/før.*$/i, '')
         .trim();
 
     product.name = product.name

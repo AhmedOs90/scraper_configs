@@ -8,7 +8,7 @@
     "skipCollectionLinksInProducts": true,
     "moreConfig": true,
     "selectors": {
-        "header": { },
+        "header": {},
         "main": {
             "name": ".product_title.entry-title",
             "price": ".price .woocommerce-Price-amount.amount",
@@ -19,5 +19,6 @@
         "type": "button",
         "selector": ".ais-Pagination-item--nextPage .ais-Pagination-link"
     },
-    "purePlayer": false
+    "purePlayer": false,
+    "level": 0
 }

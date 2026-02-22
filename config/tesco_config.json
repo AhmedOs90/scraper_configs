@@ -22,6 +22,6 @@
         "type": "link",
         "selector": "a[data-nextpreviousbtn=\"next\"]"
     },
-    "level": 2,
+    "level": 0,
     "purePlayer": false
 }

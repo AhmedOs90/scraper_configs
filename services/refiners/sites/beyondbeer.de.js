@@ -1,5 +1,7 @@
 // services/refiners/sites/beyondbeer.de.js
 export default async function refine(rootUrl, product, page) {
+    product.country = 'Germany';
+
     product.abv = await page.evaluate(() => {
         const rows = document.querySelectorAll("table.product-detail-properties-table tr.properties-row");
         for (let row of rows) {

@@ -1,25 +1,26 @@
 {
     "rootUrl": "https://noblegreenwines.co.uk",
-    "baseUrl": "https://noblegreenwines.co.uk/products?keywords=Alcohol&submit=",
+    "baseUrl": "https://noblegreenwines.co.uk/search?search=Alcohol",
     "site_name": "noblegreenwinesonline",
     "seller": "seller",
-    "collectionLinks": "/t/",
     "productsLinks": "/products/",
+    "collectionLinks": "/search?category=",
     "skipCollectionLinksInProducts": true,
     "moreConfig": true,
     "selectors": {
         "header": {
-            "description": "meta[name='description']"
+            "name": "meta[property='og:title']",
+            "description": "meta[property='og:description']",
+            "images": "meta[property='og:image']"
         },
         "main": {
-            "name": "h1.taxon-title[itemprop='name']",
-            "price": "div.product-price-standard",
-            "images": "#main-image img[itemprop='image']"
+            "price": ".text-3xl.font-bold.text-primary-dark",
+            "producer": "a[href*=\"producer=\"]"
         }
     },
     "pagination": {
-        "type": "link",
-        "selector": "a[rel=\"next\"]"
+        "type": "button",
+        "selector": "button[aria-label=\"Next page\"]"
     },
     "level": 1,
     "purePlayer": false

@@ -22,5 +22,6 @@
         "type": "link",
         "selector": "a.Pagination__NavItem[rel=\"next\"]"
     },
+    "level": -1,
     "purePlayer": true
 }

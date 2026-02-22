@@ -17,11 +17,12 @@
             "description": "meta[name='description']",
             "images": "meta[property='og:image']"
         },
-        "main": { }
+        "main": {}
     },
     "pagination": {
         "type": "button",
         "selector": "button.js-load-more-btn-all"
     },
+    "level": 1,
     "purePlayer": true
 }

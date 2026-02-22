@@ -1,12 +1,15 @@
 {
     "rootUrl": "https://positivedrinks.co",
-    "baseUrl": "https://positivedrinks.co/collections/all",
+    "baseUrl": [
+        "https://positivedrinks.co/collections/0-0-abv",
+        "https://positivedrinks.co/collections/0-3-abv",
+        "https://positivedrinks.co/collections/0-5-abv"
+    ],
     "site_name": "positivedrinks",
     "seller": "seller",
     "bannerSkip": "#shopify-pc__banner__btn-accept",
-    "productsLinks": "/collections/all/products/",
-    "collectionLinks": "/collections/",
-    "skipCollectionLinksInProducts": true,
+    "productLinkAttribute": "href",
+    "productLinkSelector": "a.product-item__title",
     "moreConfig": true,
     "selectors": {
         "header": {
@@ -22,6 +25,6 @@
         "type": "link",
         "selector": "nav .pagination .next a"
     },
-    "level": 2,
+    "level": 1,
     "purePlayer": true
 }

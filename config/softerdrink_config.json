@@ -19,7 +19,6 @@
             "producer": ".product__text.inline-richtext"
         }
     },
-    
     "pagination": {
         "type": "link",
         "selector": "a[aria-label='Next page']"

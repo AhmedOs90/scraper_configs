@@ -23,5 +23,6 @@
         "type": "button",
         "selector": ".boost-products__load-more .btn.btn--primary"
     },
+    "level": 0,
     "purePlayer": false
 }

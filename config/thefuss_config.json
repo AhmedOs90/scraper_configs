@@ -7,12 +7,12 @@
     "productsLinks": "/products/",
     "collectionLinks": "/collections/",
     "skipCollectionLinksInProducts": true,
-    "moreConfig": true, 
+    "moreConfig": true,
     "selectors": {
         "header": {
             "name": "meta[property='og:title']",
             "price": "meta[property='og:price:amount']",
-            "currency": "meta[property='og:price:currency']",            
+            "currency": "meta[property='og:price:currency']",
             "images": "meta[property='og:image']"
         },
         "main": {
@@ -24,5 +24,6 @@
         "type": "scroll",
         "selector": ".footer-wrapper"
     },
-    "purePlayer": false
+    "purePlayer": false,
+    "level": 1
 }

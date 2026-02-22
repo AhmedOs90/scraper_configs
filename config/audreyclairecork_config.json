@@ -18,11 +18,10 @@
             "description": ".product-tabs .page.info"
         }
     },
-
     "pagination": {
         "type": "link",
         "selector": "li.next a"
     },
-    "level": 1,
+    "level": 0,
     "purePlayer": false
 }

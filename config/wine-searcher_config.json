@@ -1,7 +1,7 @@
 {
     "rootUrl": "https://www.wine-searcher.com",
-    "baseUrl": "https://www.wine-searcher.com/find/non-alcoholic#t6",
-    "site_name": "albertabeerexchange",
+    "baseUrl": "https://www.wine-searcher.com/find/non-alcoholic/1/any#t6",
+    "site_name": "wine-searcher",
     "seller": "seller",
     "productLinkAttribute": "href",
     "productLinkSelector": ".card-product__name > a",
@@ -21,5 +21,6 @@
         "type": "link",
         "selector": ".pagination .page-item a[title='Next Page']"
     },
+    "level": -1,
     "purePlayer": false
 }

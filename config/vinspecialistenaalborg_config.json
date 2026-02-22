@@ -1,56 +1,23 @@
 {
-  "rootUrl": "https://www.vinspecialistenaalborg.dk",
-  "baseUrl": "https://www.vinspecialistenaalborg.dk/produkt-kategori/alkoholfri/",
-  "site_name": "Vinspecialisten Aalborg",
-  "seller": "seller",
-
-  "productsLinks": "/shop/alkoholfri/",
-  "collectionLinks": "/produkt-kategori/alkoholfri/",
-  "productLinkSelector": "a[href*='/shop/alkoholfri/'], a[href*='/shop/aktuelle-vine/']",
-  "productLinkAttribute": "href",
-  "skipCollectionLinksInProducts": true,
-
-  "purePlayer": true,
-  "moreConfig": true,
-  "level": 2,
-
-  "pagination": {
-    "type": "page",
-    "selector": "nav.woocommerce-pagination a.next"
-  },
-
-  "selectors": {
-    "header": {
-      "name": "meta[property='og:title'], h1.product_title",
-      "currency": "span.woocommerce-Price-currencySymbol",
-      "description": "meta[property='og:description']",
-      "images": "div.woocommerce-product-gallery img",
-      "producer": "span.brand, .product_meta .brand",
-
-      "abv": null,
-      "gluten_free": null,
-      "vegan": null,
-      "energy": null,
-      "sugars": null,
-      "category": "nav.woocommerce-breadcrumb a:last-child"
+    "rootUrl": "https://www.vinspecialistenaalborg.dk",
+    "baseUrl": "https://www.vinspecialistenaalborg.dk/produkt-kategori/alkoholfri",
+    "site_name": "vinspecialistenaalborg",
+    "seller": "seller",
+    "bannerSkip": "button.coi-banner__accept",
+    "productsLinks": "/shop/alkoholfri/",
+    "collectionLinks": "/produkt-kategori/alkoholfri/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "description": "meta[property='og:description']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "price": ".summary .price .woocommerce-Price-amount.amount"
+        }
     },
-
-    "main": {
-      "name": "h1.product_title",
-      "price": "p.price .woocommerce-Price-amount bdi",
-      "currency": ".woocommerce-Price-currencySymbol",
-      "description": ".woocommerce-product-details__short-description",
-
-      "images": "div.woocommerce-product-gallery img",
-      "producer": ".product_meta a[href*='product_tag']",
-
-      
-      "abv": "p:contains('%'), li:contains('%'), span:contains('%')",
-      "gluten": "li:contains('Gluten'), p:contains('Gluten')",
-      "vegan": "li:contains('Vegan'), p:contains('Vegan')",
-      "energy": "li:contains('kcal'), p:contains('kcal')",
-      "sugars": "li:contains('sukker'), p:contains('sukker')",
-      "category": "nav.woocommerce-breadcrumb a:last-child"
-    }
-  }
+    "level": 0,
+    "purePlayer": false
 }

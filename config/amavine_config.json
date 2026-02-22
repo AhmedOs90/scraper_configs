@@ -21,6 +21,6 @@
         "type": "link",
         "selector": ".woocommerce-pagination .page-numbers.next"
     },
-    "level": 0,
+    "level": 1,
     "purePlayer": true
 }

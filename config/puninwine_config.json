@@ -1,26 +1,24 @@
 {
     "rootUrl": "https://puninwine.com",
-    "baseUrl": "https://puninwine.com/catalog/filter/type-non_alcoholic/",
+    "baseUrl": "https://puninwine.com/collections/non-alcoholic",
     "site_name": "puninwine",
     "seller": "seller",
-    "bannerSkip": "mat-dialog-container app-age-confirm-popup button#t-age-conf-2",
-    "productLinkAttribute": "href",
-    "productLinkSelector": ".product-card",
+    "bannerSkip": "button.btn--popup-1.js-close-modal",
+    "productsLinks": "/collections/non-alcoholic/products/",
+    "collectionLinks": "/collections/",
     "moreConfig": true,
     "selectors": {
         "header": {
             "images": "meta[property='og:image']",
-            "producer": "meta[name='brand']",
-            "price": "meta[name='product:price:amount']",
-            "currency": "meta[name='price:currency']"
+            "price": "meta[property='og:price:amount']",
+            "currency": "meta[property='og:price:currency']"
         },
         "main": {
-            "name": ".product-info__title"
+            "name": ".product-info__title",
+            "producer": ".product-vendor",
+            "description": ".pw-disclosure__content"
         }
     },
-    "pagination": {
-        "type": "scroll",
-        "selector": ".beacon"
-    },
+    "level": 0,
     "purePlayer": false
 }

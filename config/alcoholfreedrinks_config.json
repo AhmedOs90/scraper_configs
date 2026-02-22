@@ -15,7 +15,7 @@
             "description": "meta[name='description']",
             "images": "meta[property='og:image']"
         },
-        "main": { }
+        "main": {}
     },
     "pagination": {
         "type": "scroll",

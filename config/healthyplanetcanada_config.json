@@ -20,5 +20,6 @@
         "type": "button",
         "selector": "button.primary.amscroll-load-button.-after"
     },
+    "level": -1,
     "purePlayer": true
 }

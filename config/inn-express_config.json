@@ -20,5 +20,6 @@
         "type": "button",
         "selector": ".load-more-btn"
     },
-    "purePlayer": false
+    "purePlayer": false,
+    "level": 1
 }

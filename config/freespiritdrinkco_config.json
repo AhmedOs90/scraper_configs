@@ -23,5 +23,6 @@
         "type": "scroll",
         "selector": "a.js-pagination-load-more"
     },
+    "level": 0,
     "purePlayer": true
 }

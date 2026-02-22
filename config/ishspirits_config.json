@@ -17,5 +17,6 @@
             "price": ".block-price__container"
         }
     },
+    "level": 0,
     "purePlayer": true
 }

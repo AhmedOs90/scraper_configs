@@ -20,6 +20,6 @@
         "type": "link",
         "selector": ".styles__PaginationButtonWrapper-sc-1s9fh3a-3 a"
     },
-    "purePlayer": true,
-    "level": 1
+    "level": 1,
+    "purePlayer": true
 }
