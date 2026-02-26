@@ -154,9 +154,9 @@ import kolonnenull from "./sites/kolonnenull.com.js";
 import surdyks from "./sites/surdyks.com.js";
 import thealcoholfreeco from "./sites/thealcoholfreeco.co.uk.js";
 import virginwines from "./sites/virginwines.co.uk.js";
-
 import densidstedraabe from "./sites/densidstedraabe.dk.js";
 import alkoholfrishop from "./sites/alkoholfrishop.dk.js";
+import zerozerodrinks from "./sites/zerozerodrinks.com.js";
 
 // Registry map
 const registry = new Map([
@@ -312,8 +312,8 @@ const registry = new Map([
     ["thealcoholfreeco.co.uk", thealcoholfreeco],
     ["virginwines.co.uk", virginwines],
     ["densidstedraabe.dk", densidstedraabe],
-    ["alkoholfrishop.dk", alkoholfrishop]
-
+    ["alkoholfrishop.dk", alkoholfrishop],
+    ["zerozerodrinks.com", zerozerodrinks]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {
