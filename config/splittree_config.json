@@ -1,0 +1,58 @@
+{
+  "rootUrl": "https://splittree.ca",
+  "baseUrl": [
+    "https://splittree.ca/collections/non-alcoholic-spirit"
+  ],
+  "site_name": "splittree",
+  "seller": "seller",
+  "currency": "CAD",
+  "productsLinks": null,
+  "collectionLinks": "/collections/",
+  "skipCollectionLinksInProducts": true,
+  "moreConfig": true,
+  "productLinkSelector": "main a[href*='/products/'], .collection-main-grid a[href*='/products/'], [data-aid='product-card'] a[href*='/products/']",
+  "productLinkAttribute": "href",
+  "selectors": {
+    "header": {
+      "name": "meta[property='og:title'], meta[name='twitter:title'], meta[itemprop='name']",
+      "price": "meta[property='product:price:amount'], meta[property='og:price:amount'], meta[itemprop='price']",
+      "currency": "meta[property='product:price:currency'], meta[property='og:price:currency'], meta[itemprop='priceCurrency']",
+      "country": "meta[property='product:country'], meta[name='product:country'], meta[itemprop='countryOfOrigin']",
+      "description": "meta[property='og:description'], meta[name='description'], meta[itemprop='description']",
+      "images": "meta[property='og:image:secure_url'], meta[property='og:image'], meta[name='twitter:image']",
+      "abv": "meta[name='alcohol'], meta[property='product:alcohol'], meta[itemprop='alcoholContent']",
+      "gluten_free": "meta[name='gluten_free'], meta[property='product:gluten_free']",
+      "vegan": "meta[name='vegan'], meta[property='product:vegan']",
+      "producer": "meta[name='brand'], meta[property='product:brand'], meta[itemprop='brand']",
+      "energy": "meta[name='energy'], meta[property='product:energy']",
+      "sugars": "meta[name='sugars'], meta[property='product:sugars']",
+      "category": "meta[property='product:category'], meta[name='category']"
+    },
+    "main": {
+      "name": "h1, main h1, [data-aid='basic-product-form-title'], [data-aid='main-form-product-title'], [itemprop='name']",
+      "price": "[data-aid='regular-price'], [data-armada-selector*='regular-price'], .price-item--regular, .price .money, [itemprop='price']",
+      "currency": "meta[property='product:price:currency'], meta[property='og:price:currency'], meta[itemprop='priceCurrency']",
+      "country": "[itemprop='countryOfOrigin'], .product-origin, .country",
+      "description": "[itemprop='description'], .product-single__description, .product__description, [data-aid='product-description'], .rte",
+      "images": "meta[property='og:image:secure_url'], meta[property='og:image'], img[itemprop='image'], .product__media img, .product-single__photo img, .gallery img",
+      "abv": "[itemprop*='alcohol'], .abv, [data-label*='Alcohol'], [data-label*='ABV']",
+      "gluten": ".gluten, [data-label*='Gluten'], [data-aid='product-description'], .rte",
+      "vegan": ".vegan, [data-label*='Vegan'], [data-aid='product-description'], .rte",
+      "producer": ".product__vendor, [itemprop='brand'], .brand",
+      "energy": ".energy, [data-label*='Energy'], [data-label*='Calories'], [data-aid='product-description'], .rte",
+      "sugars": ".sugar, .sugars, [data-label*='Sugar'], [data-aid='product-description'], .rte",
+      "category": ".breadcrumb a:last-child, nav.breadcrumb a:last-child, [itemprop='category']"
+    }
+  },
+  "pagination": {
+    "type": "link",
+    "selector": "link[rel='next'], a[rel='next'], .pagination a.next, a[aria-label*='Next']"
+  },
+  "level": 1,
+  "purePlayer": true,
+  "_notes": [
+    "Scoped to non-alcoholic collection entrypoint.",
+    "Limit product discovery to collection-main-grid cards to avoid nav/featured collection cross-links.",
+    "Hybrid strict filtering is enforced in services/refiners/sites/splittree.ca.js."
+  ]
+}

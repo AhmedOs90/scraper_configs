@@ -159,7 +159,13 @@ import densidstedraabe from "./sites/densidstedraabe.dk.js";
 import alkoholfrishop from "./sites/alkoholfrishop.dk.js";
 import itsundone from "./sites/itsundone.com.js";
 import nirvanabrewery from "./sites/nirvanabrewery.com.js";
+import voila from "./sites/voila.ca.js";
+import splittree_ca from "./sites/splittree.ca.js";
+import bienmanger_com from "./sites/bienmanger.com.js";
 
+import psalcoholfree_com from "./sites/psalcoholfree.com.js";
+import drinkdesoi_com from "./sites/drinkdesoi.com.js";
+import legacyliquorstore_com from "./sites/legacyliquorstore.com.js";
 // Registry map
 const registry = new Map([
     ["drydrinker.com", drydrinker],
@@ -316,9 +322,18 @@ const registry = new Map([
     ["densidstedraabe.dk", densidstedraabe],
     ["alkoholfrishop.dk", alkoholfrishop],
     ["itsundone.com", itsundone],
-    ["nirvanabrewery.com", nirvanabrewery]
-    
+    ["nirvanabrewery.com", nirvanabrewery],
+    ["voila.ca", voila],
+    ["splittree.ca", splittree_ca],
+    ["bienmanger.com", bienmanger_com],
 
+    ["psalcoholfree.com", psalcoholfree_com],
+    ["drinkdesoi.com", drinkdesoi_com],
+    ["legacyliquorstore.com", legacyliquorstore_com],
+    ["legacyliquorstore.com", legacyliquorstore_com],
+    ["legacyliquorstore.com", legacyliquorstore_com],
+    ["legacyliquorstore.com", legacyliquorstore_com],
+    ["legacyliquorstore.com", legacyliquorstore_com],
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {

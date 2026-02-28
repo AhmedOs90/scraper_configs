@@ -1,0 +1,59 @@
+{
+  "rootUrl": "https://voila.ca",
+  "baseUrl": [
+    "https://voila.ca/categories/beverages/alcohol-free/WEB2100676?source=navigation"
+  ],
+  "site_name": "voila",
+  "seller": "seller",
+  "currency": "CAD",
+  "productsLinks": null,
+  "collectionLinks": "/categories/",
+  "skipCollectionLinksInProducts": true,
+  "productLinkSelector": "a[href*='/products/'], a[href*='/product/']",
+  "productLinkAttribute": "href",
+  "bannerSkip": "button[aria-label*='close' i], button[aria-label*='dismiss' i], button[class*='close' i]",
+  "moreConfig": true,
+  "selectors": {
+    "header": {
+      "name": "meta[property='og:title'], meta[name='twitter:title']",
+      "price": "meta[property='product:price:amount'], meta[name='product:price:amount'], meta[itemprop='price'], meta[property='og:price:amount']",
+      "currency": "meta[property='product:price:currency'], meta[name='product:price:currency'], meta[itemprop='priceCurrency'], meta[property='og:price:currency']",
+      "country": "meta[property='product:country_of_origin'], meta[name='country'], meta[name='product:country_of_origin'], meta[itemprop='countryOfOrigin']",
+      "description": "meta[property='og:description'], meta[name='description']",
+      "images": "meta[property='og:image'], meta[property='og:image:url'], meta[name='twitter:image']",
+      "abv": "meta[name='abv'], meta[property='product:abv'], meta[name='alcohol_by_volume'], meta[itemprop='alcoholContent']",
+      "gluten_free": "meta[name='gluten_free'], meta[property='product:gluten_free']",
+      "vegan": "meta[name='vegan'], meta[property='product:vegan']",
+      "producer": "meta[name='brand'], meta[property='product:brand'], meta[itemprop='brand']",
+      "energy": "meta[name='energy'], meta[property='product:energy']",
+      "sugars": "meta[name='sugar'], meta[property='product:sugar'], meta[name='sugars'], meta[property='product:sugars']",
+      "category": "meta[property='product:category'], meta[name='category']"
+    },
+    "main": {
+      "name": "main h1, h1",
+      "price": "[data-testid*='price' i], [class*='price' i], span[itemprop='price'], [itemprop='price']",
+      "currency": "[data-testid*='currency' i], span[itemprop='priceCurrency'], [itemprop='priceCurrency']",
+      "country": "[data-testid*='country' i], [itemprop='countryOfOrigin']",
+      "description": "[data-testid*='description' i], [itemprop='description'], main [class*='description' i]",
+      "images": "meta[property='og:image'], main img[src], img[src]",
+      "abv": "[data-testid*='abv' i], [data-testid*='alcohol' i], [class*='abv' i], [class*='alcohol' i]",
+      "gluten": "[data-testid*='gluten' i], [class*='gluten' i]",
+      "vegan": "[data-testid*='vegan' i], [class*='vegan' i]",
+      "producer": "[data-testid*='brand' i], [class*='brand' i], a[href*='/brands/']",
+      "energy": "[data-testid*='energy' i], [class*='energy' i], [class*='kcal' i]",
+      "sugars": "[data-testid*='sugar' i], [class*='sugar' i]",
+      "category": "nav[aria-label*='breadcrumb' i] a:last-child, .breadcrumb a:last-child, a[href*='/categories/']:last-child"
+    }
+  },
+  "pagination": {
+    "type": "button",
+    "selector": "button[aria-label*='load' i], button[aria-label*='more' i], button[class*='load' i], button[class*='more' i]"
+  },
+  "level": 1,
+  "purePlayer": true,
+  "_notes": [
+    "Voila.ca pages may require location / cookie consent. bannerSkip tries to close common modals.",
+    "Strategy is dynamic links: harvest product links from the category page using /products/ URLs and productLinkSelector.",
+    "Selectors are best-effort because voila.ca blocks automated browsing in this environment; verify with your browser inspect and tweak if needed."
+  ]
+}
