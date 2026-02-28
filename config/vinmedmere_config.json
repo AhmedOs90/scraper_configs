@@ -22,6 +22,6 @@
         "type": "link",
         "selector": "ul.pagination li:last-child a"
     },
-    "level": 1,
+    "level": 0,
     "purePlayer": false
 }

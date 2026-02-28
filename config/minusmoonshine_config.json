@@ -15,7 +15,6 @@
             "images": "meta[property='og:image']"
         },
         "main": {
-            "category": ".product__type span:nth-of-type(2)",
             "description": ".description-block__content p"
         }
     },
@@ -23,5 +22,6 @@
         "type": "link",
         "selector": ".pagination .page-item:last-child a.page-link"
     },
+    "level": 1,
     "purePlayer": true
 }

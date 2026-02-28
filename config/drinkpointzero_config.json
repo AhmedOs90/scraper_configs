@@ -15,11 +15,12 @@
             "description": "meta[property='og:description']",
             "images": "meta[property='og:image']"
         },
-        "main": { }
+        "main": {}
     },
     "pagination": {
         "type": "link",
         "selector": ".m-pagination .next a"
     },
+    "level": 1,
     "purePlayer": true
 }

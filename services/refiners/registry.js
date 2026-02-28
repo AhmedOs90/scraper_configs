@@ -154,9 +154,9 @@ import kolonnenull from "./sites/kolonnenull.com.js";
 import surdyks from "./sites/surdyks.com.js";
 import thealcoholfreeco from "./sites/thealcoholfreeco.co.uk.js";
 import virginwines from "./sites/virginwines.co.uk.js";
-
 import densidstedraabe from "./sites/densidstedraabe.dk.js";
 import alkoholfrishop from "./sites/alkoholfrishop.dk.js";
+import zerozerodrinks from "./sites/zerozerodrinks.com.js";
 import itsundone from "./sites/itsundone.com.js";
 import nirvanabrewery from "./sites/nirvanabrewery.com.js";
 
@@ -315,6 +315,7 @@ const registry = new Map([
     ["virginwines.co.uk", virginwines],
     ["densidstedraabe.dk", densidstedraabe],
     ["alkoholfrishop.dk", alkoholfrishop],
+    ["zerozerodrinks.com", zerozerodrinks]
     ["itsundone.com", itsundone],
     ["nirvanabrewery.com", nirvanabrewery]
     

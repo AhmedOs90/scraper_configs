@@ -20,6 +20,6 @@
         "type": "link",
         "selector": ".page-nav .next a[rel='next']"
     },
-    "level": 1,
+    "level": 0,
     "purePlayer": false
 }
