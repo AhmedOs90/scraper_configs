@@ -1,0 +1,64 @@
+{
+  "rootUrl": "https://psalcoholfree.com",
+  "baseUrl": [
+    "https://psalcoholfree.com/all-wines",
+    "https://psalcoholfree.com/cocktails",
+    "https://psalcoholfree.com/spirits"
+  ],
+  "site_name": "psalcoholfree",
+  "seller": "seller",
+  "currency": "CAD",
+  "productsLinks": null,
+  "collectionLinks": "/",
+  "skipCollectionLinksInProducts": true,
+  "moreConfig": true,
+  "runRefineOnMissingName": true,
+  "productLinkSelector": "a[data-aid^='CONTENT_CTA_BTN'][href*='/products/'], a[data-aid^='CONTENT_CTA_BTN'][href*='a.co/'], a[data-aid^='CONTENT_CTA_BTN'][href*='amazon.']",
+  "productLinkAttribute": "href",
+  "bannerSkip": "#b23f1c3e-8dac-490c-bc6e-37f9566d5251-accept, [data-aid='FOOTER_COOKIE_CLOSE_RENDERED']",
+  "selectors": {
+    "header": {
+      "name": "meta[property='og:title'], meta[name='twitter:title'], meta[itemprop='name']",
+      "price": "meta[property='product:price:amount'], meta[property='og:price:amount'], meta[itemprop='price']",
+      "currency": "meta[property='product:price:currency'], meta[property='og:price:currency'], meta[itemprop='priceCurrency']",
+      "country": "meta[property='product:country'], meta[name='product:country'], meta[itemprop='countryOfOrigin']",
+      "description": "meta[property='og:description'], meta[name='description'], meta[itemprop='description']",
+      "images": "meta[property='og:image:secure_url'], meta[property='og:image'], meta[name='twitter:image']",
+      "abv": "meta[name='alcohol'], meta[property='product:alcohol'], meta[itemprop='alcoholContent']",
+      "gluten_free": "meta[name='gluten_free'], meta[property='product:gluten_free']",
+      "vegan": "meta[name='vegan'], meta[property='product:vegan']",
+      "producer": "meta[name='brand'], meta[property='product:brand'], meta[itemprop='brand']",
+      "energy": "meta[name='energy'], meta[property='product:energy']",
+      "sugars": "meta[name='sugars'], meta[property='product:sugars']",
+      "category": "meta[property='product:category'], meta[name='category']"
+    },
+    "main": {
+      "name": "h1, main h1, .product-single__title, .product__title, [itemprop='name']",
+      "price": "[data-product-price], main [data-product-price], .product__price, main .price-item--regular, .product-form .price .money",
+      "currency": "meta[property='product:price:currency'], meta[property='og:price:currency'], meta[itemprop='priceCurrency']",
+      "country": "[itemprop='countryOfOrigin'], .product-origin, .country",
+      "description": "[itemprop='description'], .product-single__description, .product__description, .description",
+      "images": "meta[property='og:image:secure_url'], img[itemprop='image'], .product__media img, .product-single__photo img",
+      "abv": "[itemprop*='alcohol'], .abv, [data-label*='Alcohol']",
+      "gluten": ".gluten, [data-label*='Gluten']",
+      "vegan": ".vegan, [data-label*='Vegan']",
+      "producer": ".product__vendor, [itemprop='brand'], .brand",
+      "energy": ".energy, [data-label*='Energy'], [data-label*='Calories']",
+      "sugars": ".sugar, .sugars, [data-label*='Sugar']",
+      "category": ".breadcrumb a:last-child, nav.breadcrumb a:last-child"
+    }
+  },
+  "pagination": {
+    "type": "link",
+    "selector": "a[rel='next'], .pagination a.next, a[aria-label*='Next'], .next a"
+  },
+  "level": 1,
+  "purePlayer": true,
+  "_notes": [
+    "P/S Alcohol Free category pages link externally to Upside Drinks product pages.",
+    "Crawl the 3 category entry URLs: /all-wines, /cocktails, /spirits.",
+    "Match direct /products/, /collections/.../products/ and Amazon short links (a.co) from CTA buttons.",
+    "Use outbound CTA links as product queue source and extract product payload from destination pages.",
+    "Keep rootUrl/site_url anchored to psalcoholfree.com for reporting and schema placement."
+  ]
+}

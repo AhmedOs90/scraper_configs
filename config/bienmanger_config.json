@@ -1,0 +1,56 @@
+{
+  "rootUrl": "https://www.bienmanger.com",
+  "baseUrl": [
+    "https://www.bienmanger.com/1L1454_Boissons_Sans_Alcool.html",
+    "https://www.bienmanger.com/1L1479_Spiritueux_Sans_Alcool.html",
+    "https://www.bienmanger.com/1L1486_Vin_Sans_Alcool.html",
+    "https://www.bienmanger.com/achat-biere/type-sans-alcool/"
+  ],
+  "site_name": "bienmanger",
+  "seller": "seller",
+  "currency": "EUR",
+  "productsLinks": null,
+  "productLinkSelector": ".product-list-title a[href], a[href^='/1F']",
+  "productLinkAttribute": "href",
+  "skipCollectionLinksInProducts": true,
+  "moreConfig": true,
+  "selectors": {
+    "header": {
+      "name": "meta[property='og:title'], meta[name='twitter:title'], meta[itemprop='name']",
+      "price": "meta[property='product:price:amount'], meta[property='og:price:amount'], meta[itemprop='price']",
+      "currency": "meta[property='product:price:currency'], meta[property='og:price:currency'], meta[itemprop='priceCurrency']",
+      "country": "meta[property='product:country'], meta[name='country'], meta[itemprop='countryOfOrigin']",
+      "description": "meta[property='og:description'], meta[name='description'], meta[itemprop='description']",
+      "images": "meta[property='og:image'], meta[name='twitter:image'], meta[itemprop='image']",
+      "abv": "meta[name='alcohol'], meta[property='product:alcohol'], meta[itemprop='alcoholContent']",
+      "gluten_free": "meta[name='gluten_free'], meta[property='product:gluten_free']",
+      "vegan": "meta[name='vegan'], meta[property='product:vegan']",
+      "producer": "meta[name='brand'], meta[property='product:brand'], meta[itemprop='brand']",
+      "energy": "meta[name='energy'], meta[property='product:energy']",
+      "sugars": "meta[name='sugar'], meta[name='sugars'], meta[property='product:sugar'], meta[property='product:sugars']",
+      "category": "meta[property='product:category'], meta[name='category']"
+    },
+    "main": {
+      "name": "h1, #main_column h1",
+      "price": ".priceUnit b, .product-list-price, [itemprop='price']",
+      "currency": "meta[property='og:price:currency'], [itemprop='priceCurrency']",
+      "country": "[itemprop='countryOfOrigin'], ol.breadcrumb li:last-child a, .breadcrumb a:last-child",
+      "description": "#desc, .font16.padding-left-right-restore-sm, [itemprop='description']",
+      "images": "#imageProduct img[xoriginal], #imageProduct img[src], img[itemprop='image']",
+      "abv": "#desc, .font16.padding-left-right-restore-sm, [itemprop='alcoholContent']",
+      "gluten": "[data-label*='gluten' i], [itemprop='glutenFree']",
+      "vegan": "[data-label*='vegan' i], [itemprop='isVegan']",
+      "producer": "h2.subTitle a, .product-list-info span, [itemprop='brand']",
+      "energy": "[data-label*='energy' i], [data-label*='energie' i], [data-label*='calorie' i], [itemprop='calories']",
+      "sugars": "[data-label*='sugar' i], [data-label*='sugars' i], [data-label*='sucre' i], [itemprop='sugarContent']",
+      "category": "ol.breadcrumb li:last-child a, .breadcrumb a:last-child"
+    }
+  },
+  "level": 1,
+  "purePlayer": false,
+  "_notes": [
+    "Legacy URL /legacyliquorstore returns 404; onboarding uses confirmed non-alcohol category pages.",
+    "Use dynamic-link mode with /1F product pages and selector targeting product-list title links.",
+    "JSON-LD Product data is available on product pages and used by the site refiner."
+  ]
+}
