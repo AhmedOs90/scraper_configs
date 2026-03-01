@@ -15,11 +15,12 @@
             "description": "meta[name='twitter:description'], meta[property='og:description']",
             "images": "meta[property='og:image']"
         },
-        "main": { }
+        "main": {}
     },
     "pagination": {
         "type": "link",
         "selector": "a.pagination__item[rel=\"next\"]"
     },
+    "level": 1,
     "purePlayer": true
 }

@@ -21,6 +21,6 @@
         "type": "link",
         "selector": ".Pagination .NextPageLink a"
     },
-    "level": 1,
+    "level": 0,
     "purePlayer": false
 }

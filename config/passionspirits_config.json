@@ -3,22 +3,22 @@
     "baseUrl": "https://passionspirits.com/spirits/non-alcoholic",
     "site_name": "passionspirits",
     "seller": "seller",
-    "bannerSkip": "[role=\"dialog\"] button[type=\"button\"]",
+    "bannerSkip": "div.MuiBox-root.css-1hkclfa > button[type=\"button\"]",
     "productLinkAttribute": "href",
-    "productLinkSelector": ".MuiCard-root .MuiBox-root a > img",
+    "productLinkSelector": ".MuiBox-root.css-1hce2jx a",
     "moreConfig": true,
     "selectors": {
         "header": {},
         "main": {
             "name": ".MuiGrid-item h1",
             "price": "h2.css-1hthql9",
-            "description": "..MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.css-1au9qiw ul",
-            "images": "img[alt=\"Product Image\"]"
+            "description": ".MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.css-1au9qiw .MuiBox-root.css-0"
         }
     },
     "pagination": {
         "type": "button",
-        "selector": "button.MuiPaginationItem-previousNext[aria-label=\"Go to next page\"]"
+        "selector": "button[aria-label=\"Go to next page\"]"
     },
+    "level": 1,
     "purePlayer": false
 }

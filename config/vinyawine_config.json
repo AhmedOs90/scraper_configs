@@ -17,5 +17,6 @@
         },
         "main": {}
     },
-    "purePlayer": false
+    "purePlayer": false,
+    "level": 0
 }

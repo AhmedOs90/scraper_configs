@@ -22,5 +22,6 @@
             "description": ".product-description"
         }
     },
+    "level": 1,
     "purePlayer": true
 }

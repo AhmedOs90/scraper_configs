@@ -1,7 +1,7 @@
 {
-    "rootUrl": "https://alambika.ca",
-    "baseUrl": "https://alambika.ca/collections/non-alcoholic-substitutes",
-    "site_name": "alambika",
+    "rootUrl": "https://zerozerodrinks.com",
+    "baseUrl": "https://zerozerodrinks.com/collections/all/",
+    "site_name": "zerozerodrinks",
     "seller": "seller",
     "productsLinks": "/products/",
     "collectionLinks": "/collections/",
@@ -15,14 +15,9 @@
             "currency": "meta[property='og:price:currency']"
         },
         "main": {
-            "producer": ".product__subtitle p",
-            "description": "#tab-0"
+            "description": ".product__description"
         }
     },
-    "pagination": {
-        "type": "link",
-        "selector": ".pagination li.next a"
-    },
-    "level": 1,
-    "purePlayer": true
+    "level": 0,
+    "purePlayer": false
 }

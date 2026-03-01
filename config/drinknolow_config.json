@@ -24,5 +24,6 @@
         "type": "button",
         "selector": ".mt-2.text-center button.btn--load"
     },
+    "level": 1,
     "purePlayer": true
 }

@@ -4,9 +4,8 @@
     "site_name": "virginwines",
     "seller": "seller",
     "bannerSkip": "button.acceptallcookies",
-    "productsLinks": "/wine/",
-    "collectionLinks": "/wines/",
-    "skipCollectionLinksInProducts": true,
+    "productLinkAttribute": "href",
+    "productLinkSelector": ".product-bottle .product-name a",
     "moreConfig": true,
     "selectors": {
         "header": {

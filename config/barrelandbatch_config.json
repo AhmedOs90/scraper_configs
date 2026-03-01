@@ -24,6 +24,6 @@
         "type": "link",
         "selector": "a.pagination__item--prev"
     },
-    "level": 1,
+    "level": 0,
     "purePlayer": false
 }

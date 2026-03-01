@@ -20,5 +20,6 @@
         "type": "link",
         "selector": ".next-page a"
     },
-    "purePlayer": false
+    "purePlayer": false,
+    "level": 0
 }
