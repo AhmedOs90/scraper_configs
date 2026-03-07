@@ -162,7 +162,6 @@ import nirvanabrewery from "./sites/nirvanabrewery.com.js";
 import voila from "./sites/voila.ca.js";
 import splittree_ca from "./sites/splittree.ca.js";
 import bienmanger_com from "./sites/bienmanger.com.js";
-
 import psalcoholfree_com from "./sites/psalcoholfree.com.js";
 import drinkdesoi_com from "./sites/drinkdesoi.com.js";
 import legacyliquorstore_com from "./sites/legacyliquorstore.com.js";
@@ -321,20 +320,15 @@ const registry = new Map([
     ["virginwines.co.uk", virginwines],
     ["densidstedraabe.dk", densidstedraabe],
     ["alkoholfrishop.dk", alkoholfrishop],
-    ["zerozerodrinks.com", zerozerodrinks]
+    ["zerozerodrinks.com", zerozerodrinks],
     ["itsundone.com", itsundone],
     ["nirvanabrewery.com", nirvanabrewery],
     ["voila.ca", voila],
     ["splittree.ca", splittree_ca],
     ["bienmanger.com", bienmanger_com],
-
     ["psalcoholfree.com", psalcoholfree_com],
     ["drinkdesoi.com", drinkdesoi_com],
-    ["legacyliquorstore.com", legacyliquorstore_com],
-    ["legacyliquorstore.com", legacyliquorstore_com],
-    ["legacyliquorstore.com", legacyliquorstore_com],
-    ["legacyliquorstore.com", legacyliquorstore_com],
-    ["legacyliquorstore.com", legacyliquorstore_com],
+    ["legacyliquorstore.com", legacyliquorstore_com]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {

@@ -1,25 +1,12 @@
-// services/refiners/sites/danmurphys.com.au.js
 export default async function refine(rootUrl, product, page) {
-    const info = await page.evaluate(() => {
-        try {
-            const script = document.querySelector('script[type="application/ld+json"]');
-            if (!script) return null;
-
-            const data = JSON.parse(script.textContent);
-
-            return {
-                price: data.offers?.price || null,
-                currency: data.offers?.priceCurrency || null
-            };
-        } catch {
-            return null;
-        }
-    });
-
-    if (info) {
-        product.price = info.price;
-        product.currency = info.currency;
-    }
+    product.country = 'Australia';
+    product.currency = 'AUD';
+    product.price = product.price?.replace('$', '').trim();
+    product.description = product.description
+        ?.replace(/<[^>]*>/g, ' ')
+        .replace(/\n+/g, ' ')
+        .replace(/\s+/g, ' ')
+        .trim();
 
     product.abv = await page.$$eval(
         '.mat-expansion-panel-body .product-attribute__item, .product-attribute__item',
