@@ -4,7 +4,7 @@
     "site_name": "nonalcoholicwinesonline",
     "seller": "seller",
     "collectionLinks": "/collections/all/",
-    "productsLinks": "/collections/all/products/",
+    "productsLinks": "/products/",
     "skipCollectionLinksInProducts": true,
     "moreConfig": true,
     "selectors": {

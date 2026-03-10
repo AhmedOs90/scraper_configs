@@ -20,7 +20,7 @@
   "collectionLinks": "-c",
   "skipCollectionLinksInProducts": true,
   "moreConfig": true,
-  "productLinkSelector": "a[href*='-p']",
+  "productLinkSelector": ".c-product-thumb__name a[href*='-p'], .c-product-thumb__image a[href*='-p']",
   "productLinkAttribute": "href",
   "bannerSkip": "#country-select-modal button, #country-select-modal .c-btn--transparent",
   "selectors": {

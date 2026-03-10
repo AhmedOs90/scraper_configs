@@ -1,0 +1,41 @@
+{
+  "rootUrl": "https://www.bevco.dk",
+  "baseUrl": [
+    "https://www.bevco.dk/alkoholfri/"
+  ],
+  "site_name": "bevco",
+  "seller": "seller",
+  "currency": null,
+  "productsLinks":  "pageLinks",
+  "collectionLinks": "collections/",
+  "skipCollectionLinksInProducts": true,
+  "moreConfig": true,
+  "productLinkSelector": ".sw-product-card a[href]",
+  "productLinkAttribute": "href",
+  "selectors": {
+    "header": {
+      "name": "meta[property='og:title']",
+      "price": "meta[property='product:price:amount']",
+      "currency": "meta[property='product:price:currency'], meta[property='og:price:currency'], meta[itemprop='priceCurrency']",
+      "country": "meta[property='product:country'], meta[name='product:country'], meta[name='countryOfOrigin'], meta[itemprop='countryOfOrigin'], meta[property='og:country-name']",
+      "images": "meta[property='og:image'], meta[name='twitter:image'], meta[property='og:image:secure_url']"
+      
+    },
+    "main": {
+      "name": "h1, main h1, [itemprop='name'], ",
+      "price": "[itemprop='price'], .price, .product-price, .product__price, .sales-price",
+      "currency": "[itemprop='priceCurrency'], .currency, .price-currency",
+      "abv": "div.inline-block.border-solid.border-1.mr-2.border-gray-400.rounded-2xl.px-4.py-1.text-sm + div.inline-block.border-solid.border-1.mr-2.border-gray-400.rounded-2xl.px-4.py-1.text-sm",
+      "country": "[itemprop='countryOfOrigin'], [itemprop='country'], .country, .product-country, [data-label*='Country of Origin'], [data-label*='Origin'], .origin, .made-in",
+      "images": "img[itemprop='image'], .product img, .product__media img, .product-gallery img",
+      "category": ".breadcrumb a:last-child, nav.breadcrumb a:last-child, [itemprop='category']"
+    }
+  },
+  "pagination": {
+    "type": "button",
+    "selector": ".ais-InfiniteHits > .w-full.mt-8 > button"
+  },
+  "level": 1,
+  "purePlayer": false
+  
+}

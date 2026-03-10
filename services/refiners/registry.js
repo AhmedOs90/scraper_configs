@@ -162,10 +162,14 @@ import nirvanabrewery from "./sites/nirvanabrewery.com.js";
 import voila from "./sites/voila.ca.js";
 import splittree_ca from "./sites/splittree.ca.js";
 import bienmanger_com from "./sites/bienmanger.com.js";
-
 import psalcoholfree_com from "./sites/psalcoholfree.com.js";
 import drinkdesoi_com from "./sites/drinkdesoi.com.js";
 import legacyliquorstore_com from "./sites/legacyliquorstore.com.js";
+import wineandbeyond_ca from "./sites/wineandbeyond.ca.js";
+import bondston_com from "./sites/bondston.com.js";
+import bevco_dk from "./sites/bevco.dk.js";
+import nonalcwines_au from "./sites/nonalcwines.au.js";
+
 // Registry map
 const registry = new Map([
     ["drydrinker.com", drydrinker],
@@ -321,20 +325,20 @@ const registry = new Map([
     ["virginwines.co.uk", virginwines],
     ["densidstedraabe.dk", densidstedraabe],
     ["alkoholfrishop.dk", alkoholfrishop],
-    ["zerozerodrinks.com", zerozerodrinks]
+    ["zerozerodrinks.com", zerozerodrinks],
     ["itsundone.com", itsundone],
     ["nirvanabrewery.com", nirvanabrewery],
     ["voila.ca", voila],
     ["splittree.ca", splittree_ca],
     ["bienmanger.com", bienmanger_com],
-
     ["psalcoholfree.com", psalcoholfree_com],
     ["drinkdesoi.com", drinkdesoi_com],
     ["legacyliquorstore.com", legacyliquorstore_com],
-    ["legacyliquorstore.com", legacyliquorstore_com],
-    ["legacyliquorstore.com", legacyliquorstore_com],
-    ["legacyliquorstore.com", legacyliquorstore_com],
-    ["legacyliquorstore.com", legacyliquorstore_com],
+    ["wineandbeyond.ca", wineandbeyond_ca],
+    ["bondston.com", bondston_com],
+    
+    ["bevco.dk", bevco_dk],
+    ["nonalcwines.au", nonalcwines_au],
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {
