@@ -1,7 +1,7 @@
 {
   "rootUrl": "https://www.wineandbeyond.ca",
   "baseUrl": [
-   
+    "https://www.wineandbeyond.ca/collections/non-alcoholic?filter.p.m.display.available_at=96969883959"
   ],
   "site_name": "wineandbeyond",
   "seller": "seller",
