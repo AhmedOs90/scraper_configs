@@ -5,7 +5,6 @@
     "seller": "seller",
     "productLinkAttribute": "href",
     "productLinkSelector": "li.js-list.search-results__item h2 a",
-    "skipCollectionLinksInProducts": true,
     "moreConfig": true,
     "selectors": {
         "header": {

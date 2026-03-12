@@ -1,8 +1,8 @@
 Total Sites Scraped: 1
 Total Products Scraped: 0
 Details per Site:
-Site Name: Vinspecialisten Aalborg
-Root URL: https://www.vinspecialistenaalborg.dk
+Site Name: refinemoments
+Root URL: https://refinemoments.com
 Products Scraped: 0
 ---
 Scraped Root URLs:
@@ -50,7 +50,6 @@ https://thechiller.co.nz
 https://boozefree.co.uk
 https://www.amavine.nl
 https://joinclubsoda.com
-https://freebarco.com
 https://keinundlow.at
 https://noughtyaf.com
 https://www.inn-express.com
@@ -63,7 +62,7 @@ https://noblegreenwines.co.uk
 https://www.healthyplanetcanada.com
 https://www.bittersandbottles.com
 https://www.draydrinks.com
-https://www.positivedrinks.co
+https://positivedrinks.co
 https://surdyks.com
 https://zerodrinks.co.za
 https://evergreencurated.com
@@ -88,7 +87,6 @@ https://nonalcwines.au
 https://beveragedaily.com
 https://wineandbeyond.ca
 https://todelli.com
-https://drinkdesoi.com
 https://wineanthology.com
 https://barrelandbatch.com.au
 https://sierranevada.com
@@ -132,7 +130,6 @@ https://www.wine-searcher.com
 https://belowbrewco.com
 https://threespiritdrinks.com
 https://www.obrienswine.ie
-https://www.thebelgianbeercompany.com
 https://www.virginwines.co.uk
 https://www.decantalo.dk
 https://www.kodriget.dk
@@ -146,7 +143,7 @@ https://mrwest.com.au
 https://vinmedmere.dk
 https://eng.whisky.dk
 https://www.topdrinks.dk
-https://www.kjaersommerfeldt.dk
+https://www.f.dk
 https://www.bilkatogo.dk
 https://www.hjhansen-vin.dk
 https://www.fleggaard.dk
@@ -158,12 +155,26 @@ https://osterbrovin.dk
 https://philipsonwine.com
 https://shop.meny.dk
 https://dengyldneloeve.dk
-https://toolbeer.dk
+https://www.sluktoersten.dk
+https://kundetbedste.com
+https://densidstedraabe.dk
+https://www.alkoholfrishop.dk
 https://www.vinspecialistenaalborg.dk
+https://toolbeer.dk
 https://kolonnenull.com
 https://www.lbv.dk
 https://mashgang.com
 https://www.audreyclairecork.com
-https://www.sluktoersten.dk
-https://kundetbedste.com
-https://www.vinspecialistenaalborg.dk
+https://refinemoments.com
+https://www.bondston.com
+https://itsundone.com
+https://nirvanabrewery.com
+https://www.beermerchants.com
+https://voila.ca
+https://www.bienmanger.com
+https://splittree.ca
+https://www.legacyliquorstore.com
+https://drinkdesoi.com
+https://www.wineandbeyond.ca
+https://www.blackmarket.co.nz
+https://zerozerodrinks.com

@@ -160,11 +160,13 @@ import zerozerodrinks from "./sites/zerozerodrinks.com.js";
 import itsundone from "./sites/itsundone.com.js";
 import nirvanabrewery from "./sites/nirvanabrewery.com.js";
 import voila from "./sites/voila.ca.js";
-import splittree_ca from "./sites/splittree.ca.js";
-import bienmanger_com from "./sites/bienmanger.com.js";
-import psalcoholfree_com from "./sites/psalcoholfree.com.js";
-import drinkdesoi_com from "./sites/drinkdesoi.com.js";
-import legacyliquorstore_com from "./sites/legacyliquorstore.com.js";
+import splittree from "./sites/splittree.ca.js";
+import bienmanger from "./sites/bienmanger.com.js";
+
+import psalcoholfree from "./sites/psalcoholfree.com.js";
+import drinkdesoi from "./sites/drinkdesoi.com.js";
+import legacyliquorstore from "./sites/legacyliquorstore.com.js";
+
 // Registry map
 const registry = new Map([
     ["drydrinker.com", drydrinker],
@@ -309,7 +311,6 @@ const registry = new Map([
     ["sluktoersten.dk", sluktoersten],
     ["kundetbedste.com", kundetbedste],
     ["vinspecialistenaalborg.dk", vinspecialistenaalborg],
-    ["beermerchants.com", beermerchants],
     ["alcoholfreedrinks.co.uk", alcoholfreedrinks],
     ["beerfordriving.com", beerfordriving],
     ["blackmarket.co.nz", blackmarket],
@@ -323,12 +324,13 @@ const registry = new Map([
     ["zerozerodrinks.com", zerozerodrinks],
     ["itsundone.com", itsundone],
     ["nirvanabrewery.com", nirvanabrewery],
+    ["beermerchants.com", beermerchants],
     ["voila.ca", voila],
-    ["splittree.ca", splittree_ca],
-    ["bienmanger.com", bienmanger_com],
-    ["psalcoholfree.com", psalcoholfree_com],
-    ["drinkdesoi.com", drinkdesoi_com],
-    ["legacyliquorstore.com", legacyliquorstore_com]
+    ["psalcoholfree.com", psalcoholfree],
+    ["bienmanger.com", bienmanger],
+    ["splittree.ca", splittree],
+    ["legacyliquorstore.com", legacyliquorstore],
+    ["drinkdesoi.com", drinkdesoi]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {

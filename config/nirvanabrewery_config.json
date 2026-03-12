@@ -24,6 +24,8 @@
             "name": "h1.product__title, h1",
             "price": ".price-item--regular, .price-item--sale, .price .money",
             "description": ".product__description, .accordion-details, details .accordion__content",
+                  "abv": "p.product-metafield__abv-scale",
+
             "images": ".product__media-item img, .product__media img",
             "producer": ".product__vendor a, .product__vendor span"
         }
