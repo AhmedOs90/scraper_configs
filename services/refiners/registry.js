@@ -170,6 +170,7 @@ import wineandbeyond from "./sites/wineandbeyond.ca.js";
 import bondston from "./sites/bondston.com.js";
 import bevco from "./sites/bevco.dk.js";
 import nonalcwines from "./sites/nonalcwines.au.js";
+import sprit_co from "./sites/sprit-co.dk.js";
 
 // Registry map
 const registry = new Map([
@@ -339,6 +340,7 @@ const registry = new Map([
     ["bondston.com", bondston],
     ["bevco.dk", bevco],
     ["nonalcwines.au", nonalcwines],
+    ["sprit-co.dk", sprit_co],
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {
