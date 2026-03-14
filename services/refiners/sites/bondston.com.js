@@ -6,6 +6,16 @@
 // Comments in English as requested.
 
 export default async function refiner(rootUrl, Prod, page, config) {
+  // Guard: Bondston product pages use "-p<digits>" suffix.
+  // Listing pages can expose title/price-like text and must not be treated as products.
+  const currentUrl = typeof page?.url === "function" ? String(page.url()) : "";
+  if (!/-p\d+(?:[/?#]|$)/i.test(currentUrl)) {
+    Prod.name = "Name not found";
+    Prod.price = null;
+    Prod.images = null;
+    return Prod;
+  }
+
   const normalize = (s) =>
     String(s ?? "")
       .replace(/\s+/g, " ")
