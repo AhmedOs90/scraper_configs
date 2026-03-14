@@ -1,0 +1,28 @@
+{
+    "rootUrl": "https://www.gueuledejoie.com",
+    "baseUrl": "https://www.gueuledejoie.com/collections/vins-sans-alcool",
+    "site_name": "thealcoholfreeco",
+    "seller": "seller",
+    "productsLinks": "/products/",
+    "collectionLinks": "/collections/",
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "price": "meta[property='product:price:amount']",
+            "currency": "meta[property='product:price:currency']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "producer": ".product-info__product-producteur",
+            "abv": ".product-info__taux-alcool",
+            "description": ".product-info__description"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": "a[rel=\"next\"]"
+    },
+    "level": 1,
+    "purePlayer": false
+}

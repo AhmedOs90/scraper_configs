@@ -1,10 +1,10 @@
+// services/refiners/sites/guiltlesswines.com.js
 export default async function refine(rootUrl, product, page) {
-    const desc = product.description
+    product.country = "UK";
+    product.description = product.description
         .replace(/<[^>]+>/g, "")
         .replace(/\s+/g, " ")
         .trim();
-
-    product.description = desc;
 
     let energy = null;
     {
@@ -41,7 +41,5 @@ export default async function refine(rootUrl, product, page) {
     if (/100%\s*alcohol\s*free/i.test(desc)) {
         product.abv = "0%";
     }
-
-    product.country = "UK";
     return product;
 }

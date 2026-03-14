@@ -166,6 +166,7 @@ import psalcoholfree from "./sites/psalcoholfree.com.js";
 import drinkdesoi from "./sites/drinkdesoi.com.js";
 import legacyliquorstore from "./sites/legacyliquorstore.com.js";
 import nordiskkombucha from "./sites/nordiskkombucha.dk.js";
+import gueuledejoie from "./sites/gueuledejoie.com.js";
 
 // Registry map
 const registry = new Map([
@@ -331,7 +332,8 @@ const registry = new Map([
     ["splittree.ca", splittree],
     ["legacyliquorstore.com", legacyliquorstore],
     ["drinkdesoi.com", drinkdesoi],
-    ["nordiskkombucha.dk", nordiskkombucha]
+    ["nordiskkombucha.dk", nordiskkombucha],
+    ["gueuledejoie.com", gueuledejoie]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {
