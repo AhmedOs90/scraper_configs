@@ -30,6 +30,5 @@ export default async function refine(rootUrl, product, page) {
         if (lowerDesc.includes("gluten-free") || lowerDesc.includes("gluten free"))
             product.gluten_free = "Gluten free";
     }
-
     return product;
 }

@@ -3,9 +3,8 @@
     "baseUrl": "https://www.danmurphys.com.au/list/zero-alcohol-drinks",
     "site_name": "danmurphys",
     "seller": "seller",
-    "collectionLinks": "/list/",
-    "productsLinks": "/product/",
-    "skipCollectionLinksInProducts": true,
+    "productLinkAttribute": "href",
+    "productLinkSelector": "li.js-list.search-results__item h2 a",
     "moreConfig": true,
     "selectors": {
         "header": {
@@ -14,12 +13,13 @@
         },
         "main": {
             "name": "h1.product-title .product-title__name",
+            "price": ".pack__price-info .pack__price, .pack--selected .pack__price",
             "producer": "h1.product-title .product-title__brand"
         }
     },
     "pagination": {
         "type": "button",
-        "sselector": "button.infinite-loader__load-more-button"
+        "selector": "button.infinite-loader__load-more-button"
     },
     "purePlayer": false,
     "level": 0

@@ -162,7 +162,6 @@ import nirvanabrewery from "./sites/nirvanabrewery.com.js";
 import voila from "./sites/voila.ca.js";
 import splittree from "./sites/splittree.ca.js";
 import bienmanger from "./sites/bienmanger.com.js";
-
 import psalcoholfree from "./sites/psalcoholfree.com.js";
 import drinkdesoi from "./sites/drinkdesoi.com.js";
 import legacyliquorstore from "./sites/legacyliquorstore.com.js";
@@ -171,6 +170,8 @@ import bondston from "./sites/bondston.com.js";
 import bevco from "./sites/bevco.dk.js";
 import nonalcwines from "./sites/nonalcwines.au.js";
 import sprit_co from "./sites/sprit-co.dk.js";
+import nordiskkombucha from "./sites/nordiskkombucha.dk.js";
+import gueuledejoie from "./sites/gueuledejoie.com.js";
 
 // Registry map
 const registry = new Map([
@@ -341,6 +342,8 @@ const registry = new Map([
     ["bevco.dk", bevco],
     ["nonalcwines.au", nonalcwines],
     ["sprit-co.dk", sprit_co],
+    ["nordiskkombucha.dk", nordiskkombucha],
+    ["gueuledejoie.com", gueuledejoie]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {
