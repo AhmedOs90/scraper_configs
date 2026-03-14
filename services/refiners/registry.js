@@ -166,6 +166,11 @@ import bienmanger from "./sites/bienmanger.com.js";
 import psalcoholfree from "./sites/psalcoholfree.com.js";
 import drinkdesoi from "./sites/drinkdesoi.com.js";
 import legacyliquorstore from "./sites/legacyliquorstore.com.js";
+import wineandbeyond from "./sites/wineandbeyond.ca.js";
+import bondston from "./sites/bondston.com.js";
+import bevco from "./sites/bevco.dk.js";
+import nonalcwines from "./sites/nonalcwines.au.js";
+import sprit_co from "./sites/sprit-co.dk.js";
 
 // Registry map
 const registry = new Map([
@@ -322,7 +327,6 @@ const registry = new Map([
     ["densidstedraabe.dk", densidstedraabe],
     ["alkoholfrishop.dk", alkoholfrishop],
     ["zerozerodrinks.com", zerozerodrinks],
-
     ["itsundone.com", itsundone],
     ["nirvanabrewery.com", nirvanabrewery],
     ["beermerchants.com", beermerchants],
@@ -332,7 +336,11 @@ const registry = new Map([
     ["splittree.ca", splittree],
     ["legacyliquorstore.com", legacyliquorstore],
     ["drinkdesoi.com", drinkdesoi],
-    
+    ["wineandbeyond.ca", wineandbeyond],
+    ["bondston.com", bondston],
+    ["bevco.dk", bevco],
+    ["nonalcwines.au", nonalcwines],
+    ["sprit-co.dk", sprit_co],
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {

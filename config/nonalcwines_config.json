@@ -1,0 +1,32 @@
+{
+  "rootUrl": "https://nonalcwines.au",
+  "site_name": "nonalcwines",
+  "seller": "seller",
+  "moreConfig": true,
+  "purePlayer": true,
+  "skipCollectionLinksInProducts": true,
+  "level": 1,
+  "baseUrl": [
+    "https://nonalcwines.au/non-alcwines-shop/"
+  ],
+  "productsLinks": "pageLinks",
+  "productLinkSelector": "a[href*='/product/']",
+  "productLinkAttribute": "href",
+  "collectionLinks": "product-category/",
+  "selectors": {
+    "header": {
+      "name": "meta[property='og:title']",
+      "images": "meta[property='og:image']"
+    },
+    "main": {
+      "name": "h1",
+      "price": ".price",
+      "images": ".woocommerce-product-gallery__image img"
+    }
+  },
+  "pagination": {
+    "type": "link",
+    "selector": "a[rel='next'], .pagination a.next, a[aria-label*='Next'], .next a, a.next"
+  }
+
+}

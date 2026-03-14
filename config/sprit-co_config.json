@@ -1,0 +1,41 @@
+{
+  "rootUrl": "https://sprit-co.dk",
+  "baseUrl": [
+    "https://sprit-co.dk/da/alkoholfri"
+  ],
+  "site_name": "sprit-co",
+  "seller": "seller",
+  "currency": null,
+  "productsLinks": "/da/alkoholfri/",
+  "collectionLinks": "/da/alkoholfri",
+  "skipCollectionLinksInProducts": true,
+  "moreConfig": true,
+  "productLinkSelector": "a[href*='/da/alkoholfri/']",
+  "productLinkAttribute": "href",
+  "selectors": {
+    "header": {
+      "name": "meta[property='og:title'], meta[name='twitter:title']",
+      "price": "meta[property='product:price:amount'], meta[property='og:price:amount'], meta[itemprop='price']",
+      "currency": "meta[property='product:price:currency'], meta[property='og:price:currency'], meta[itemprop='priceCurrency']",
+      "country": "meta[property='product:country'], meta[name='countryOfOrigin'], meta[itemprop='countryOfOrigin']",
+      "images": "meta[property='og:image'], meta[name='twitter:image']",
+      "description": "meta[property='og:description'], meta[name='description']"
+    },
+    "main": {
+      "name": "h1, main h1, [itemprop='name'], .product__title, .product-title",
+      "price": "div.uk-text-bold > span.uk-h2.uk-text-bold",
+      "currency": "[itemprop='priceCurrency'], .currency, [class*='currency']",
+      "abv": "[data-abv], [itemprop='abv']",
+      "country": "[itemprop='countryOfOrigin'], .country, [data-label*='Land'], [data-label*='Origin']",
+      "images": "img[itemprop='image'], .product img, .product__media img, .product-gallery img",
+      "description": ".product__description, .rte, .description, [class*='description']",
+      "category": ".breadcrumb a:last-child, nav.breadcrumb a:last-child, [itemprop='category']"
+    }
+  },
+  "pagination": {
+    "type": "link",
+    "selector": "link[rel='next'], a[rel='next'], a[aria-label*='Next'], a[aria-label*='Næste'], .pagination a.next, .uk-pagination-next a, a[href*='?page=']"
+  },
+  "level": 1,
+  "purePlayer": false
+}
