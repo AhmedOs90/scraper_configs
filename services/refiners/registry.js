@@ -162,10 +162,10 @@ import nirvanabrewery from "./sites/nirvanabrewery.com.js";
 import voila from "./sites/voila.ca.js";
 import splittree from "./sites/splittree.ca.js";
 import bienmanger from "./sites/bienmanger.com.js";
-
 import psalcoholfree from "./sites/psalcoholfree.com.js";
 import drinkdesoi from "./sites/drinkdesoi.com.js";
 import legacyliquorstore from "./sites/legacyliquorstore.com.js";
+import nordiskkombucha from "./sites/nordiskkombucha.dk.js";
 
 // Registry map
 const registry = new Map([
@@ -330,7 +330,8 @@ const registry = new Map([
     ["bienmanger.com", bienmanger],
     ["splittree.ca", splittree],
     ["legacyliquorstore.com", legacyliquorstore],
-    ["drinkdesoi.com", drinkdesoi]
+    ["drinkdesoi.com", drinkdesoi],
+    ["nordiskkombucha.dk", nordiskkombucha]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {

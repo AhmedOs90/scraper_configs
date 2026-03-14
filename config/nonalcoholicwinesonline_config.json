@@ -3,8 +3,8 @@
     "baseUrl": "https://nonalcoholicwinesonline.com/collections/all",
     "site_name": "nonalcoholicwinesonline",
     "seller": "seller",
-    "collectionLinks": "/collections/all/",
     "productsLinks": "/collections/all/products/",
+    "collectionLinks": "/collections/all/",
     "skipCollectionLinksInProducts": true,
     "moreConfig": true,
     "selectors": {
