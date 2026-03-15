@@ -172,6 +172,7 @@ import nonalcwines from "./sites/nonalcwines.au.js";
 import sprit_co from "./sites/sprit-co.dk.js";
 import nordiskkombucha from "./sites/nordiskkombucha.dk.js";
 import gueuledejoie from "./sites/gueuledejoie.com.js";
+import agoodcase from "./sites/agoodcase.dk.js";
 
 // Registry map
 const registry = new Map([
@@ -343,7 +344,8 @@ const registry = new Map([
     ["nonalcwines.au", nonalcwines],
     ["sprit-co.dk", sprit_co],
     ["nordiskkombucha.dk", nordiskkombucha],
-    ["gueuledejoie.com", gueuledejoie]
+    ["gueuledejoie.com", gueuledejoie],
+    ["agoodcase.dk", agoodcase]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {
