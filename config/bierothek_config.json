@@ -1,0 +1,28 @@
+{
+    "rootUrl": "https://bierothek.dk",
+    "baseUrl": "https://bierothek.dk/category/alkoholfreie-biere",
+    "site_name": "bierothek",
+    "seller": "seller",
+    "bannerSkip": "button[aria-label=\"OK\"]",
+    "productsLinks": "/online-shop/m",
+    "collectionLinks": "/category/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "description": "meta[property='og:description']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "name": ".col-md-8 .title",
+            "producer": ".col-md-8 .brewery",
+            "price": ".price .effective-price"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": ".pagination_section a.next_link"
+    },
+    "level": 1,
+    "purePlayer": false
+}
