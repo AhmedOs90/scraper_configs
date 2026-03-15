@@ -1,0 +1,25 @@
+{
+    "rootUrl": "https://www.otto-duborg.dk",
+    "baseUrl": [
+        "https://www.otto-duborg.dk/15-ol?alkohol-vol-=0-1",
+        "https://www.otto-duborg.dk/98-alkoholfri-vin"
+    ],
+    "site_name": "otto-duborg",
+    "seller": "seller",
+    "productLinkAttribute": "href",
+    "productLinkSelector": ".product-miniature .product-title > a:first-child",
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "images": "meta[property='og:image']",
+            "price": "meta[property='product:pretax_price:amount'], meta[property='product:price:amount']",
+            "currency": "meta[property='product:pretax_price:currency'], meta[property='product:price:currency']"
+        },
+        "main": {
+            "description": ".product-description"
+        }
+    },
+    "level": 0,
+    "purePlayer": false
+}
