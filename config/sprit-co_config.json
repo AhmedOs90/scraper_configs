@@ -28,8 +28,7 @@
       "abv": "[data-abv], [itemprop='abv']",
       "country": "[itemprop='countryOfOrigin'], .country, [data-label*='Land'], [data-label*='Origin']",
       "images": "img[itemprop='image'], .product img, .product__media img, .product-gallery img",
-      "description": ".product__description, .rte, .description, [class*='description']",
-      "category": ".breadcrumb a:last-child, nav.breadcrumb a:last-child, [itemprop='category']"
+      "description": ".product__description, .rte, .description, [class*='description']"
     }
   },
   "pagination": {
