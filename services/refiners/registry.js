@@ -175,6 +175,7 @@ import gueuledejoie from "./sites/gueuledejoie.com.js";
 import agoodcase from "./sites/agoodcase.dk.js";
 import otto_duborg from "./sites/otto-duborg.dk.js";
 import bierothek from "./sites/bierothek.dk.js";
+import vinspecialistenaarhus from "./sites/vinspecialistenaarhus.dk.js";
 
 // Registry map
 const registry = new Map([
@@ -349,7 +350,8 @@ const registry = new Map([
     ["gueuledejoie.com", gueuledejoie],
     ["agoodcase.dk", agoodcase],
     ["otto-duborg.dk", otto_duborg],
-    ["bierothek.dk", bierothek]
+    ["bierothek.dk", bierothek],
+    ["vinspecialistenaarhus.dk", vinspecialistenaarhus]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {
