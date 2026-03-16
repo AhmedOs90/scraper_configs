@@ -23,6 +23,10 @@
         "type": "link",
         "selector": "a[rel=\"next\"]"
     },
+    "extras": {
+        "volume": ".product-info__taux-alcool span:nth-child(2)",
+        "ingredients": ".product-info__taux-alcool span:nth-child(2)"
+    },
     "level": 1,
     "purePlayer": false
 }

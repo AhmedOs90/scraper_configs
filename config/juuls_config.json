@@ -1,0 +1,59 @@
+{
+  "rootUrl": "https://www.juuls.dk",
+  "baseUrl": "https://www.juuls.dk/oevrige-vine/varekort/leitz-eins-zwei-zero-riesling",
+  "site_name": "juuls",
+  "seller": "seller",
+
+  "collectionLinks": "",
+  "productsLinks": "varekort",
+  "skipCollectionLinksInProducts": true,
+
+  "moreConfig": true,
+
+  "productLinkAttribute": "href",
+  "productLinkSelector": "a[href^='/roedvin/varekort/'], a[href^='/oevrige-vine/varekort/'], a[href*='/varekort/']",
+
+  "productPageCheckSelector": "article[itemtype*='schema.org/Product'], .product-page--root, .product__blocks, .product-page",
+
+  "selectors": {
+    "header": {
+      "name": "meta[property='og:title'], meta[name='twitter:title']",
+      "price": "meta[property='product:price:amount'], meta[property='og:price:amount']",
+      "currency": "meta[property='product:price:currency'], meta[property='og:price:currency']",
+      "country": "meta[property='og:locale']",
+      "description": "meta[property='og:description'], meta[name='description']",
+      "images": "meta[property='og:image'], meta[property='og:image:secure_url']",
+      "abv": "meta[name='alcohol_by_volume'], meta[property='product:alcohol_by_volume']",
+      "producer": "meta[property='product:brand'], meta[name='author']",
+      "energy": "meta[name='energy'], meta[property='product:energy']",
+      "sugars": "meta[name='sugars'], meta[property='product:sugars']",
+      "category": "meta[property='product:category'], meta[property='og:type']"
+    },
+    "main": {
+      "name": "h1, .product-page--title, .product__title",
+      "price": ".e-product-price .e-price-price",
+      "currency": "meta[itemprop='priceCurrency'], [itemprop='priceCurrency'], .price--container, .price",
+      "country": "",
+      "description": "[itemprop='description'], .rte-content, .product-page--description, .product__description, .rte",
+      "images": "img[src*='/cdn/'], img[src*='juuls.dk']",
+      "abv": "",
+      "gluten": "",
+      "vegan": "",
+      "producer": "",
+      "energy": "",
+      "sugars": "",
+      "category": ".breadcrumbs a:last-child, .breadcrumbs li:last-child"
+    }
+    
+  },
+
+  "extras": {
+    "volume": ".juuls-topinfo-container .juuls-topinfo:nth-child(2)"
+  },
+  "pagination": {
+    "type": "link",
+    "selector": "a[href*='PageNum='][href*='PID=']"
+  },
+
+  "level": 1
+}

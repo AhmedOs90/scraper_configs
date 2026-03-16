@@ -82,66 +82,81 @@ export const classifyAll = () => {
 };
   
 
-export async function saveProductsToCSV(products, filename = 'scraped_products.csv') {
-  const csvHeaders = [
-    'id',
-    'name',
-    'abv',
-    'producer',
-    'product_category',
-    'energy',
-    'sugar',
-    'price',
-    'currency',
-    'country',
-    'url',
-    'images',
-    'description',
-    'gluten_free',
-    'vegan',
-    'duplicateWith',
-    'percentDuplication',
-    'site_name',
-    'site_url',
-    'seller'
-  ];
+  export async function saveProductsToCSV(products, filename = 'scraped_products.csv') {
+    const csvHeaders = [
+      'id',
+      'name',
+      'abv',
+      'producer',
+      'product_category',
+      'energy',
+      'sugar',
+      'price',
+      'currency',
+      'country',
+      'url',
+      'images',
+      'description',
+      'gluten_free',
+      'vegan',
+      'duplicateWith',
+      'percentDuplication',
+      'site_name',
+      'site_url',
+      'seller',
+        'extras'
+    ];
 
-  const outputPath = path.join(process.cwd(), filename);
+    const outputPath = path.join(process.cwd(), filename);
 
-  let writeHeader = false;
+    let writeHeader = false;
 
-  // Check if file exists
-  try {
-    await fs.promises.access(outputPath, fs.constants.F_OK);
-    writeHeader = false; // file exists, don't write header again
-  } catch (error) {
-    writeHeader = true; // file does not exist, write header
+    // Check if file exists
+    try {
+      await fs.promises.access(outputPath, fs.constants.F_OK);
+      writeHeader = false; // file exists, don't write header again
+    } catch (error) {
+      writeHeader = true; // file does not exist, write header
+    }
+
+    // Prepare CSV rows
+    const csvRows = products.map(product => {
+  return csvHeaders.map(header => {
+    let value = product[header] !== undefined ? product[header] : '';
+
+    // stringify objects like extras
+    if (value && typeof value === 'object' && !Array.isArray(value)) {
+      value = JSON.stringify(value);
+    }
+
+    // stringify arrays too, if you ever store arrays in extras
+    if (Array.isArray(value)) {
+      value = JSON.stringify(value);
+    }
+
+    value = String(value);
+
+    if (value.includes(',') || value.includes('"') || value.includes('\n')) {
+      return `"${value.replace(/"/g, '""')}"`;
+    }
+
+    return value;
+  }).join(',');
+});
+
+    let csvContent = '';
+
+    if (writeHeader) {
+      csvContent += csvHeaders.join(',') + '\n'; // Write headers first if file is new
+    }
+
+    csvContent += csvRows.join('\n') + '\n'; // Then the data
+
+    // Append to file
+    await fs.promises.appendFile(outputPath, csvContent);
+
+    console.log(`✅ Products appended to ${outputPath}`);
   }
-
-  // Prepare CSV rows
-  const csvRows = products.map(product => {
-    return csvHeaders.map(header => {
-      const value = product[header] !== undefined ? product[header] : '';
-      if (typeof value === 'string' && (value.includes(',') || value.includes('"'))) {
-        return `"${value.replace(/"/g, '""')}"`;
-      }
-      return value;
-    }).join(',');
-  });
-
-  let csvContent = '';
-
-  if (writeHeader) {
-    csvContent += csvHeaders.join(',') + '\n'; // Write headers first if file is new
-  }
-
-  csvContent += csvRows.join('\n') + '\n'; // Then the data
-
-  // Append to file
-  await fs.promises.appendFile(outputPath, csvContent);
-
-  console.log(`✅ Products appended to ${outputPath}`);
-}
 
 
 export async function getClassifiedNeedsInvestigation() {

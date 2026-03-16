@@ -1,5 +1,33 @@
+import { prod_tt_sasportal } from 'googleapis/build/src/apis/prod_tt_sasportal/index.js';
 import { refineData } from '../services/refine_data.js';
 
+
+export async function extractExtras(page, config) {
+  const extrasConfig = config?.extras || {};
+  const extras = {};
+
+  for (const [key, selector] of Object.entries(extrasConfig)) {
+    let value = null;
+
+    // first try as meta/header-like element
+    value = await page.$eval(selector, el => {
+      return el.content?.trim() || el.getAttribute('content')?.trim() || null;
+    }).catch(() => null);
+
+    // fallback: try as normal body text
+    if (!value) {
+      value = await page.$eval(selector, el => {
+        return el.textContent?.trim() || null;
+      }).catch(() => null);
+    }
+
+    if (value) {
+      extras[key] = value;
+    }
+  }
+
+  return extras;
+}
 
 export async function extractProductData(page, config, Prod, log, opts = {}) {
 
@@ -39,6 +67,7 @@ const refineFromApi = opts?.refineFromApi;                  // use the function 
             Prod.category = Prod.category || await page.$eval(config.selectors.main.category, el => el.textContent.trim()).catch(() => null);
 
 
+Prod.extras = await extractExtras(page, config) || {};   
          // 3) Your hardcoded per-site refine (kept)
     if (config.moreConfig && Prod.name !== "Name not found") {
       try {
