@@ -148,6 +148,26 @@ export const classifyAll = () => {
 
     if (writeHeader) {
       csvContent += csvHeaders.join(',') + '\n'; // Write headers first if file is new
+    } else {
+      // If the existing file does not end with a newline, add one before appending rows.
+      try {
+        const stats = await fs.promises.stat(outputPath);
+        if (stats.size > 0) {
+          const fd = await fs.promises.open(outputPath, 'r');
+          try {
+            const buffer = Buffer.alloc(1);
+            await fd.read(buffer, 0, 1, stats.size - 1);
+            const lastChar = buffer.toString();
+            if (lastChar !== '\n' && lastChar !== '\r') {
+              csvContent += '\n';
+            }
+          } finally {
+            await fd.close();
+          }
+        }
+      } catch (error) {
+        // If we cannot inspect the file tail, continue with best-effort append.
+      }
     }
 
     csvContent += csvRows.join('\n') + '\n'; // Then the data
@@ -176,4 +196,3 @@ export async function getClassifiedNeedsInvestigation() {
     return [];
   }
 }
-
