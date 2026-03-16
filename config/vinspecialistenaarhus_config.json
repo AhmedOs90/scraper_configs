@@ -1,0 +1,30 @@
+{
+    "rootUrl": "https://vinspecialistenaarhus.dk",
+    "baseUrl": [
+        "https://vinspecialistenaarhus.dk/index.php?cPath=255&sort=3d&f%5B3%5D=394",
+        "https://vinspecialistenaarhus.dk/index.php?cPath=685&sort=3d&f%5B14%5D=2264"
+    ],
+    "site_name": "vinspecialistenaarhus",
+    "seller": "seller",
+    "bannerSkip": "#AgeMessage .btn-success",
+    "productLinkAttribute": "href",
+    "productLinkSelector": ".is-product .card-title a",
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "price": "meta[property='product:price:amount']",
+            "currency": "meta[property='product:price:currency']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "description": ".pi-description"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": ".pagination a[aria-label=\"Next Page\"]"
+    },
+    "level": 0,
+    "purePlayer": false
+}
