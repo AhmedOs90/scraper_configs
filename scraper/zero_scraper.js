@@ -165,7 +165,7 @@ if (
           if (Prod.name != "Name not found") {
 
 
-            saveProductsToCSV([Prod], "my_scraped_data.csv")
+            await saveProductsToCSV([Prod], "my_scraped_data.csv")
             // let resp = await populateLake(Prod);
             // if (resp == "updated") {
             //   updatedProductsCount++; // Increment updated product count
@@ -369,5 +369,3 @@ function generateReportFile() {
   fs.writeFileSync(reportFilePath, reportLines.join('\n'), 'utf-8');
   console.log(`Scraping report generated at ${reportFilePath}`);
 }
-
-
