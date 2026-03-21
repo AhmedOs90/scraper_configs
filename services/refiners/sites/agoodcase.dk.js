@@ -10,5 +10,10 @@ export default async function refine(rootUrl, product, page) {
     if (abvMatch) {
         product.abv = abvMatch[1].replace(',', '.') + '%';
     }
+    const sizeMatch = product.description?.match(/Størrelse:\s*([\d.,]+\s*(?:cl|ml|l))/i);
+    if (sizeMatch) {
+        product.extras = product.extras || {};
+        product.extras.size = sizeMatch[1].trim();
+    }
     return product;
 }
