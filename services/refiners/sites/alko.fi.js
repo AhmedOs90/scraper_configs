@@ -17,6 +17,8 @@ export default async function refine(rootUrl, product, page) {
         }
     });
 
+    if (price) product.price = parseFloat(price);
+
     const extra = await page.evaluate(() => {
         const rows = Array.from(
             document.querySelectorAll('[role="tabpanel"] li')
@@ -30,15 +32,28 @@ export default async function refine(rootUrl, product, page) {
         };
 
         return {
+            allergens: getValue("Allergens"),
+            ingredients: getValue("Ingredients"),
             sugar: getValue("Sugars"),
-            energy: getValue("Energy"),
+            bitterness: getValue("Bitterness"),
+            wort_strength: getValue("Wort strength"),
             producer: getValue("Producer"),
+            energy: getValue("Energy"),
+            fat: getValue("Fat"),
+            carbohydrates: getValue("Carbohydrates"),
+            size: getValue("Package size"),
         };
     });
 
-    if (price) product.price = parseFloat(price);
+    if (extra.allergens) product.extras.allergens = extra.allergens;
+    if (extra.ingredients) product.extras.ingredients = extra.ingredients;
     if (extra.sugar) product.sugar = extra.sugar;
-    if (extra.energy) product.energy = extra.energy;
+    if (extra.bitterness) product.extras.bitterness = extra.bitterness;
+    if (extra.wort_strength) product.extras.wort_strength = extra.wort_strength;
     if (extra.producer) product.producer = extra.producer;
+    if (extra.energy) product.energy = extra.energy;
+    if (extra.fat) product.extras.fat = extra.fat;
+    if (extra.carbohydrates) product.extras.carbohydrates = extra.carbohydrates;
+    if (extra.size) product.extras.size = extra.size;
     return product;
 }
