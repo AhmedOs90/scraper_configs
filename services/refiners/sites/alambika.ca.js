@@ -1,10 +1,13 @@
 // services/refiners/sites/alambika.ca.js
 export default async function refine(rootUrl, product, page) {
+    product.country = 'Canada';
     product.description = product.description
-        .replace(/<[^>]+>/g, "")
+        ?.replace(/<[^>]+>/g, "")
         .replace(/\s+/g, " ")
         .trim();
-
-    product.country = 'Canada';
+    product.extras.ingredients = product.extras.ingredients
+        ?.replace(/<[^>]+>/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
     return product;
 }
