@@ -18,8 +18,8 @@ export default async function refine(rootUrl, product, page) {
 
         for (const script of scripts) {
             try {
-            const data = JSON.parse(script.textContent);
-            if (data?.brand?.name) return data.brand.name;
+                const data = JSON.parse(script.textContent);
+                if (data?.brand?.name) return data.brand.name;
             } catch {}
         }
 
@@ -57,5 +57,44 @@ export default async function refine(rootUrl, product, page) {
 
     product.energy = nutrition.energy;
     product.sugar = nutrition.sugar;
+
+    product.extras = product.extras || {};
+
+    product.extras.ingredients = await page.evaluate(() => {
+        const el = Array.from(document.querySelectorAll('.product-block'))
+            .find(block => /Ingredients/i.test(block.textContent));
+
+        if (!el) return null;
+
+        const inner = el.querySelector('.collapsible-content__inner');
+        if (!inner) return null;
+
+        return inner.textContent.replace(/\s+/g, ' ').trim();
+    });
+
+    const extras = await page.evaluate(() => {
+        const el = Array.from(document.querySelectorAll('.collapsible-content__inner'))
+            .find(e => /Nutrition/i.test(e.closest('.product-block')?.textContent));
+
+        if (!el) return {};
+
+        const text = el.textContent.replace(/\s+/g, ' ');
+
+        const get = (regex) => {
+            const m = text.match(regex);
+            return m ? m[1] : null;
+        };
+
+        return {
+            fat: get(/Fat,\s*Total\s*([\d.]+)\s*g/i),
+            carbohydrates: get(/Carbohydrate\s*([\d.]+)\s*g/i),
+            dietary_fibre: get(/Dietary Fibre\s*([\d.]+)\s*g/i),
+            sodium: get(/Sodium\s*([\d.]+)\s*mg/i),
+            magnesium_glycinate: get(/Magnesium glycinate\s*([\d.]+)\s*mg/i),
+            l_theanine: get(/L-?theanine\s*([\d.]+)\s*mg/i),
+        };
+    });
+    
+    Object.assign(product.extras, extras);
     return product;
 }
