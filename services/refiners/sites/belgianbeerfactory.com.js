@@ -27,5 +27,10 @@ export default async function refine(rootUrl, product, page) {
     );
     if (producerMatch) product.producer = producerMatch[1].trim();
 
+    const volumeMatch = product.description.match(/Volume\s*:\s*([\d.,]+\s*(?:Cl|L|ml))/i);
+    if (volumeMatch) {
+        product.extras = product.extras || {};
+        product.extras.size = volumeMatch[1].trim();
+    }
    return product;
 }
