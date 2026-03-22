@@ -105,7 +105,5 @@ export default async function refine(rootUrl, product, page) {
 
     if (!product.extras.carbohydrates && scraped.carbohydrates)
         product.extras.carbohydrates = scraped.carbohydrates;
-
-    // Ingrediets, halal, grape variety, size, and carbohydrates
     return product;
 }
