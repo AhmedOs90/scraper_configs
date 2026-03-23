@@ -18,6 +18,9 @@
         },
         "main": {}
     },
+    "extras": {
+        "size": ".price-unit-content"
+    },
     "pagination": {
         "type": "link",
         "selector": "li.page-next > a.page-link"
