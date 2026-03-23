@@ -11,31 +11,47 @@ export default async function refine(rootUrl, product, page) {
         .replace(/\s+/g, ' ')
         .trim();
 
-    product.abv = await page.evaluate(() => {
+    const details = await page.evaluate(() => {
         const items = Array.from(document.querySelectorAll('.detail-info dl dt'));
 
-        for (const dt of items) {
-            const label = dt.textContent
-                ?.replace(/\s+/g, ' ')
-                .trim()
-                .toLowerCase();
-
-            if (['alkoholindhold', 'alcohol content'].includes(label)) {
-                const dd = dt.nextElementSibling;
-
-                const value = dd?.textContent
+        const getValue = (labels) => {
+            for (const dt of items) {
+                const label = dt.textContent
                     ?.replace(/\s+/g, ' ')
-                    .trim();
+                    .trim()
+                    .toLowerCase();
 
-                if (!value) return null;
+                if (labels.includes(label)) {
+                    const dd = dt.nextElementSibling;
+                    const value = dd?.textContent
+                        ?.replace(/\s+/g, ' ')
+                        .trim();
 
-                return value
-                    .replace(/vol\.?/gi, '')
-                    .trim();
+                    return value || null;
+                }
             }
-        }
 
-        return null;
+            return null;
+        };
+
+        return {
+            abv: getValue(['alkoholindhold', 'alcohol content'])
+                ?.replace(/vol\.?/gi, '')
+                .trim() || null,
+            size: getValue(['indhold']),
+            weight: getValue(['vægt']),
+            bitterness: getValue(['bitter sammenhold']),
+            wort_strength: getValue(['original urt']),
+        };
     });
+
+    product.abv = details.abv;
+    product.extras = {
+        ...product.extras,
+        size: details.size,
+        weight: details.weight,
+        bitterness: details.bitterness,
+        wort_strength: details.wort_strength,
+    };
     return product;
 }
