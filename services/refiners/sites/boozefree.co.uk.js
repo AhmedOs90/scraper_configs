@@ -15,6 +15,9 @@ export default async function refine(rootUrl, product, page) {
     const sugarLine = details.find(t =>
         t.toLowerCase().includes("sugar")
     );
+    const sizeLine = details.find(t =>
+        /^\d+(?:\.\d+)?\s?(?:ml|cl|l)\b/i.test(t)
+    );
 
     if (abvLine) {
         product.abv = abvLine.split("-")[1].trim();
@@ -30,6 +33,11 @@ export default async function refine(rootUrl, product, page) {
         product.sugar = `${val} / 100ml`;
     }
 
+    if (sizeLine) {
+        product.extras ??= {};
+        product.extras.size = sizeLine.trim();
+    }
+
     if (details.some(t => t.toLowerCase().includes("vegan"))) {
         product.vegan = "Vegan";
     }
@@ -42,5 +50,6 @@ export default async function refine(rootUrl, product, page) {
         .replace(/<[^>]+>/g, "")
         .replace(/\s+/g, " ")
         .trim();
+
     return product;
 }
