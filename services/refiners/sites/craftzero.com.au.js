@@ -35,16 +35,18 @@ export default async function refine(rootUrl, product, page) {
         const accordion = title.closest('.product__accordion, .accordion');
         if (!accordion) return null;
 
-        const span = accordion.querySelector('.accordion__content__inner span');
-        const text = (span?.textContent || '').trim();
+        const content = accordion.querySelector('.accordion__content__inner');
+        const text = (content?.innerText || '').trim();
         if (!text) return null;
 
         const caloriesMatch = text.match(/Calories:\s*([\d.]+)/i);
         const sugarMatch = text.match(/Sugars?:\s*([\d.]+g)/i);
+        const carbsMatch = text.match(/Carbohydrates?:\s*([\d.]+g)/i);
 
         return {
             calories: caloriesMatch ? caloriesMatch[1] : null,
             sugar: sugarMatch ? sugarMatch[1] : null,
+            carbohydrates: carbsMatch ? carbsMatch[1] : null,
         };
     });
 
@@ -54,6 +56,34 @@ export default async function refine(rootUrl, product, page) {
 
     if (nutrition?.calories) {
         product.energy = nutrition.calories;
+    }
+
+    if (nutrition?.carbohydrates) {
+        product.extras = product.extras || {};
+        product.extras.carbohydrates = nutrition.carbohydrates;
+    }
+
+    const ingredients = await page.evaluate(() => {
+        const titles = Array.from(document.querySelectorAll('h2.accordion__title'));
+        const title = titles.find(
+            (el) => (el.textContent || '').trim().toLowerCase() === 'ingredients'
+        );
+        if (!title) return null;
+
+        const accordion = title.closest('.product__accordion, .accordion');
+        if (!accordion) return null;
+
+        const content = accordion.querySelector('.accordion__content__inner');
+        if (!content) return null;
+
+        return (content.innerText || '')
+            .replace(/\s*\n\s*/g, ', ')
+            .trim();
+    });
+
+    if (ingredients) {
+        product.extras = product.extras || {};
+        product.extras.ingredients = ingredients;
     }
 
     const producer = await page.evaluate(() => {
