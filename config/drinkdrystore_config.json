@@ -3,28 +3,27 @@
     "baseUrl": "https://drinkdrystore.com/collections/drinkdrystore-all-products",
     "site_name": "drinkdrystore",
     "seller": "seller",
-    "bannerSkip": "button.klaviyo-close-form",
-    "productsLinks": "/products/",
+    "productsLinks": "/collections/drinkdrystore-all-products/products/",
     "collectionLinks": "/collections/",
     "skipCollectionLinksInProducts": true,
     "moreConfig": true,
     "selectors": {
         "header": {
             "name": "meta[property='og:title']",
+            "description": "meta[property='og:description']",
             "images": "meta[property='og:image']",
             "price": "meta[property='og:price:amount']",
             "currency": "meta[property='og:price:currency']"
         },
-        "main": {
-            "description": ".short-description.serve",
-            "abv": ".t-three-sections .col-md-4:first-child p",
-            "category": ".t-three-sections .col-md-4:last-child p"
-        }
+        "main": { }
+    },
+    "extras": {
+        "ingredients": ".tab[data-id=\"ingredients\"]"
     },
     "pagination": {
         "type": "link",
-        "selector": ".infinite-scrolling .btn"
+        "selector": ".pagination__item--prev"
     },
-    "level": 1,
+    "level": 0,
     "purePlayer": true
 }
