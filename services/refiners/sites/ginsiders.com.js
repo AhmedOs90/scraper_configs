@@ -63,5 +63,40 @@ export default async function refine(rootUrl, product, page) {
     if (sugarMatch) {
         product.sugar = `${sugarMatch[1].replace(',', '.')} g`;
     }
+    const extras = await page.evaluate(() => {
+        const rows = document.querySelectorAll(
+            '#tab-additional_information tr.woocommerce-product-attributes-item'
+        );
+
+        const result = {};
+
+        rows.forEach((row) => {
+            const label = row
+                .querySelector('.woocommerce-product-attributes-item__label')
+                ?.innerText.trim().toLowerCase();
+
+            const value = row
+                .querySelector('.woocommerce-product-attributes-item__value')
+                ?.innerText.trim();
+
+            if (!label || !value) return;
+
+            if (label.includes('poids')) {
+                result.weight = value;
+            }
+
+            if (label.includes('volume')) {
+                result.size = value;
+            }
+        });
+
+        return result;
+    });
+
+    product.extras = {
+        ...(product.extras || {}),
+        weight: extras.weight || null,
+        size: extras.size || null
+    };
     return product;
 }
