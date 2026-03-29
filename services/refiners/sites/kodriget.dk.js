@@ -14,16 +14,33 @@ export default async function refine(rootUrl, product, page) {
         .replace(/\s+/g, " ")
         .trim();
 
-    product.abv = await page.evaluate(() => {
-        const label = [...document.querySelectorAll('.metafield-rich_text_field p')]
-            .find(p => p.textContent.trim() === 'Alcohol %:');
+    product.extras = product.extras || {};
 
-        if (!label) return null;
+    const data = await page.evaluate(() => {
+        const rows = [...document.querySelectorAll('.metafield-rich_text_field p')];
 
-        const valueEl = label.nextElementSibling;
-        if (!valueEl) return null;
+        const getValue = (labelText) => {
+            const label = rows.find(p => p.textContent.trim().startsWith(labelText));
+            if (!label) return null;
 
-        return valueEl.textContent.trim() + '%';
+            const valueEl = label.nextElementSibling;
+            if (!valueEl) return null;
+
+            return valueEl.textContent.trim();
+        };
+
+        return {
+            size: getValue('Størrelse:'),
+            abv: getValue('Alkohol %:')
+        };
     });
+
+    if (data.size) {
+        product.extras.size = data.size;
+    }
+
+    if (data.abv) {
+        product.abv = data.abv.replace(',', '.').trim() + '%';
+    }
     return product;
 }
