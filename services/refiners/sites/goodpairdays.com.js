@@ -18,6 +18,8 @@ export default async function refine(rootUrl, product, page) {
 
         let producer = '';
         let abv = '';
+        let size = '';
+        let ingredients = '';
 
         const specsTable = document.querySelector('h5#specs')?.nextElementSibling;
         if (specsTable) {
@@ -26,6 +28,8 @@ export default async function refine(rootUrl, product, page) {
                 const val = clean(row.querySelector('td:last-child')?.textContent);
                 if (key === 'PRODUCER') producer = val;
                 if (key === 'ALCOHOL') abv = val;
+                if (key === 'SIZE') size = val;
+                if (key === 'INGREDIENTS') ingredients = val;
             }
         }
 
@@ -40,6 +44,8 @@ export default async function refine(rootUrl, product, page) {
         return {
             producer,
             abv,
+            size,
+            ingredients,
             description: clean(parts.join(' '))
         };
     });
@@ -47,5 +53,9 @@ export default async function refine(rootUrl, product, page) {
     product.producer = data.producer;
     product.abv = data.abv;
     product.description = data.description;
+    product.extras = {
+        size: data.size,
+        ingredients: data.ingredients
+    };
     return product;
 }
