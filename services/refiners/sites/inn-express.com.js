@@ -44,10 +44,6 @@ export default async function refine(rootUrl, product, page) {
     });
 
     product.producer = await page.evaluate(() => {
-        const brandEl = document.querySelector(
-            '#product-detail-summary-module li p strong'
-        );
-
         const items = document.querySelectorAll(
             '#product-detail-summary-module li p'
         );
@@ -77,6 +73,45 @@ export default async function refine(rootUrl, product, page) {
         }
 
         return null;
+    });
+
+    product.extras = product.extras || {};
+
+    product.extras.size = await page.evaluate(() => {
+        const items = document.querySelectorAll(
+            '#product-detail-summary-module li p'
+        );
+
+        for (const p of items) {
+            const text = p.textContent.trim();
+
+            if (text.startsWith('Container Size:')) {
+                return text.replace('Container Size:', '').trim();
+            }
+        }
+
+        return null;
+    });
+
+    product.size = product.size || {};
+
+    product.size.allergens = await page.evaluate(() => {
+        const rows = document.querySelectorAll(
+            '#allergens table.product-allergen-table tbody tr'
+        );
+
+        const allergens = {};
+
+        for (const row of rows) {
+            const key = row.querySelector('th')?.textContent.trim();
+            const value = row.querySelector('td')?.textContent.trim();
+
+            if (key) {
+                allergens[key] = value;
+            }
+        }
+
+        return allergens;
     });
     return product;
 }
