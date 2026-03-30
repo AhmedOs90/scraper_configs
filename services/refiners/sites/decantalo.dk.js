@@ -31,5 +31,17 @@ export default async function refine(rootUrl, product, page) {
     if (details['Alcohol'] === 'Alcohol free' && abvIsNull) {
         product.abv = '<0.5%';
     }
+
+    product.extras = product.extras || {};
+
+    for (const [key, value] of Object.entries(details)) {
+        if (key === 'Winery' || key === 'Alcohol') continue;
+
+        const normalizedKey = key
+            .toLowerCase()
+            .replace(/\s+/g, '_');
+
+        product.extras[normalizedKey] = value;
+    }
     return product;
 }

@@ -51,5 +51,26 @@ export default async function refine(rootUrl, product, page) {
 
         return null;
     });
+
+    product.extras = await page.evaluate(() => {
+        const getValue = (label) => {
+            const el = document.evaluate(
+                `//tr[td[contains(translate(text(),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'${label}')]]/td[2]`,
+                document,
+                null,
+                XPathResult.FIRST_ORDERED_NODE_TYPE,
+                null
+            ).singleNodeValue;
+
+            return el ? el.textContent.trim() : null;
+        };
+
+        return {
+            fat: getValue('fat'),
+            carbohydrates: getValue('carbohydrate'),
+            protein: getValue('protein'),
+            salt: getValue('salt'),
+        };
+    });
     return product;
 }

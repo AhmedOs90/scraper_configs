@@ -58,7 +58,28 @@ export default async function refine(rootUrl, product, page) {
             }
         }
 
-        return { producer, abv, energy, sugars, vegan, glutenFree };
+        const ingredients = pick(/\b(ingrediënten|ingredienten)\b/i);
+
+        const halalVal = pick(/\bhalal\b/i);
+        let halal = null;
+        if (halalVal && /^\s*(ja|yes)\s*$/i.test(halalVal)) {
+            halal = 'halal';
+        }
+
+        const grapeVariety = pick(/\b(druivensoort)\b/i);
+
+        const size = pick(/\b(inhoud)\b/i);
+
+        let carbohydrates = pick(/\b(koolhydraten)\b/i);
+        carbohydrates = carbohydrates
+            ?.replace(/\s+/g, ' ')
+            .replace(',', '.')
+            .trim();
+
+        return { 
+            producer, abv, energy, sugars, vegan, glutenFree,
+            ingredients, halal, grapeVariety, size, carbohydrates
+        };
     });
 
     if (!product.producer && scraped.producer) product.producer = scraped.producer;
@@ -67,5 +88,22 @@ export default async function refine(rootUrl, product, page) {
     if (!product.sugar && scraped.sugars) product.sugar = scraped.sugars;
     if (!product.vegan && scraped.vegan) product.vegan = scraped.vegan;
     if (!product.gluten_free && scraped.glutenFree) product.gluten_free = scraped.glutenFree;
+
+    product.extras = product.extras || {};
+
+    if (!product.extras.ingredients && scraped.ingredients)
+        product.extras.ingredients = scraped.ingredients;
+
+    if (!product.extras.halal && scraped.halal)
+        product.extras.halal = scraped.halal;
+
+    if (!product.extras.grape_variety && scraped.grapeVariety)
+        product.extras.grape_variety = scraped.grapeVariety;
+
+    if (!product.extras.size && scraped.size)
+        product.extras.size = scraped.size;
+
+    if (!product.extras.carbohydrates && scraped.carbohydrates)
+        product.extras.carbohydrates = scraped.carbohydrates;
     return product;
 }

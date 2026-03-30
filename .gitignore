@@ -1,9 +1,7 @@
 config/levels.py
-config/levels.csv
 config/samples.csv
 node_modules/
 storage/
 scraping_reports.txt
 .env
-my_scraped_data.csv
 my_scraped_data.csv

@@ -1,6 +1,6 @@
 {
     "rootUrl": "https://joinclubsoda.com",
-    "baseUrl": "https://joinclubsoda.com/product-category/drinks/",
+    "baseUrl": "https://joinclubsoda.com/product-category/drinks",
     "site_name": "joinclubsoda",
     "seller": "seller",
     "productsLinks": "/product/",

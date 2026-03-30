@@ -5,6 +5,8 @@ export default async function refine(rootUrl, product, page) {
         .replace(/<[^>]+>/g, "")
         .replace(/\s+/g, " ")
         .trim();
+        
+    const desc = product.description;
 
     let energy = null;
     {
@@ -41,5 +43,15 @@ export default async function refine(rootUrl, product, page) {
     if (/100%\s*alcohol\s*free/i.test(desc)) {
         product.abv = "0%";
     }
+
+    let ingredients = null;
+    {
+        const match = desc.match(/ingredients[:\s]*([^.]+)/i);
+        if (match) {
+            ingredients = match[1].trim();
+        }
+    }
+    product.extras = product.extras || {};
+    product.extras.ingredients = ingredients;
     return product;
 }

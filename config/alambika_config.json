@@ -19,6 +19,9 @@
             "description": "#tab-0"
         }
     },
+    "extras": {
+        "ingredients": "#tab-2"
+    },
     "pagination": {
         "type": "link",
         "selector": ".pagination li.next a"

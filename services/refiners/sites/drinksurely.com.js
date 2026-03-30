@@ -4,7 +4,7 @@ export default async function refine(rootUrl, product, page) {
     product.country = "USA";
 
     const scraped = await page.evaluate(() => {
-        const product = {};
+        const product = { extras: {} };
 
         const labels = Array.from(
             document.querySelectorAll('.product__labels li span')
@@ -22,6 +22,22 @@ export default async function refine(rootUrl, product, page) {
             }
             if (label.includes('vegan')) {
                 product.vegan = "Vegan";
+            }
+        }
+
+        const compositionToggle = Array.from(
+            document.querySelectorAll('.accordion-toggle')
+        ).find(el => el.textContent.trim().toLowerCase() === 'composition');
+
+        if (compositionToggle) {
+            const row = compositionToggle.closest('.accordion-row');
+            const compositionEl = row?.querySelector('[data-accordion-body]');
+            const composition = compositionEl?.innerText
+                ?.replace(/\s+/g, ' ')
+                .trim();
+
+            if (composition) {
+                product.extras.composition = composition;
             }
         }
 

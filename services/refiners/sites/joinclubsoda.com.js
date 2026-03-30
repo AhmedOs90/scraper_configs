@@ -13,7 +13,10 @@ export default async function refine(rootUrl, product, page) {
 
     const extra = await page.evaluate(() => {
         const el = document.querySelector('#elementor-tab-content-6322');
-        if (!el) return { abv: null, energy: null, sugar: null };
+        if (!el) return {
+            abv: null, energy: null, sugar: null,
+            ingredients: null, fat: null, carbohydrates: null, protein: null, salt: null
+        };
 
         const text = el.innerText;
 
@@ -33,11 +36,39 @@ export default async function refine(rootUrl, product, page) {
             text.match(/\bSugar:\s*([\d.]+g)\b/i)?.[1] ||
             null;
 
-        return { abv, energy, sugar };
+        const ingredients =
+            text.match(/Ingredients\s*([\s\S]*?)\nNutrition/i)?.[1]?.trim() ||
+            null;
+
+        const fat =
+            text.match(/\bFat\s*([\d.]+g)/i)?.[1] ||
+            null;
+
+        const carbohydrates =
+            text.match(/\bCarbohydrates\s*([\d.]+g)/i)?.[1] ||
+            null;
+
+        const protein =
+            text.match(/\bProtein\s*([\d.]+g)/i)?.[1] ||
+            null;
+
+        const salt =
+            text.match(/\bSalt\s*([\d.]+g)/i)?.[1] ||
+            null;
+
+        return { abv, energy, sugar, ingredients, fat, carbohydrates, protein, salt };
     });
 
     product.abv = extra.abv;
     product.energy = extra.energy;
     product.sugar = extra.sugar;
+
+    product.extras = {
+        ingredients: extra.ingredients,
+        fat: extra.fat,
+        carbohydrates: extra.carbohydrates,
+        protein: extra.protein,
+        salt: extra.salt
+    };
     return product;
 }
