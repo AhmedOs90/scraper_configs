@@ -1,0 +1,27 @@
+{
+    "rootUrl": "https://eriksorensenvin.dk",
+    "baseUrl": "https://eriksorensenvin.dk/kategorier/vin-type/alkoholfri/",
+    "site_name": "eriksorensenvin",
+    "seller": "seller",
+    "bannerSkip": "button.btn.btn-primary.mr-2",
+    "productsLinks": "/produkter/alkoholfri-",
+    "collectionLinks": "/kategorier/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "description": "meta[name='og:description']",
+            "images": "meta[name='og:image']"
+        },
+        "main": {
+            "name": ".title.h2",
+            "price": ".content .pricing .featured-price .price .woocommerce-Price-amount.amount"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": ".page-link[aria-label=\"Go to next page\"]"
+    },
+    "level": 0,
+    "purePlayer": false
+}

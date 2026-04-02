@@ -23,6 +23,6 @@
         "type": "button",
         "selector": "a[aria-label=\"Vis flere produkter\"]"
     },
-    "level": -1,
+    "level": 0,
     "purePlayer": false
 }
