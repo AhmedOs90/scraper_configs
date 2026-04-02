@@ -177,6 +177,7 @@ import otto_duborg from "./sites/otto-duborg.dk.js";
 import bierothek from "./sites/bierothek.dk.js";
 import vinspecialistenaarhus from "./sites/vinspecialistenaarhus.dk.js";
 import dhwines from "./sites/dhwines.dk.js";
+import bottlehero from "./sites/bottlehero.dk.js";
 
 // Registry map
 const registry = new Map([
@@ -353,7 +354,8 @@ const registry = new Map([
     ["otto-duborg.dk", otto_duborg],
     ["bierothek.dk", bierothek],
     ["vinspecialistenaarhus.dk", vinspecialistenaarhus],
-    ["dhwines.dk", dhwines]
+    ["dhwines.dk", dhwines],
+    ["bottlehero.dk", bottlehero]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {
