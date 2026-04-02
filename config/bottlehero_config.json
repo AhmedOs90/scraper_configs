@@ -1,0 +1,28 @@
+{
+    "rootUrl": "https://bottlehero.dk",
+    "baseUrl": "https://bottlehero.dk/collections/alkohol-fri-vin",
+    "site_name": "bottlehero",
+    "seller": "seller",
+    "productsLinks": "/products/",
+    "collectionLinks": "/collections/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "images": "meta[property='og:image']",
+            "price": "meta[property='og:price:amount']",
+            "currency": "meta[property='og:price:currency']"
+        },
+        "main": {
+            "producer": "p a[href^=\"/collections/\"]",
+            "description": "div.line-clamp-3"
+        }
+    },
+    "pagination": {
+        "type": "button",
+        "selector": "a[aria-label=\"Vis flere produkter\"]"
+    },
+    "level": 0,
+    "purePlayer": false
+}
