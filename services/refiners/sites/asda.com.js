@@ -50,5 +50,15 @@ export default async function refine(rootUrl, product, page) {
     if (sugarMatch) {
         product.sugar = `${sugarMatch[1]} g`;
     }
+
+    product.extras = product.extras || {};
+
+    const sizeMatch = product.description.match(
+        /net content\s*([\d.]+\s*(litres?|millilitres?|centilitres?|ml|cl))/i
+    );
+    
+    if (sizeMatch) {
+        product.extras.size = sizeMatch[1];
+    }
     return product;
 }

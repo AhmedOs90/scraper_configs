@@ -1,10 +1,6 @@
-// services/refiners/sites/alambika.ca.js
+// services/refiners/sites/drinkdrystore.com.js
 export default async function refine(rootUrl, product, page) {
-    product.country = 'Canada';
-    product.description = product.description
-        ?.replace(/<[^>]+>/g, "")
-        .replace(/\s+/g, " ")
-        .trim();
+    product.country = 'UAE';
     product.extras.ingredients = product.extras.ingredients
         ?.replace(/<[^>]+>/g, "")
         .replace(/\s+/g, " ")

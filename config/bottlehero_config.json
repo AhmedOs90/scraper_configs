@@ -1,7 +1,7 @@
 {
-    "rootUrl": "https://alambika.ca",
-    "baseUrl": "https://alambika.ca/collections/non-alcoholic-substitutes",
-    "site_name": "alambika",
+    "rootUrl": "https://bottlehero.dk",
+    "baseUrl": "https://bottlehero.dk/collections/alkohol-fri-vin",
+    "site_name": "bottlehero",
     "seller": "seller",
     "productsLinks": "/products/",
     "collectionLinks": "/collections/",
@@ -15,17 +15,14 @@
             "currency": "meta[property='og:price:currency']"
         },
         "main": {
-            "producer": ".product__subtitle p",
-            "description": "#tab-0"
+            "producer": "p a[href^=\"/collections/\"]",
+            "description": "div.line-clamp-3"
         }
     },
-    "extras": {
-        "ingredients": "#tab-2"
-    },
     "pagination": {
-        "type": "link",
-        "selector": ".pagination li.next a"
+        "type": "button",
+        "selector": "a[aria-label=\"Vis flere produkter\"]"
     },
-    "level": 1,
-    "purePlayer": true
+    "level": 0,
+    "purePlayer": false
 }

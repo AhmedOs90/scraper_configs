@@ -3,6 +3,10 @@ export default async function refine(rootUrl, product, page) {
     product.country = 'USA';
     product.currency = 'USD';
     product.price = product.price.replace('$', '').trim();
+    product.description = product.description
+        .replace(/<[^>]+>/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
 
     const extra = await page.evaluate(() => {
         const getValue = (label) => {
@@ -34,22 +38,44 @@ export default async function refine(rootUrl, product, page) {
         const abvNum = abvText ? (abvText.match(/[\d.]+/) || [null])[0] : null;
 
         const energy = getValue('Calories');
-        const carbs = getValue('Carbs') || getValue('Total Carbohydrates');
+        const carbs = getValue('Carbs') || getValue('Total Carbs') || getValue('Total Carbohydrates');
+        const ibu = getValue('IBU');
+
+        const sizeText =
+            document.querySelector('p.text-xs')?.textContent || null;
+
+        const size = sizeText
+            ? (sizeText.match(/Serving Size\s*(.+)/i)?.[1]?.trim() || null)
+            : null;
+
+        const ingredients = Array.from(document.querySelectorAll('h3'))
+            .find(h => h.textContent.trim() === 'Ingredients')
+            ?.parentElement
+            ?.querySelectorAll('span');
+
+        const ingredientsList = ingredients
+            ? Array.from(ingredients).map(el => el.textContent.trim())
+            : null;
 
         return {
             abv: abvNum ? `${abvNum}%` : null,
             energy,
-            sugar: carbs
+            carbs,
+            size,
+            ibu,
+            ingredients: ingredientsList
         };
     });
 
     product.abv = extra.abv;
     product.energy = extra.energy;
-    product.sugar = extra.sugar;
 
-    product.description = product.description
-        .replace(/<[^>]+>/g, "")
-        .replace(/\s+/g, " ")
-        .trim();
+    product.extras = {
+        ...(product.extras || {}),
+        carbohydrates: extra.carbs,
+        size: extra.size,
+        ibu: extra.ibu,
+        ingredients: extra.ingredients
+    };
     return product;
 }

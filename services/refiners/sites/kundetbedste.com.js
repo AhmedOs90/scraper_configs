@@ -14,6 +14,12 @@ export default async function refine(rootUrl, product, page) {
         product.abv = abvMatch[1].replace(",", ".") + "%";
     }
 
+    const sizeMatch = product.description.match(/Indhold:\s*([\d]+(?:[.,]\d+)?)\s*(cl|ml|l)/i);
+    if (sizeMatch) {
+        product.extras = product.extras || {};
+        product.extras.size = sizeMatch[1].replace(",", ".") + " " + sizeMatch[2].toLowerCase();
+    }
+
     product.producer = await page.$$eval(
         'script[type="application/ld+json"]',
         scripts => {

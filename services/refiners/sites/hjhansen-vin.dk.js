@@ -32,5 +32,22 @@ export default async function refine(rootUrl, product, page) {
 
         return [];
     });
+
+    product.extras = product.extras || {};
+
+    const specs = await page.evaluate(() => {
+        const rows = document.querySelectorAll('[class*="Specs__Line"]');
+        const out = {};
+
+        rows.forEach(row => {
+            const key = row.querySelector('[class*="Specs__Bold"]')?.textContent?.trim().replace(':','');
+            const value = row.querySelector('[class*="Specs__Value"]')?.textContent?.trim();
+            if (key && value) out[key] = value;
+        });
+
+        return out;
+    });
+
+    product.extras.size = specs['Flaskestørrelse'] || null;
     return product;
 }

@@ -12,7 +12,7 @@
             "description": "meta[name='description']"
         },
         "main": {
-            "name": ".product-detail-heading.h2.productname",
+            "name": ".product-detail-heading.h2",
             "price": ".product-detail-price-module"
         }
     },
