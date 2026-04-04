@@ -1,6 +1,11 @@
 {
-    "rootUrl": "https://surdyks.com",
-    "baseUrl": "https://surdyks.com/feature/?_bc_fsnf=1&Web+Type=Non-Alcoholic",
+    "rootUrl": "c",
+    "baseUrl": [
+        "https://surdyks.com/beer/?_bc_fsnf=1&Web+Type=Non-Alcoholic",
+        "https://surdyks.com/wine/?_bc_fsnf=1&Web+Type=Non-Alcoholic",
+        "https://surdyks.com/liquor/?_bc_fsnf=1&Web+Type=Non-Alcoholic",
+        "https://surdyks.com/extras/?_bc_fsnf=1&Web+Type=Non-Alcoholic"
+    ],
     "site_name": "surdyks",
     "seller": "seller",
     "productLinkAttribute": "href",
