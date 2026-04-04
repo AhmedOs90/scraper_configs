@@ -30,5 +30,21 @@ export default async function refine(rootUrl, product, page) {
         const first = imgs[0].getAttribute('src');
         return first ? [first] : [];
     });
+
+    product.extras = product.extras || {};
+
+    product.extras.size = await page.evaluate(() => {
+        const rows = Array.from(document.querySelectorAll('div.MuiGrid-container'));
+
+        for (const row of rows) {
+            const label = row.querySelector('h6')?.innerText?.toLowerCase();
+            if (label && label.includes('container size')) {
+                const value = row.querySelector('p')?.innerText?.trim();
+                return value || null;
+            }
+        }
+
+        return null;
+    });
     return product;
 }
