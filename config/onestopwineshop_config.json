@@ -1,6 +1,6 @@
 {
     "rootUrl": "https://www.onestopwineshop.com",
-    "baseUrl": "https://www.onestopwineshop.com/collection/non-alcohol-wines/",
+    "baseUrl": "https://www.onestopwineshop.com/collection/non-alcohol-wines",
     "site_name": "onestopwineshop",
     "seller": "seller",
     "productsLinks": "/product/",
