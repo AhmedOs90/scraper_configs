@@ -8,21 +8,31 @@ export default async function refine(rootUrl, product, page) {
         .trim();
 
     const nutrition = await page.evaluate(() => {
-        const out = { energy: null, sugar: null, abv: null };
+        const out = {
+            energy: null,
+            sugar: null,
+            abv: null,
+            carbohydrates: null,
+            fat: null,
+            salt: null,
+        };
 
         document
             .querySelectorAll(
                 ".product-block-nutritional-information li div.flex"
             )
             .forEach((row) => {
-                const label = row.querySelector("span:first-child")?.innerText.trim();
-                const value = row.querySelector("span:last-child")?.innerText.trim();
+                const label = row.querySelector("span:first-child")?.textContent.trim();
+                const value = row.querySelector("span:last-child")?.textContent.trim();
 
                 if (!label || !value) return;
 
                 if (label.includes("Calorie")) out.energy = value;
                 if (label.includes("Sugars")) out.sugar = value;
                 if (label.includes("Alcohol Content")) out.abv = value;
+                if (label.includes("Total Carbohydrate")) out.carbohydrates = value;
+                if (label.includes("Total Fat")) out.fat = value;
+                if (label.includes("Total Salt")) out.salt = value;
             });
 
         return out;
@@ -63,5 +73,17 @@ export default async function refine(rootUrl, product, page) {
     product.energy = nutrition.energy;
     product.sugar = nutrition.sugar;
     product.abv = nutrition.abv;
+
+    product.extras = {
+        carbohydrates: nutrition.carbohydrates,
+        fat: nutrition.fat,
+        salt: nutrition.salt,
+        ingredients: await page.evaluate(() => {
+            const el = document.querySelector(
+                ".product-block-collapsible-tab .rte li"
+            );
+            return el?.textContent.replace(/^"+|"+$/g, "").trim() || null;
+        }),
+    };
     return product;
 }
