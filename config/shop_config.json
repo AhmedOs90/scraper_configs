@@ -17,6 +17,9 @@
             "description": ".introduction-text"
         }
     },
+    "extras": {
+        "tasting_notes": ".flavoursection__items"
+    },
     "pagination": {
         "type": "button",
         "selector": "#LoadMoreButton"
