@@ -11,8 +11,8 @@
         "header": {
             "name": "meta[property='og:title']",
             "images": "meta[property='og:image']",
-            "price": "meta[property='product:price:amount'], meta[property='product:original_price:amount'], meta[property='product:sale_price:amount']",
-            "currency": "meta[property='product:price:currency'], meta[property='product:original_price:currency'], meta[property='product:sale_price:currency']"
+            "price": "meta[property='product:price:amount']",
+            "currency": "meta[property='product:price:currency']"
         },
         "main": {
             "description": ".product-description"
