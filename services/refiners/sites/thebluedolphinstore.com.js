@@ -13,11 +13,6 @@ export default async function refine(rootUrl, product, page) {
         .replace(/\s+/g, " ")
         .trim();
 
-    product.energy = product.energy
-        .replace(/<[^>]+>/g, "")
-        .replace(/\s+/g, " ")
-        .trim();
-
     const abvMatch = product.description.match(
         /graduación\s*:\s*([\d.,]+)\s*%/i
     );
@@ -26,24 +21,34 @@ export default async function refine(rootUrl, product, page) {
         product.abv = abvMatch[1].replace(",", ".") + "%";
     }
 
-    const energyMatch = product.energy.match(
-        /calorías\s*:\s*([\d.,<>]+)?\s*kcal/i
+    const sizeMatch = product.description.match(
+        /volumen:\s*([\d.,]+\s*cl)/i
     );
 
-    if (energyMatch && energyMatch[1]) {
-        product.energy = energyMatch[1].replace(",", ".") + " kcal";
-    } else {
-        product.energy = null;
+    if (sizeMatch) {
+        product.extras = product.extras || {};
+        product.extras.size = sizeMatch[1].trim();
     }
 
-    const sugarMatch = product.energy?.match(
-        /azúcares\s*:\s*([\d.,<>]+)\s*g/i
-    );
+    // nutrition (from tab)
+    const nutritionText = await page.evaluate(() => {
+        const el = document.querySelector("#tab-description");
+        return el ? el.textContent : "";
+    });
 
-    if (sugarMatch) {
-        product.sugar = sugarMatch[1].replace(",", ".") + " g";
-    } else {
-        product.sugar = null;
-    }
+    const extract = (regex) => {
+        const m = nutritionText.match(regex);
+        return m ? m[1].replace(",", ".").trim() : null;
+    };
+
+    product.energy = extract(/calor[ií]as:\s*([\d.,]+\s*kcal)/i);
+    product.sugar = extract(/az[úu]cares:\s*([\d.,]+\s*g)/i);
+
+    product.extras = product.extras || {};
+
+    product.extras.protein = extract(/prote[ií]nas:\s*([\d.,]+\s*g)/i);
+    product.extras.fat = extract(/grasa:\s*([\d.,]+\s*g)/i);
+    product.extras.salt = extract(/sal:\s*([\d.,]+\s*g)/i);
+    product.extras.carbohydrates = extract(/hidratos\s+de\s+carbono:\s*([\d.,]+\s*g)/i);
     return product;
 }

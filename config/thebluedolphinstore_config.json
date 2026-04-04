@@ -18,8 +18,7 @@
         },
         "main": {
             "price": ".woocommerce-Price-amount.amount",
-            "description": ".woocommerce-product-details__short-description",
-            "energy": ".woocommerce-Tabs-panel--description"
+            "description": ".woocommerce-product-details__short-description"
         }
     },
     "pagination": {
