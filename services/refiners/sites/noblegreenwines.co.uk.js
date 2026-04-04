@@ -35,5 +35,10 @@ export default async function refine(rootUrl, product, page) {
             product.gluten_free = 'Gluten free';
         }
     }
+
+    if (details.Size) {
+        product.extras = product.extras || {};
+        product.extras.size = details.Size;
+    }
     return product;
 }
