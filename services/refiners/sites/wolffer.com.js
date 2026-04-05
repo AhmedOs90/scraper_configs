@@ -26,5 +26,21 @@ export default async function refine(rootUrl, product, page) {
             return null;
         }
     });
+
+    product.extras = await page.evaluate(() => {
+        const items = [...document.querySelectorAll(".accordion__content li")];
+
+        const getValue = (label) => {
+            const el = items.find(i => i.textContent.includes(label));
+            if (!el) return null;
+            return el.textContent.split(":")[1]?.trim() || null;
+        };
+
+        return {
+            vintage: getValue("Vintage"),
+            appellation: getValue("Appellation"),
+            type: getValue("Type"),
+        };
+    });
     return product;
 }
