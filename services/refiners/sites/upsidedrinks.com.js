@@ -62,5 +62,57 @@ export default async function refine(rootUrl, product, page) {
             return null;
         })
     .catch(() => null);
+    
+    product.extras = product.extras || {};
+
+    product.extras.ingredients = await page
+        .evaluate(() => {
+            const paragraphs = document.querySelectorAll("p");
+
+            for (const p of paragraphs) {
+                const strong = p.querySelector("strong");
+                if (
+                    strong &&
+                    strong.textContent?.toLowerCase().includes("ingredient")
+                ) {
+                    const span = p.querySelector("span");
+                    if (span) {
+                        const v = span.textContent.trim();
+                        if (v) return v;
+                    }
+
+                    const textAfterStrong = p.textContent
+                        .replace(strong.textContent, "")
+                        .trim();
+
+                    return textAfterStrong || null;
+                }
+            }
+
+            return null;
+        })
+    .catch(() => null);
+
+    product.extras.size = await page
+        .evaluate(() => {
+            const paragraphs = document.querySelectorAll("p");
+
+            for (const p of paragraphs) {
+                const strong = p.querySelector("strong");
+                if (
+                    strong &&
+                    strong.textContent?.toLowerCase().includes("size")
+                ) {
+                    const text = p.textContent
+                        .replace(strong.textContent, "")
+                        .trim();
+
+                    return text || null;
+                }
+            }
+
+            return null;
+        })
+    .catch(() => null);
     return product;
 }
