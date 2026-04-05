@@ -1,6 +1,6 @@
 {
     "rootUrl": "https://zepeim.com",
-    "baseUrl": "https://zepeim.com/non-alcoholic-beverages-wholesale-distribution/",
+    "baseUrl": "https://zepeim.com/non-alcoholic-beverages-wholesale-distribution",
     "site_name": "zepeim",
     "seller": "seller",
     "productLinkSelector": ".productGrid .card .card-title > a, .productGrid .product .card-title > a, .product .card-title > a",
