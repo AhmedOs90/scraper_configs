@@ -13,7 +13,6 @@
         },
         "main": {
             "price": ".price.normalPrice",
-            "producer": "[itemprop='brand'] meta[itemprop='name']",
             "description": ".tab-content #description"
         }
     },
