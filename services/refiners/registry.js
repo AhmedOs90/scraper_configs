@@ -179,6 +179,7 @@ import vinspecialistenaarhus from "./sites/vinspecialistenaarhus.dk.js";
 import dhwines from "./sites/dhwines.dk.js";
 import bottlehero from "./sites/bottlehero.dk.js";
 import eriksorensenvin from "./sites/eriksorensenvin.dk.js";
+import delicando from "./sites/delicando.com.js";
 
 // Registry map
 const registry = new Map([
@@ -357,7 +358,8 @@ const registry = new Map([
     ["vinspecialistenaarhus.dk", vinspecialistenaarhus],
     ["dhwines.dk", dhwines],
     ["bottlehero.dk", bottlehero],
-    ["eriksorensenvin.dk", eriksorensenvin]
+    ["eriksorensenvin.dk", eriksorensenvin],
+    ["delicando.com", delicando]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {
