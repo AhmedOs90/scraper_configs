@@ -46,13 +46,17 @@ export default async function refine(rootUrl, product, page) {
             vegan: /(^|\b)vegan( friendly)?(\b|$)/i.test(txt),
             glutenFree: /gluten\s*free/i.test(txt),
             energy: null,
-            sugars: null
+            sugars: null,
+            fat: null,
+            carbohydrates: null,
+            protein: null,
+            ingredients: null
         };
 
         const rows = document.querySelectorAll('.tfv1-table[data-table-name="Nutrition"] .tfv1-tr');
         for (const row of rows) {
             const label = row.querySelector('.tfv1-label .tfv1-data')?.innerText?.trim().toLowerCase();
-            const value = row.querySelector('.tfv1-value .tfv1-data span')?.innerText?.trim().toLowerCase();
+            const value = row.querySelector('.tfv1-value .tfv1-data span')?.innerText?.trim();
             if (!label || !value) continue;
 
             if (!result.energy && label.includes('energy')) {
@@ -66,7 +70,25 @@ export default async function refine(rootUrl, product, page) {
                 if (match) result.sugars = `${match[1]} g`;
             }
 
-            if (result.energy && result.sugars) break;
+            if (!result.fat && /^fat\b/i.test(label)) {
+                result.fat = value;
+                continue;
+            }
+
+            if (!result.carbohydrates && /^carbohydrate/i.test(label)) {
+                result.carbohydrates = value;
+                continue;
+            }
+
+            if (!result.protein && /^protein\b/i.test(label)) {
+                result.protein = value;
+                continue;
+            }
+
+            if (!result.ingredients && /^ingredients\b/i.test(label)) {
+                result.ingredients = value;
+                continue;
+            }
         }
 
         return result;
@@ -76,5 +98,11 @@ export default async function refine(rootUrl, product, page) {
     if (extracted.glutenFree) product.gluten_free = 'Gluten free';
     if (extracted.energy) product.energy = extracted.energy;
     if (extracted.sugars) product.sugar = extracted.sugars;
+
+    product.extras ||= {};
+    if (extracted.fat) product.extras.fat = extracted.fat;
+    if (extracted.carbohydrates) product.extras.carbohydrates = extracted.carbohydrates;
+    if (extracted.protein) product.extras.protein = extracted.protein;
+    if (extracted.ingredients) product.extras.ingredients = extracted.ingredients;
     return product;
 }
