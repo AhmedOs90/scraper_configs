@@ -16,13 +16,25 @@ export default async function refine(rootUrl, product, page) {
         .trim();
 
     product.producer = await page.evaluate(() => {
-        const el = document.querySelector("#tab-panel-1 li:nth-child(1) .sc-c047f47e-4");
-        return el ? el.textContent.trim() : null;
+        const items = document.querySelectorAll('[id^="tab-panel-"] li');
+        for (const li of items) {
+            const label = li.querySelector(".sc-c047f47e-1")?.textContent?.replace(/\s+/g, " ").trim();
+            if (label?.startsWith("Marque")) {
+                return li.querySelector(".sc-c047f47e-4, .sc-c047f47e-2")?.textContent?.trim() || null;
+            }
+        }
+        return null;
     });
 
     product.abv = await page.evaluate(() => {
-        const el = document.querySelector("#tab-panel-1 li:nth-child(4) .sc-c047f47e-2");
-        return el ? el.textContent.replace(/\s+/g, "").trim() : null;
+        const items = document.querySelectorAll('[id^="tab-panel-"] li');
+        for (const li of items) {
+            const label = li.querySelector(".sc-c047f47e-1")?.textContent?.replace(/\s+/g, " ").trim();
+            if (label?.startsWith("Degré")) {
+                return li.querySelector(".sc-c047f47e-2")?.textContent?.replace(/\s+/g, "").trim() || null;
+            }
+        }
+        return null;
     });
 
     product.energy = await page.evaluate(() => {
@@ -33,6 +45,24 @@ export default async function refine(rootUrl, product, page) {
     product.sugar = await page.evaluate(() => {
         const el = document.querySelector("#tab-panel-4 tr:nth-child(4) td p");
         return el ? el.textContent.trim() : null;
+    });
+
+    product.extras = product.extras || {};
+
+    product.extras.size = await page.evaluate(() => {
+        const items = document.querySelectorAll('[id^="tab-panel-"] li');
+        for (const li of items) {
+            const label = li.querySelector(".sc-c047f47e-1")?.textContent?.replace(/\s+/g, " ").trim();
+            if (label?.startsWith("Volume")) {
+                return li.querySelector(".sc-c047f47e-2")?.textContent?.trim() || null;
+            }
+        }
+        return null;
+    });
+
+    product.extras.ingredients = await page.evaluate(() => {
+        const el = document.querySelector("#tab-panel-2 p");
+        return el ? el.textContent.replace(/\s+/g, " ").trim() : null;
     });
     return product;
 }
