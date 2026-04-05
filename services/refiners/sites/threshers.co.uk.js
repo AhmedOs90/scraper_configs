@@ -2,16 +2,22 @@
 export default async function refine(rootUrl, product, page) {
     product.country = 'UK';
     product.currency = 'GBP';
+    product.price = product.price
+        ?.replace(/[^\d.]/g, '')
+        .trim();
+    product.description = product.description
+        ?.replace(/<[^>]+>/g, '')
+        .replace(/\s+/g, ' ')
+        .trim();
 
-    if (product.price) {
-        product.price = product.price.replace('£', '').trim();
-    }
+    const text = await page.evaluate(() => {
+        return document
+            .querySelector('[id^="Product-content-"]')
+            ?.textContent || '';
+    });
 
-    if (product.description) {
-        product.description = product.description
-            .replace(/<[^>]+>/g, '')
-            .replace(/\s+/g, ' ')
-            .trim();
-    }
+    product.abv = text.match(/ABV\s*([\d.]+%)/i)?.[1] || null;
+    product.extras = product.extras || {};
+    product.extras.size = text.match(/SIZE\s*([^\n]+)/i)?.[1]?.trim() || null;
     return product;
 }
