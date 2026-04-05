@@ -14,9 +14,8 @@
             "images": "meta[property='og:image']"
         },
         "main": {
-            "price": "p.product-price.h4.primary-font",
-            "description": ".product-description.rich-text-editor",
-            "country": ".bm-country-clickable .ml-2"
+            "price": ".product-price.h4",
+            "description": ".product-description"
         }
     },
     "level": 0,
