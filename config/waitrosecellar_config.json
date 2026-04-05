@@ -11,11 +11,8 @@
         "header": {},
         "main": {
             "name": "h1.ProductDescriptionPage_heading__EQgAJ",
-            "price": "span[data-testid='product-price']",
-            "images": "h1.ProductDescriptionPage_heading__EQgAJ",
-            "producer": "h1.ProductDescriptionPage_heading__EQgAJ",
-            "abv": "h1.ProductDescriptionPage_heading__EQgAJ",
-            "description": "h1.ProductDescriptionPage_heading__EQgAJ"
+            "price": ".Price_headingMedium__pPEp8",
+            "description": ".ProductAtAGlance_atAGlanceContent__KRiB8"
         }
     },
     "pagination": {

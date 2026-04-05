@@ -10,33 +10,38 @@ export default async function refine(rootUrl, product, page) {
     );
 
     product.images = await page.evaluate(() => {
-        const scripts = document.querySelectorAll('script[type="application/ld+json"]');
+        const img = document.querySelector(
+            'div[class*="ProductDescriptionPage_imageContainer"] img'
+        );
 
-        for (const s of scripts) {
-            try {
-            const json = JSON.parse(s.textContent);
-            if (json['@type'] === 'Product' && json.image) {
-                return Array.isArray(json.image) ? json.image : [json.image];
-            }
-            } catch {}
+        if (!img) return [];
+
+        const urls = new Set();
+
+        if (img.src) urls.add(img.src);
+
+        if (img.srcset) {
+            img.srcset.split(',').forEach(entry => {
+                const url = entry.trim().split(/\s+/)[0];
+                if (url) urls.add(url);
+            });
         }
 
-        return [];
+        return [...urls];
     });
 
-    product.producer = await page.evaluate(() => {
-        const el = document.querySelector('#gg01_origin');
-        return el ? el.textContent.replace(' (brand origin)', '').trim() : "";
-    });
+    product.extras = product.extras || {};
 
-    product.abv = await page.evaluate(() => {
-        const el = document.querySelector('#gg01_alcohol_percentage_wrapper');
-        return el ? el.textContent.trim() : "";
-    });
+    if (product.description) {
+        const sizeMatch = product.description.match(/Size\s*([0-9]+(?:\.[0-9]+)?\s*(?:ml|cl|l))/i);
+        if (sizeMatch) {
+            product.extras.size = sizeMatch[1].trim();
+        }
 
-    product.description = await page.evaluate(() => {
-        const el = document.querySelector('.gg01_tab_content p.gg01_product_description');
-        return el ? el.textContent.replace(/\s+/g, ' ').trim() : "";
-    });
+        const abvMatch = product.description.match(/Alcohol\s*Vol\.?\s*([0-9]+(?:\.[0-9]+)?)%/i);
+        if (abvMatch) {
+            product.abv = `${abvMatch[1]}%`;
+        }
+    }
     return product;
 }
