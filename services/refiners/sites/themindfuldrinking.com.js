@@ -1,26 +1,53 @@
 // services/refiners/sites/themindfuldrinking.com.js
 export default async function refine(rootUrl, product, page) {
-    if (product.description) {
-        product.description = product.description
-        .replace(/<[^>]+>/g, " ")
-        .replace(/\s+/g, " ")
+    product.country = 'USA';
+    product.description = product.description
+        ?.replace(/<[^>]+>/g, ' ')
+        .replace(/\s+/g, ' ')
         .trim();
-    }
 
-    const nutrition = await page.evaluate(() => {
+
+    const data = await page.evaluate(() => {
         const result = {};
-        document.querySelectorAll(".info-table tr").forEach(row => {
-            const th = row.querySelector("th");
-            const td = row.querySelector("td");
-            if (!th || !td) return;
-            const label = th.textContent.toLowerCase();
-            if (label.includes("calories")) result.energy = td.textContent.trim();
-            if (label.includes("sugar")) result.sugar = td.textContent.trim();
+
+        document.querySelectorAll('.product__accordion details').forEach((block) => {
+            const title = block.querySelector('summary h2')?.textContent?.toLowerCase().trim();
+            const content = block.querySelector('.accordion__content');
+
+            if (!title || !content) return;
+
+            if (title.includes('ingredients')) {
+                result.ingredients = content.textContent
+                    .replace(/\s+/g, ' ')
+                    .trim();
+            }
+
+            if (title.includes('nutritional')) {
+                content.querySelectorAll('tr').forEach((row) => {
+                    const label = row.querySelector('th')?.textContent?.toLowerCase().trim();
+                    const value = row.querySelector('td')?.textContent?.trim();
+
+                    if (!label || !value) return;
+
+                    if (label.includes('calories')) result.energy = value;
+                    if (label.includes('sugar')) result.sugar = value;
+                    if (label.includes('fat')) result.fat = value;
+                    if (label.includes('carbohydrate')) result.carbohydrates = value;
+                    if (label.includes('protein')) result.protein = value;
+                });
+            }
         });
+
         return result;
     }).catch(() => ({}));
 
-    product.energy = nutrition.energy || null;
-    product.sugar = nutrition.sugar || null;
+    product.energy = data.energy || null;
+    product.sugar = data.sugar || null;
+
+    product.extras = product.extras || {};
+    product.extras.ingredients = data.ingredients || null;
+    product.extras.fat = data.fat || null;
+    product.extras.carbohydrates = data.carbohydrates || null;
+    product.extras.protein = data.protein || null;
     return product;
 }
