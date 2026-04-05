@@ -4,11 +4,15 @@ export default async function refine(rootUrl, product, page) {
     product.producer = "To Øl";
     product.price = product.price.replace(",", ".").trim();
 
+    product.extras ||= {};
+
     const info = await page.evaluate(() => {
         const rows = Array.from(document.querySelectorAll(".product__info-line"));
 
         const out = {
             abv: null,
+            size: null,
+            allergens: null,
             nutritionText: null
         };
 
@@ -25,6 +29,8 @@ export default async function refine(rootUrl, product, page) {
             if (!label || !value) continue;
 
             if (label === "abv") out.abv = value;
+            if (label === "size") out.size = value;
+            if (label === "allergens") out.allergens = value;
 
             if (label.includes("nutrition facts per 100 ml")) {
                 out.nutritionText = value;
@@ -32,7 +38,12 @@ export default async function refine(rootUrl, product, page) {
         }
 
         return out;
-    }).catch(() => ({ abv: null, nutritionText: null }));
+    }).catch(() => ({
+        abv: null,
+        size: null,
+        allergens: null,
+        nutritionText: null
+    }));
 
     if (info.abv) {
         const abvMatch = info.abv.match(/(\d+(?:[.,]\d+)?)\s*%/);
@@ -41,27 +52,38 @@ export default async function refine(rootUrl, product, page) {
         }
     }
 
+    if (info.size) {
+        product.extras.size = info.size;
+    }
+
+    if (info.allergens) {
+        product.extras.allergens = info.allergens;
+    }
+
     if (info.nutritionText) {
         const txt = info.nutritionText.replace(/\s+/g, " ").trim();
 
-        const kcalMatch = txt.match(/(\d+(?:[.,]\d+)?)\s*kcal/i);
-        const kjMatch = txt.match(/(\d+(?:[.,]\d+)?)\s*kJ/i);
+        const getVal = (regex, suffix = "g") => {
+            const match = txt.match(regex);
+            if (!match) return null;
+            const lessThan = Boolean(match[1]);
+            const val = match[2].replace(",", ".");
+            return `${lessThan ? "<" : ""}${val} ${suffix}`;
+        };
 
-        if (kcalMatch) {
-            product.energy = `${kcalMatch[1].replace(",", ".")} kcal`;
-        } else if (kjMatch) {
-            product.energy = `${kjMatch[1].replace(",", ".")} kJ`;
-        }
-
-        const sugarMatch = txt.match(
-            /sugars?\s*(?:[:])?\s*(<\s*)?(\d+(?:[.,]\d+)?)\s*g/i
+        const energyMatch = txt.match(
+            /energy\s*(\d+(?:[.,]\d+)?)\s*kJ\s*\/\s*(\d+(?:[.,]\d+)?)\s*kcal/i
         );
 
-        if (sugarMatch) {
-            const lessThan = Boolean(sugarMatch[1]);
-            const val = sugarMatch[2].replace(",", ".");
-            product.sugar = `${lessThan ? "<" : ""}${val} g`;
+        if (energyMatch) {
+            product.energy = `${energyMatch[1].replace(",", ".")} kJ / ${energyMatch[2].replace(",", ".")} kcal`;
         }
+
+        product.sugar = getVal(/sugars\s*(?:[:])?\s*(<\s*)?(\d+(?:[.,]\d+)?)\s*g/i);
+        product.extras.fat = getVal(/fat\s*(?:[:])?\s*(<\s*)?(\d+(?:[.,]\d+)?)(?:\s*g)?/i);
+        product.extras.carbohydrates = getVal(/carbohydrates\s*(?:[:])?\s*(<\s*)?(\d+(?:[.,]\d+)?)\s*g/i);
+        product.extras.protein = getVal(/protein\s*(?:[:])?\s*(<\s*)?(\d+(?:[.,]\d+)?)\s*g/i);
+        product.extras.salt = getVal(/salt\s*(?:[:])?\s*(<\s*)?(\d+(?:[.,]\d+)?)\s*g/i);
     }
     return product;
 }
