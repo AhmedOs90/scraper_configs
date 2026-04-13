@@ -29,12 +29,19 @@ export default async function refine(rootUrl, product, page) {
     }
 
     const descLower = product.description.toLowerCase();
+   
     if (descLower.includes("vegan")) {
         product.vegan = "Vegan";
     }
+   
     if (descLower.includes("gluten")) {
         product.gluten_free = "Gluten free";
     }
 
+    const sizeMatch = product.description.match(/Bottle Size:\s*([^\n<]+)/i);
+    if (sizeMatch) {
+        product.extras = product.extras || {};
+        product.extras.size = sizeMatch[1].trim();
+    }
     return product;
 }

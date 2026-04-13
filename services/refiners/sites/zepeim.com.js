@@ -33,6 +33,38 @@ export default async function refine(rootUrl, product, page) {
             }
         }
 
+        const ingredientsEl = document.querySelector("#tab-custom-0 p");
+        if (ingredientsEl) {
+            result.ingredients = ingredientsEl.textContent.trim();
+        }
+
+        const nutritionItems = document.querySelectorAll("#tab-custom-1 li");
+        for (let item of nutritionItems) {
+            const text = item.textContent?.trim();
+            if (!text) continue;
+            const lower = text.toLowerCase();
+
+            if (lower.startsWith("carbohydrates")) {
+                const match = text.match(/Carbohydrates[^:]*:\s*([^/]+)/i);
+                if (match) result.carbohydrates = match[1].trim();
+            }
+
+            if (lower.startsWith("total fat")) {
+                const match = text.match(/Total Fat:\s*(.+)/i);
+                if (match) result.fat = match[1].trim();
+            }
+
+            if (lower.startsWith("protein")) {
+                const match = text.match(/Protein:\s*(.+)/i);
+                if (match) result.protein = match[1].trim();
+            }
+
+            if (lower.startsWith("sodium")) {
+                const match = text.match(/Sodium:\s*(.+)/i);
+                if (match) result.sodium = match[1].trim();
+            }
+        }
+
         return result;
     }).catch(() => ({}));
 
@@ -41,6 +73,22 @@ export default async function refine(rootUrl, product, page) {
     if (details.energy) product.energy = details.energy;
     if (details.gluten_free) product.gluten_free = details.gluten_free;
     if (details.vegan) product.vegan = details.vegan;
+
+    if (
+        details.ingredients ||
+        details.carbohydrates ||
+        details.fat ||
+        details.protein ||
+        details.sodium
+    ) {
+        product.extras = product.extras || {};
+    }
+
+    if (details.ingredients) product.extras.ingredients = details.ingredients;
+    if (details.carbohydrates) product.extras.carbohydrates = details.carbohydrates;
+    if (details.fat) product.extras.fat = details.fat;
+    if (details.protein) product.extras.protein = details.protein;
+    if (details.sodium) product.extras.sodium = details.sodium;
 
     if (product.producer) {
         const parts = product.producer.split(" - ").map(s => s.trim()).filter(Boolean);
@@ -67,7 +115,7 @@ export default async function refine(rootUrl, product, page) {
 
         const match = rawPrice.match(/^([^\d\s]+)/);
         if (match) {
-            product.currency = match[1]; // e.g., "$", "€", "£"
+            product.currency = match[1];
             rawPrice = rawPrice.replace(match[1], "").trim();
         }
 

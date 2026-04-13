@@ -2,24 +2,11 @@
 export default async function refine(rootUrl, product, page) {
     product.country = 'Lithuania';
     product.currency = 'EUR';
-    product.price = product.price?.replace('€', '').trim();
-
+    product.price = product.price.replace('€', '').trim();
     product.name = product.name.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
     product.description = product.description.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
 
     const scope = '#product-description.selected';
-
-    await page.waitForSelector(scope);
-
-    product.energy = await page.$$eval(
-        `${scope} p.attribute-Energy`,
-        els => els.map(e => e.textContent.trim()).join(' / ') || null
-    );
-
-    product.sugar = await page.$eval(
-        `${scope} p.attribute-Sugar`,
-        el => el.textContent.trim()
-    ).catch(() => null);
 
     const special = await page.$eval(
         `${scope} p.attribute-special_feature`,

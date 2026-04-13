@@ -11,12 +11,13 @@
     "selectors": {
         "header": {
             "name": "meta[property='og:title']",
-            "description": "meta[property='og:description']",
             "images": "meta[property='og:image']",
             "price": "meta[property='og:price:amount']",
             "currency": "meta[property='og:price:currency']"
         },
-        "main": {}
+        "main": {
+            "description": "#tab-description"
+        }
     },
     "pagination": {
         "type": "button",

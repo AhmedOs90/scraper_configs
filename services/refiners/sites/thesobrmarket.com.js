@@ -29,6 +29,35 @@ export default async function refine(rootUrl, product, page) {
         product.sugar = nutrition.sugar;
     }
 
+    const extras = await page.evaluate(() => {
+        const containers = Array.from(document.querySelectorAll('[data-tab-content]'));
+
+        for (const container of containers) {
+            const text = container.innerText;
+
+            if (text.toLowerCase().includes('serving size')) {
+                const sizeMatch = text.match(/Serving Size:\s*([\d.]+\s*ml)/i);
+
+                const ingredientsEl = container.querySelector('.metafield-multi_line_text_field');
+                const ingredients = ingredientsEl ? ingredientsEl.innerText.trim() : null;
+
+                return {
+                    size: sizeMatch ? sizeMatch[1] : null,
+                    ingredients
+                };
+            }
+        }
+
+        return null;
+    });
+
+    if (extras) {
+        product.extras = {
+            size: extras.size,
+            ingredients: extras.ingredients
+        };
+    }
+
     const producer = await page.evaluate(() => {
         const scripts = Array.from(document.querySelectorAll('script[type="application/ld+json"]'));
 

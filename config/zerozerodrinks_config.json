@@ -1,6 +1,6 @@
 {
     "rootUrl": "https://zerozerodrinks.com",
-    "baseUrl": "https://zerozerodrinks.com/collections/all/",
+    "baseUrl": "https://zerozerodrinks.com/collections/all",
     "site_name": "zerozerodrinks",
     "seller": "seller",
     "productsLinks": "/products/",

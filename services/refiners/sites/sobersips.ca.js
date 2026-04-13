@@ -16,6 +16,9 @@ export default async function refine(rootUrl, product, page) {
     const sugarRe =
         /\bsugars?\b\s*[:\-]?\s*(\d+(?:[.,]\d+)?)\s*g\b|\bsugars?\b\s*[:\-]?\s*(\d+(?:[.,]\d+)?)g\b|\bless\s+than\s*(\d+(?:[.,]\d+)?)\s*g\b\s*(?:of\s*)?\bsugars?\b/i;
 
+    const carbsRe =
+        /\bcarbohydrates?\b\s*[:\-]?\s*(\d+(?:[.,]\d+)?)\s*g\b|\bcarbs?\b\s*[:\-]?\s*(\d+(?:[.,]\d+)?)\s*g\b/i;
+
     const normNum = (s) => s.replace(",", ".").trim();
 
     const mAbv = product.description.match(abvRe);
@@ -30,11 +33,15 @@ export default async function refine(rootUrl, product, page) {
     const mEnergy = product.description.match(energyRe);
     const cal = mEnergy ? (mEnergy[1] || mEnergy[2] || mEnergy[3]) : null;
     product.energy = cal ? cal : null;
-    
 
     const mSugar = product.description.match(sugarRe);
     const sug = mSugar ? (mSugar[1] || mSugar[2] || mSugar[3]) : null;
     product.sugar = sug ? sug : null;
+
+    const mCarbs = product.description.match(carbsRe);
+    const carbs = mCarbs ? (mCarbs[1] || mCarbs[2]) : null;
+    product.extras = product.extras || {};
+    product.extras.carbohydrates = carbs ? normNum(carbs) : null;
 
     if (/vegan/i.test(product.description)) {
         product.vegan = "Vegan";

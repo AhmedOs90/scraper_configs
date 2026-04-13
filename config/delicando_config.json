@@ -1,0 +1,25 @@
+{
+    "rootUrl": "https://www.delicando.com",
+    "baseUrl": "https://www.delicando.com/en/c224/buy-non-alcoholic-beverages",
+    "site_name": "delicando",
+    "seller": "seller",
+    "bannerSkip": "#consentAcceptAllFromMain",
+    "productLinkAttribute": "href",
+    "productLinkSelector": ".title a",
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']"
+        },
+        "main": {
+            "price": ".price.normalPrice",
+            "description": ".tab-content #description"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": ".pagination-next"
+    },
+    "level": 1,
+    "purePlayer": false
+}

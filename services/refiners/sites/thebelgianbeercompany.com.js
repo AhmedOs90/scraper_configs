@@ -9,5 +9,11 @@ export default async function refine(rootUrl, product, page) {
 
     const abvMatch = product.description.match(/(\d+(?:\.\d+)?)%\s*ABV/i);
     product.abv = abvMatch ? abvMatch[1] + "%" : null;
+
+    const sizeMatches = [...product.description.matchAll(/Size of Bottle:\s*([\d.]+\s*cl)/gi)];
+    const sizes = sizeMatches.map(m => m[1]);
+
+    product.extras = product.extras || {};
+    product.extras.size = sizes.length ? [...new Set(sizes)] : null;
     return product;
 }

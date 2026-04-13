@@ -7,32 +7,6 @@ export default async function refine(rootUrl, product, page) {
         .replace(/\s+/g, ' ')
         .trim();
 
-    const nutrition = await page
-        .evaluate(() => {
-            const normalize = (s) => (s || '').replace(/\s+/g, ' ').trim().toLowerCase();
-
-            const valueFor = (...needles) => {
-                const ths = Array.from(document.querySelectorAll('th'));
-                const th = ths.find((el) => {
-                    const t = normalize(el.textContent);
-                    return needles.some((n) => t.includes(normalize(n)));
-                });
-                const tdText = th?.nextElementSibling?.textContent;
-                return tdText ? tdText.replace(/\s+/g, ' ').trim() : null;
-            };
-
-            return {
-                energy: valueFor('energy', 'calories'),
-                sugar: valueFor('sugars', 'sugar', '- sugars'),
-                abv: valueFor('abv'),
-            };
-        })
-        .catch(() => ({ energy: null, sugar: null, abv: null }));
-
-    product.energy = nutrition.energy;
-    product.sugar = nutrition.sugar;
-    product.abv = product.abv || nutrition.abv;
-
     product.producer = await page
         .evaluate(() => {
             const scripts = Array.from(
@@ -70,5 +44,64 @@ export default async function refine(rootUrl, product, page) {
             return null;
         })
         .catch(() => null);
+
+    const facts = await page
+        .evaluate(() => {
+            const normalize = (s) => (s || '').replace(/\s+/g, ' ').trim().toLowerCase();
+
+            const valueFor = (...needles) => {
+                const ths = Array.from(document.querySelectorAll('th'));
+                const th = ths.find((el) => {
+                    const t = normalize(el.textContent);
+                    return needles.some((n) => t.includes(normalize(n)));
+                });
+                const next = th?.nextElementSibling?.textContent;
+                return next ? next.replace(/\s+/g, ' ').trim() : null;
+            };
+
+            return {
+                energy: valueFor('energy', 'calories'),
+                sugar: valueFor('sugars', 'sugar', '- sugars'),
+                abv: valueFor('abv'),
+                protein: valueFor('protein'),
+                fat: valueFor('fat total', 'fat'),
+                carbohydrates: valueFor('carbohydrates', 'carbs'),
+                sodium: valueFor('sodium'),
+                contains_sulphites: valueFor('contains sulphites'),
+            };
+        })
+        .catch(() => ({
+            energy: null,
+            sugar: null,
+            abv: null,
+            protein: null,
+            fat: null,
+            carbohydrates: null,
+            sodium: null,
+            contains_sulphites: null,
+        }));
+
+    product.energy = facts.energy;
+    product.sugar = facts.sugar;
+    product.abv = product.abv || facts.abv;
+
+    product.extras = {
+        ...(product.extras || {}),
+        protein: facts.protein,
+        fat: facts.fat,
+        carbohydrates: facts.carbohydrates,
+        sodium: facts.sodium,
+        contains_sulphites: facts.contains_sulphites,
+    };
+
+    const desc = product.description.toLowerCase();
+
+    if (desc.includes('vegan')) {
+        product.vegan = 'Vegan';
+    }
+
+    if (desc.includes('gluten')) {
+        product.gluten_free = 'Gluten free';
+    }
     return product;
 }

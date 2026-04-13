@@ -18,25 +18,32 @@ export default async function refine(rootUrl, product, page) {
             vegan: labels.some(text => text.includes('vegan')),
             gluten: labels.some(text => text.includes('gluten')),
         };
-    })
+    });
 
     if (flags.vegan) product.vegan = 'Vegan';
     if (flags.gluten) product.gluten_free = 'Gluten free';
 
-    const abv = await page.evaluate(() => {
+    const details = await page.evaluate(() => {
         const el = document.querySelector(
             '.s-hero-split__block-info-3__item-content--list'
         );
-        if (!el) return null;
+        if (!el) return { abv: null, size: null };
 
         const items = [...el.querySelectorAll('li')].map((li) =>
             li.innerText.trim()
         );
 
-        return items.find((t) => t.includes('%')) || null;
+        return {
+            abv: items.find((t) => t.includes('%')) || null,
+            size: items.find((t) => /\b\d+\s?(cl|ml|l)\b/i.test(t)) || null,
+        };
     });
 
-    if (abv) product.abv = abv;
+    if (details.abv) product.abv = details.abv;
+    if (details.size) {
+        product.extras = product.extras || {};
+        product.extras.size = details.size;
+    }
 
     const producer = await page.evaluate(() => {
         const el = document.querySelector(

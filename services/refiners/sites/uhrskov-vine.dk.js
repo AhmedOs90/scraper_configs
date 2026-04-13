@@ -1,8 +1,8 @@
 // services/refiners/sites/uhrskov-vine.dk.js
 export default async function refine(rootUrl, product, page) {
-    
     product.country = 'Denmark';
     product.currency = 'DKK';
+    product.extras = product.extras || {};
 
     product.description = product.description
         .replace(/<[^>]+>/g, "")
@@ -10,7 +10,7 @@ export default async function refine(rootUrl, product, page) {
         .trim();
 
     product.price = product.price
-        .replace('DKK  ', '')
+        .replace('DKK  ', '')
         .replace(',', '.')
         .trim();
 
@@ -20,7 +20,6 @@ export default async function refine(rootUrl, product, page) {
         for (const s of scripts) {
             try {
                 const json = JSON.parse(s.textContent);
-
                 const candidates = json['@graph'] ?? [json];
 
                 for (const obj of candidates) {
@@ -30,9 +29,7 @@ export default async function refine(rootUrl, product, page) {
                         (Array.isArray(type) && type.includes('Product'));
 
                     if (isProduct && obj.image) {
-                        return Array.isArray(obj.image)
-                            ? obj.image
-                            : [obj.image];
+                        return Array.isArray(obj.image) ? obj.image : [obj.image];
                     }
                 }
             } catch {}
@@ -50,9 +47,34 @@ export default async function refine(rootUrl, product, page) {
 
         if (!match) return '';
 
-        const value = match[1].replace(',', '.');
-        return value + '%';
+        return match[1].replace(',', '.') + '%';
     });
 
+    const extras = await page.evaluate(() => {
+        const out = {
+            size: '',
+            year: '',
+            grapes: ''
+        };
+
+        const rows = document.querySelectorAll('.attribute-table .data-text');
+
+        for (const row of rows) {
+            const label = row.querySelector('.label')?.textContent?.trim();
+            const value = row.querySelector('.data')?.textContent?.trim();
+
+            if (!label || !value) continue;
+
+            if (label === 'Størrelse') out.size = value;
+            if (label === 'Årgang') out.year = value;
+            if (label === 'Druetype') out.grapes = value;
+        }
+
+        return out;
+    });
+
+    product.extras.size = extras.size;
+    product.extras.year = extras.year;
+    product.extras.grapes = extras.grapes;
     return product;
 }

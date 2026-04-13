@@ -15,10 +15,21 @@
         "main": {
             "name": "#title",
             "description": ".short-description-text",
-            "price": ".product-size-price .woocommerce-Price-amount"
+            "price": ".product-size-price .woocommerce-Price-amount",
+            "energy": ".attribute-Energy",
+            "sugar": ".attribute-Sugar",
+            "producer": ".attribute-manufacturer_name"
         }
     },
-    "paginatiopn": {
+    "extras": {
+        "package": ".attribute-package",
+        "amount_in_case": ".attribute-amount_in_case",
+        "serving_suggestion": ".attribute-serving_suggestion",
+        "size": ".attribute-size",
+        "carbohydrates": ".attribute-Сarbohydrates",
+        "ingredients": ".attribute-ingredients"
+    },
+    "pagination": {
         "type": "button",
         "selector": ".woocommerce-pagination button[data-type=\"products\"]"
     },

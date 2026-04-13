@@ -13,7 +13,6 @@
             "name": "meta[property='og:title']"
         },
         "main": {
-            "price": ".gyT8MW_priceText",
             "images": "img#carousel__product-image",
             "description": "#accordion-panel-product-description"
         }
