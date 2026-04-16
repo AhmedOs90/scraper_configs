@@ -68,15 +68,18 @@ const refineFromApi = opts?.refineFromApi;                  // use the function 
 
 
 Prod.extras = await extractExtras(page, config) || {};   
+
          // 3) Your hardcoded per-site refine (kept)
     if (config.moreConfig && Prod.name !== "Name not found") {
       try {
         Prod = await refineData(config.rootUrl, Prod, page, config);
+        
       } catch (e) {
         log.error(`hardcoded refineData error: ${e.message}`);
       }
     }
   
+    
   
   
             return Prod;

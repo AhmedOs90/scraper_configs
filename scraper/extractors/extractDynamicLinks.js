@@ -110,6 +110,20 @@ async function extractDynamicLinks({ page, crawler, config, url, siteComingBaseU
     return;
   }
 
+  // pageLinks: false → only extract links from entry URLs, pagination, or pages whose URL contains baseUrl.
+  // All other pages (e.g. individual product pages) are skipped for link collection.
+  const allowPageLinks = cfg.pageLinks !== false;
+  if (!allowPageLinks) {
+    const isEntry = entryUrlSet && entryUrlSet.has(url);
+    const baseUrl = cfg.baseUrl || siteComingBaseUrl || '';
+    const urlContainsBase = baseUrl && url.includes(baseUrl);
+    if (!isEntry && !urlContainsBase) {
+      log.info(`[extractDynamicLinks] pageLinks=false → skipping link extraction on ${url} (not entry/base).`);
+      return;
+    }
+    log.info(`[extractDynamicLinks] pageLinks=false but url is entry/base → extracting links on ${url}.`);
+  }
+
   // Pagination pass (button/scroll) BEFORE link-grab
   if (cfg.pagination?.type === 'button') {
     await handleButtonPagination({
