@@ -181,6 +181,7 @@ import bottlehero from "./sites/bottlehero.dk.js";
 import eriksorensenvin from "./sites/eriksorensenvin.dk.js";
 import delicando from "./sites/delicando.com.js";
 import honest_rare from "./sites/honest-rare.de.js";
+import bovino from "./sites/bovino.de.js";
 
 // Registry map
 const registry = new Map([
@@ -361,7 +362,8 @@ const registry = new Map([
     ["bottlehero.dk", bottlehero],
     ["eriksorensenvin.dk", eriksorensenvin],
     ["delicando.com", delicando],
-    ["honest-rare.de", honest_rare]
+    ["honest-rare.de", honest_rare],
+    ["bovino.de", bovino]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {
