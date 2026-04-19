@@ -6,6 +6,9 @@
     "bannerSkip": "#consentAcceptAllFromMain",
     "productLinkAttribute": "href",
     "productLinkSelector": ".title a",
+    "collectionLinks": "/en/c224/buy-non-alcoholic-beverages",
+    "skipCollectionLinksInProducts": true,
+    "pageLinks":false,
     "moreConfig": true,
     "selectors": {
         "header": {

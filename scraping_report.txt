@@ -1,8 +1,8 @@
 Total Sites Scraped: 1
 Total Products Scraped: 0
 Details per Site:
-Site Name: refinemoments
-Root URL: https://refinemoments.com
+Site Name: delicando
+Root URL: https://www.delicando.com
 Products Scraped: 0
 ---
 Scraped Root URLs:
@@ -166,15 +166,30 @@ https://www.lbv.dk
 https://mashgang.com
 https://www.audreyclairecork.com
 https://refinemoments.com
+https://www.beermerchants.com
+https://www.blackmarket.co.nz
+https://zerozerodrinks.com
 https://www.bondston.com
 https://itsundone.com
 https://nirvanabrewery.com
-https://www.beermerchants.com
 https://voila.ca
 https://www.bienmanger.com
 https://splittree.ca
 https://www.legacyliquorstore.com
 https://drinkdesoi.com
 https://www.wineandbeyond.ca
-https://www.blackmarket.co.nz
-https://zerozerodrinks.com
+https://www.bevco.dk
+https://sprit-co.dk
+https://nordiskkombucha.dk
+https://www.gueuledejoie.com
+https://www.agoodcase.dk
+https://www.otto-duborg.dk
+https://bierothek.dk
+https://vinspecialistenaarhus.dk
+https://dhwines.dk
+https://www.kjaersommerfeldt.dk
+https://www.juuls.dk
+https://kjaersommerfeldt.dk
+https://bottlehero.dk
+https://eriksorensenvin.dk
+https://www.delicando.com
