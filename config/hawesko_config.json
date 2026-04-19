@@ -1,0 +1,27 @@
+{
+    "rootUrl": "https://www.hawesko.de",
+    "baseUrl": "https://www.hawesko.de/alkoholfrei",
+    "site_name": "hawesko",
+    "seller": "seller",
+    "productLinkAttribute": "href",
+    "productLinkSelector": "a.product-box__header-text",
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "price": ".sale-box__price-wrapper .price-info__current, .sale-box__price-wrapper .price-info__old",
+            "description": ".product-description-text__description",
+            "producer": ".product-content-block__headline"
+        }
+    },
+    "extras": {},
+    "pagination": {
+        "type": "button",
+        "selector": ".pagination__button--next"
+    },
+    "level": 1,
+    "purePlayer": false
+}
