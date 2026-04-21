@@ -1,5 +1,15 @@
 // services/refiners/sites/thenewbar.com.js
 export default async function refine(rootUrl, product, page) {
+    product.country = 'USA';
+    product.price = product.price
+        .replace('.00', '')    
+        .replace(',', '.')
+        .trim();
+    product.description = product.description
+        .replace(/<[^>]*>/g, '')
+        .replace(/\s+/g, ' ')
+        .trim();
+
     const tags = await page.evaluate(() => window?.Rivo?.common?.product?.tags || []);
 
     const abvTag = tags.find(t => t.toLowerCase().includes('abv'));
