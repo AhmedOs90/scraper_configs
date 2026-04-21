@@ -1,0 +1,33 @@
+{
+    "rootUrl": "https://www.bovino.de",
+    "baseUrl": "https://www.bovino.de/zoekresultaten#twn|?tn_q=alkoholfrei%20rotwein%20alle",
+    "site_name": "bovino",
+    "seller": "seller",
+    "productLinkAttribute": "href",
+    "productLinkSelector": "a.twn-frame-element",
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "images": "meta[property='og:image']",
+            "name": "meta[property='og:title']",
+            "desciription": "meta[property='og:description']"
+        },
+        "main": {
+            "producer": ".merkknop .merk a",
+            "price": ".blok.bestel .prijzen .prijs",
+            "abv": ".kenmerkArt.alcoholpercentage .titel"
+        }
+    },
+    "extras": {
+        "size": ".kenmerkArt.inhoudBerekening.inhoud .titel",
+        "grape_variety": ".kenmerkArt.druif .titel",
+        "allergens": ".kenmerkArt.allergenen .titel",
+        "color": ".kenmerkArt.kleur .titel"
+    },
+    "pagination": {
+        "type": "link",
+        "selector": "a.twn-pagination__next"
+    },
+    "level": 1,
+    "purePlayer": false
+}

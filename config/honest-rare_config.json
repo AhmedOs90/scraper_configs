@@ -1,0 +1,29 @@
+{
+    "rootUrl": "https://www.honest-rare.de",
+    "baseUrl": "https://www.honest-rare.de/en/non-alcoholic-spirits-gin-rum-and-co-without-alcohol",
+    "site_name": "honest-rare",
+    "seller": "seller",
+    "productLinkAttribute": "href",
+    "productLinkSelector": ".ty-grid-list__item a[href]",
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "name": ".ty-product-block-title",
+            "price": ".ty-product-block__price-actual .ty-price, .ty-list-price .ty-strike",
+            "producer": ".ce-product-block__vendor-text, .ty-control-group__link",
+            "description": ".ty-wysiwyg-content.content-description"
+        }
+    },
+    "extras": {
+        "size": ".ce-product-block__size"
+    },
+    "pagination": {
+        "type": "scroll",
+        "selector": "#section-437"
+    },
+    "level": 1,
+    "purePlayer": false
+}
