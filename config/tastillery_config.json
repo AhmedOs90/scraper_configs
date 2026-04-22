@@ -23,5 +23,5 @@
         "selector": ".pagination__item--prev"
     },
     "level": 1,
-    "purePlayer": true
+    "purePlayer": false
 }

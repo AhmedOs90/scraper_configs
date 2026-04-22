@@ -184,6 +184,7 @@ import honest_rare from "./sites/honest-rare.de.js";
 import bovino from "./sites/bovino.de.js";
 import hawesko from "./sites/hawesko.de.js";
 import tastillery from "./sites/tastillery.com.js";
+import drankdozijn from "./sites/drankdozijn.de.js";
 
 // Registry map
 const registry = new Map([
@@ -367,7 +368,8 @@ const registry = new Map([
     ["honest-rare.de", honest_rare],
     ["bovino.de", bovino],
     ["hawesko.de", hawesko],
-    ["tastillery.com", tastillery]
+    ["tastillery.com", tastillery],
+    ["drankdozijn.de", drankdozijn]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {
