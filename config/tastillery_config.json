@@ -1,0 +1,27 @@
+{
+    "rootUrl": "https://tastillery.com",
+    "baseUrl": "https://tastillery.com/collections/alkoholfrei?page=1",
+    "site_name": "tastillery",
+    "seller": "seller",
+    "productLinkAttribute": "href",
+    "productLinkSelector": ".card__inner .card__heading a.full-unstyled-link",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "price": "meta[property='og:price:amount']",
+            "currency": "meta[property='og:price:currency']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "description": ".section-description"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": ".pagination__item--prev"
+    },
+    "level": 1,
+    "purePlayer": true
+}
