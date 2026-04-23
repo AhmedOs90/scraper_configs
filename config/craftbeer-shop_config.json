@@ -1,0 +1,25 @@
+{
+    "rootUrl": "https://www.craftbeer-shop.com",
+    "baseUrl": "https://www.craftbeer-shop.com/alkoholfrei",
+    "site_name": "craftbeer-shop",
+    "seller": "seller",
+    "productLinkAttribute": "href",
+    "productLinkSelector": ".image-link-wrapper a.image-wrapper",
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "name": ".product-title",
+            "price": ".price-wrapper__inner .price",
+            "description": ".shortdesc"
+        }
+    },
+    "pagination": {
+        "type": "scroll",
+        "selector": ".productlist-pagination"
+    },
+    "level": 1,
+    "purePlayer": false
+}

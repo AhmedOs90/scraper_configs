@@ -185,6 +185,7 @@ import bovino from "./sites/bovino.de.js";
 import hawesko from "./sites/hawesko.de.js";
 import tastillery from "./sites/tastillery.com.js";
 import drankdozijn from "./sites/drankdozijn.de.js";
+import craftbeer_shop from "./sites/craftbeer-shop.com.js";
 
 // Registry map
 const registry = new Map([
@@ -369,7 +370,8 @@ const registry = new Map([
     ["bovino.de", bovino],
     ["hawesko.de", hawesko],
     ["tastillery.com", tastillery],
-    ["drankdozijn.de", drankdozijn]
+    ["drankdozijn.de", drankdozijn],
+    ["craftbeer-shop.com", craftbeer_shop]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {
