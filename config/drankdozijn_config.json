@@ -1,0 +1,23 @@
+{
+    "rootUrl": "https://drankdozijn.de",
+    "baseUrl": "https://drankdozijn.de/groep/wijn/alcoholvrij",
+    "site_name": "drankdozijn",
+    "seller": "seller",
+    "productLinkAttribute": "href",
+    "productLinkSelector": ".product_info > a",
+    "collectionLinks": "/groep/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[name='og:title']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "price": ".main_price .fatred .price:not(.currency), .main_price .txt_line.strike:not(.currency)",
+            "description": ".txt_paragraph.description"
+        }
+    },
+    "level": 1,
+    "purePlayer": false
+}
