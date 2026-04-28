@@ -187,6 +187,7 @@ import tastillery from "./sites/tastillery.com.js";
 import drankdozijn from "./sites/drankdozijn.de.js";
 import craftbeer_shop from "./sites/craftbeer-shop.com.js";
 import drankgigant from "./sites/drankgigant.de.js";
+import vineshop24 from "./sites/vineshop24.de.js";
 
 // Registry map
 const registry = new Map([
@@ -373,7 +374,8 @@ const registry = new Map([
     ["tastillery.com", tastillery],
     ["drankdozijn.de", drankdozijn],
     ["craftbeer-shop.com", craftbeer_shop],
-    ["drankgigant.de", drankgigant]
+    ["drankgigant.de", drankgigant],
+    ["vineshop24.de", vineshop24]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {
