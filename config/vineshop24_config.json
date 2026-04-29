@@ -5,7 +5,6 @@
     "seller": "seller",
     "productLinkAttribute": "href",
     "productLinkSelector": ".product-name",
-    "skipCollectionLinksInProducts": true,
     "moreConfig": true,
     "selectors": {
         "header": {
@@ -22,6 +21,6 @@
         "type": "link",
         "selector": ".page-item.page-next a.page-link"
     },
-    "level": -1,
+    "level": 1,
     "purePlayer": false
 }

@@ -1,0 +1,24 @@
+{
+    "rootUrl": "https://barrelbrothers.de",
+    "baseUrl": "https://barrelbrothers.de/alkoholfrei/?products=1",
+    "site_name": "barrelbrothers",
+    "seller": "seller",
+    "bannerSkip": ".cmp-button-wrapper #grant-all-btn",
+    "productLinkAttribute": "href",
+    "productLinkSelector": "a[aria-label='Produktseite']",
+    "moreConfig": true,
+    "selectors": {
+        "header": { },
+        "main": {
+            "name": "h1[itemprop='name']",
+            "price": "div.md\\:sticky span.font-heading",
+            "description": "div.relative.text-16.text-neutral"
+        }
+    },
+    "pagination": {
+        "type": "button",
+        "selector": ".pagination a.pagination-button:last-child"
+    },
+    "level": -1,
+    "purePlayer": false
+}
