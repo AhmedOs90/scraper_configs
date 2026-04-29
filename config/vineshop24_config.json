@@ -1,0 +1,27 @@
+{
+    "rootUrl": "https://www.vineshop24.de",
+    "baseUrl": "https://www.vineshop24.de/alkoholfrei",
+    "site_name": "vineshop24",
+    "seller": "seller",
+    "productLinkAttribute": "href",
+    "productLinkSelector": ".product-name",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "images": "meta[property='og:image']",
+            "producer": "meta[property='product:brand']",
+            "price": "meta[property='product:price']"
+        },
+        "main": {
+            "name": ".product-detail-name",
+            "description": ".product-detail-description-text"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": ".page-item.page-next a.page-link"
+    },
+    "level": -1,
+    "purePlayer": false
+}

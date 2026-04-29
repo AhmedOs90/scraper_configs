@@ -3,7 +3,6 @@
     "baseUrl": "https://www.virginwines.co.uk/wines/non-alcoholic-wines",
     "site_name": "virginwines",
     "seller": "seller",
-    "bannerSkip": "button.acceptallcookies",
     "productLinkAttribute": "href",
     "productLinkSelector": ".product-bottle .product-name a",
     "moreConfig": true,
@@ -19,10 +18,6 @@
             "producer": "a[data-gaaction='winemaker-info-click']",
             "vegan": "ul.other-classifications svg.classification.vegan + p"
         }
-    },
-    "pagination": {
-        "type": "link",
-        "selector": "a[aria-label=\"Next\"]"
     },
     "level": 1,
     "purePlayer": false

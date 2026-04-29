@@ -1,0 +1,34 @@
+{
+    "rootUrl": "https://www.drankgigant.de",
+    "baseUrl": "https://www.drankgigant.de/alk-frei",
+    "site_name": "drankgigant",
+    "seller": "seller",
+    "productLinkAttribute": "href",
+    "productLinkSelector": ".product-item a.link-wrapper",
+    "bannerSkip": ".age-check-popup button.btn",
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[name='title']",
+            "images": "meta[property='og:image']",
+            "price": "meta[property='product:price:amount']",
+            "currency": "meta[property='product:price:currency']"
+        },
+        "main": {
+            "description": ".description-pdp",
+            "energy": "div[data-th='Kcal per 100ml']",
+            "producer": "div[data-th='Brauerei']"
+        }
+    },
+    "extras": {
+        "size": "div[data-th='Inhalt']",
+        "weight": "div[data-th='Weight']",
+        "allergens": "div[data-th='Allergenen ']"
+    },
+    "pagination": {
+        "type": "link",
+        "selector": "a.action.next"
+    },
+    "level": 0,
+    "purePlayer": false
+}
