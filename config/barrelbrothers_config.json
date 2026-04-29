@@ -8,7 +8,7 @@
     "productLinkSelector": "a[aria-label='Produktseite']",
     "moreConfig": true,
     "selectors": {
-        "header": { },
+        "header": {},
         "main": {
             "name": "h1[itemprop='name']",
             "price": "div.md\\:sticky span.font-heading",
@@ -19,6 +19,6 @@
         "type": "button",
         "selector": ".pagination a.pagination-button:last-child"
     },
-    "level": -1,
+    "level": 1,
     "purePlayer": false
 }
