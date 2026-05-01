@@ -188,6 +188,9 @@ import drankdozijn from "./sites/drankdozijn.de.js";
 import craftbeer_shop from "./sites/craftbeer-shop.com.js";
 import drankgigant from "./sites/drankgigant.de.js";
 import vineshop24 from "./sites/vineshop24.de.js";
+import barrelbrothers from "./sites/barrelbrothers.de.js";
+import onlineshop_helgoland from "./sites/onlineshop-helgoland.de.js";
+import beclink from "./sites/beclink.com.js";
 
 // Registry map
 const registry = new Map([
@@ -375,7 +378,10 @@ const registry = new Map([
     ["drankdozijn.de", drankdozijn],
     ["craftbeer-shop.com", craftbeer_shop],
     ["drankgigant.de", drankgigant],
-    ["vineshop24.de", vineshop24]
+    ["vineshop24.de", vineshop24],
+    ["barrelbrothers.de", barrelbrothers],
+    ["onlineshop-helgoland.de", onlineshop_helgoland],
+    ["beclink.com", beclink]
 ]);
 
 export function getRefinerForUrl(rootUrl, siteConfig) {

@@ -1,0 +1,26 @@
+{
+    "rootUrl": "https://beclink.com",
+    "baseUrl": "https://beclink.com/store/full-catalog",
+    "site_name": "beclink",
+    "seller": "seller",
+    "productsLinks": "/product/",
+    "collectionLinks": "/store/full-catalog/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "images": "meta[property='og:image']"
+        },
+        "main": {
+            "price": ".colthree .woocommerce-Price-amount.amount",
+            "description": ".one-liner"
+        }
+    },
+    "pagination": {
+        "type": "link",
+        "selector": "nav.woocommerce-pagination a.next.page-numbers"
+    },
+    "level": 1,
+    "purePlayer": true
+}

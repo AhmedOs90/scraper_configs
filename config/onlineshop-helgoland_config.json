@@ -1,0 +1,24 @@
+{
+    "rootUrl": "https://www.onlineshop-helgoland.de",
+    "baseUrl": "https://www.onlineshop-helgoland.de/spirituosen/alkoholfrei",
+    "site_name": "onlineshop-helgoland",
+    "seller": "seller",
+    "productsLinks": "/produkte/",
+    "collectionLinks": "/spirituosen/",
+    "skipCollectionLinksInProducts": true,
+    "moreConfig": true,
+    "selectors": {
+        "header": {
+            "name": "meta[property='og:title']",
+            "images": "meta[property='og:image']",
+            "producer": "meta[property='product:brand']",
+            "price": "meta[property='product:price:amount']",
+            "currency": "meta[property='product:price:currency']"
+        },
+        "main": {
+            "description": ".product-detail-description-text"
+        }
+    },
+    "level": 1,
+    "purePlayer": false
+}
